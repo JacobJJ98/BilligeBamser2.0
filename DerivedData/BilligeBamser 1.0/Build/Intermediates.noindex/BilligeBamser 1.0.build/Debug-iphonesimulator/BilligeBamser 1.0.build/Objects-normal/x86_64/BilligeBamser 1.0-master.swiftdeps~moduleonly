@@ -1,0 +1,6 @@
+version: "Apple Swift version 5.0.1 (swiftlang-1001.0.82.4 clang-1001.0.46.5)"
+options: "76523c504161c7715a5ccd9cf9bcfc38"
+build_time: [1570636479, 705873000]
+inputs:
+  "/Users/nicolaidam/Documents/BilligeBamser-1.0/BilligeBamser 1.0/ViewController.swift": [1570636477, 475565144]
+  "/Users/nicolaidam/Documents/BilligeBamser-1.0/BilligeBamser 1.0/AppDelegate.swift": [1570636477, 471894648]

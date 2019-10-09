@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>logFormatVersion</key>
+	<integer>10</integer>
+	<key>logs</key>
+	<dict>
+		<key>50900FF2-EE09-4648-ADD9-B4D5EF1A6464</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.target.product-type.application</string>
+			<key>fileName</key>
+			<string>50900FF2-EE09-4648-ADD9-B4D5EF1A6464.xcactivitylog</string>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>signature</key>
+			<string>BilligeBamser_1.0-dfpjgazfxydrlvdzculckqqirhhr</string>
+			<key>timeStartedRecording</key>
+			<real>592342133.97217906</real>
+			<key>timeStoppedRecording</key>
+			<real>592342135.84548604</real>
+			<key>title</key>
+			<string>Build target BilligeBamser 1.0</string>
+			<key>uniqueIdentifier</key>
+			<string>50900FF2-EE09-4648-ADD9-B4D5EF1A6464</string>
+		</dict>
+	</dict>
+	<key>preserveOldLogs</key>
+	<true/>
+</dict>
+</plist>

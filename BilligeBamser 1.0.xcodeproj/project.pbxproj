@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		287ECAE9234E3D9800487427 /* MainUITabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287ECAE8234E3D9800487427 /* MainUITabBarController.swift */; };
+		287ECAED234E541800487427 /* Theme.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 287ECAEC234E541800487427 /* Theme.xcassets */; };
+		287ECAEF234E5FF200487427 /* OpretBajerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287ECAEE234E5FF200487427 /* OpretBajerViewController.swift */; };
 		EE805A31234DF9B40095651D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE805A30234DF9B40095651D /* AppDelegate.swift */; };
 		EE805A33234DF9B40095651D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE805A32234DF9B40095651D /* ViewController.swift */; };
 		EE805A36234DF9B40095651D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE805A34234DF9B40095651D /* Main.storyboard */; };
@@ -15,6 +18,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		287ECAE8234E3D9800487427 /* MainUITabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainUITabBarController.swift; sourceTree = "<group>"; };
+		287ECAEC234E541800487427 /* Theme.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Theme.xcassets; sourceTree = "<group>"; };
+		287ECAEE234E5FF200487427 /* OpretBajerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpretBajerViewController.swift; sourceTree = "<group>"; };
 		EE805A2D234DF9B40095651D /* BilligeBamser 1.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BilligeBamser 1.0.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE805A30234DF9B40095651D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE805A32234DF9B40095651D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -57,7 +63,10 @@
 				EE805A30234DF9B40095651D /* AppDelegate.swift */,
 				EE805A32234DF9B40095651D /* ViewController.swift */,
 				EE805A34234DF9B40095651D /* Main.storyboard */,
+				287ECAEE234E5FF200487427 /* OpretBajerViewController.swift */,
+				287ECAE8234E3D9800487427 /* MainUITabBarController.swift */,
 				EE805A37234DF9B60095651D /* Assets.xcassets */,
+				287ECAEC234E541800487427 /* Theme.xcassets */,
 				EE805A39234DF9B60095651D /* LaunchScreen.storyboard */,
 				EE805A3C234DF9B60095651D /* Info.plist */,
 			);
@@ -123,6 +132,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE805A3B234DF9B60095651D /* LaunchScreen.storyboard in Resources */,
+				287ECAED234E541800487427 /* Theme.xcassets in Resources */,
 				EE805A38234DF9B60095651D /* Assets.xcassets in Resources */,
 				EE805A36234DF9B40095651D /* Main.storyboard in Resources */,
 			);
@@ -136,6 +146,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE805A33234DF9B40095651D /* ViewController.swift in Sources */,
+				287ECAE9234E3D9800487427 /* MainUITabBarController.swift in Sources */,
+				287ECAEF234E5FF200487427 /* OpretBajerViewController.swift in Sources */,
 				EE805A31234DF9B40095651D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -213,7 +225,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -268,7 +280,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -283,16 +295,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = G6TSQJ6DQ5;
+				DEVELOPMENT_TEAM = 8B9KRX6NBR;
 				INFOPLIST_FILE = "BilligeBamser 1.0/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "JJJ.BilligeBamser-1-0";
+				PRODUCT_BUNDLE_IDENTIFIER = "Nicolai-Dam";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -301,16 +314,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = G6TSQJ6DQ5;
+				DEVELOPMENT_TEAM = 8B9KRX6NBR;
 				INFOPLIST_FILE = "BilligeBamser 1.0/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "JJJ.BilligeBamser-1-0";
+				PRODUCT_BUNDLE_IDENTIFIER = "Nicolai-Dam";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
