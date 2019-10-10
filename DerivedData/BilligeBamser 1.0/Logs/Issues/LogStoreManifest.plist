@@ -6,7 +6,7 @@
 	<integer>10</integer>
 	<key>logs</key>
 	<dict>
-		<key>F9A23EFF-0705-4390-92E1-6063C96ABC71</key>
+		<key>B2D2CDA8-EF73-44A6-81BC-50DD445DCB29</key>
 		<dict>
 			<key>className</key>
 			<string>IDEActivityLogMajorGroupSection</string>
@@ -15,7 +15,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.target.product-type.application</string>
 			<key>fileName</key>
-			<string>F9A23EFF-0705-4390-92E1-6063C96ABC71.xcactivitylog</string>
+			<string>B2D2CDA8-EF73-44A6-81BC-50DD445DCB29.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -26,13 +26,13 @@
 			<key>signature</key>
 			<string>BilligeBamser_1.0-dfpjgazfxydrlvdzculckqqirhhr</string>
 			<key>timeStartedRecording</key>
-			<real>592422291.64670599</real>
+			<real>592428522.56009102</real>
 			<key>timeStoppedRecording</key>
-			<real>592422301.09850895</real>
+			<real>592428526.87471199</real>
 			<key>title</key>
 			<string>Build target BilligeBamser 1.0</string>
 			<key>uniqueIdentifier</key>
-			<string>F9A23EFF-0705-4390-92E1-6063C96ABC71</string>
+			<string>B2D2CDA8-EF73-44A6-81BC-50DD445DCB29</string>
 		</dict>
 	</dict>
 	<key>preserveOldLogs</key>

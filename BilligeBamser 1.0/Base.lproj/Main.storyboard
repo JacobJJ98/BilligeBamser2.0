@@ -27,13 +27,15 @@
         <scene sceneID="Uu8-ft-C4n">
             <objects>
                 <viewController title="OpretBajer" id="860-RQ-ZIz" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="efd-BI-AQQ">
+                    <view key="view" hidden="YES" contentMode="scaleToFill" id="efd-BI-AQQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="xdM-s1-eF4"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="KFQ-L2-XUS"/>
+                    <tabBarItem key="tabBarItem" title="" id="KFQ-L2-XUS">
+                        <inset key="imageInsets" minX="-25" minY="-35" maxX="-25" maxY="-25"/>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YZA-0t-PKN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -216,8 +218,8 @@
                     <tabBar key="tabBar" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" semanticContentAttribute="spatial" insetsLayoutMarginsFromSafeArea="NO" id="MRE-ht-C51">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" name="bajerGrøn"/>
-                        <color key="barTintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
+                        <color key="tintColor" red="0.25299999117851257" green="0.74299997091293335" blue="0.5220000147819519" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="9sm-LX-bnG" kind="relationship" relationship="viewControllers" id="0ra-3w-ttx"/>
@@ -235,7 +237,7 @@
         <scene sceneID="IZQ-lG-fkf">
             <objects>
                 <navigationController title="Favoritter" automaticallyAdjustsScrollViewInsets="NO" id="c1A-Nd-sju" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="favoritter75x75" id="oXF-bw-gWx"/>
+                    <tabBarItem key="tabBarItem" title="" image="favoritterOrange75x75" id="oXF-bw-gWx"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="wVd-qE-xny">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -259,7 +261,7 @@
         <scene sceneID="yqp-0F-xQk">
             <objects>
                 <navigationController title="Mere" automaticallyAdjustsScrollViewInsets="NO" id="Hov-iz-ci7" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="mere75x75" id="Qhy-Hi-DEH"/>
+                    <tabBarItem key="tabBarItem" title="" image="mereBlue75x75" selectedImage="mereBlue75x75" id="Qhy-Hi-DEH"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="tHe-zW-t6I">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -283,7 +285,7 @@
         <scene sceneID="2Vd-uL-nuF">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="YhJ-bA-exD" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="map75x75" id="hKN-Ay-Ilc"/>
+                    <tabBarItem key="tabBarItem" title="" image="mapBlue75x75" id="hKN-Ay-Ilc"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="Dvm-X6-HeV">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -307,9 +309,7 @@
         <scene sceneID="ETx-Uw-TNG">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9sm-LX-bnG" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="udforsk75x75" id="mvZ-6V-2gt">
-                        <inset key="imageInsets" minX="4" minY="4" maxX="4" maxY="4"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="" image="udforskGul75x75" id="mvZ-6V-2gt"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="doB-eF-X9n">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -331,10 +331,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="favoritter75x75" width="25" height="25"/>
-        <image name="map75x75" width="25" height="25"/>
-        <image name="mere75x75" width="25" height="25"/>
-        <image name="udforsk75x75" width="25" height="25"/>
+        <image name="favoritterOrange75x75" width="25" height="25"/>
+        <image name="mapBlue75x75" width="25" height="25"/>
+        <image name="mereBlue75x75" width="25" height="25"/>
+        <image name="udforskGul75x75" width="25" height="25"/>
         <namedColor name="bajerGrøn">
             <color red="0.25299999117851257" green="0.74299997091293335" blue="0.5220000147819519" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

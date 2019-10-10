@@ -1,8 +1,8 @@
 version: "Apple Swift version 5.1 (swiftlang-1100.0.270.13 clang-1100.0.33.7)"
 options: "c57e2a7920539c010f78bedb18037ea1"
-build_time: [1570729159, 462379000]
+build_time: [1570733705, 177051000]
 inputs:
   "/Users/nicolaidam/Documents/BilligeBamser-1.0/BilligeBamser 1.0/ViewController.swift": [1570636477, 475565144]
-  "/Users/nicolaidam/Documents/BilligeBamser-1.0/BilligeBamser 1.0/MainUITabBarController.swift": [1570729159, 374796753]
+  "/Users/nicolaidam/Documents/BilligeBamser-1.0/BilligeBamser 1.0/MainUITabBarController.swift": [1570733705, 105991383]
   "/Users/nicolaidam/Documents/BilligeBamser-1.0/BilligeBamser 1.0/OpretBajerViewController.swift": [1570647103, 74887485]
   "/Users/nicolaidam/Documents/BilligeBamser-1.0/BilligeBamser 1.0/AppDelegate.swift": [1570636477, 471894648]
