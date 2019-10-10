@@ -10,7 +10,6 @@ import UIKit
 
 class MainUITabBarController: UITabBarController {
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,8 +21,6 @@ class MainUITabBarController: UITabBarController {
     // MARK: - Setups
     
     func setupMiddleButton() {
-        
-        
         
         let menuButton = UIButton(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width/6, height: self.view.frame.size.width/6))
         
