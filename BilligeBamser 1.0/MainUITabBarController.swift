@@ -10,9 +10,12 @@ import UIKit
 
 class MainUITabBarController: UITabBarController {
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+
         
+       
         setupMiddleButton()
     }
     
@@ -20,13 +23,13 @@ class MainUITabBarController: UITabBarController {
     
     func setupMiddleButton() {
         
-        let menuButton = UIButton(frame: CGRect(x: 0, y: 0, width: 60, height: 60))
+        let menuButton = UIButton(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width/6, height: self.view.frame.size.width/6))
         
         var menuButtonFrame = menuButton.frame
         menuButtonFrame.origin.y = view.bounds.height - menuButtonFrame.height
         menuButtonFrame.origin.x = view.bounds.width/2 - menuButtonFrame.size.width/2
          menuButton.setImage(UIImage(named: "ikonPlus")?.withRenderingMode(.alwaysTemplate), for: .normal)
-        menuButton.backgroundColor=#colorLiteral(red: 0.8909999728, green: 0.8909999728, blue: 0.8909999728, alpha: 1)
+        menuButton.backgroundColor=UIColor.white
         menuButton.tintColor=#colorLiteral(red: 0.2529999912, green: 0.7429999709, blue: 0.5220000148, alpha: 1)
         menuButton.frame = menuButtonFrame
         menuButton.layer.cornerRadius = menuButtonFrame.height/2
@@ -38,6 +41,7 @@ class MainUITabBarController: UITabBarController {
         
         view.layoutIfNeeded()
     }
+
     
     
     // MARK: - Actions

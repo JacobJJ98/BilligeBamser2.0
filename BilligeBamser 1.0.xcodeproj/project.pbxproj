@@ -3,17 +3,17 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		287ECAE9234E3D9800487427 /* MainUITabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287ECAE8234E3D9800487427 /* MainUITabBarController.swift */; };
 		287ECAED234E541800487427 /* Theme.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 287ECAEC234E541800487427 /* Theme.xcassets */; };
 		287ECAEF234E5FF200487427 /* OpretBajerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287ECAEE234E5FF200487427 /* OpretBajerViewController.swift */; };
+		28C5E9C2234F9BEA00BE284D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28C5E9C1234F9BEA00BE284D /* Assets.xcassets */; };
 		EE805A31234DF9B40095651D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE805A30234DF9B40095651D /* AppDelegate.swift */; };
 		EE805A33234DF9B40095651D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE805A32234DF9B40095651D /* ViewController.swift */; };
 		EE805A36234DF9B40095651D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE805A34234DF9B40095651D /* Main.storyboard */; };
-		EE805A38234DF9B60095651D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE805A37234DF9B60095651D /* Assets.xcassets */; };
 		EE805A3B234DF9B60095651D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE805A39234DF9B60095651D /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -21,11 +21,11 @@
 		287ECAE8234E3D9800487427 /* MainUITabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainUITabBarController.swift; sourceTree = "<group>"; };
 		287ECAEC234E541800487427 /* Theme.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Theme.xcassets; sourceTree = "<group>"; };
 		287ECAEE234E5FF200487427 /* OpretBajerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpretBajerViewController.swift; sourceTree = "<group>"; };
+		28C5E9C1234F9BEA00BE284D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EE805A2D234DF9B40095651D /* BilligeBamser 1.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BilligeBamser 1.0.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE805A30234DF9B40095651D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE805A32234DF9B40095651D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EE805A35234DF9B40095651D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		EE805A37234DF9B60095651D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EE805A3A234DF9B60095651D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EE805A3C234DF9B60095651D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -65,7 +65,7 @@
 				EE805A34234DF9B40095651D /* Main.storyboard */,
 				287ECAEE234E5FF200487427 /* OpretBajerViewController.swift */,
 				287ECAE8234E3D9800487427 /* MainUITabBarController.swift */,
-				EE805A37234DF9B60095651D /* Assets.xcassets */,
+				28C5E9C1234F9BEA00BE284D /* Assets.xcassets */,
 				287ECAEC234E541800487427 /* Theme.xcassets */,
 				EE805A39234DF9B60095651D /* LaunchScreen.storyboard */,
 				EE805A3C234DF9B60095651D /* Info.plist */,
@@ -109,7 +109,7 @@
 				};
 			};
 			buildConfigurationList = EE805A28234DF9B40095651D /* Build configuration list for PBXProject "BilligeBamser 1.0" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 11.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -133,7 +133,7 @@
 			files = (
 				EE805A3B234DF9B60095651D /* LaunchScreen.storyboard in Resources */,
 				287ECAED234E541800487427 /* Theme.xcassets in Resources */,
-				EE805A38234DF9B60095651D /* Assets.xcassets in Resources */,
+				28C5E9C2234F9BEA00BE284D /* Assets.xcassets in Resources */,
 				EE805A36234DF9B40095651D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -293,7 +293,6 @@
 		EE805A40234DF9B60095651D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8B9KRX6NBR;
 				INFOPLIST_FILE = "BilligeBamser 1.0/Info.plist";
@@ -312,7 +311,6 @@
 		EE805A41234DF9B60095651D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8B9KRX6NBR;
 				INFOPLIST_FILE = "BilligeBamser 1.0/Info.plist";

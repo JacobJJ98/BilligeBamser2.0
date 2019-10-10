@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yaP-uK-V5q">
-    <device id="retina6_1" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yaP-uK-V5q">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -28,7 +26,6 @@
         <!--OpretBajer-->
         <scene sceneID="Uu8-ft-C4n">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="YZA-0t-PKN" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController title="OpretBajer" id="860-RQ-ZIz" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="efd-BI-AQQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -38,6 +35,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="KFQ-L2-XUS"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YZA-0t-PKN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4368.115942028986" y="930.80357142857133"/>
         </scene>
@@ -76,10 +74,10 @@
             </objects>
             <point key="canvasLocation" x="5531.884057971015" y="922.76785714285711"/>
         </scene>
-        <!--MereScene-->
+        <!--Mere-->
         <scene sceneID="0Wj-8s-nbp">
             <objects>
-                <viewController title="MereScene" id="jwm-PQ-Ta3" sceneMemberID="viewController">
+                <viewController id="jwm-PQ-Ta3" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FYj-dk-Ags">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -101,10 +99,10 @@
             </objects>
             <point key="canvasLocation" x="2460.8695652173915" y="2441.5178571428569"/>
         </scene>
-        <!--FavoritterScene-->
+        <!--Favoritter-->
         <scene sceneID="pRE-T4-Fj7">
             <objects>
-                <viewController title="FavoritterScene" id="EzH-Iu-9r0" sceneMemberID="viewController">
+                <viewController title="Favoritter" id="EzH-Iu-9r0" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8cR-BI-a9u">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -154,7 +152,7 @@
         <!--View Controller-->
         <scene sceneID="ZgS-OH-B96">
             <objects>
-                <viewController id="yaP-uK-V5q" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="yaP-uK-V5q" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PiF-8X-gbb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -189,7 +187,7 @@
         <!--View Controller-->
         <scene sceneID="t1o-dM-OMf">
             <objects>
-                <viewController id="feu-lp-tZK" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="feu-lp-tZK" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mhc-PN-R7Q">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -214,11 +212,11 @@
         <!--MainTabBar-->
         <scene sceneID="VsO-yj-OZI">
             <objects>
-                <tabBarController title="MainTabBar" id="d6o-K0-wM0" customClass="MainUITabBarController" customModule="BilligeBamser_1_0" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBar key="tabBar" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="MRE-ht-C51">
+                <tabBarController storyboardIdentifier="tabbar" title="MainTabBar" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="d6o-K0-wM0" customClass="MainUITabBarController" customModule="BilligeBamser_1_0" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" semanticContentAttribute="spatial" insetsLayoutMarginsFromSafeArea="NO" id="MRE-ht-C51">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" name="bajerGrøn"/>
                         <color key="barTintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                     </tabBar>
                     <connections>
@@ -237,15 +235,15 @@
         <scene sceneID="IZQ-lG-fkf">
             <objects>
                 <navigationController title="Favoritter" automaticallyAdjustsScrollViewInsets="NO" id="c1A-Nd-sju" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="oXF-bw-gWx"/>
+                    <tabBarItem key="tabBarItem" title="" image="favoritter75x75" id="oXF-bw-gWx"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="wVd-qE-xny">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" name="bajerGrøn"/>
                         <textAttributes key="titleTextAttributes">
-                            <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="18"/>
-                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="19"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -261,15 +259,15 @@
         <scene sceneID="yqp-0F-xQk">
             <objects>
                 <navigationController title="Mere" automaticallyAdjustsScrollViewInsets="NO" id="Hov-iz-ci7" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Qhy-Hi-DEH"/>
+                    <tabBarItem key="tabBarItem" title="" image="mere75x75" id="Qhy-Hi-DEH"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="tHe-zW-t6I">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" name="bajerGrøn"/>
                         <textAttributes key="titleTextAttributes">
-                            <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="18"/>
-                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="19"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -281,21 +279,19 @@
             </objects>
             <point key="canvasLocation" x="1550.7246376811595" y="2441.5178571428569"/>
         </scene>
-        <!--Kort-->
+        <!--Navigation Controller-->
         <scene sceneID="2Vd-uL-nuF">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="YhJ-bA-exD" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Kort" id="hKN-Ay-Ilc">
-                        <color key="badgeColor" name="findHighlightColor" catalog="System" colorSpace="catalog"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="" image="map75x75" id="hKN-Ay-Ilc"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="Dvm-X6-HeV">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" name="bajerGrøn"/>
                         <textAttributes key="titleTextAttributes">
-                            <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="18"/>
-                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="19"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -307,19 +303,21 @@
             </objects>
             <point key="canvasLocation" x="1550.7246376811595" y="409.82142857142856"/>
         </scene>
-        <!--Item 1-->
+        <!--Navigation Controller-->
         <scene sceneID="ETx-Uw-TNG">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9sm-LX-bnG" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 1" id="mvZ-6V-2gt"/>
+                    <tabBarItem key="tabBarItem" title="" image="udforsk75x75" id="mvZ-6V-2gt">
+                        <inset key="imageInsets" minX="4" minY="4" maxX="4" maxY="4"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="doB-eF-X9n">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" name="bajerGrøn"/>
                         <textAttributes key="titleTextAttributes">
-                            <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="18"/>
-                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="19"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -333,6 +331,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="favoritter75x75" width="25" height="25"/>
+        <image name="map75x75" width="25" height="25"/>
+        <image name="mere75x75" width="25" height="25"/>
+        <image name="udforsk75x75" width="25" height="25"/>
         <namedColor name="bajerGrøn">
             <color red="0.25299999117851257" green="0.74299997091293335" blue="0.5220000147819519" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
