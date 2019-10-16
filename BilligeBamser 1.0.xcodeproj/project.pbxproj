@@ -21,6 +21,7 @@
 		EEAECAD723577CF500C555E0 /* BarListe.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAECAD623577CF500C555E0 /* BarListe.swift */; };
 		EEAECAD923578ADE00C555E0 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAECAD823578ADE00C555E0 /* MapViewController.swift */; };
 		EEAECADC23579D2B00C555E0 /* UdforskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAECADB23579D2B00C555E0 /* UdforskViewController.swift */; };
+		EEAECAE22357A1EE00C555E0 /* MereViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAECAE12357A1EE00C555E0 /* MereViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		EEAECAD623577CF500C555E0 /* BarListe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarListe.swift; sourceTree = "<group>"; };
 		EEAECAD823578ADE00C555E0 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		EEAECADB23579D2B00C555E0 /* UdforskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UdforskViewController.swift; sourceTree = "<group>"; };
+		EEAECAE12357A1EE00C555E0 /* MereViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MereViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				EE805A30234DF9B40095651D /* AppDelegate.swift */,
+				EEAECAE12357A1EE00C555E0 /* MereViewController.swift */,
 				EE805A32234DF9B40095651D /* ViewController.swift */,
 				EE805A34234DF9B40095651D /* Main.storyboard */,
 				EEAECADB23579D2B00C555E0 /* UdforskViewController.swift */,
@@ -233,6 +236,7 @@
 				EE805A33234DF9B40095651D /* ViewController.swift in Sources */,
 				287ECAE9234E3D9800487427 /* MainUITabBarController.swift in Sources */,
 				EEAECADC23579D2B00C555E0 /* UdforskViewController.swift in Sources */,
+				EEAECAE22357A1EE00C555E0 /* MereViewController.swift in Sources */,
 				EEAECAD723577CF500C555E0 /* BarListe.swift in Sources */,
 				287ECAEF234E5FF200487427 /* OpretBajerViewController.swift in Sources */,
 				EE805A31234DF9B40095651D /* AppDelegate.swift in Sources */,

@@ -82,7 +82,7 @@
         <!--Mere-->
         <scene sceneID="0Wj-8s-nbp">
             <objects>
-                <viewController id="jwm-PQ-Ta3" sceneMemberID="viewController">
+                <viewController id="jwm-PQ-Ta3" customClass="MereViewController" customModule="BilligeBamser_1_0" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FYj-dk-Ags">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
