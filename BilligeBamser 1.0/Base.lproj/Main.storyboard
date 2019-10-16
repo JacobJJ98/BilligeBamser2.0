@@ -12,12 +12,15 @@
         <!--Kort-->
         <scene sceneID="0BT-Fr-ll7">
             <objects>
-                <viewController title="Kort" id="Z6h-zG-AZk" sceneMemberID="viewController">
+                <viewController title="Kort" id="Z6h-zG-AZk" customClass="MapViewController" customModule="BilligeBamser_1_0" customModuleProvider="target" sceneMemberID="viewController">
                     <mapView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="5Lb-qc-fjp">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     </mapView>
                     <navigationItem key="navigationItem" title="Kort" id="oAf-W4-9Vb"/>
+                    <connections>
+                        <outlet property="mapView" destination="5Lb-qc-fjp" id="tJV-eD-Ff9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="smj-fP-mRQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -237,7 +240,7 @@
         <scene sceneID="IZQ-lG-fkf">
             <objects>
                 <navigationController title="Favoritter" automaticallyAdjustsScrollViewInsets="NO" id="c1A-Nd-sju" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="favoritter75x75" id="oXF-bw-gWx"/>
+                    <tabBarItem key="tabBarItem" title="" image="favoritter75x75" selectedImage="favoritterBlue75x75" id="oXF-bw-gWx"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="wVd-qE-xny">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -261,7 +264,7 @@
         <scene sceneID="yqp-0F-xQk">
             <objects>
                 <navigationController title="Mere" automaticallyAdjustsScrollViewInsets="NO" id="Hov-iz-ci7" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="mereBlue75x75" selectedImage="mereBlue75x75" id="Qhy-Hi-DEH"/>
+                    <tabBarItem key="tabBarItem" title="" image="mere75x75" selectedImage="mere75x75" id="Qhy-Hi-DEH"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="tHe-zW-t6I">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -285,7 +288,7 @@
         <scene sceneID="2Vd-uL-nuF">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="YhJ-bA-exD" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="mapBlue75x75" id="hKN-Ay-Ilc"/>
+                    <tabBarItem key="tabBarItem" title="" image="map75x75" selectedImage="map75x75" id="hKN-Ay-Ilc"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="Dvm-X6-HeV">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -309,7 +312,7 @@
         <scene sceneID="ETx-Uw-TNG">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9sm-LX-bnG" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="udforsk75x75" id="mvZ-6V-2gt"/>
+                    <tabBarItem key="tabBarItem" title="" image="udforsk75x75" selectedImage="udforsk75x75" id="mvZ-6V-2gt"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="doB-eF-X9n">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -332,8 +335,9 @@
     </scenes>
     <resources>
         <image name="favoritter75x75" width="25" height="25"/>
-        <image name="mapBlue75x75" width="25" height="25"/>
-        <image name="mereBlue75x75" width="25" height="25"/>
+        <image name="favoritterBlue75x75" width="25" height="25"/>
+        <image name="map75x75" width="25" height="25"/>
+        <image name="mere75x75" width="25" height="25"/>
         <image name="udforsk75x75" width="25" height="25"/>
         <namedColor name="bajerGrøn">
             <color red="0.25299999117851257" green="0.74299997091293335" blue="0.5220000147819519" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

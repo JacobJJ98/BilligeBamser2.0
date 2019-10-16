@@ -11,10 +11,15 @@
 		287ECAED234E541800487427 /* Theme.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 287ECAEC234E541800487427 /* Theme.xcassets */; };
 		287ECAEF234E5FF200487427 /* OpretBajerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287ECAEE234E5FF200487427 /* OpretBajerViewController.swift */; };
 		28C5E9C2234F9BEA00BE284D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28C5E9C1234F9BEA00BE284D /* Assets.xcassets */; };
+		5A122BC17CAC7E5F5394BDA2 /* Pods_BilligeBamser_1_0.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F47A92EC5D00DAD65B0498A /* Pods_BilligeBamser_1_0.framework */; };
 		EE805A31234DF9B40095651D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE805A30234DF9B40095651D /* AppDelegate.swift */; };
 		EE805A33234DF9B40095651D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE805A32234DF9B40095651D /* ViewController.swift */; };
 		EE805A36234DF9B40095651D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE805A34234DF9B40095651D /* Main.storyboard */; };
 		EE805A3B234DF9B60095651D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE805A39234DF9B60095651D /* LaunchScreen.storyboard */; };
+		EEAECAD323575FAE00C555E0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EEAECAD223575FAE00C555E0 /* GoogleService-Info.plist */; };
+		EEAECAD52357733200C555E0 /* Bar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAECAD42357733200C555E0 /* Bar.swift */; };
+		EEAECAD723577CF500C555E0 /* BarListe.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAECAD623577CF500C555E0 /* BarListe.swift */; };
+		EEAECAD923578ADE00C555E0 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAECAD823578ADE00C555E0 /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,12 +27,19 @@
 		287ECAEC234E541800487427 /* Theme.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Theme.xcassets; sourceTree = "<group>"; };
 		287ECAEE234E5FF200487427 /* OpretBajerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpretBajerViewController.swift; sourceTree = "<group>"; };
 		28C5E9C1234F9BEA00BE284D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		380EDE949A882405A61B8F77 /* Pods-BilligeBamser 1.0.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BilligeBamser 1.0.debug.xcconfig"; path = "Target Support Files/Pods-BilligeBamser 1.0/Pods-BilligeBamser 1.0.debug.xcconfig"; sourceTree = "<group>"; };
+		7F47A92EC5D00DAD65B0498A /* Pods_BilligeBamser_1_0.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BilligeBamser_1_0.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		861AAD122035663F003CE24D /* Pods-BilligeBamser 1.0.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BilligeBamser 1.0.release.xcconfig"; path = "Target Support Files/Pods-BilligeBamser 1.0/Pods-BilligeBamser 1.0.release.xcconfig"; sourceTree = "<group>"; };
 		EE805A2D234DF9B40095651D /* BilligeBamser 1.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BilligeBamser 1.0.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE805A30234DF9B40095651D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE805A32234DF9B40095651D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EE805A35234DF9B40095651D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EE805A3A234DF9B60095651D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EE805A3C234DF9B60095651D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EEAECAD223575FAE00C555E0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		EEAECAD42357733200C555E0 /* Bar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bar.swift; sourceTree = "<group>"; };
+		EEAECAD623577CF500C555E0 /* BarListe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarListe.swift; sourceTree = "<group>"; };
+		EEAECAD823578ADE00C555E0 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,17 +47,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A122BC17CAC7E5F5394BDA2 /* Pods_BilligeBamser_1_0.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C2D218BA4494DD413AD8CB55 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				380EDE949A882405A61B8F77 /* Pods-BilligeBamser 1.0.debug.xcconfig */,
+				861AAD122035663F003CE24D /* Pods-BilligeBamser 1.0.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		D4A4F1478BFF1A85B3C11AE3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7F47A92EC5D00DAD65B0498A /* Pods_BilligeBamser_1_0.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		EE805A24234DF9B40095651D = {
 			isa = PBXGroup;
 			children = (
 				EE805A2F234DF9B40095651D /* BilligeBamser 1.0 */,
 				EE805A2E234DF9B40095651D /* Products */,
+				C2D218BA4494DD413AD8CB55 /* Pods */,
+				D4A4F1478BFF1A85B3C11AE3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,11 +96,15 @@
 				EE805A32234DF9B40095651D /* ViewController.swift */,
 				EE805A34234DF9B40095651D /* Main.storyboard */,
 				287ECAEE234E5FF200487427 /* OpretBajerViewController.swift */,
+				EEAECAD823578ADE00C555E0 /* MapViewController.swift */,
 				287ECAE8234E3D9800487427 /* MainUITabBarController.swift */,
 				28C5E9C1234F9BEA00BE284D /* Assets.xcassets */,
 				287ECAEC234E541800487427 /* Theme.xcassets */,
 				EE805A39234DF9B60095651D /* LaunchScreen.storyboard */,
 				EE805A3C234DF9B60095651D /* Info.plist */,
+				EEAECAD223575FAE00C555E0 /* GoogleService-Info.plist */,
+				EEAECAD42357733200C555E0 /* Bar.swift */,
+				EEAECAD623577CF500C555E0 /* BarListe.swift */,
 			);
 			path = "BilligeBamser 1.0";
 			sourceTree = "<group>";
@@ -80,9 +116,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EE805A3F234DF9B60095651D /* Build configuration list for PBXNativeTarget "BilligeBamser 1.0" */;
 			buildPhases = (
+				DCA34F65E16957E50266DE1C /* [CP] Check Pods Manifest.lock */,
 				EE805A29234DF9B40095651D /* Sources */,
 				EE805A2A234DF9B40095651D /* Frameworks */,
 				EE805A2B234DF9B40095651D /* Resources */,
+				85D57C4CAF5DDB941E0B4C8F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,6 +171,7 @@
 			files = (
 				EE805A3B234DF9B60095651D /* LaunchScreen.storyboard in Resources */,
 				287ECAED234E541800487427 /* Theme.xcassets in Resources */,
+				EEAECAD323575FAE00C555E0 /* GoogleService-Info.plist in Resources */,
 				28C5E9C2234F9BEA00BE284D /* Assets.xcassets in Resources */,
 				EE805A36234DF9B40095651D /* Main.storyboard in Resources */,
 			);
@@ -140,15 +179,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		85D57C4CAF5DDB941E0B4C8F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BilligeBamser 1.0/Pods-BilligeBamser 1.0-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BilligeBamser 1.0/Pods-BilligeBamser 1.0-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BilligeBamser 1.0/Pods-BilligeBamser 1.0-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DCA34F65E16957E50266DE1C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BilligeBamser 1.0-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		EE805A29234DF9B40095651D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEAECAD52357733200C555E0 /* Bar.swift in Sources */,
 				EE805A33234DF9B40095651D /* ViewController.swift in Sources */,
 				287ECAE9234E3D9800487427 /* MainUITabBarController.swift in Sources */,
+				EEAECAD723577CF500C555E0 /* BarListe.swift in Sources */,
 				287ECAEF234E5FF200487427 /* OpretBajerViewController.swift in Sources */,
 				EE805A31234DF9B40095651D /* AppDelegate.swift in Sources */,
+				EEAECAD923578ADE00C555E0 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,9 +376,10 @@
 		};
 		EE805A40234DF9B60095651D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 380EDE949A882405A61B8F77 /* Pods-BilligeBamser 1.0.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8B9KRX6NBR;
+				DEVELOPMENT_TEAM = G6TSQJ6DQ5;
 				INFOPLIST_FILE = "BilligeBamser 1.0/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -310,9 +395,10 @@
 		};
 		EE805A41234DF9B60095651D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 861AAD122035663F003CE24D /* Pods-BilligeBamser 1.0.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8B9KRX6NBR;
+				DEVELOPMENT_TEAM = G6TSQJ6DQ5;
 				INFOPLIST_FILE = "BilligeBamser 1.0/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (

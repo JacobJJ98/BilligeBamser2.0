@@ -7,4 +7,14 @@ target 'BilligeBamser 1.0' do
 
   # Pods for BilligeBamser 1.0
 
+# add the Firebase pod for Google Analytics
+
+pod 'Firebase/Analytics'
+pod 'Firebase/Core'
+pod 'Firebase/Firestore'
+
+# add pods for any other desired Firebase products
+# https://firebase.google.com/docs/ios/setup#available-pods
+
+
 end
