@@ -82,7 +82,7 @@ class UdforskViewController: UIViewController {
             
            print("BAREN UDSKRIVES: ")
            BarListe.shared.udskrivTest()
-        SVProgressHUD.dismiss()
+        SVProgressHUD.dismiss(withDelay: 2)
             
        }
     

@@ -189,10 +189,10 @@
             </objects>
             <point key="canvasLocation" x="-1995.6521739130437" y="921.42857142857133"/>
         </scene>
-        <!--View Controller-->
+        <!--Logind View Controller-->
         <scene sceneID="t1o-dM-OMf">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="feu-lp-tZK" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="feu-lp-tZK" customClass="LogindViewController" customModule="BilligeBamser_1_0" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mhc-PN-R7Q">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -205,6 +205,22 @@
                                     <segue destination="d6o-K0-wM0" kind="presentation" id="4vN-Gh-a7W"/>
                                 </connections>
                             </button>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" barStyle="blackTranslucent" translatesAutoresizingMaskIntoConstraints="NO" id="wxN-GW-q19">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="barTintColor" name="bajerGrøn"/>
+                                <items>
+                                    <navigationItem title="Log ind" id="vdb-S4-9qa">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="UUX-lY-qZf">
+                                            <connections>
+                                                <action selector="TilbageTrykket:" destination="feu-lp-tZK" id="Pac-8a-89T"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" name="bajerGrøn"/>
                         <viewLayoutGuide key="safeArea" id="sw5-Qh-25K"/>
