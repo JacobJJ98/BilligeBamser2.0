@@ -237,7 +237,7 @@
         <scene sceneID="IZQ-lG-fkf">
             <objects>
                 <navigationController title="Favoritter" automaticallyAdjustsScrollViewInsets="NO" id="c1A-Nd-sju" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="favoritterOrange75x75" id="oXF-bw-gWx"/>
+                    <tabBarItem key="tabBarItem" title="" image="favoritter75x75" id="oXF-bw-gWx"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="wVd-qE-xny">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -309,7 +309,7 @@
         <scene sceneID="ETx-Uw-TNG">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9sm-LX-bnG" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="udforskGul75x75" id="mvZ-6V-2gt"/>
+                    <tabBarItem key="tabBarItem" title="" image="udforsk75x75" id="mvZ-6V-2gt"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="doB-eF-X9n">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -331,10 +331,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="favoritterOrange75x75" width="25" height="25"/>
+        <image name="favoritter75x75" width="25" height="25"/>
         <image name="mapBlue75x75" width="25" height="25"/>
         <image name="mereBlue75x75" width="25" height="25"/>
-        <image name="udforskGul75x75" width="25" height="25"/>
+        <image name="udforsk75x75" width="25" height="25"/>
         <namedColor name="bajerGrøn">
             <color red="0.25299999117851257" green="0.74299997091293335" blue="0.5220000147819519" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
