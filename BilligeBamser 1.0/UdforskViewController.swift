@@ -18,10 +18,16 @@ class UdforskViewController: UIViewController {
 
        override func viewDidLoad() {
            super.viewDidLoad()
-           SVProgressHUD.show()
            print("INDE I OPRETBAJER")
-           self.HentBarer()
        }
+    
+    // lavet for at teste om kortet opdatere rigtigt når der ændres i DB. Så dette skal nok ikke være der endeligt!
+    override func viewDidAppear(_ animated: Bool) {
+        SVProgressHUD.show()
+        BarListe.shared.barer.removeAll()
+        self.HentBarer()
+        
+    }
        
        func HentBarer() -> Void {
             db = Firestore.firestore()

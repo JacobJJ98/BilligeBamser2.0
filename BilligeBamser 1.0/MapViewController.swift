@@ -21,7 +21,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         // Denne her skal flyttes hen når man opretter sig tænker jeg. Så man tillader der!!
         locationManager.requestWhenInUseAuthorization()
         
-        //Resterende sørger for at sætte current location som der hvor Map starter!! 
+        //Resterende sørger for at sætte current location som der hvor Map starter!!
         if CLLocationManager.locationServicesEnabled() {
             locationManager.delegate = self
             locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
@@ -30,15 +30,22 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
                 let initialLocation = CLLocation(latitude: lokationen.coordinate.latitude, longitude: lokationen.coordinate.longitude)
                 centerMapOnLocation(location: initialLocation)
             }
+        
+    }
+
+        }
+    override func viewDidDisappear(_ animated: Bool) {
+        
+        mapView.removeAnnotations(BarListe.shared.barer)
+    }
+        
+    override func viewDidAppear(_ animated: Bool) {
+        print("APPEAR MAP!!")
             for bar in BarListe.shared.barer {
                 mapView.addAnnotation(bar)
             }
-            
         }
-        
-        
-        
-    }
+    
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else { return }
@@ -54,14 +61,5 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+   
 }
