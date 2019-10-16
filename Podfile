@@ -12,6 +12,7 @@ target 'BilligeBamser 1.0' do
 pod 'Firebase/Analytics'
 pod 'Firebase/Core'
 pod 'Firebase/Firestore'
+pod 'SVProgressHUD'
 
 # add pods for any other desired Firebase products
 # https://firebase.google.com/docs/ios/setup#available-pods

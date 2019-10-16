@@ -7,20 +7,19 @@
 //
 
 import Foundation
+import MapKit
 
-class Bar {
+class Bar: NSObject, MKAnnotation {
     var flaskepris: Int
-    var latitude: Double
-    var longitude: Double
     var navn: String
     var rygning: Bool
+    let coordinate: CLLocationCoordinate2D
     
-    init(flaskepris: Int, latitude: Double, longitude: Double, navn: String, rygning: Bool) {
+    init(flaskepris: Int, navn: String, rygning: Bool, coordinate: CLLocationCoordinate2D) {
         self.flaskepris = flaskepris
-        self.latitude = latitude
-        self.longitude = longitude
         self.navn = navn
         self.rygning = rygning
+        self.coordinate = coordinate
     }
     
 }
