@@ -54,6 +54,7 @@ class LogindViewController: UIViewController, UITextFieldDelegate {
                         // self.showSimpleAlert(besked: "Logind fejlet!")
                         
                     } else {
+                        BarListe.shared.HentBarer()
                         SVProgressHUD.dismiss()
                         self.performSegue(withIdentifier: "efterLoginSegue", sender: nil)
                         

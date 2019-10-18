@@ -253,13 +253,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xG9-FA-xnp">
-                                <rect key="frame" x="188" y="594" width="38" height="30"/>
-                                <state key="normal" title="Login"/>
-                                <connections>
-                                    <action selector="onLogin:" destination="feu-lp-tZK" eventType="touchUpInside" id="sQF-SQ-b9v"/>
-                                </connections>
-                            </button>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" barStyle="blackTranslucent" translatesAutoresizingMaskIntoConstraints="NO" id="wxN-GW-q19">
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
@@ -298,13 +291,20 @@
                                 <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tr1-RR-G0p">
-                                <rect key="frame" x="170" y="481" width="74" height="49"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tr1-RR-G0p">
+                                <rect key="frame" x="170" y="481" width="74" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="FB!!"/>
                                 <connections>
                                     <action selector="FB:" destination="feu-lp-tZK" eventType="touchUpInside" id="jWi-P0-wcA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xG9-FA-xnp">
+                                <rect key="frame" x="170" y="591" width="70" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Login"/>
+                                <connections>
+                                    <action selector="onLogin:" destination="feu-lp-tZK" eventType="touchUpInside" id="sQF-SQ-b9v"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -315,14 +315,14 @@
                             <constraint firstItem="HSv-oL-Ndk" firstAttribute="leading" secondItem="sw5-Qh-25K" secondAttribute="leading" constant="79" id="7DW-fb-Ys0"/>
                             <constraint firstItem="fpW-5F-EOg" firstAttribute="leading" secondItem="sw5-Qh-25K" secondAttribute="leading" constant="79" id="8Dt-Yr-3uM"/>
                             <constraint firstItem="nRO-rW-g8I" firstAttribute="leading" secondItem="sw5-Qh-25K" secondAttribute="leading" constant="79" id="8m4-xE-qz5"/>
-                            <constraint firstItem="xG9-FA-xnp" firstAttribute="top" secondItem="sw5-Qh-25K" secondAttribute="top" constant="550" id="BdH-Yy-27Y"/>
                             <constraint firstItem="sw5-Qh-25K" firstAttribute="trailing" secondItem="fpW-5F-EOg" secondAttribute="trailing" constant="78" id="G7D-x0-LXM"/>
+                            <constraint firstItem="tr1-RR-G0p" firstAttribute="leading" secondItem="sw5-Qh-25K" secondAttribute="leading" constant="170" id="GvL-5e-Nyc"/>
                             <constraint firstItem="y3A-r1-7JO" firstAttribute="top" secondItem="fpW-5F-EOg" secondAttribute="bottom" constant="58" id="LeM-NY-MSa"/>
-                            <constraint firstItem="sw5-Qh-25K" firstAttribute="trailing" secondItem="xG9-FA-xnp" secondAttribute="trailing" constant="188" id="Sua-qQ-MPP"/>
-                            <constraint firstItem="xG9-FA-xnp" firstAttribute="leading" secondItem="sw5-Qh-25K" secondAttribute="leading" constant="188" id="VB7-DF-Cd9"/>
+                            <constraint firstItem="sw5-Qh-25K" firstAttribute="trailing" secondItem="tr1-RR-G0p" secondAttribute="trailing" constant="170" id="Oul-hP-sVz"/>
                             <constraint firstItem="nRO-rW-g8I" firstAttribute="top" secondItem="fpW-5F-EOg" secondAttribute="bottom" constant="2" id="a0E-UY-gPI"/>
                             <constraint firstItem="sw5-Qh-25K" firstAttribute="trailing" secondItem="nRO-rW-g8I" secondAttribute="trailing" constant="78" id="adS-8z-Of2"/>
                             <constraint firstItem="sw5-Qh-25K" firstAttribute="trailing" secondItem="y3A-r1-7JO" secondAttribute="trailing" constant="78" id="aqt-E2-9t8"/>
+                            <constraint firstItem="tr1-RR-G0p" firstAttribute="top" secondItem="sw5-Qh-25K" secondAttribute="top" constant="437" id="f7b-uS-COL"/>
                             <constraint firstItem="y3A-r1-7JO" firstAttribute="leading" secondItem="sw5-Qh-25K" secondAttribute="leading" constant="79" id="q4F-KZ-bFp"/>
                             <constraint firstItem="sw5-Qh-25K" firstAttribute="trailing" secondItem="HSv-oL-Ndk" secondAttribute="trailing" constant="78" id="xOS-vK-MpH"/>
                         </constraints>
@@ -474,7 +474,7 @@
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="d0Q-4Y-KKX"/>
+        <segue reference="gVz-kF-XJC"/>
         <segue reference="LEn-V1-kBe"/>
     </inferredMetricsTieBreakers>
 </document>
