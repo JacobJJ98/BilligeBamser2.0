@@ -17,10 +17,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         super.viewDidLoad()
         // set initial location in Honolulu
         let locationManager = CLLocationManager()
-        
-        // Denne her skal flyttes hen når man opretter sig tænker jeg. Så man tillader der!!
-        locationManager.requestWhenInUseAuthorization()
-        
+      
         //Resterende sørger for at sætte current location som der hvor Map starter!!
         if CLLocationManager.locationServicesEnabled() {
             locationManager.delegate = self

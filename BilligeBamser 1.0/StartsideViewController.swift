@@ -11,13 +11,22 @@ import SVProgressHUD
 import FirebaseAuth
 import FBSDKCoreKit
 import FBSDKLoginKit
+import MapKit
 
 class StartsideViewController: UIViewController {
+    private let locationManager = CLLocationManager()
     @IBOutlet weak var loggetindLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+      
+        locationManager.requestWhenInUseAuthorization()
     }
     // denne metode gør at den logger ind via FaceBook!!
     @IBAction func loginMedFacebook(_ sender: UIButton) {
