@@ -7,9 +7,21 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class MereViewController: UIViewController {
 
+    @IBAction func logUD(_ sender: UIButton) {
+       // if Auth.auth().user != nil {
+            try! Auth.auth().signOut()
+    
+         if Auth.auth().currentUser == nil {
+            print("BRGUEREN ER NUL OG SEGUE SKAL BRUGES NU!!!")
+            self.performSegue(withIdentifier: "loggedOutSegue", sender: nil)
+        }
+        
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         print("MERE VIEW!!")

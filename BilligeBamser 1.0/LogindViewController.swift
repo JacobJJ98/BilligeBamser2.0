@@ -7,9 +7,78 @@
 //
 
 import UIKit
+import SVProgressHUD
+import FirebaseAuth
 
-class LogindViewController: UIViewController {
+class LogindViewController: UIViewController, UITextFieldDelegate {
    
+    @IBOutlet weak var mailFelt: UITextField!
+    
+    @IBOutlet weak var kodeFelt: UITextField!
+    @IBOutlet weak var afvistKode: UILabel!
+    @IBOutlet weak var afvistMail: UILabel!
+    
+    @IBAction func FB(_ sender: UIButton) {
+       
+    }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        mailFelt.delegate = self
+        kodeFelt.delegate = self
+        
+    }
+    
+    
+    @IBAction func onLogin(_ sender: UIButton) {
+        if let mail = mailFelt.text {
+            guard mail.count > 0 else {
+                afvistMail.isHidden = false
+                return
+            }
+            if let kode = kodeFelt.text {
+                guard kode.count > 0 else {
+                    afvistKode.isHidden = false
+                    return
+                }
+                SVProgressHUD.show()
+                
+                // Auth.auth().signIn(withEmail: email, password: kode)
+                Auth.auth().signIn(withEmail: mail, password: kode) { (result, err) in
+                    // tjek for fejl
+                    if err != nil {
+                        //hvis den kommer herind er der fejl!
+                        SVProgressHUD.dismiss()
+                        SVProgressHUD.showError(withStatus: "Mislykket!")
+                        SVProgressHUD.dismiss(withDelay: 0.5)
+                        // self.showSimpleAlert(besked: "Logind fejlet!")
+                        
+                    } else {
+                        SVProgressHUD.dismiss()
+                        self.performSegue(withIdentifier: "efterLoginSegue", sender: nil)
+                        
+                    }
+                }
+            }
+            
+            
+            
+        }
+    }
+    
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        print("RETURN TRYKKET!")
+        if textField == mailFelt {
+            print("DET ER MAILFELTET")
+            kodeFelt.becomeFirstResponder()
+        } else {
+            print("DET ER KODEFELTET")
+            kodeFelt.resignFirstResponder()
+        }
+        return true
+    }
+    
     
     @IBAction func TilbageTrykket(_ sender: UIBarButtonItem) {
         performSegueToReturnBack()
@@ -19,21 +88,4 @@ class LogindViewController: UIViewController {
             self.dismiss(animated: true, completion: nil)
         
     }
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

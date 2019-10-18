@@ -13,6 +13,8 @@ pod 'Firebase/Analytics'
 pod 'Firebase/Core'
 pod 'Firebase/Firestore'
 pod 'SVProgressHUD'
+pod 'Firebase/Auth'
+pod 'FBSDKLoginKit'
 
 # add pods for any other desired Firebase products
 # https://firebase.google.com/docs/ios/setup#available-pods

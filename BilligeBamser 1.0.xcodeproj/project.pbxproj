@@ -16,6 +16,8 @@
 		EE805A33234DF9B40095651D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE805A32234DF9B40095651D /* ViewController.swift */; };
 		EE805A36234DF9B40095651D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE805A34234DF9B40095651D /* Main.storyboard */; };
 		EE805A3B234DF9B60095651D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE805A39234DF9B60095651D /* LaunchScreen.storyboard */; };
+		EE954609235A508A00EC534D /* StartsideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE954608235A508A00EC534D /* StartsideViewController.swift */; };
+		EE95460B235A5DAF00EC534D /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE95460A235A5DAF00EC534D /* IntroViewController.swift */; };
 		EEAECAD323575FAE00C555E0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EEAECAD223575FAE00C555E0 /* GoogleService-Info.plist */; };
 		EEAECAD52357733200C555E0 /* Bar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAECAD42357733200C555E0 /* Bar.swift */; };
 		EEAECAD723577CF500C555E0 /* BarListe.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAECAD623577CF500C555E0 /* BarListe.swift */; };
@@ -39,6 +41,8 @@
 		EE805A35234DF9B40095651D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EE805A3A234DF9B60095651D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EE805A3C234DF9B60095651D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE954608235A508A00EC534D /* StartsideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartsideViewController.swift; sourceTree = "<group>"; };
+		EE95460A235A5DAF00EC534D /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		EEAECAD223575FAE00C555E0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EEAECAD42357733200C555E0 /* Bar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bar.swift; sourceTree = "<group>"; };
 		EEAECAD623577CF500C555E0 /* BarListe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarListe.swift; sourceTree = "<group>"; };
@@ -102,6 +106,8 @@
 				EEAECAE12357A1EE00C555E0 /* MereViewController.swift */,
 				EE805A32234DF9B40095651D /* ViewController.swift */,
 				EE805A34234DF9B40095651D /* Main.storyboard */,
+				EE95460A235A5DAF00EC534D /* IntroViewController.swift */,
+				EE954608235A508A00EC534D /* StartsideViewController.swift */,
 				EEAECAE32357AF8900C555E0 /* LogindViewController.swift */,
 				EEAECADB23579D2B00C555E0 /* UdforskViewController.swift */,
 				287ECAEE234E5FF200487427 /* OpretBajerViewController.swift */,
@@ -236,7 +242,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				EEAECAD52357733200C555E0 /* Bar.swift in Sources */,
+				EE954609235A508A00EC534D /* StartsideViewController.swift in Sources */,
 				EE805A33234DF9B40095651D /* ViewController.swift in Sources */,
+				EE95460B235A5DAF00EC534D /* IntroViewController.swift in Sources */,
 				287ECAE9234E3D9800487427 /* MainUITabBarController.swift in Sources */,
 				EEAECADC23579D2B00C555E0 /* UdforskViewController.swift in Sources */,
 				EEAECAE22357A1EE00C555E0 /* MereViewController.swift in Sources */,
