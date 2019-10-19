@@ -9,10 +9,12 @@
 import UIKit
 import CoreLocation
 import SVProgressHUD
+import FirebaseFirestore
 
 class OpretBajerViewController: UIViewController, CLLocationManagerDelegate {
     let locationManager = CLLocationManager()
-    
+    var db: Firestore!
+   
     var pris : Int? = nil
     var cor : CLLocationCoordinate2D?
     var midlerRyg : Bool? = nil
@@ -71,7 +73,8 @@ class OpretBajerViewController: UIViewController, CLLocationManagerDelegate {
         
     }
     func tilføjTilFirebase() -> Void {
-        print("INDE I OPRET EFTER KOR")
+         db = Firestore.firestore()
+        print("INDE I FIREBASE tilføj")
         if let kor = cor {
             if let navn_ = navn {
                 if let pris_ = pris {
@@ -82,12 +85,33 @@ class OpretBajerViewController: UIViewController, CLLocationManagerDelegate {
                         print(pris_)
                         print(rygningTilladt.isOn)
                     
+                    var ref: DocumentReference? = nil
+                    ref = db.collection("Bar").addDocument(data:[
+                        "flaskepris": pris_,
+                        "latitude": "\(kor.latitude)",
+                        "longitude": "\(kor.longitude)",
+                        "navn": navn_,
+                        "rygning": rygningTilladt.isOn
+                    ]) { err in
+                        if let err = err {
+                            print("Error adding document: \(err)")
+                            SVProgressHUD.showError(withStatus: "Mislykkedes")
+                        } else {
+                            print("Document added with ID: \(ref!.documentID)")
+                            SVProgressHUD.showSuccess(withStatus: "")
+                            SVProgressHUD.dismiss {
+                                BarListe.shared.HentBarer()
+                            }
+                            self.performSegueToReturnBack()
+                            
+                            
+                        }
+                    }
                     
                 }
             }
         }
-        SVProgressHUD.showSuccess(withStatus: "")
-        self.performSegueToReturnBack()
+        
     }
     func tilføjNavnogPris() -> Void {
         if let navnmidler = barNavn.text {
