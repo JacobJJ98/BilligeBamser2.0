@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreLocation
+import SVProgressHUD
 
 class OpretBajerViewController: UIViewController, CLLocationManagerDelegate {
     let locationManager = CLLocationManager()
@@ -37,10 +38,12 @@ class OpretBajerViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     @IBAction func opretBar(_ sender: UIButton) {
+        SVProgressHUD.show()
         fjernAfvistLabels()
         print("opretBar er trykket")
-        // kaldes for at finde lokationen og derefter kaldes der en ny metode inde fra denne!
-        self.findLokation()
+        // kaldes for at oversætte fra Textfield og hen til klassevariable og kalder derefter find lokation som så derefter vil kalde tilføj til Firebase
+        self.tilføjNavnogPris()
+        
         
         }
         
@@ -67,8 +70,26 @@ class OpretBajerViewController: UIViewController, CLLocationManagerDelegate {
             self.dismiss(animated: true, completion: nil)
         
     }
-    
-    func opretBarenEfterKoordinat() -> Void {
+    func tilføjTilFirebase() -> Void {
+        print("INDE I OPRET EFTER KOR")
+        if let kor = cor {
+            if let navn_ = navn {
+                if let pris_ = pris {
+                        print("BAREN KAN NU OPRETTES MED DISSE VÆRDIER: ")
+                        print(kor.latitude)
+                        print(kor.longitude)
+                        print(navn_)
+                        print(pris_)
+                        print(rygningTilladt.isOn)
+                    
+                    
+                }
+            }
+        }
+        SVProgressHUD.showSuccess(withStatus: "")
+        self.performSegueToReturnBack()
+    }
+    func tilføjNavnogPris() -> Void {
         if let navnmidler = barNavn.text {
             guard navnmidler.count > 0 else {
                 navnAfvist.isHidden = false
@@ -87,21 +108,8 @@ class OpretBajerViewController: UIViewController, CLLocationManagerDelegate {
                 pris = prisSomInt
             }
         }
-        print("INDE I OPRET EFTER KOR")
-        if let kor = cor {
-            if let navn_ = navn {
-                if let pris_ = pris {
-                        print("BAREN KAN NU OPRETTES MED DISSE VÆRDIER: ")
-                        print(kor.latitude)
-                        print(kor.longitude)
-                        print(navn_)
-                        print(pris_)
-                        print(rygningTilladt.isOn)
-                    
-                    
-                }
-            }
-        }
+        
+        self.findLokation()
     }
     
      func findLokation() -> Void {
@@ -119,7 +127,7 @@ class OpretBajerViewController: UIViewController, CLLocationManagerDelegate {
                         print(lokationen.coordinate.longitude)
                         // sætter cor til være den nuværende lokation!
                         cor = lokationen.coordinate
-                        self.opretBarenEfterKoordinat()
+                        self.tilføjTilFirebase()
                       } else {
                         // TODO:  lav en allert eller noget NICE
                         print("DU SKAL ACCEPTERE BRUG AF LOKATION!!!")
@@ -156,7 +164,7 @@ class OpretBajerViewController: UIViewController, CLLocationManagerDelegate {
                      //   print(location.coordinate.longitude)
                         
                         self.cor = location.coordinate
-                        self.opretBarenEfterKoordinat()
+                        self.tilføjTilFirebase()
                         
                     }
                     
