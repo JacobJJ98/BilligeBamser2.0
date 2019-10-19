@@ -167,12 +167,12 @@ class OpretBajerViewController: UIViewController, CLLocationManagerDelegate {
                         return
                     }
                 }
-                let address = "Toftebakken 15, 3790 Hasle"
+                // let address = "Toftebakken 15, 3790 Hasle"
 
                 let geoCoder = CLGeocoder()
-                // if let adress = adresse.text {
+                 if let adress = adresse.text {
                     
-                    geoCoder.geocodeAddressString(address) { (placemarks, error) in
+                    geoCoder.geocodeAddressString(adress) { (placemarks, error) in
                         guard let placemarks = placemarks, let location = placemarks.first?.location
                          else {
                             // handle no location found
@@ -192,7 +192,7 @@ class OpretBajerViewController: UIViewController, CLLocationManagerDelegate {
                         
                     }
                     
-               // }
+                }
                 
             
           }
