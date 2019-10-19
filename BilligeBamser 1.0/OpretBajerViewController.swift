@@ -11,6 +11,24 @@ import UIKit
 class OpretBajerViewController: UIViewController {
     
 
+    @IBOutlet weak var barNavn: UITextField!
+    @IBOutlet weak var flaskePris: UITextField!
+    @IBOutlet weak var rygningTilladt: UISwitch!
+    @IBOutlet weak var adresse: UITextField!
+    @IBAction func vedAendretLokation(_ sender: UISwitch) {
+        print("lokation ændret!!")
+        if sender.isOn == false {
+            adresse.backgroundColor = UIColor.white.withAlphaComponent(1)
+            adresse.isEnabled = true
+        } else {
+            adresse.backgroundColor = UIColor.white.withAlphaComponent(0.4)
+            adresse.isEnabled = false
+        }
+    }
+    
+    @IBAction func opretBar(_ sender: UIButton) {
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
