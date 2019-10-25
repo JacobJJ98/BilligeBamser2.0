@@ -8,7 +8,6 @@
 
 import UIKit
 import FirebaseAuth
-//HEJ MED DIG!! NU MASTER!!
 
 class IntroViewController: UIViewController, UITabBarControllerDelegate {
     
