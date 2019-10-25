@@ -9,7 +9,9 @@
 import UIKit
 import FirebaseAuth
 
-class IntroViewController: UIViewController {
+class IntroViewController: UIViewController, UITabBarControllerDelegate {
+    
+    let tabbarController = CustomTabbarController()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +28,7 @@ class IntroViewController: UIViewController {
                      print("INDE I LOGGET IND: \(Auth.auth().currentUser?.uid)")
             BarListe.shared.HentBarer()
             sleep(2)
-                self.performSegue(withIdentifier: "forOldUser", sender: nil)
+               self.present(tabbarController, animated: true, completion: nil)
               
                } else {
              //  SVProgressHUD.showInfo(withStatus: "IKKE LOGGET IND!")

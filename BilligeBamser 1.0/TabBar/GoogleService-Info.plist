@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+
+    <key>CFBundleURLTypes</key>
+    <array>
+      <dict>
+      <key>CFBundleURLSchemes</key>
+      <array>
+        <string>fb442516993043480</string>
+      </array>
+      </dict>
+    </array>
+    <key>FacebookAppID</key>
+    <string>442516993043480</string>
+    <key>FacebookDisplayName</key>
+    <string>BilligeBamser</string>
+    
+	<key>CLIENT_ID</key>
+	<string>1032176007618-fvv7nvpu37j2lvhmcavkp9fqdsq5cuk3.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.1032176007618-fvv7nvpu37j2lvhmcavkp9fqdsq5cuk3</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDA9EvZ4QpUuudtFI_tzknJ4D_pgeIWOiY</string>
+	<key>GCM_SENDER_ID</key>
+	<string>1032176007618</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>Nicolai-Dam</string>
+	<key>PROJECT_ID</key>
+	<string>billigebamser</string>
+	<key>STORAGE_BUCKET</key>
+	<string>billigebamser.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:1032176007618:ios:2b4d82872dc798335c3e5b</string>
+	<key>DATABASE_URL</key>
+	<string>https://billigebamser.firebaseio.com</string>
+</dict>
+</plist>

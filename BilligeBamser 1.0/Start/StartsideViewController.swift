@@ -17,6 +17,8 @@ class StartsideViewController: UIViewController {
     private let locationManager = CLLocationManager()
     @IBOutlet weak var loggetindLabel: UILabel!
     
+    let tabbarController = CustomTabbarController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -71,7 +73,7 @@ class StartsideViewController: UIViewController {
                     print("INDE FRA SSVC")
                     print(BarListe.shared.udskrivTest())
                     SVProgressHUD.dismiss()
-                    self.performSegue(withIdentifier: "medFBSegue", sender: nil)
+                    self.present(self.tabbarController, animated: true, completion: nil)
                       
                           
                        

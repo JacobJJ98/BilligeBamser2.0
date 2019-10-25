@@ -7,49 +7,57 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		287ECAE9234E3D9800487427 /* MainUITabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287ECAE8234E3D9800487427 /* MainUITabBarController.swift */; };
+		2865BAC22361935D00CE8878 /* ExampleBouncesContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2865BABE2361934D00CE8878 /* ExampleBouncesContentView.swift */; };
+		2865BAC32361935D00CE8878 /* ExampleNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2865BABF2361935200CE8878 /* ExampleNavigationController.swift */; };
+		2865BAC42361935D00CE8878 /* ExampleBasicContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2865BAC02361935800CE8878 /* ExampleBasicContentView.swift */; };
+		2865BAC52361935D00CE8878 /* ExampleIrregularityContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2865BAC12361935D00CE8878 /* ExampleIrregularityContentView.swift */; };
+		2865BAC72361936400CE8878 /* CustomTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2865BAC62361936400CE8878 /* CustomTabbarController.swift */; };
+		2865BAC9236193F600CE8878 /* TabbarContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2865BAC8236193F600CE8878 /* TabbarContentView.swift */; };
 		287ECAED234E541800487427 /* Theme.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 287ECAEC234E541800487427 /* Theme.xcassets */; };
 		287ECAEF234E5FF200487427 /* OpretBajerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287ECAEE234E5FF200487427 /* OpretBajerViewController.swift */; };
 		28C5E9C2234F9BEA00BE284D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28C5E9C1234F9BEA00BE284D /* Assets.xcassets */; };
 		5A122BC17CAC7E5F5394BDA2 /* Pods_BilligeBamser_1_0.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F47A92EC5D00DAD65B0498A /* Pods_BilligeBamser_1_0.framework */; };
 		EE805A31234DF9B40095651D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE805A30234DF9B40095651D /* AppDelegate.swift */; };
-		EE805A33234DF9B40095651D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE805A32234DF9B40095651D /* ViewController.swift */; };
 		EE805A36234DF9B40095651D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE805A34234DF9B40095651D /* Main.storyboard */; };
 		EE805A3B234DF9B60095651D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE805A39234DF9B60095651D /* LaunchScreen.storyboard */; };
 		EE954609235A508A00EC534D /* StartsideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE954608235A508A00EC534D /* StartsideViewController.swift */; };
 		EE95460B235A5DAF00EC534D /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE95460A235A5DAF00EC534D /* IntroViewController.swift */; };
-		EEAECAD323575FAE00C555E0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EEAECAD223575FAE00C555E0 /* GoogleService-Info.plist */; };
 		EEAECAD52357733200C555E0 /* Bar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAECAD42357733200C555E0 /* Bar.swift */; };
 		EEAECAD723577CF500C555E0 /* BarListe.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAECAD623577CF500C555E0 /* BarListe.swift */; };
 		EEAECAD923578ADE00C555E0 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAECAD823578ADE00C555E0 /* MapViewController.swift */; };
 		EEAECADC23579D2B00C555E0 /* UdforskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAECADB23579D2B00C555E0 /* UdforskViewController.swift */; };
 		EEAECAE22357A1EE00C555E0 /* MereViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAECAE12357A1EE00C555E0 /* MereViewController.swift */; };
 		EEAECAE42357AF8900C555E0 /* LogindViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAECAE32357AF8900C555E0 /* LogindViewController.swift */; };
+		EEDE09D6236371E400E7B095 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EEDE09D5236371E400E7B095 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		287ECAE8234E3D9800487427 /* MainUITabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainUITabBarController.swift; sourceTree = "<group>"; };
+		2865BABE2361934D00CE8878 /* ExampleBouncesContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleBouncesContentView.swift; sourceTree = "<group>"; };
+		2865BABF2361935200CE8878 /* ExampleNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleNavigationController.swift; sourceTree = "<group>"; };
+		2865BAC02361935800CE8878 /* ExampleBasicContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleBasicContentView.swift; sourceTree = "<group>"; };
+		2865BAC12361935D00CE8878 /* ExampleIrregularityContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleIrregularityContentView.swift; sourceTree = "<group>"; };
+		2865BAC62361936400CE8878 /* CustomTabbarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabbarController.swift; sourceTree = "<group>"; };
+		2865BAC8236193F600CE8878 /* TabbarContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabbarContentView.swift; sourceTree = "<group>"; };
 		287ECAEC234E541800487427 /* Theme.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Theme.xcassets; sourceTree = "<group>"; };
-		287ECAEE234E5FF200487427 /* OpretBajerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpretBajerViewController.swift; sourceTree = "<group>"; };
+		287ECAEE234E5FF200487427 /* OpretBajerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OpretBajerViewController.swift; path = "../New Group1/OpretBajerViewController.swift"; sourceTree = "<group>"; };
 		28C5E9C1234F9BEA00BE284D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		380EDE949A882405A61B8F77 /* Pods-BilligeBamser 1.0.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BilligeBamser 1.0.debug.xcconfig"; path = "Target Support Files/Pods-BilligeBamser 1.0/Pods-BilligeBamser 1.0.debug.xcconfig"; sourceTree = "<group>"; };
 		7F47A92EC5D00DAD65B0498A /* Pods_BilligeBamser_1_0.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BilligeBamser_1_0.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		861AAD122035663F003CE24D /* Pods-BilligeBamser 1.0.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BilligeBamser 1.0.release.xcconfig"; path = "Target Support Files/Pods-BilligeBamser 1.0/Pods-BilligeBamser 1.0.release.xcconfig"; sourceTree = "<group>"; };
 		EE805A2D234DF9B40095651D /* BilligeBamser 1.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BilligeBamser 1.0.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE805A30234DF9B40095651D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EE805A32234DF9B40095651D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EE805A35234DF9B40095651D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EE805A3A234DF9B60095651D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EE805A3C234DF9B60095651D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EE954608235A508A00EC534D /* StartsideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartsideViewController.swift; sourceTree = "<group>"; };
 		EE95460A235A5DAF00EC534D /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
-		EEAECAD223575FAE00C555E0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EEAECAD42357733200C555E0 /* Bar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bar.swift; sourceTree = "<group>"; };
-		EEAECAD623577CF500C555E0 /* BarListe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarListe.swift; sourceTree = "<group>"; };
+		EEAECAD623577CF500C555E0 /* BarListe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BarListe.swift; path = "../New Group2/BarListe.swift"; sourceTree = "<group>"; };
 		EEAECAD823578ADE00C555E0 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		EEAECADB23579D2B00C555E0 /* UdforskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UdforskViewController.swift; sourceTree = "<group>"; };
 		EEAECAE12357A1EE00C555E0 /* MereViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MereViewController.swift; sourceTree = "<group>"; };
-		EEAECAE32357AF8900C555E0 /* LogindViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogindViewController.swift; sourceTree = "<group>"; };
+		EEAECAE32357AF8900C555E0 /* LogindViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LogindViewController.swift; path = "../New Group/LogindViewController.swift"; sourceTree = "<group>"; };
+		EEDE09D5236371E400E7B095 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "TabBar/GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +72,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2865BABD2361929100CE8878 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				2865BAC8236193F600CE8878 /* TabbarContentView.swift */,
+				2865BAC02361935800CE8878 /* ExampleBasicContentView.swift */,
+				2865BAC62361936400CE8878 /* CustomTabbarController.swift */,
+				2865BABE2361934D00CE8878 /* ExampleBouncesContentView.swift */,
+				2865BAC12361935D00CE8878 /* ExampleIrregularityContentView.swift */,
+				2865BABF2361935200CE8878 /* ExampleNavigationController.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		2865BACA23619D9800CE8878 /* Start */ = {
+			isa = PBXGroup;
+			children = (
+				EE95460A235A5DAF00EC534D /* IntroViewController.swift */,
+				EE954608235A508A00EC534D /* StartsideViewController.swift */,
+				EEAECAE32357AF8900C555E0 /* LogindViewController.swift */,
+			);
+			path = Start;
+			sourceTree = "<group>";
+		};
+		2865BACB23619DD800CE8878 /* MainSide */ = {
+			isa = PBXGroup;
+			children = (
+				EEAECAE12357A1EE00C555E0 /* MereViewController.swift */,
+				EEAECADB23579D2B00C555E0 /* UdforskViewController.swift */,
+				287ECAEE234E5FF200487427 /* OpretBajerViewController.swift */,
+				EEAECAD823578ADE00C555E0 /* MapViewController.swift */,
+			);
+			path = MainSide;
+			sourceTree = "<group>";
+		};
+		2865BACC23619DF800CE8878 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EEAECAD42357733200C555E0 /* Bar.swift */,
+				EEAECAD623577CF500C555E0 /* BarListe.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		C2D218BA4494DD413AD8CB55 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -102,24 +153,17 @@
 		EE805A2F234DF9B40095651D /* BilligeBamser 1.0 */ = {
 			isa = PBXGroup;
 			children = (
+				2865BACC23619DF800CE8878 /* Model */,
+				2865BACB23619DD800CE8878 /* MainSide */,
+				2865BACA23619D9800CE8878 /* Start */,
+				2865BABD2361929100CE8878 /* TabBar */,
 				EE805A30234DF9B40095651D /* AppDelegate.swift */,
-				EEAECAE12357A1EE00C555E0 /* MereViewController.swift */,
-				EE805A32234DF9B40095651D /* ViewController.swift */,
+				EEDE09D5236371E400E7B095 /* GoogleService-Info.plist */,
 				EE805A34234DF9B40095651D /* Main.storyboard */,
-				EE95460A235A5DAF00EC534D /* IntroViewController.swift */,
-				EE954608235A508A00EC534D /* StartsideViewController.swift */,
-				EEAECAE32357AF8900C555E0 /* LogindViewController.swift */,
-				EEAECADB23579D2B00C555E0 /* UdforskViewController.swift */,
-				287ECAEE234E5FF200487427 /* OpretBajerViewController.swift */,
-				EEAECAD823578ADE00C555E0 /* MapViewController.swift */,
-				287ECAE8234E3D9800487427 /* MainUITabBarController.swift */,
 				28C5E9C1234F9BEA00BE284D /* Assets.xcassets */,
 				287ECAEC234E541800487427 /* Theme.xcassets */,
 				EE805A39234DF9B60095651D /* LaunchScreen.storyboard */,
 				EE805A3C234DF9B60095651D /* Info.plist */,
-				EEAECAD223575FAE00C555E0 /* GoogleService-Info.plist */,
-				EEAECAD42357733200C555E0 /* Bar.swift */,
-				EEAECAD623577CF500C555E0 /* BarListe.swift */,
 			);
 			path = "BilligeBamser 1.0";
 			sourceTree = "<group>";
@@ -186,7 +230,7 @@
 			files = (
 				EE805A3B234DF9B60095651D /* LaunchScreen.storyboard in Resources */,
 				287ECAED234E541800487427 /* Theme.xcassets in Resources */,
-				EEAECAD323575FAE00C555E0 /* GoogleService-Info.plist in Resources */,
+				EEDE09D6236371E400E7B095 /* GoogleService-Info.plist in Resources */,
 				28C5E9C2234F9BEA00BE284D /* Assets.xcassets in Resources */,
 				EE805A36234DF9B40095651D /* Main.storyboard in Resources */,
 			);
@@ -243,13 +287,17 @@
 			files = (
 				EEAECAD52357733200C555E0 /* Bar.swift in Sources */,
 				EE954609235A508A00EC534D /* StartsideViewController.swift in Sources */,
-				EE805A33234DF9B40095651D /* ViewController.swift in Sources */,
 				EE95460B235A5DAF00EC534D /* IntroViewController.swift in Sources */,
-				287ECAE9234E3D9800487427 /* MainUITabBarController.swift in Sources */,
+				2865BAC9236193F600CE8878 /* TabbarContentView.swift in Sources */,
+				2865BAC52361935D00CE8878 /* ExampleIrregularityContentView.swift in Sources */,
 				EEAECADC23579D2B00C555E0 /* UdforskViewController.swift in Sources */,
+				2865BAC22361935D00CE8878 /* ExampleBouncesContentView.swift in Sources */,
 				EEAECAE22357A1EE00C555E0 /* MereViewController.swift in Sources */,
 				EEAECAE42357AF8900C555E0 /* LogindViewController.swift in Sources */,
 				EEAECAD723577CF500C555E0 /* BarListe.swift in Sources */,
+				2865BAC32361935D00CE8878 /* ExampleNavigationController.swift in Sources */,
+				2865BAC72361936400CE8878 /* CustomTabbarController.swift in Sources */,
+				2865BAC42361935D00CE8878 /* ExampleBasicContentView.swift in Sources */,
 				287ECAEF234E5FF200487427 /* OpretBajerViewController.swift in Sources */,
 				EE805A31234DF9B40095651D /* AppDelegate.swift in Sources */,
 				EEAECAD923578ADE00C555E0 /* MapViewController.swift in Sources */,
@@ -399,7 +447,7 @@
 			baseConfigurationReference = 380EDE949A882405A61B8F77 /* Pods-BilligeBamser 1.0.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = G6TSQJ6DQ5;
+				DEVELOPMENT_TEAM = 8B9KRX6NBR;
 				INFOPLIST_FILE = "BilligeBamser 1.0/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -418,7 +466,7 @@
 			baseConfigurationReference = 861AAD122035663F003CE24D /* Pods-BilligeBamser 1.0.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = G6TSQJ6DQ5;
+				DEVELOPMENT_TEAM = 8B9KRX6NBR;
 				INFOPLIST_FILE = "BilligeBamser 1.0/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (

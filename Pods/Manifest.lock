@@ -5,6 +5,7 @@ PODS:
   - BoringSSL-GRPC/Implementation (0.0.3):
     - BoringSSL-GRPC/Interface (= 0.0.3)
   - BoringSSL-GRPC/Interface (0.0.3)
+  - ESTabBarController-swift (2.7)
   - FBSDKCoreKit (5.8.0):
     - FBSDKCoreKit/Basics (= 5.8.0)
     - FBSDKCoreKit/Core (= 5.8.0)
@@ -129,6 +130,7 @@ PODS:
   - SVProgressHUD (2.2.5)
 
 DEPENDENCIES:
+  - ESTabBarController-swift
   - FBSDKLoginKit
   - Firebase/Analytics
   - Firebase/Auth
@@ -139,6 +141,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - BoringSSL-GRPC
+    - ESTabBarController-swift
     - FBSDKCoreKit
     - FBSDKLoginKit
     - Firebase
@@ -164,6 +167,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   BoringSSL-GRPC: db8764df3204ccea016e1c8dd15d9a9ad63ff318
+  ESTabBarController-swift: 4fb52ad03d94d0717ef97bc9eb09a5abfdded0a2
   FBSDKCoreKit: e7dcac0aabcfb09d0166998edd95fe3b05a0ce5d
   FBSDKLoginKit: 1b0cf04df0370b37404213157b060d6666ede814
   Firebase: 2d750c54cda57d5a6ae31212cfe5cc813c6be7e4
@@ -187,6 +191,6 @@ SPEC CHECKSUMS:
   Protobuf: a4dc852ad69c027ca2166ed287b856697814375b
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: 7049ac23892fbf79d47898b22bc0a124e85298c2
+PODFILE CHECKSUM: c35f1d2415cfaef4916443f68503eaedc6f04dd2
 
 COCOAPODS: 1.8.1

@@ -15,6 +15,7 @@ pod 'Firebase/Firestore'
 pod 'SVProgressHUD'
 pod 'Firebase/Auth'
 pod 'FBSDKLoginKit'
+pod 'ESTabBarController-swift'
 
 # add pods for any other desired Firebase products
 # https://firebase.google.com/docs/ios/setup#available-pods

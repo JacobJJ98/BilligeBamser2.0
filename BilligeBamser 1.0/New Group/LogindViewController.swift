@@ -18,6 +18,8 @@ class LogindViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var afvistKode: UILabel!
     @IBOutlet weak var afvistMail: UILabel!
     
+    let tabbarController = CustomTabbarController()
+    
     @IBAction func FB(_ sender: UIButton) {
        
     }
@@ -56,7 +58,7 @@ class LogindViewController: UIViewController, UITextFieldDelegate {
                     } else {
                         BarListe.shared.HentBarer()
                         SVProgressHUD.dismiss()
-                        self.performSegue(withIdentifier: "efterLoginSegue", sender: nil)
+                        self.present(self.tabbarController, animated: true, completion: nil)
                         
                     }
                 }

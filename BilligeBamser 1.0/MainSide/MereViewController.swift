@@ -17,7 +17,7 @@ class MereViewController: UIViewController {
     
          if Auth.auth().currentUser == nil {
             print("BRGUEREN ER NUL OG SEGUE SKAL BRUGES NU!!!")
-            self.performSegue(withIdentifier: "loggedOutSegue", sender: nil)
+            self.dismiss(animated: true, completion: nil)
         }
         
         
