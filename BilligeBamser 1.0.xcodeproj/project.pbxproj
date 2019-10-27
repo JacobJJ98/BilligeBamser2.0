@@ -29,6 +29,7 @@
 		EEAECAE22357A1EE00C555E0 /* MereViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAECAE12357A1EE00C555E0 /* MereViewController.swift */; };
 		EEAECAE42357AF8900C555E0 /* LogindViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAECAE32357AF8900C555E0 /* LogindViewController.swift */; };
 		EEDE09D6236371E400E7B095 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EEDE09D5236371E400E7B095 /* GoogleService-Info.plist */; };
+		EEDE09D82365C2F600E7B095 /* OpretBrugerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDE09D72365C2F600E7B095 /* OpretBrugerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		EEAECAE12357A1EE00C555E0 /* MereViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MereViewController.swift; sourceTree = "<group>"; };
 		EEAECAE32357AF8900C555E0 /* LogindViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LogindViewController.swift; path = "../New Group/LogindViewController.swift"; sourceTree = "<group>"; };
 		EEDE09D5236371E400E7B095 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "TabBar/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		EEDE09D72365C2F600E7B095 /* OpretBrugerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpretBrugerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 				EE95460A235A5DAF00EC534D /* IntroViewController.swift */,
 				EE954608235A508A00EC534D /* StartsideViewController.swift */,
 				EEAECAE32357AF8900C555E0 /* LogindViewController.swift */,
+				EEDE09D72365C2F600E7B095 /* OpretBrugerViewController.swift */,
 			);
 			path = Start;
 			sourceTree = "<group>";
@@ -294,6 +297,7 @@
 				2865BAC22361935D00CE8878 /* ExampleBouncesContentView.swift in Sources */,
 				EEAECAE22357A1EE00C555E0 /* MereViewController.swift in Sources */,
 				EEAECAE42357AF8900C555E0 /* LogindViewController.swift in Sources */,
+				EEDE09D82365C2F600E7B095 /* OpretBrugerViewController.swift in Sources */,
 				EEAECAD723577CF500C555E0 /* BarListe.swift in Sources */,
 				2865BAC32361935D00CE8878 /* ExampleNavigationController.swift in Sources */,
 				2865BAC72361936400CE8878 /* CustomTabbarController.swift in Sources */,
