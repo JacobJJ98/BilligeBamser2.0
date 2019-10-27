@@ -13,6 +13,11 @@ import FirebaseFirestore
 class OpretBrugerViewController: UIViewController {
 
     
+    var fornavnString = ""
+    var efternavnString = ""
+    var mailString = ""
+    var kodeString = ""
+    
     @IBOutlet weak var fornavn: UITextField!
     @IBOutlet weak var efternavn: UITextField!
     @IBOutlet weak var mail: UITextField!
@@ -26,12 +31,15 @@ class OpretBrugerViewController: UIViewController {
     
     
     @IBAction func onOpretBruger(_ sender: UIButton) {
-        self.validerFelterne()
-        self.opretBrugerPaaFirebase()
-        self.gaaTilMenu()
+        if(self.validerFelterne()) {
+            self.opretBrugerPaaFirebase()
+            self.gaaTilMenu()
+        }
+        
     }
-    func validerFelterne() -> Void {
+    func validerFelterne() -> Bool {
         // TODO: tjek at der er indtastet noget i navn/efternavn. Tjek også om det er en gyldig mail (validator) og tjek at kode er over en vis længde
+        return true
     }
     func opretBrugerPaaFirebase() -> Void {
         //TODO: opret i authentication og derefter i fireStore. tjek her at document ID ikke findes i forvejen, fordi så findes brugeren. og hvad hvis man bruger den sammen mail to gange?
