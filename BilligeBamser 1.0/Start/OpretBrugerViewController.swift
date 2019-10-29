@@ -20,6 +20,12 @@ class OpretBrugerViewController: UIViewController {
     var mailString = ""
     var kodeString = ""
     
+    @IBOutlet weak var fornavnAfvist: UILabel!
+    @IBOutlet weak var efternavnAfvist: UILabel!
+    @IBOutlet weak var mailAfvist: UILabel!
+    @IBOutlet weak var kodeAfvist: UILabel!
+    
+    
     @IBOutlet weak var fornavn: UITextField!
     @IBOutlet weak var efternavn: UITextField!
     @IBOutlet weak var mail: UITextField!
@@ -36,18 +42,86 @@ class OpretBrugerViewController: UIViewController {
         SVProgressHUD.show()
         if(self.validerFelterne()) {
             self.opretBrugerPaaFirebase()
+        } else {
+            SVProgressHUD.dismiss()
         }
         
     }
     func validerFelterne() -> Bool {
         // TODO: tjek at der er indtastet noget i navn/efternavn. Tjek også om det er en gyldig mail (validator) og tjek at kode er over en vis længde
+        print("INDE I VALIDER!")
+        var boolfnavn = false
+        var boolenavn = false
+        var boolmail = false
+        var boolkode = false
+        
+        // Valider navn
+        if let nnaavvnn = fornavn.text {
+            if nnaavvnn.count > 0 {
+                boolfnavn = true
+                fornavnString = nnaavvnn
+            }
+        }
+        // Valider efternavn
+        if let efternnaavvnn = efternavn.text {
+            if efternnaavvnn.count > 0 {
+                boolenavn = true
+                fornavnString = efternnaavvnn
+            }
+        }
+        
+        // Valider mail
+        // TODO: brug validator bibliotek så vi sikrer det er en mail!
         if let mmaaiil = mail.text {
-            mailString = mmaaiil
+            if mmaaiil.count > 0 {
+                boolmail = true
+                mailString = mmaaiil
+            }
+            
         }
+        
+        //valider kode
         if let kkooddee = kode.text {
-            kodeString = kkooddee
+            if kkooddee.count > 5 {
+                boolkode = true
+                kodeString = kkooddee
+            }
         }
-        return true
+        
+        if !boolfnavn {
+            fornavnAfvist.isHidden = false
+            DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+                self.fornavnAfvist.isHidden = true
+            }
+        }
+        if !boolenavn {
+            efternavnAfvist.isHidden = false
+            DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+                self.efternavnAfvist.isHidden = true
+            }
+        }
+        if !boolmail {
+            mailAfvist.isHidden = false
+            DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+                self.mailAfvist.isHidden = true
+            }
+        }
+        if !boolkode {
+            kodeAfvist.isHidden = false
+            DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+                self.kodeAfvist.isHidden = true
+            }
+        }
+        
+        if boolfnavn && boolenavn && boolmail && boolkode {
+            return true
+        } else {
+            return false
+        }
+        
+    
+        
+        
     }
     func opretBrugerPaaFirebase() -> Void {
         //TODO: opret i authentication og derefter i fireStore. tjek her at document ID ikke findes i forvejen, fordi så findes brugeren. og hvad hvis man bruger den sammen mail to gange?
