@@ -13,6 +13,7 @@ import SVProgressHUD
 
 class OpretBrugerViewController: UIViewController {
     var db: Firestore!
+    let tabbarController = CustomTabbarController()
     
     var fornavnString = "TEST"
     var efternavnString = "TEST"
@@ -35,7 +36,6 @@ class OpretBrugerViewController: UIViewController {
         SVProgressHUD.show()
         if(self.validerFelterne()) {
             self.opretBrugerPaaFirebase()
-            self.gaaTilMenu()
         }
         
     }
@@ -94,7 +94,14 @@ class OpretBrugerViewController: UIViewController {
                                 } else {
                                   print("SUCCES MED AT TILFØJE BRUGER I DB")
                                     SVProgressHUD.showSuccess(withStatus: "Bruger oprettet")
-                                    SVProgressHUD.dismiss(withDelay: 2)
+                                    // SEND BRUGEREN VIDERE TIL LOGGET IND og henter alle barer
+                                    BarListe.shared.HentBarer()
+                                    SVProgressHUD.dismiss(withDelay: 2) {
+                                        self.present(self.tabbarController, animated: true, completion: nil)
+                                    }
+                                
+                                    
+                                    
                                 }
                 }
                 
@@ -107,14 +114,8 @@ class OpretBrugerViewController: UIViewController {
            }
        }
     }
-    func opretBrugeriFirestore() -> Bool {
-        
-        
-        return true
-    }
-    func gaaTilMenu() -> Void {
-        //TODO: send brugeren videre til tabbar og er nu logget ind. 
-    }
+    
+    
     
     func performSegueToReturnBack()  {
            
