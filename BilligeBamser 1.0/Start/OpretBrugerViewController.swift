@@ -11,7 +11,7 @@ import FirebaseAuth
 import FirebaseFirestore
 import SVProgressHUD
 
-class OpretBrugerViewController: UIViewController {
+class OpretBrugerViewController: UIViewController, UITextFieldDelegate {
     var db: Firestore!
     let tabbarController = CustomTabbarController()
     
@@ -33,13 +33,18 @@ class OpretBrugerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // for at kunne håndtere return knappen på tastaturet!
+        fornavn.delegate = self
+        efternavn.delegate = self
+        mail.delegate = self
+        kode.delegate = self
 
         // Do any additional setup after loading the view.
     }
     
     
     @IBAction func onOpretBruger(_ sender: UIButton) {
-        SVProgressHUD.show()
         if(self.validerFelterne()) {
             self.opretBrugerPaaFirebase()
         } else {
@@ -90,25 +95,25 @@ class OpretBrugerViewController: UIViewController {
         
         if !boolfnavn {
             fornavnAfvist.isHidden = false
-            DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                 self.fornavnAfvist.isHidden = true
             }
         }
         if !boolenavn {
             efternavnAfvist.isHidden = false
-            DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                 self.efternavnAfvist.isHidden = true
             }
         }
         if !boolmail {
             mailAfvist.isHidden = false
-            DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                 self.mailAfvist.isHidden = true
             }
         }
         if !boolkode {
             kodeAfvist.isHidden = false
-            DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                 self.kodeAfvist.isHidden = true
             }
         }
@@ -125,7 +130,7 @@ class OpretBrugerViewController: UIViewController {
     }
     func opretBrugerPaaFirebase() -> Void {
         //TODO: opret i authentication og derefter i fireStore. tjek her at document ID ikke findes i forvejen, fordi så findes brugeren. og hvad hvis man bruger den sammen mail to gange?
-        
+        SVProgressHUD.show()
         Auth.auth().createUser(withEmail: mailString, password: kodeString) { (ress, err) in
            if err != nil {
             print("OPRETTELSE FEJLET!")
@@ -196,5 +201,15 @@ class OpretBrugerViewController: UIViewController {
                self.dismiss(animated: true, completion: nil)
            
        }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        print("RETURN TRYKKET!")
+        fornavn.resignFirstResponder()
+        efternavn.resignFirstResponder()
+        mail.resignFirstResponder()
+        kode.resignFirstResponder()
+        return true
+    }
+    
     
 }
