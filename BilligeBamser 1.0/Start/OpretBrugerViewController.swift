@@ -78,10 +78,15 @@ class OpretBrugerViewController: UIViewController, UITextFieldDelegate {
         // Valider mail
         // TODO: brug validator bibliotek så vi sikrer det er en mail!
         if let mmaaiil = mail.text {
-            if mmaaiil.count > 0 {
+            
+            if self.erMailKorrekt(mail: mmaaiil) {
+                print("DET ER EN GYLDIG MAIL!")
                 boolmail = true
                 mailString = mmaaiil
+            } else {
+                print("UGYLDIG MAIL!")
             }
+
             
         }
         
@@ -175,7 +180,7 @@ class OpretBrugerViewController: UIViewController, UITextFieldDelegate {
                                     SVProgressHUD.showSuccess(withStatus: "Bruger oprettet")
                                     // SEND BRUGEREN VIDERE TIL LOGGET IND og henter alle barer
                                     BarListe.shared.HentBarer()
-                                    SVProgressHUD.dismiss(withDelay: 2) {
+                                    SVProgressHUD.dismiss(withDelay: 1) {
                                         self.present(self.tabbarController, animated: true, completion: nil)
                                     }
                                 
@@ -209,6 +214,15 @@ class OpretBrugerViewController: UIViewController, UITextFieldDelegate {
         mail.resignFirstResponder()
         kode.resignFirstResponder()
         return true
+    }
+    
+    
+    // lidt inspiration fra nettet, men det er bare regex for en mailadr som så evalueres ved hjælp af NSPredicate og returnere true/false alt afhængig om det er en gyldig mail
+    func erMailKorrekt(mail:String) -> Bool {
+        let regex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+
+        let predicate = NSPredicate(format:"SELF MATCHES %@", regex)
+        return predicate.evaluate(with: mail)
     }
     
     
