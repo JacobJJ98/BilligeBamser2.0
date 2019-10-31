@@ -45,8 +45,6 @@ class OpretBajerViewController: UIViewController, CLLocationManagerDelegate {
         print("opretBar er trykket")
         // kaldes for at oversætte fra Textfield og hen til klassevariable og kalder derefter find lokation som så derefter vil kalde tilføj til Firebase
         self.tilføjNavnogPris()
-        
-        
         }
         
     
