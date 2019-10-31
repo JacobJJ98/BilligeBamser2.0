@@ -30,6 +30,10 @@ class MereViewController: UIViewController {
     }
     override func viewDidAppear(_ animated: Bool) {
         print("APPEAR MERE!!")
+        
+        for bar in BarListe.shared.egneFavoritter {
+            print(bar.navn)
+        }
     }
     
 

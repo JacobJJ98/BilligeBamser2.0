@@ -33,6 +33,7 @@
 		EEAECAE42357AF8900C555E0 /* LogindViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAECAE32357AF8900C555E0 /* LogindViewController.swift */; };
 		EEDE09D6236371E400E7B095 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EEDE09D5236371E400E7B095 /* GoogleService-Info.plist */; };
 		EEDE09D82365C2F600E7B095 /* OpretBrugerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDE09D72365C2F600E7B095 /* OpretBrugerViewController.swift */; };
+		EEDE0A1E236B71E000E7B095 /* Bruger.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDE0A1D236B71E000E7B095 /* Bruger.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +67,7 @@
 		EEAECAE32357AF8900C555E0 /* LogindViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LogindViewController.swift; path = "../New Group/LogindViewController.swift"; sourceTree = "<group>"; };
 		EEDE09D5236371E400E7B095 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "TabBar/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EEDE09D72365C2F600E7B095 /* OpretBrugerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpretBrugerViewController.swift; sourceTree = "<group>"; };
+		EEDE0A1D236B71E000E7B095 /* Bruger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bruger.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 			children = (
 				EEAECAD42357733200C555E0 /* Bar.swift */,
 				EEAECAD623577CF500C555E0 /* BarListe.swift */,
+				EEDE0A1D236B71E000E7B095 /* Bruger.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -305,6 +308,7 @@
 				EEAECADC23579D2B00C555E0 /* UdforskViewController.swift in Sources */,
 				28721CB1236A1DE4005C50F4 /* UIColorExtensions.swift in Sources */,
 				2865BAC22361935D00CE8878 /* ExampleBouncesContentView.swift in Sources */,
+				EEDE0A1E236B71E000E7B095 /* Bruger.swift in Sources */,
 				EEAECAE22357A1EE00C555E0 /* MereViewController.swift in Sources */,
 				EEAECAE42357AF8900C555E0 /* LogindViewController.swift in Sources */,
 				EEDE09D82365C2F600E7B095 /* OpretBrugerViewController.swift in Sources */,
@@ -463,7 +467,7 @@
 			baseConfigurationReference = 380EDE949A882405A61B8F77 /* Pods-BilligeBamser 1.0.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8B9KRX6NBR;
+				DEVELOPMENT_TEAM = G6TSQJ6DQ5;
 				INFOPLIST_FILE = "BilligeBamser 1.0/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -482,7 +486,7 @@
 			baseConfigurationReference = 861AAD122035663F003CE24D /* Pods-BilligeBamser 1.0.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8B9KRX6NBR;
+				DEVELOPMENT_TEAM = G6TSQJ6DQ5;
 				INFOPLIST_FILE = "BilligeBamser 1.0/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
