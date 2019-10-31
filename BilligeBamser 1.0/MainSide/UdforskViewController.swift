@@ -13,11 +13,17 @@ import FirebaseFirestore
 import FirebaseAuth
 import SVProgressHUD
 
-class UdforskViewController: UIViewController {
+class CollectionViewCell : UICollectionViewCell {
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var text: UILabel!
+}
+
+class UdforskViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
 
        override func viewDidLoad() {
            super.viewDidLoad()
+
        }
     
  
@@ -26,6 +32,29 @@ class UdforskViewController: UIViewController {
         // BarListe.shared.barer.removeAll()
         // self.HentBarer()
         
+    }
+    
+    
+    let reuseIdentifier = "collectionViewCellId"
+    
+    @IBOutlet weak var collectionView: UICollectionView!
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 2
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! CollectionViewCell
+        
+        cell.imageView.backgroundColor = UIColor.randomColor()
+        cell.text.text = "forhelf"
+        cell.text.textColor = UIColor.blue
+        print("test tekst for cell er: \(cell.text.text)")
+        return cell
     }
        
        
