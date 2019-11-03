@@ -11,10 +11,10 @@ import ESTabBarController_swift
 
 class TabBarContentView: ESTabBarItemContentView {
     
-    public var duration = 1.0
+    public var duration = 0.5
     override init(frame: CGRect) {
         super.init(frame: frame)
-        highlightTextColor = UIColor.blue
+       // highlightTextColor = UIColor.blue
         renderingMode = .alwaysOriginal
     }
     
@@ -34,7 +34,7 @@ class TabBarContentView: ESTabBarItemContentView {
     
     func bounceAnimation() {
         let impliesAnimation = CAKeyframeAnimation(keyPath: "transform.scale")
-        impliesAnimation.values = [1.0 ,1.4, 0.9, 1.15, 0.95, 1.02, 1.0]
+        impliesAnimation.values = [1.0 ,1.3, 0.9, 1.1, 0.95, 1.02, 1.0]
         impliesAnimation.duration = duration
         impliesAnimation.calculationMode = CAAnimationCalculationMode.cubic
         imageView.layer.add(impliesAnimation, forKey: nil)

@@ -181,6 +181,12 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #if __has_warning("-Watimport-in-framework-header")
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
+@import CoreGraphics;
+@import CoreLocation;
+@import ESTabBarController_swift;
+@import Foundation;
+@import MapKit;
+@import ObjectiveC;
 @import UIKit;
 #endif
 
@@ -206,6 +212,7 @@ SWIFT_CLASS("_TtC17BilligeBamser_1_011AppDelegate")
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 @property (nonatomic, strong) UIWindow * _Nullable window;
 - (BOOL)application:(UIApplication * _Nonnull)application didFinishLaunchingWithOptions:(NSDictionary<UIApplicationLaunchOptionsKey, id> * _Nullable)launchOptions SWIFT_WARN_UNUSED_RESULT;
+- (BOOL)application:(UIApplication * _Nonnull)app openURL:(NSURL * _Nonnull)url options:(NSDictionary<UIApplicationOpenURLOptionsKey, id> * _Nonnull)options SWIFT_WARN_UNUSED_RESULT;
 - (void)applicationWillResignActive:(UIApplication * _Nonnull)application;
 - (void)applicationDidEnterBackground:(UIApplication * _Nonnull)application;
 - (void)applicationWillEnterForeground:(UIApplication * _Nonnull)application;
@@ -214,20 +221,157 @@ SWIFT_CLASS("_TtC17BilligeBamser_1_011AppDelegate")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class NSBundle;
+
+SWIFT_CLASS("_TtC17BilligeBamser_1_03Bar")
+@interface Bar : NSObject <MKAnnotation>
+@property (nonatomic, readonly) CLLocationCoordinate2D coordinate;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+@class UICollectionViewLayoutAttributes;
 @class NSCoder;
 
-SWIFT_CLASS("_TtC17BilligeBamser_1_022MainUITabBarController")
-@interface MainUITabBarController : UITabBarController
+SWIFT_CLASS("_TtC17BilligeBamser_1_020CenterViewFlowLayout")
+@interface CenterViewFlowLayout : UICollectionViewFlowLayout
+@property (nonatomic, readonly) CGSize collectionViewContentSize;
+- (UICollectionViewLayoutAttributes * _Nullable)layoutAttributesForItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+- (NSArray<UICollectionViewLayoutAttributes *> * _Nullable)layoutAttributesForElementsInRect:(CGRect)rect SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class UIImageView;
+@class UILabel;
+
+SWIFT_CLASS("_TtC17BilligeBamser_1_018CollectionViewCell")
+@interface CollectionViewCell : UICollectionViewCell
+@property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified imageView;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified text;
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class NSBundle;
+
+SWIFT_CLASS("_TtC17BilligeBamser_1_022CustomTabbarController")
+@interface CustomTabbarController : ESTabBarController
 - (void)viewDidLoad;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
 
+
+SWIFT_CLASS("_TtC17BilligeBamser_1_023ExampleBasicContentView")
+@interface ExampleBasicContentView : ESTabBarItemContentView
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC17BilligeBamser_1_025ExampleBouncesContentView")
+@interface ExampleBouncesContentView : ExampleBasicContentView
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC17BilligeBamser_1_035ExampleIrregularityBasicContentView")
+@interface ExampleIrregularityBasicContentView : ExampleBouncesContentView
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class UIEvent;
+
+SWIFT_CLASS("_TtC17BilligeBamser_1_030ExampleIrregularityContentView")
+@interface ExampleIrregularityContentView : ESTabBarItemContentView
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+- (BOOL)pointInside:(CGPoint)point withEvent:(UIEvent * _Nullable)event SWIFT_WARN_UNUSED_RESULT;
+@end
+
+@class UIViewController;
+
+SWIFT_CLASS("_TtC17BilligeBamser_1_027ExampleNavigationController")
+@interface ExampleNavigationController : UINavigationController <UITabBarControllerDelegate>
+- (void)viewDidLoad;
+- (nonnull instancetype)initWithNavigationBarClass:(Class _Nullable)navigationBarClass toolbarClass:(Class _Nullable)toolbarClass OBJC_DESIGNATED_INITIALIZER SWIFT_AVAILABILITY(ios,introduced=5.0);
+- (nonnull instancetype)initWithRootViewController:(UIViewController * _Nonnull)rootViewController OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC17BilligeBamser_1_019IntroViewController")
+@interface IntroViewController : UIViewController <UITabBarControllerDelegate>
+- (void)viewDidLoad;
+- (void)viewDidAppear:(BOOL)animated;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
 @class UIButton;
+@class UITextField;
+
+SWIFT_CLASS("_TtC17BilligeBamser_1_020LogindViewController")
+@interface LogindViewController : UIViewController <UITextFieldDelegate>
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified btnLogin;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified btnFb;
+@property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified mailFelt;
+@property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified kodeFelt;
+- (IBAction)FB:(UIButton * _Nonnull)sender;
+- (BOOL)textField:(UITextField * _Nonnull)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString * _Nonnull)string SWIFT_WARN_UNUSED_RESULT;
+- (void)viewDidLoad;
+- (void)viewDidLayoutSubviews;
+- (void)viewWillAppear:(BOOL)animated;
+- (BOOL)textFieldShouldReturn:(UITextField * _Nonnull)textField SWIFT_WARN_UNUSED_RESULT;
+- (IBAction)onLogin:(UIButton * _Nonnull)sender;
+@property (nonatomic, readonly) UIStatusBarStyle preferredStatusBarStyle;
+- (IBAction)TilbageTrykket:(UIButton * _Nonnull)sender;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class MKMapView;
+@class CLLocationManager;
+@class CLLocation;
+
+SWIFT_CLASS("_TtC17BilligeBamser_1_017MapViewController")
+@interface MapViewController : UIViewController <CLLocationManagerDelegate>
+@property (nonatomic, strong) IBOutlet MKMapView * _Null_unspecified mapView;
+- (void)viewDidLoad;
+- (void)viewDidDisappear:(BOOL)animated;
+- (void)viewDidAppear:(BOOL)animated;
+- (void)locationManager:(CLLocationManager * _Nonnull)manager didUpdateLocations:(NSArray<CLLocation *> * _Nonnull)locations;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC17BilligeBamser_1_018MereViewController")
+@interface MereViewController : UIViewController
+- (IBAction)logUD:(UIButton * _Nonnull)sender;
+- (void)viewDidLoad;
+- (void)viewDidAppear:(BOOL)animated;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class UISwitch;
 
 SWIFT_CLASS("_TtC17BilligeBamser_1_024OpretBajerViewController")
-@interface OpretBajerViewController : UIViewController
+@interface OpretBajerViewController : UIViewController <CLLocationManagerDelegate>
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified navnAfvist;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified prisAfvist;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified adrAfvist;
+@property (nonatomic, weak) IBOutlet UISwitch * _Null_unspecified nuværendeLokationStatus;
+@property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified barNavn;
+@property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified flaskePris;
+@property (nonatomic, weak) IBOutlet UISwitch * _Null_unspecified rygningTilladt;
+@property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified adresse;
+- (IBAction)vedAendretLokation:(UISwitch * _Nonnull)sender;
+- (IBAction)opretBar:(UIButton * _Nonnull)sender;
 - (void)viewDidLoad;
 - (IBAction)tilbage:(UIButton * _Nonnull)sender;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
@@ -235,9 +379,60 @@ SWIFT_CLASS("_TtC17BilligeBamser_1_024OpretBajerViewController")
 @end
 
 
-SWIFT_CLASS("_TtC17BilligeBamser_1_014ViewController")
-@interface ViewController : UIViewController
+SWIFT_CLASS("_TtC17BilligeBamser_1_025OpretBrugerViewController")
+@interface OpretBrugerViewController : UIViewController <UITextFieldDelegate>
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified fornavnAfvist;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified efternavnAfvist;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified mailAfvist;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified kodeAfvist;
+@property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified fornavn;
+@property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified efternavn;
+@property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified mail;
+@property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified kode;
 - (void)viewDidLoad;
+- (IBAction)onOpretBruger:(UIButton * _Nonnull)sender;
+- (BOOL)textFieldShouldReturn:(UITextField * _Nonnull)textField SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC17BilligeBamser_1_023StartsideViewController")
+@interface StartsideViewController : UIViewController
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified loggetindLabel;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified btnFb;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified fortsætBtn;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified btnAllerede;
+- (void)viewDidLayoutSubviews;
+@property (nonatomic, readonly) UIStatusBarStyle preferredStatusBarStyle;
+- (void)viewDidLoad;
+- (void)viewDidAppear:(BOOL)animated;
+- (IBAction)loginMedFacebook:(UIButton * _Nonnull)sender;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC17BilligeBamser_1_017TabBarContentView")
+@interface TabBarContentView : ESTabBarItemContentView
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+
+
+
+@class UICollectionView;
+
+SWIFT_CLASS("_TtC17BilligeBamser_1_021UdforskViewController")
+@interface UdforskViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate>
+- (void)viewDidLoad;
+- (void)viewDidAppear:(BOOL)animated;
+@property (nonatomic, weak) IBOutlet UICollectionView * _Null_unspecified collectionView;
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView * _Nonnull)collectionView SWIFT_WARN_UNUSED_RESULT;
+- (NSInteger)collectionView:(UICollectionView * _Nonnull)collectionView numberOfItemsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+- (UICollectionViewCell * _Nonnull)collectionView:(UICollectionView * _Nonnull)collectionView cellForItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end

@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2820A7B4236B5E7C005EDE6D /* buttonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2820A7B3236B5E7C005EDE6D /* buttonStyle.swift */; };
 		2865BAC22361935D00CE8878 /* ExampleBouncesContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2865BABE2361934D00CE8878 /* ExampleBouncesContentView.swift */; };
 		2865BAC32361935D00CE8878 /* ExampleNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2865BABF2361935200CE8878 /* ExampleNavigationController.swift */; };
 		2865BAC42361935D00CE8878 /* ExampleBasicContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2865BAC02361935800CE8878 /* ExampleBasicContentView.swift */; };
@@ -37,7 +36,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2820A7B3236B5E7C005EDE6D /* buttonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = buttonStyle.swift; sourceTree = "<group>"; };
 		2865BABE2361934D00CE8878 /* ExampleBouncesContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleBouncesContentView.swift; sourceTree = "<group>"; };
 		2865BABF2361935200CE8878 /* ExampleNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleNavigationController.swift; sourceTree = "<group>"; };
 		2865BAC02361935800CE8878 /* ExampleBasicContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleBasicContentView.swift; sourceTree = "<group>"; };
@@ -178,7 +176,6 @@
 				287ECAEC234E541800487427 /* Theme.xcassets */,
 				EE805A39234DF9B60095651D /* LaunchScreen.storyboard */,
 				EE805A3C234DF9B60095651D /* Info.plist */,
-				2820A7B3236B5E7C005EDE6D /* buttonStyle.swift */,
 			);
 			path = "BilligeBamser 1.0";
 			sourceTree = "<group>";
@@ -314,7 +311,6 @@
 				EEDE09D82365C2F600E7B095 /* OpretBrugerViewController.swift in Sources */,
 				EEAECAD723577CF500C555E0 /* BarListe.swift in Sources */,
 				28721CAF236A1912005C50F4 /* CenterViewFlowLayout.swift in Sources */,
-				2820A7B4236B5E7C005EDE6D /* buttonStyle.swift in Sources */,
 				2865BAC32361935D00CE8878 /* ExampleNavigationController.swift in Sources */,
 				2865BAC72361936400CE8878 /* CustomTabbarController.swift in Sources */,
 				2865BAC42361935D00CE8878 /* ExampleBasicContentView.swift in Sources */,
@@ -467,7 +463,7 @@
 			baseConfigurationReference = 380EDE949A882405A61B8F77 /* Pods-BilligeBamser 1.0.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = G6TSQJ6DQ5;
+				DEVELOPMENT_TEAM = 8B9KRX6NBR;
 				INFOPLIST_FILE = "BilligeBamser 1.0/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -486,7 +482,7 @@
 			baseConfigurationReference = 861AAD122035663F003CE24D /* Pods-BilligeBamser 1.0.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = G6TSQJ6DQ5;
+				DEVELOPMENT_TEAM = 8B9KRX6NBR;
 				INFOPLIST_FILE = "BilligeBamser 1.0/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (

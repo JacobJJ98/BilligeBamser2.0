@@ -16,8 +16,29 @@ import MapKit
 class StartsideViewController: UIViewController {
     private let locationManager = CLLocationManager()
     @IBOutlet weak var loggetindLabel: UILabel!
+    @IBOutlet weak var btnFb: UIButton!
+    @IBOutlet weak var fortsætBtn: UIButton!
+    @IBOutlet weak var btnAllerede: UIButton!
     
     let tabbarController = CustomTabbarController()
+    
+    
+    override func viewDidLayoutSubviews() {
+        //Laver layout for knapper efter subviews er lavet
+        // så de radius er relativt ift knappens størrelse. (så den er helt rund)
+        btnFb.layer.cornerRadius = btnFb.bounds.size.height/2
+        
+        fortsætBtn.layer.cornerRadius = fortsætBtn.bounds.size.height/2
+        
+        btnAllerede.layer.cornerRadius  = btnAllerede.frame.size.height/2
+        btnAllerede.layer.borderWidth = 2
+        btnAllerede.layer.borderColor = UIColor.white.cgColor
+       
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

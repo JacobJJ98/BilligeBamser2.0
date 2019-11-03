@@ -311,21 +311,24 @@ SWIFT_CLASS("_TtC17BilligeBamser_1_019IntroViewController")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class UITextField;
 @class UIButton;
-@class UIBarButtonItem;
+@class UITextField;
 
 SWIFT_CLASS("_TtC17BilligeBamser_1_020LogindViewController")
 @interface LogindViewController : UIViewController <UITextFieldDelegate>
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified btnLogin;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified btnFb;
 @property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified mailFelt;
 @property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified kodeFelt;
-@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified afvistKode;
-@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified afvistMail;
 - (IBAction)FB:(UIButton * _Nonnull)sender;
+- (BOOL)textField:(UITextField * _Nonnull)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString * _Nonnull)string SWIFT_WARN_UNUSED_RESULT;
 - (void)viewDidLoad;
-- (IBAction)onLogin:(UIButton * _Nonnull)sender;
+- (void)viewDidLayoutSubviews;
+- (void)viewWillAppear:(BOOL)animated;
 - (BOOL)textFieldShouldReturn:(UITextField * _Nonnull)textField SWIFT_WARN_UNUSED_RESULT;
-- (IBAction)TilbageTrykket:(UIBarButtonItem * _Nonnull)sender;
+- (IBAction)onLogin:(UIButton * _Nonnull)sender;
+@property (nonatomic, readonly) UIStatusBarStyle preferredStatusBarStyle;
+- (IBAction)TilbageTrykket:(UIButton * _Nonnull)sender;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -397,6 +400,11 @@ SWIFT_CLASS("_TtC17BilligeBamser_1_025OpretBrugerViewController")
 SWIFT_CLASS("_TtC17BilligeBamser_1_023StartsideViewController")
 @interface StartsideViewController : UIViewController
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified loggetindLabel;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified btnFb;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified fortsætBtn;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified btnAllerede;
+- (void)viewDidLayoutSubviews;
+@property (nonatomic, readonly) UIStatusBarStyle preferredStatusBarStyle;
 - (void)viewDidLoad;
 - (void)viewDidAppear:(BOOL)animated;
 - (IBAction)loginMedFacebook:(UIButton * _Nonnull)sender;
@@ -413,6 +421,8 @@ SWIFT_CLASS("_TtC17BilligeBamser_1_017TabBarContentView")
 
 
 
+
+
 @class UICollectionView;
 
 SWIFT_CLASS("_TtC17BilligeBamser_1_021UdforskViewController")
@@ -425,13 +435,6 @@ SWIFT_CLASS("_TtC17BilligeBamser_1_021UdforskViewController")
 - (UICollectionViewCell * _Nonnull)collectionView:(UICollectionView * _Nonnull)collectionView cellForItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-SWIFT_CLASS("_TtC17BilligeBamser_1_011buttonStyle")
-@interface buttonStyle : UIButton
-- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
 #if __has_attribute(external_source_symbol)
