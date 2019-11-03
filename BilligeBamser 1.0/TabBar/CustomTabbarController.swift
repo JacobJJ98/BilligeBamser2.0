@@ -42,7 +42,7 @@ class CustomTabbarController: ESTabBarController {
         let v3 = UIViewController()
         let v3Nav = UINavigationController(rootViewController: v3)
         
-       let v4Nav = storyBoard.instantiateViewController(withIdentifier: "favoVC") as! UINavigationController
+       let v4Nav = storyBoard.instantiateViewController(withIdentifier: "favoVC2") as! UINavigationController
         
         let v5Nav = storyBoard.instantiateViewController(withIdentifier: "mereVC") as! UINavigationController
         

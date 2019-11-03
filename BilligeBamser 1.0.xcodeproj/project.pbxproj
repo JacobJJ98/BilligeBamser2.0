@@ -33,6 +33,7 @@
 		EEDE09D6236371E400E7B095 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EEDE09D5236371E400E7B095 /* GoogleService-Info.plist */; };
 		EEDE09D82365C2F600E7B095 /* OpretBrugerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDE09D72365C2F600E7B095 /* OpretBrugerViewController.swift */; };
 		EEDE0A1E236B71E000E7B095 /* Bruger.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDE0A1D236B71E000E7B095 /* Bruger.swift */; };
+		EEDE0A20236F4DEF00E7B095 /* FavoriterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDE0A1F236F4DEE00E7B095 /* FavoriterTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +67,7 @@
 		EEDE09D5236371E400E7B095 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "TabBar/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EEDE09D72365C2F600E7B095 /* OpretBrugerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpretBrugerViewController.swift; sourceTree = "<group>"; };
 		EEDE0A1D236B71E000E7B095 /* Bruger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bruger.swift; sourceTree = "<group>"; };
+		EEDE0A1F236F4DEE00E7B095 /* FavoriterTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriterTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 				EEAECADB23579D2B00C555E0 /* UdforskViewController.swift */,
 				287ECAEE234E5FF200487427 /* OpretBajerViewController.swift */,
 				EEAECAD823578ADE00C555E0 /* MapViewController.swift */,
+				EEDE0A1F236F4DEE00E7B095 /* FavoriterTableViewController.swift */,
 			);
 			path = MainSide;
 			sourceTree = "<group>";
@@ -312,6 +315,7 @@
 				EEAECAD723577CF500C555E0 /* BarListe.swift in Sources */,
 				28721CAF236A1912005C50F4 /* CenterViewFlowLayout.swift in Sources */,
 				2865BAC32361935D00CE8878 /* ExampleNavigationController.swift in Sources */,
+				EEDE0A20236F4DEF00E7B095 /* FavoriterTableViewController.swift in Sources */,
 				2865BAC72361936400CE8878 /* CustomTabbarController.swift in Sources */,
 				2865BAC42361935D00CE8878 /* ExampleBasicContentView.swift in Sources */,
 				287ECAEF234E5FF200487427 /* OpretBajerViewController.swift in Sources */,
