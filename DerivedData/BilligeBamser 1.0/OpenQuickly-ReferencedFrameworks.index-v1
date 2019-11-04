@@ -39,9 +39,9 @@
 	<string>SVProgressHUD</string>
 	<string>CoreFoundation</string>
 	<string>ESTabBarController</string>
-	<string>FirebasePerformance</string>
 	<string>FirebaseMLNLTranslate</string>
 	<string>AuthenticationServices</string>
+	<string>FirebasePerformance</string>
 	<string>Crashlytics</string>
 	<string>FirebaseMLVisionAutoML</string>
 	<string>netinet</string>
@@ -52,12 +52,12 @@
 	<string>FirebaseMLNLSmartReply</string>
 	<string>FirebaseRemoteConfig</string>
 	<string>FirebaseMLVision</string>
-	<string>FirebaseMLNLLanguageID</string>
+	<string>GTMSessionFetcher</string>
 	<string>AudioToolbox</string>
+	<string>FirebaseMLNLLanguageID</string>
 	<string>QuartzCore</string>
 	<string>SystemConfiguration</string>
 	<string>FirebaseAnalytics</string>
-	<string>GTMSessionFetcher</string>
 	<string>Security</string>
 	<string>FirebaseMLVisionObjectDetection</string>
 	<string>CoreGraphics</string>

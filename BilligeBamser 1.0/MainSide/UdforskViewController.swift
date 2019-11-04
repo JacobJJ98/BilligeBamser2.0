@@ -22,7 +22,8 @@ class UdforskViewController: UIViewController, UICollectionViewDelegate, UIColle
 
        override func viewDidLoad() {
            super.viewDidLoad()
-
+        collectionView.backgroundColor = UIColor.clear
+        
        }
     
  
@@ -42,6 +43,7 @@ class UdforskViewController: UIViewController, UICollectionViewDelegate, UIColle
         return 1
     }
     
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 10
     }
@@ -53,13 +55,13 @@ class UdforskViewController: UIViewController, UICollectionViewDelegate, UIColle
         let testdata = ["Palæen", "Old Irish - Lyngby ", "Den glade gris", "Hegnet","Artillericafeen","DTU fredagsbar","Ruder Konge","IRISH tivoli","DIAMANTEN","billige bamse cafe :)"
         ]
         
-        // var testimage : UIImage = UIImage(named:"bg1")!
+        // var testimage : UIImage = UIImage(named:"plus1")!
               
         // cell.imageView = UIImageView(image: testimage)
         
-        cell.imageView.backgroundColor = UIColor.randomColor()
+        // cell.imageView.backgroundColor = UIColor.randomColor()
         cell.text.text = testdata[indexPath.row]
-        cell.text.textColor = UIColor.blue
+        // cell.text.textColor = UIColor.blue
         print("test tekst for cell er: \(cell.text.text)")
         return cell
     }

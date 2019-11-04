@@ -229,14 +229,10 @@ SWIFT_CLASS("_TtC17BilligeBamser_1_03Bar")
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
-@class UICollectionViewLayoutAttributes;
 @class NSCoder;
 
 SWIFT_CLASS("_TtC17BilligeBamser_1_020CenterViewFlowLayout")
 @interface CenterViewFlowLayout : UICollectionViewFlowLayout
-@property (nonatomic, readonly) CGSize collectionViewContentSize;
-- (UICollectionViewLayoutAttributes * _Nullable)layoutAttributesForItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
-- (NSArray<UICollectionViewLayoutAttributes *> * _Nullable)layoutAttributesForElementsInRect:(CGRect)rect SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -302,6 +298,34 @@ SWIFT_CLASS("_TtC17BilligeBamser_1_027ExampleNavigationController")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class UITableView;
+@class UITableViewCell;
+
+SWIFT_CLASS("_TtC17BilligeBamser_1_028FavoriterTableViewController")
+@interface FavoriterTableViewController : UITableViewController
+- (void)viewDidLoad;
+- (NSInteger)numberOfSectionsInTableView:(UITableView * _Nonnull)tableView SWIFT_WARN_UNUSED_RESULT;
+- (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+- (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+- (CGFloat)tableView:(UITableView * _Nonnull)tableView heightForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)initWithStyle:(UITableViewStyle)style OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC17BilligeBamser_1_021HeadlineTableViewCell")
+@interface HeadlineTableViewCell : UITableViewCell
+@property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified storBillede;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified navnet;
+@property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified prisBillede;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified prisTekst;
+@property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified mapBillede;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified mapTekst;
+- (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Nullable)reuseIdentifier OBJC_DESIGNATED_INITIALIZER SWIFT_AVAILABILITY(ios,introduced=3.0);
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
 
 SWIFT_CLASS("_TtC17BilligeBamser_1_019IntroViewController")
 @interface IntroViewController : UIViewController <UITabBarControllerDelegate>
@@ -320,14 +344,14 @@ SWIFT_CLASS("_TtC17BilligeBamser_1_020LogindViewController")
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified btnFb;
 @property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified mailFelt;
 @property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified kodeFelt;
-- (IBAction)FB:(UIButton * _Nonnull)sender;
-- (BOOL)textField:(UITextField * _Nonnull)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString * _Nonnull)string SWIFT_WARN_UNUSED_RESULT;
 - (void)viewDidLoad;
+@property (nonatomic, readonly) UIStatusBarStyle preferredStatusBarStyle;
 - (void)viewDidLayoutSubviews;
 - (void)viewWillAppear:(BOOL)animated;
+- (BOOL)textField:(UITextField * _Nonnull)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString * _Nonnull)string SWIFT_WARN_UNUSED_RESULT;
 - (BOOL)textFieldShouldReturn:(UITextField * _Nonnull)textField SWIFT_WARN_UNUSED_RESULT;
 - (IBAction)onLogin:(UIButton * _Nonnull)sender;
-@property (nonatomic, readonly) UIStatusBarStyle preferredStatusBarStyle;
+- (IBAction)FB:(UIButton * _Nonnull)sender;
 - (IBAction)TilbageTrykket:(UIButton * _Nonnull)sender;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
