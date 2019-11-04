@@ -19,7 +19,6 @@ class CollectionViewCell : UICollectionViewCell {
 }
 
 class UdforskViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
-    
 
        override func viewDidLoad() {
            super.viewDidLoad()
@@ -44,14 +43,22 @@ class UdforskViewController: UIViewController, UICollectionViewDelegate, UIColle
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 2
+        return 10
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! CollectionViewCell
+
+        //TODO HENT DATA FRA BARLISTE MED 10 TÆTTESTE PÅ
+        let testdata = ["Palæen", "Old Irish - Lyngby ", "Den glade gris", "Hegnet","Artillericafeen","DTU fredagsbar","Ruder Konge","IRISH tivoli","DIAMANTEN","billige bamse cafe :)"
+        ]
+        
+        // var testimage : UIImage = UIImage(named:"bg1")!
+              
+        // cell.imageView = UIImageView(image: testimage)
         
         cell.imageView.backgroundColor = UIColor.randomColor()
-        cell.text.text = "forhelf"
+        cell.text.text = testdata[indexPath.row]
         cell.text.textColor = UIColor.blue
         print("test tekst for cell er: \(cell.text.text)")
         return cell

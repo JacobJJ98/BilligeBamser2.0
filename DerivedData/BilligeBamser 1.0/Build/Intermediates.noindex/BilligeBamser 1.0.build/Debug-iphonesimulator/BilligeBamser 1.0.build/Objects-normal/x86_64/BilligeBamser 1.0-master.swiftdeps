@@ -1,13 +1,13 @@
 version: "Apple Swift version 5.1 (swiftlang-1100.0.270.13 clang-1100.0.33.7)"
 options: "463f4699afb0dfac316e18179fa80c21"
-build_time: [1572785128, 501743000]
+build_time: [1572861196, 316563000]
 inputs:
   "/Users/nicolaidam/Documents/BilligeBamser2.0/BilligeBamser 1.0/Model/Bar.swift": [1572099269, 702949423]
   "/Users/nicolaidam/Documents/BilligeBamser2.0/BilligeBamser 1.0/Start/StartsideViewController.swift": [1572637039, 419947749]
   "/Users/nicolaidam/Documents/BilligeBamser2.0/BilligeBamser 1.0/Start/IntroViewController.swift": [1572099269, 705099951]
   "/Users/nicolaidam/Documents/BilligeBamser2.0/BilligeBamser 1.0/TabBar/TabbarContentView.swift": [1572724585, 515117347]
   "/Users/nicolaidam/Documents/BilligeBamser2.0/BilligeBamser 1.0/TabBar/ExampleIrregularityContentView.swift": [1572724893, 555152388]
-  "/Users/nicolaidam/Documents/BilligeBamser2.0/BilligeBamser 1.0/MainSide/UdforskViewController.swift": [1572544790, 775467084]
+  "/Users/nicolaidam/Documents/BilligeBamser2.0/BilligeBamser 1.0/MainSide/UdforskViewController.swift": [1572861195, 696974193]
   "/Users/nicolaidam/Documents/BilligeBamser2.0/BilligeBamser 1.0/MainSide/UIColorExtensions.swift": [1537580230, 0]
   "/Users/nicolaidam/Documents/BilligeBamser2.0/BilligeBamser 1.0/TabBar/ExampleBouncesContentView.swift": [1572099269, 749471259]
   "/Users/nicolaidam/Documents/BilligeBamser2.0/BilligeBamser 1.0/Model/Bruger.swift": [1572617817, 303732766]
@@ -15,9 +15,10 @@ inputs:
   "/Users/nicolaidam/Documents/BilligeBamser2.0/BilligeBamser 1.0/New Group/LogindViewController.swift": [1572726006, 128527014]
   "/Users/nicolaidam/Documents/BilligeBamser2.0/BilligeBamser 1.0/Start/OpretBrugerViewController.swift": [1572459098, 509868035]
   "/Users/nicolaidam/Documents/BilligeBamser2.0/BilligeBamser 1.0/New Group2/BarListe.swift": [1572617817, 304545933]
-  "/Users/nicolaidam/Documents/BilligeBamser2.0/BilligeBamser 1.0/MainSide/CenterViewFlowLayout.swift": [1537580230, 0]
+  "/Users/nicolaidam/Documents/BilligeBamser2.0/BilligeBamser 1.0/MainSide/CenterViewFlowLayout.swift": [1572814750, 858414618]
   "/Users/nicolaidam/Documents/BilligeBamser2.0/BilligeBamser 1.0/TabBar/ExampleNavigationController.swift": [1572099269, 750659109]
-  "/Users/nicolaidam/Documents/BilligeBamser2.0/BilligeBamser 1.0/TabBar/CustomTabbarController.swift": [1572724685, 261530085]
+  "/Users/nicolaidam/Documents/BilligeBamser2.0/BilligeBamser 1.0/MainSide/FavoriterTableViewController.swift": [1572856291, 780911094]
+  "/Users/nicolaidam/Documents/BilligeBamser2.0/BilligeBamser 1.0/TabBar/CustomTabbarController.swift": [1572856291, 782343012]
   "/Users/nicolaidam/Documents/BilligeBamser2.0/BilligeBamser 1.0/TabBar/ExampleBasicContentView.swift": [1572099269, 749022198]
   "/Users/nicolaidam/Documents/BilligeBamser2.0/BilligeBamser 1.0/New Group1/OpretBajerViewController.swift": [1572617817, 304156404]
   "/Users/nicolaidam/Documents/BilligeBamser2.0/BilligeBamser 1.0/AppDelegate.swift": [1572099269, 627535454]
