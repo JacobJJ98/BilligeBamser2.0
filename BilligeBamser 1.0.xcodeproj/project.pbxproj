@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		284DEA912371AB40004471F5 /* NavigationControllerUdforsk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284DEA902371AB40004471F5 /* NavigationControllerUdforsk.swift */; };
 		2865BAC22361935D00CE8878 /* ExampleBouncesContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2865BABE2361934D00CE8878 /* ExampleBouncesContentView.swift */; };
 		2865BAC32361935D00CE8878 /* ExampleNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2865BABF2361935200CE8878 /* ExampleNavigationController.swift */; };
 		2865BAC42361935D00CE8878 /* ExampleBasicContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2865BAC02361935800CE8878 /* ExampleBasicContentView.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		284DEA902371AB40004471F5 /* NavigationControllerUdforsk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerUdforsk.swift; sourceTree = "<group>"; };
 		2865BABE2361934D00CE8878 /* ExampleBouncesContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleBouncesContentView.swift; sourceTree = "<group>"; };
 		2865BABF2361935200CE8878 /* ExampleNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleNavigationController.swift; sourceTree = "<group>"; };
 		2865BAC02361935800CE8878 /* ExampleBasicContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleBasicContentView.swift; sourceTree = "<group>"; };
@@ -82,6 +84,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		284DEA8F2371AAFD004471F5 /* Udforsk */ = {
+			isa = PBXGroup;
+			children = (
+				28721CB0236A1DE4005C50F4 /* UIColorExtensions.swift */,
+				28721CAE236A1912005C50F4 /* CenterViewFlowLayout.swift */,
+				EEAECADB23579D2B00C555E0 /* UdforskViewController.swift */,
+				284DEA902371AB40004471F5 /* NavigationControllerUdforsk.swift */,
+			);
+			path = Udforsk;
+			sourceTree = "<group>";
+		};
 		2865BABD2361929100CE8878 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
@@ -109,10 +122,8 @@
 		2865BACB23619DD800CE8878 /* MainSide */ = {
 			isa = PBXGroup;
 			children = (
-				28721CB0236A1DE4005C50F4 /* UIColorExtensions.swift */,
-				28721CAE236A1912005C50F4 /* CenterViewFlowLayout.swift */,
+				284DEA8F2371AAFD004471F5 /* Udforsk */,
 				EEAECAE12357A1EE00C555E0 /* MereViewController.swift */,
-				EEAECADB23579D2B00C555E0 /* UdforskViewController.swift */,
 				287ECAEE234E5FF200487427 /* OpretBajerViewController.swift */,
 				EEAECAD823578ADE00C555E0 /* MapViewController.swift */,
 				EEDE0A1F236F4DEE00E7B095 /* FavoriterTableViewController.swift */,
@@ -311,6 +322,7 @@
 				EEDE0A1E236B71E000E7B095 /* Bruger.swift in Sources */,
 				EEAECAE22357A1EE00C555E0 /* MereViewController.swift in Sources */,
 				EEAECAE42357AF8900C555E0 /* LogindViewController.swift in Sources */,
+				284DEA912371AB40004471F5 /* NavigationControllerUdforsk.swift in Sources */,
 				EEDE09D82365C2F600E7B095 /* OpretBrugerViewController.swift in Sources */,
 				EEAECAD723577CF500C555E0 /* BarListe.swift in Sources */,
 				28721CAF236A1912005C50F4 /* CenterViewFlowLayout.swift in Sources */,

@@ -33,13 +33,16 @@ class LogindViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var kodeFelt: UITextField!
     
+    var email: String?
+    var kode: String?
+    
     let tabbarController = CustomTabbarController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        mailFelt.delegate = self
-        kodeFelt.delegate = self
+        //mailFelt.delegate = self
+        //kodeFelt.delegate = self
         
         deaktiverLoginKnap()
         
@@ -78,27 +81,34 @@ class LogindViewController: UIViewController, UITextFieldDelegate {
     //Metode til at disable login knap når felterne er tomme
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         print("should change køres")
+        
         if(textField == self.mailFelt) {
             print("mailFelt")
-            let text = (mailFelt.text! as NSString).replacingCharacters(in: range, with: string)
-            if text.isEmpty || kodeFelt.text!.isEmpty {
-                print("email felt OG pass er emty")
-                deaktiverLoginKnap()
-            } else {
-                print("email felt IKKE emty")
-                aktiverLoginKnap()
+            if let _ = mailFelt.text, let kode = kodeFelt.text {
+                let mail = (mailFelt.text! as NSString).replacingCharacters(in: range, with: string)
+                if mail.isEmpty || kode.isEmpty {
+                    print("email felt OG pass er emty")
+                    deaktiverLoginKnap()
+                } else {
+                    print("email felt IKKE emty")
+                    aktiverLoginKnap()
+                }
+                
             }
+            
         }
         
         if(textField == self.kodeFelt) {
             print("kodeFelt")
-            let text = (kodeFelt.text! as NSString).replacingCharacters(in: range, with: string)
-            if text.isEmpty || mailFelt.text!.isEmpty {
-                print("email felt OG pass er emty")
-                deaktiverLoginKnap()
-            } else {
-                print("email felt IKKE emty")
-                aktiverLoginKnap()
+            if let mail = mailFelt.text, let _ = kodeFelt.text {
+                let kode = (kodeFelt.text! as NSString).replacingCharacters(in: range, with: string)
+                if kode.isEmpty || mail.isEmpty {
+                    print("email felt OG pass er emty")
+                    deaktiverLoginKnap()
+                } else {
+                    print("email felt IKKE emty")
+                    aktiverLoginKnap()
+                }
             }
             
         }
@@ -109,14 +119,15 @@ class LogindViewController: UIViewController, UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == mailFelt {
             kodeFelt.becomeFirstResponder()
-        } else {
+        }
+        if textField == kodeFelt {
             kodeFelt.resignFirstResponder()
         }
         return true
     }
     
-    func fireBaseLogin() {
-        Auth.auth().signIn(withEmail: mailFelt.text!, password: kodeFelt.text!) { (result, err) in
+    func fireBaseLogin(email: String, pass: String) {
+        Auth.auth().signIn(withEmail: email, password: pass) { (result, err) in
             if err != nil {
                 //hvis den kommer herind er der fejl!
                 SVProgressHUD.dismiss()
@@ -133,30 +144,39 @@ class LogindViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-        func erMailKorrekt(mail:String) -> Bool {
+    func erMailKorrekt(mail: String) -> Bool {
         let regex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
         let predicate = NSPredicate(format:"SELF MATCHES %@", regex)
         return predicate.evaluate(with: mail)
     }
     
     @IBAction func onLogin(_ sender: UIButton) {
-        if(!erMailKorrekt(mail: mailFelt.text!)) {
-            let alert = UIAlertController(title: title, message: "Indtast en gyldig email-adresse.", preferredStyle: .alert)
+        if let mail = mailFelt.text, let kode = kodeFelt.text {
+            if(!erMailKorrekt(mail: mail)) {
+                
+                let alert = UIAlertController(title: title, message: "Indtast en gyldig email-adresse.", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+                self.present(alert, animated: true)
+                kodeFelt.text = ""
+            }
+            else if (kode.count<6) {
+                kodeFelt.text = ""
+                deaktiverLoginKnap()
+                
+                let alert2 = UIAlertController(title: title, message: "Din kode er mindst 6 tegn.", preferredStyle: .alert)
+                alert2.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+                self.present(alert2, animated: true)
+                
+            }
+            else {
+                SVProgressHUD.show()
+                fireBaseLogin(email: mail,pass: kode)
+            }
             
-            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
-            self.present(alert, animated: true)
+            
+            
         }
-        else if(kodeFelt.text!.count<6){
-            kodeFelt.text = ""
-            let alert = UIAlertController(title: title, message: "Din kode er midst 6 tegn.", preferredStyle: .alert)
-                       
-                       alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
-                       self.present(alert, animated: true)
-        }
-        else {
-            SVProgressHUD.show()
-            fireBaseLogin()
-        }
+        
     }
     
     @IBAction func FB(_ sender: UIButton) {

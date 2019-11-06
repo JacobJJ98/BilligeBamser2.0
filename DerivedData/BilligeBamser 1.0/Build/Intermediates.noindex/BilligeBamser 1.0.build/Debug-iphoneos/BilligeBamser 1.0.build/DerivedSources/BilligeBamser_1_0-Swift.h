@@ -382,6 +382,17 @@ SWIFT_CLASS("_TtC17BilligeBamser_1_018MereViewController")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
 
+
+SWIFT_CLASS("_TtC17BilligeBamser_1_027NavigationControllerUdforsk")
+@interface NavigationControllerUdforsk : UINavigationController
+- (void)viewDidLoad;
+- (void)viewDidLayoutSubviews;
+- (nonnull instancetype)initWithNavigationBarClass:(Class _Nullable)navigationBarClass toolbarClass:(Class _Nullable)toolbarClass OBJC_DESIGNATED_INITIALIZER SWIFT_AVAILABILITY(ios,introduced=5.0);
+- (nonnull instancetype)initWithRootViewController:(UIViewController * _Nonnull)rootViewController OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
 @class UISwitch;
 
 SWIFT_CLASS("_TtC17BilligeBamser_1_024OpretBajerViewController")
@@ -453,6 +464,7 @@ SWIFT_CLASS("_TtC17BilligeBamser_1_021UdforskViewController")
 @interface UdforskViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate>
 - (void)viewDidLoad;
 - (void)viewDidAppear:(BOOL)animated;
+- (void)viewDidLayoutSubviews;
 @property (nonatomic, weak) IBOutlet UICollectionView * _Null_unspecified collectionView;
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView * _Nonnull)collectionView SWIFT_WARN_UNUSED_RESULT;
 - (NSInteger)collectionView:(UICollectionView * _Nonnull)collectionView numberOfItemsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
