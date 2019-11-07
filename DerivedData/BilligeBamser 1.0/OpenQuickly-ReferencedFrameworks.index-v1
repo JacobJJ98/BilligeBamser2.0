@@ -23,43 +23,43 @@
 	<string>FirebaseMessaging</string>
 	<string>FirebaseCoreDiagnosticsInterop</string>
 	<string>GoogleMobileAds</string>
-	<string>WatchKit</string>
 	<string>MobileCoreServices</string>
+	<string>WatchKit</string>
 	<string>FirebaseInstanceID</string>
 	<string>FirebaseMLVisionFaceModel</string>
 	<string>AdSupport</string>
-	<string>FirebaseMLNaturalLanguage</string>
+	<string>FirebaseAuthInterop</string>
 	<string>FirebaseAuth</string>
-	<string>FBSDKLoginKit</string>
+	<string>CoreText</string>
 	<string>FirebaseMLVisionLabelModel</string>
+	<string>FirebaseMLNaturalLanguage</string>
+	<string>AppKit</string>
+	<string>FBSDKLoginKit</string>
 	<string>FBSDKCoreKit</string>
 	<string>SVProgressHUD</string>
-	<string>FirebaseAuthInterop</string>
-	<string>AppKit</string>
-	<string>CoreText</string>
 	<string>CoreFoundation</string>
-	<string>FirebasePerformance</string>
 	<string>ESTabBarController</string>
 	<string>FirebaseMLNLTranslate</string>
-	<string>Crashlytics</string>
 	<string>AuthenticationServices</string>
+	<string>FirebasePerformance</string>
+	<string>Crashlytics</string>
 	<string>FirebaseMLVisionAutoML</string>
 	<string>netinet</string>
 	<string>GoogleDataTransport</string>
 	<string>protobuf</string>
+	<string>CommonCrypto</string>
 	<string>GoogleUtilities</string>
 	<string>FirebaseMLNLSmartReply</string>
 	<string>FirebaseRemoteConfig</string>
-	<string>CommonCrypto</string>
 	<string>FirebaseMLVision</string>
+	<string>GTMSessionFetcher</string>
+	<string>AudioToolbox</string>
 	<string>FirebaseMLNLLanguageID</string>
 	<string>QuartzCore</string>
-	<string>GTMSessionFetcher</string>
 	<string>SystemConfiguration</string>
 	<string>FirebaseAnalytics</string>
-	<string>AudioToolbox</string>
-	<string>FirebaseMLVisionObjectDetection</string>
 	<string>Security</string>
+	<string>FirebaseMLVisionObjectDetection</string>
 	<string>CoreGraphics</string>
 	<string>objc</string>
 	<string>FirebaseDynamicLinks</string>

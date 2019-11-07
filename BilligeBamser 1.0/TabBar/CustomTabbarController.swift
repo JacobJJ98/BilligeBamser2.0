@@ -49,7 +49,7 @@ class CustomTabbarController: ESTabBarController {
         v1Nav.tabBarItem = ESTabBarItem.init(TabBarContentView(), image: UIImage(named: "udforskGrey"), selectedImage: UIImage(named: "udforskOrange"))
         v2Nav.tabBarItem = ESTabBarItem.init(TabBarContentView(), image: UIImage(named: "mapGrey"), selectedImage: UIImage(named: "mapOrange"))
         
-        v3Nav.tabBarItem = ESTabBarItem.init(ExampleIrregularityContentView(), title: nil, image: UIImage(named: "photo_verybig_1"), selectedImage: UIImage(named: "photo_verybig_1"))
+        v3Nav.tabBarItem = ESTabBarItem.init(ExampleIrregularityContentView(), title: nil, image: UIImage(named: "photo_big-1"), selectedImage: UIImage(named: "photo_big-1"))
         
         
         v4Nav.tabBarItem = ESTabBarItem.init(TabBarContentView(),image: UIImage(named: "favoGrey"), selectedImage: UIImage(named: "favoOrange"))

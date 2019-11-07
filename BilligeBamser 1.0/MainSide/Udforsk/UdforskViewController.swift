@@ -16,25 +16,25 @@ import SVProgressHUD
 class CollectionViewCell : UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var text: UILabel!
-    
+    @IBOutlet weak var favoritKnap: UIButton!
     
 }
 
 class UdforskViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        collectionView.backgroundColor = UIColor.clear
         collectionView.layer.shadowColor = UIColor.black.cgColor
         collectionView.layer.shadowOffset = CGSize(width: 0, height: 2.0)
         collectionView.layer.shadowRadius = 4.0
         collectionView.layer.shadowOpacity = 0.5
         collectionView.layer.masksToBounds = false
-        
         collectionView.layer.backgroundColor = UIColor.clear.cgColor
-        //        collectionView.layer.cornerRadius = 10
         
     }
     
@@ -48,51 +48,63 @@ class UdforskViewController: UIViewController, UICollectionViewDelegate, UIColle
     
     override func viewDidLayoutSubviews() {
         let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
-        backgroundImage.image = UIImage(named: "bg2")
+        backgroundImage.image = UIImage(named: "bg6")
         backgroundImage.contentMode = UIView.ContentMode.scaleAspectFill
         self.view.insertSubview(backgroundImage, at: 0)
     }
     
     
-    let reuseIdentifier = "collectionViewCellId"
+    let reuseIdentifier = "collectionViewCellID"
     
     @IBOutlet weak var collectionView: UICollectionView!
+    
+    
+    
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
-    
-    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 10
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! CollectionViewCell
         
-        cell.layer.masksToBounds = true;
-        cell.layer.cornerRadius = 10;
+        cell.layer.cornerRadius = 5;
         
-        
-        let billed = ["beer1", "beer2","beer1", "beer2","beer1", "beer2","beer1", "beer2","beer1", "beer2",]
-        
-        //TODO HENT DATA FRA BARLISTE MED 10 TÆTTESTE PÅ
-        let testdata = ["Palæen", "Old Irish - Lyngby ", "Den glade gris", "Hegnet","Artillericafeen","DTU fredagsbar","Ruder Konge","IRISH tivoli","DIAMANTEN","billige bamse cafe :)"
-        ]
-        
-        //let testimage : UIImage = UIImage(named: billed[indexPath.row])!
-        //cell.imageView.contentMode = .scaleAspectFill
-        // cell.imageView.image = testimage
-        
-        
-        
-        print(indexPath.row)
-        //  cell.imageView.backgroundColor = UIColor.randomColor()
+        let testdata = ["Palæen", "Old Irish - Lyngby ", "Den glade gris", "Hegnet","Artillericafeen","DTU fredagsbar","Ruder Konge","IRISH tivoli","DIAMANTEN","billige bamse cafe :)"]
         cell.text.text = testdata[indexPath.row]
-        // cell.text.textColor = UIColor.blue
-        //    print("test tekst for cell er: \(cell.text.text)")
+
+        let billed = ["beer1", "beer2","beer3", "beer4","beer5", "beer6","beer7", "beer8","beer9", "beer10",]
+        
+        let id = ["1", "2","3", "4","5", "6","7", "8","9", "10",]
+        
+        let testimage : UIImage = UIImage(named: billed[indexPath.row])!
+        
+        cell.imageView.image = testimage
+        cell.favoritKnap.tag = indexPath.row
+        cell.favoritKnap.addTarget(self, action: #selector(onClickFavoritNarmest), for: .touchUpInside)
+        
+        
         return cell
     }
+    
+    
+    @IBAction func onClickFavoritNarmest(sender: UIButton) {
+        //        print("dd \(sender.identi)")
+        print("Jeg er nr. 1 collection view og nr: \(sender.tag)")
+        // use button tag to find out which button is clicked.
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("did select \(indexPath.row)")
+    }
+    
+    
+    
+    
     
     
     
