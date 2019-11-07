@@ -36,6 +36,7 @@
 		EEDE09D82365C2F600E7B095 /* OpretBrugerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDE09D72365C2F600E7B095 /* OpretBrugerViewController.swift */; };
 		EEDE0A1E236B71E000E7B095 /* Bruger.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDE0A1D236B71E000E7B095 /* Bruger.swift */; };
 		EEDE0A20236F4DEF00E7B095 /* FavoriterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDE0A1F236F4DEE00E7B095 /* FavoriterTableViewController.swift */; };
+		EEDE0A22237498A100E7B095 /* FirebaseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDE0A21237498A100E7B095 /* FirebaseAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +73,7 @@
 		EEDE09D72365C2F600E7B095 /* OpretBrugerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpretBrugerViewController.swift; sourceTree = "<group>"; };
 		EEDE0A1D236B71E000E7B095 /* Bruger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bruger.swift; sourceTree = "<group>"; };
 		EEDE0A1F236F4DEE00E7B095 /* FavoriterTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriterTableViewController.swift; sourceTree = "<group>"; };
+		EEDE0A21237498A100E7B095 /* FirebaseAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +195,7 @@
 				287ECAEC234E541800487427 /* Theme.xcassets */,
 				EE805A39234DF9B60095651D /* LaunchScreen.storyboard */,
 				EE805A3C234DF9B60095651D /* Info.plist */,
+				EEDE0A21237498A100E7B095 /* FirebaseAPI.swift */,
 			);
 			path = "BilligeBamser 1.0";
 			sourceTree = "<group>";
@@ -321,6 +324,7 @@
 				2865BAC52361935D00CE8878 /* ExampleIrregularityContentView.swift in Sources */,
 				EEAECADC23579D2B00C555E0 /* UdforskViewController.swift in Sources */,
 				28721CB1236A1DE4005C50F4 /* UIColorExtensions.swift in Sources */,
+				EEDE0A22237498A100E7B095 /* FirebaseAPI.swift in Sources */,
 				2865BAC22361935D00CE8878 /* ExampleBouncesContentView.swift in Sources */,
 				EEDE0A1E236B71E000E7B095 /* Bruger.swift in Sources */,
 				EEAECAE22357A1EE00C555E0 /* MereViewController.swift in Sources */,

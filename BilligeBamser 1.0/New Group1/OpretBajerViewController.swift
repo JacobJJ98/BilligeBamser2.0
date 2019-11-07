@@ -9,12 +9,10 @@
 import UIKit
 import CoreLocation
 import SVProgressHUD
-import FirebaseFirestore
 
 class OpretBajerViewController: UIViewController, CLLocationManagerDelegate {
     let locationManager = CLLocationManager()
-    var db: Firestore!
-   
+    
     var pris : Int? = nil
     var cor : CLLocationCoordinate2D?
     var midlerRyg : Bool? = nil
@@ -45,8 +43,8 @@ class OpretBajerViewController: UIViewController, CLLocationManagerDelegate {
         print("opretBar er trykket")
         // kaldes for at oversætte fra Textfield og hen til klassevariable og kalder derefter find lokation som så derefter vil kalde tilføj til Firebase
         self.tilføjNavnogPris()
-        }
-        
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,7 +56,7 @@ class OpretBajerViewController: UIViewController, CLLocationManagerDelegate {
         adrAfvist.isHidden = true
     }
     
-   
+    
     
     
     @IBAction func tilbage(_ sender: UIButton) {
@@ -67,48 +65,7 @@ class OpretBajerViewController: UIViewController, CLLocationManagerDelegate {
     
     func performSegueToReturnBack()  {
         
-            self.dismiss(animated: true, completion: nil)
-        
-    }
-    func tilføjTilFirebase() -> Void {
-         db = Firestore.firestore()
-        print("INDE I FIREBASE tilføj")
-        if let kor = cor {
-            if let navn_ = navn {
-                if let pris_ = pris {
-                        print("BAREN KAN NU OPRETTES MED DISSE VÆRDIER: ")
-                        print(kor.latitude)
-                        print(kor.longitude)
-                        print(navn_)
-                        print(pris_)
-                        print(rygningTilladt.isOn)
-                    
-                    var ref: DocumentReference? = nil
-                    ref = db.collection("Bar").addDocument(data:[
-                        "flaskepris": pris_,
-                        "latitude": "\(kor.latitude)",
-                        "longitude": "\(kor.longitude)",
-                        "navn": navn_,
-                        "rygning": rygningTilladt.isOn
-                    ]) { err in
-                        if let err = err {
-                            print("Error adding document: \(err)")
-                            SVProgressHUD.showError(withStatus: "Mislykkedes")
-                        } else {
-                            print("Document added with ID: \(ref!.documentID)")
-                            SVProgressHUD.showSuccess(withStatus: "")
-                            SVProgressHUD.dismiss {
-                                BarListe.shared.HentBarer()
-                            }
-                            self.performSegueToReturnBack()
-                            
-                            
-                        }
-                    }
-                    
-                }
-            }
-        }
+        self.dismiss(animated: true, completion: nil)
         
     }
     func tilføjNavnogPris() -> Void {
@@ -125,7 +82,7 @@ class OpretBajerViewController: UIViewController, CLLocationManagerDelegate {
                 prisAfvist.isHidden = false
                 return
             }
-                
+            
             if let prisSomInt = Int(prismidler) {
                 pris = prisSomInt
             }
@@ -134,67 +91,110 @@ class OpretBajerViewController: UIViewController, CLLocationManagerDelegate {
         self.findLokation()
     }
     
-     func findLokation() -> Void {
+    
+    func tilføjTilFirebase() -> Void {
+        
+                           if let kor = self.cor {
+                               if let navn_ = self.navn {
+                                   if let pris_ = self.pris {
+                                       print("BAREN KAN NU OPRETTES MED DISSE VÆRDIER: ")
+                                       print(kor.latitude)
+                                       print(kor.longitude)
+                                       print(navn_)
+                                       print(pris_)
+                                       print(self.rygningTilladt.isOn)
+                                       let bar = Bar(flaskepris: pris_, navn: navn_, rygning: self.rygningTilladt.isOn, coordinate: kor)
+                                       FirebaseAPI.shared.tilføjBar(bar: bar) { (res, err) in
+                                           if err != nil {
+                                               SVProgressHUD.showError(withStatus: "Mislykkedes")
+                                           } else {
+                                               BarListe.shared.barer.removeAll()
+                                               FirebaseAPI.shared.hentBarer { (result, error) in
+                                                   if error != nil {
+                                                       SVProgressHUD.dismiss()
+                                                       SVProgressHUD.showError(withStatus: "Kunne ikke hente barer!")
+                                                       SVProgressHUD.dismiss(withDelay: 0.5)
+                                                   } else {
+                                                       if let barene = result {
+                                                           for bar in barene {
+                                                               BarListe.shared.addBar(bar: bar)
+                                                           }
+                                                           
+                                                           SVProgressHUD.showSuccess(withStatus: "")
+                                                           SVProgressHUD.dismiss()
+                                                           self.performSegueToReturnBack()
+                                                       }
+                                                       
+                                                   }
+                                                   
+                                               }
+                                           }
+                                       }
+                                       
+                                   }
+                                   
+                               }
+                               
+                               
+                           }
+    }
+    
+    func findLokation() -> Void {
         print("inde i findLokation")
         // find ud af om det skal være nuværende lokation eller adresse
-            if nuværendeLokationStatus.isOn {
-                
-                
-                  //Resterende sørger for at sætte current location som der hvor Map starter!!
-                  if CLLocationManager.locationServicesEnabled() {
-                    locationManager.delegate = self
-                      if let lokationen = locationManager.location {
-                        print("LOKATIONEN ER: ")
-                        print(lokationen.coordinate.latitude)
-                        print(lokationen.coordinate.longitude)
-                        // sætter cor til være den nuværende lokation!
-                        cor = lokationen.coordinate
-                        self.tilføjTilFirebase()
-                      } else {
-                        // TODO:  lav en allert eller noget NICE
-                        print("DU SKAL ACCEPTERE BRUG AF LOKATION!!!")
-                    }
+        if nuværendeLokationStatus.isOn {
+            
+            
+            //Resterende sørger for at sætte current location som der hvor Map starter!!
+            if CLLocationManager.locationServicesEnabled() {
+                locationManager.delegate = self
+                if let lokationen = locationManager.location {
+                    print("LOKATIONEN ER: ")
+                    print(lokationen.coordinate.latitude)
+                    print(lokationen.coordinate.longitude)
+                    // sætter cor til være den nuværende lokation!
+                    cor = lokationen.coordinate
+                    self.tilføjTilFirebase()
+                } else {
+                    // TODO:  lav en allert eller noget NICE
+                    print("DU SKAL ACCEPTERE BRUG AF LOKATION!!!")
+                }
             }
-         
+            
             
         } else {
-                
-                if let adrmidler = adresse.text {
-                    guard adrmidler.count > 0 else {
-                        adrAfvist.isHidden = false
-                        return
-                    }
+            
+            if let adrmidler = adresse.text {
+                guard adrmidler.count > 0 else {
+                    adrAfvist.isHidden = false
+                    return
                 }
-                // let address = "Toftebakken 15, 3790 Hasle"
-
-                let geoCoder = CLGeocoder()
-                 if let adress = adresse.text {
-                    
-                    geoCoder.geocodeAddressString(adress) { (placemarks, error) in
-                        guard let placemarks = placemarks, let location = placemarks.first?.location
-                         else {
+            }
+            // let address = "Toftebakken 15, 3790 Hasle"
+            
+            let geoCoder = CLGeocoder()
+            if let adress = adresse.text {
+                
+                geoCoder.geocodeAddressString(adress) { (placemarks, error) in
+                    guard let placemarks = placemarks, let location = placemarks.first?.location
+                        else {
                             // handle no location found
                             // tænker der skal komme en alert omkring det skal indtastes anderledes eller brug nuværende loka!!
                             
-                        print("Lokationen findes ikke!")
+                            print("Lokationen findes ikke!")
                             return
-                        }
-                        
-
-                      //  print("DEN INDTASTEDE LOKATION ER: ")
-                     //   print(location.coordinate.latitude)
-                     //   print(location.coordinate.longitude)
-                        
-                        self.cor = location.coordinate
-                        self.tilføjTilFirebase()
-                        
                     }
+                    
+                    self.cor = location.coordinate
+                    self.tilføjTilFirebase()
+                    
+                   
                     
                 }
                 
-            
-          }
+            }
+        }
         
     }
-   
+    
 }

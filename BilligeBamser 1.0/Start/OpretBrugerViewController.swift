@@ -179,7 +179,17 @@ class OpretBrugerViewController: UIViewController, UITextFieldDelegate {
                                   print("SUCCES MED AT TILFØJE BRUGER I DB")
                                     SVProgressHUD.showSuccess(withStatus: "Bruger oprettet")
                                     // SEND BRUGEREN VIDERE TIL LOGGET IND og henter alle barer
-                                    BarListe.shared.HentBarer()
+                                    // BarListe.shared.HentBarer()
+                                    FirebaseAPI.shared.hentBarer { (result, error) in
+                                        if error != nil {
+                                            if let barene = result {
+                                            for bar in barene {
+                                                BarListe.shared.addBar(bar: bar)
+                                            }
+                                        }
+                                    }
+                                    }
+                                    
                                     SVProgressHUD.dismiss(withDelay: 1) {
                                         self.present(self.tabbarController, animated: true, completion: nil)
                                     }

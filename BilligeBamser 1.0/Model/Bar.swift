@@ -10,6 +10,7 @@ import Foundation
 import MapKit
 
 class Bar: NSObject, MKAnnotation {
+    var id: String = ""
     var flaskepris: Int
     var navn: String
     var rygning: Bool

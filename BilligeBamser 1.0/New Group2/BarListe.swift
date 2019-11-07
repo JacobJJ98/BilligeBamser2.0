@@ -25,7 +25,11 @@ class BarListe {
     {
         brugerLoggetind = Bruger(fornavn: "", efternavn: "", favoritsteder: [""])
     }
-    
+    func tilføjBruger(bruger: Bruger) -> Void {
+        self.egneFavoritter.removeAll()
+        self.brugerLoggetind.Favoritsteder.removeAll()
+        self.brugerLoggetind = bruger
+    }
     func addBar(bar: Bar) -> Void {
         barer.insert(bar, at: barer.count)
     }
@@ -34,103 +38,33 @@ class BarListe {
         let tekst = "Antal Barer: \(barer.count)"
         return tekst
     }
-    
-    func HentBarer() -> Void {
-        barer.removeAll()
-         db = Firestore.firestore()
-         
-         var ref: DocumentReference? = nil
-         var midlerPris = 1
-         var midlerLati = 1.1
-         var midlerLong = 1.1
-         var midlerNavn = ""
-         var midlerRyg = true
-         
-         db.collection("Bar").getDocuments(){ (querySnapshot, err) in
-             if let err = err {
-                 print("Error getting documents: \(err)")
-             } else {
-                 for document in querySnapshot!.documents {
-                     if let flaskepris = document.data()["flaskepris"] as? Int {
-                         midlerPris = flaskepris
-                                          print("\(flaskepris)")
-                         
-                                        }
-                     if let latitude = document.data()["latitude"] as? String {
-                         if let latitudeDouble = Double(latitude) {
-                             midlerLati = latitudeDouble
-                             print("\(latitudeDouble)")
-                         }
-                       
-                     }
-                     if let longitude = document.data()["longitude"] as? String {
-                         if let longitudeDouble = Double(longitude) {
-                             midlerLong = longitudeDouble
-                             print("\(longitudeDouble)")
-                         }
-                         
-                     }
-                     if let Name = document.data()["navn"] as? String {
-                         midlerNavn = Name
-                       print(Name)
-                     }
-                     if let rygning = document.data()["rygning"] as? Bool {
-                         midlerRyg = rygning
-                       print("\(rygning)")
-                     }
-                    var kor = CLLocationCoordinate2D()
-                    kor.latitude = midlerLati
-                    kor.longitude = midlerLong
-                    var baren = Bar(flaskepris: midlerPris, navn: midlerNavn, rygning: midlerRyg, coordinate: kor)
-                     BarListe.shared.addBar(bar: baren)
-                 }
-                self.hentBruger()
-             }
-         }
-     
-        
+    func udskrivTestFavo() -> Void {
+        print("INDE I FAVO PRINT!")
+        print(egneFavoritter.count)
+        for bar in egneFavoritter {
+            print(bar.id)
+        }
+    }
+    func udskrivTestBarer() -> Void {
+        print("INDE I BAR PRINT!")
+        print(barer.count)
+        for bar in barer {
+            print(bar.id)
+        }
     }
     
-    func hentBruger() -> Void {
-        self.egneFavoritter.removeAll()
-        self.brugerLoggetind.Favoritsteder.removeAll()
-        print("INDE I HENT FAVORITTER!!!!!")
-        print(Auth.auth().currentUser!.uid)
-        // først hentes den bruger der er logget ind
-        db = Firestore.firestore()
-        let docRef = db.collection("Bruger").document(Auth.auth().currentUser!.uid)
-        docRef.getDocument { (document, error) in
-            if let document = document {
-                print("ER IGANG MED AT HENTE BRUGEREN!!")
-                if let fornavn =  document.data()!["Fornavn"] as? String {
-                    print("FORNAVNET ER")
-                    print(fornavn)
-                    self.brugerLoggetind.Fornavn = fornavn
+    func findFavo() -> Void {
+        egneFavoritter.removeAll()
+        for favo in brugerLoggetind.Favoritsteder {
+            for bar in barer {
+                if favo == bar.id {
+                    egneFavoritter.insert(bar, at: egneFavoritter.count)
                 }
-                if let efternavn = document.data()!["Efternavn"] as? String {
-                    print("EFTERNAVNET ER")
-                    print(efternavn)
-                    self.brugerLoggetind.Efternavn = efternavn
-                }
-                if let favoritsteder = document.data()!["Favoritsteder"] as? [String] {
-                                   print("Favoritsteder ER")
-                                    print(favoritsteder.count)
-                    self.brugerLoggetind.Favoritsteder = favoritsteder
-                    for sted in favoritsteder {
-                        print(sted)
-                    }
-                               }
-                
-                self.indlaesFavoriter()
-            } else {
-                print("Document does not exist")
             }
         }
-        
-        
- 
-        
     }
+    
+    
     func indlaesFavoriter() -> Void {
         
         // hent favoritbarerne fra Firebase

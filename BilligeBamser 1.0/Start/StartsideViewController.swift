@@ -90,11 +90,22 @@ class StartsideViewController: UIViewController {
                            return
                        }
                     
-                    BarListe.shared.HentBarer()
-                    print("INDE FRA SSVC")
-                    print(BarListe.shared.udskrivTest())
-                    SVProgressHUD.dismiss()
-                    self.present(self.tabbarController, animated: true, completion: nil)
+                   FirebaseAPI.shared.hentBarer { (result, error) in
+                       if error != nil {
+                           if let barene = result {
+                           for bar in barene {
+                               BarListe.shared.addBar(bar: bar)
+            
+                           }
+                            BarListe.shared.findFavo()
+                       }
+                        print("INDE FRA SSVC")
+                        print(BarListe.shared.udskrivTest())
+                        SVProgressHUD.dismiss()
+                        self.present(self.tabbarController, animated: true, completion: nil)
+                   }
+                   }
+                    
                       
                           
                        
