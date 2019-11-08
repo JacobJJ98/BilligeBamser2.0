@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import FirebaseAuth
 
 class IntroViewController: UIViewController, UITabBarControllerDelegate {
     
@@ -23,7 +22,7 @@ class IntroViewController: UIViewController, UITabBarControllerDelegate {
     
     override func viewDidAppear(_ animated: Bool) {
         
-        if Auth.auth().currentUser != nil {
+        if FirebaseAPI.shared.nuvaerendeBruger() != nil {
             // sørger lige for at slette alt der er, så der startes på en frisk lige meget hvad!
             BarListe.shared.logOut()
             FirebaseAPI.shared.hentBruger { (bruger, error) in
