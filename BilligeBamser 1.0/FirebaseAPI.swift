@@ -43,7 +43,6 @@ class FirebaseAPI {
         self.db = Firestore.firestore()
         print("INDE I FIREstore tilføj-bruger")
         var favo: [String] = []
-        var ref: DocumentReference? = nil
         if let user = Auth.auth().currentUser {
             
             self.db.collection("Bruger").document(user.uid).setData([

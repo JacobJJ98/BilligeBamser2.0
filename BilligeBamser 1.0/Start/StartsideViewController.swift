@@ -21,7 +21,7 @@ class StartsideViewController: UIViewController {
     @IBOutlet weak var fortsætBtn: UIButton!
     @IBOutlet weak var btnAllerede: UIButton!
     
-    let tabbarController = CustomTabbarController()
+    
     
     
     override func viewDidLayoutSubviews() {
@@ -120,8 +120,8 @@ class StartsideViewController: UIViewController {
                                          BarListe.shared.findFavo()
                                             
                                             SVProgressHUD.dismiss()
-                                            SVProgressHUD.showSuccess(withStatus: "")
-                                          self.present(self.tabbarController, animated: true, completion: nil)
+                                            let tabbarController = CustomTabbarController()
+                                          self.present(tabbarController, animated: true, completion: nil)
                                         }
                                         
                                         }
