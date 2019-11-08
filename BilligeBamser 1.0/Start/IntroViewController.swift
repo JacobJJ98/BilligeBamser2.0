@@ -24,20 +24,38 @@ class IntroViewController: UIViewController, UITabBarControllerDelegate {
     override func viewDidAppear(_ animated: Bool) {
         
         if Auth.auth().currentUser != nil {
-            FirebaseAPI.shared.hentBarer { (result, error) in
-                if error != nil {
-                    if let barene = result {
-                    for bar in barene {
-                        BarListe.shared.addBar(bar: bar)
-                    }
-                        BarListe.shared.findFavo()
+            FirebaseAPI.shared.hentBruger { (bruger, error) in
+            if error != nil {
+            } else {
+                
+                if let brugeren = bruger {
+                    BarListe.shared.tilføjBruger(bruger: brugeren)
                 }
+                BarListe.shared.barer.removeAll()
+                  FirebaseAPI.shared.hentBarer { (result, error) in
+                  if error != nil {
+                      print("Fejl ved hent af barer!!")
+                  } else {
+                      if let barene = result {
+                              print("Barene er hentet!")
+                              print(barene.count)
+                          for bar in barene {
+                              BarListe.shared.addBar(bar: bar)
+                          }
+                              print("før favo findes")
+                          BarListe.shared.findFavo()
+                              print("efter favo")
+                          
+                              self.present(self.tabbarController, animated: true, completion: nil)
+                              
+                      }
+                  }
             }
             }
-            sleep(2)
-               self.present(tabbarController, animated: true, completion: nil)
+            
               
-               } else {
+               }
+        }else {
                   print("IKKE LOGGET IND!!")
             sleep(2)
                    self.performSegue(withIdentifier: "forNewUser", sender: nil)

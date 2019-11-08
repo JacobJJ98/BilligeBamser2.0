@@ -71,11 +71,13 @@ class FirebaseAPI {
     func hentBarer(completionHandler: @escaping (_ result: [Bar]?, _ error: Error?) -> Void){
        
         db = Firestore.firestore()
+        var midlerID = ""
         var midlerPris = 1
         var midlerLati = 1.1
         var midlerLong = 1.1
         var midlerNavn = ""
         var midlerRyg = true
+        
         
         db.collection("Bar").getDocuments(){ (querySnapshot, err) in
             if let err = err {
@@ -113,10 +115,16 @@ class FirebaseAPI {
                         midlerRyg = rygning
                       print("\(rygning)")
                     }
+                    if let id = document.data()["id"] as? String {
+                        midlerID = id
+                        print(id)
+                    }
                    var kor = CLLocationCoordinate2D()
                    kor.latitude = midlerLati
                    kor.longitude = midlerLong
                     let baren = Bar(flaskepris: midlerPris, navn: midlerNavn, rygning: midlerRyg, coordinate: kor)
+                    
+                    baren.id = midlerID
                     
                     barerne.insert(baren, at: barerne.count)
                     

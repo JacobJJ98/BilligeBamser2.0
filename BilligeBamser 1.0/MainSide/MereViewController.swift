@@ -30,9 +30,10 @@ class MereViewController: UIViewController {
     }
     override func viewDidAppear(_ animated: Bool) {
         print("APPEAR MERE!!")
-        
+        print(BarListe.shared.barer.count)
+        print(BarListe.shared.egneFavoritter.count)
         for bar in BarListe.shared.egneFavoritter {
-            print(bar.navn)
+            print(bar.id)
         }
     }
     
