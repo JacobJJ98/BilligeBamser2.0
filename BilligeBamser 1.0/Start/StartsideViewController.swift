@@ -33,7 +33,7 @@ class StartsideViewController: UIViewController {
         btnAllerede.layer.cornerRadius  = btnAllerede.frame.size.height/2
         btnAllerede.layer.borderWidth = 2
         btnAllerede.layer.borderColor = UIColor.white.cgColor
-       
+        
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -48,78 +48,93 @@ class StartsideViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-      
+        
         locationManager.requestWhenInUseAuthorization()
     }
     // denne metode gør at den logger ind via FaceBook!!
     @IBAction func loginMedFacebook(_ sender: UIButton) {
         
         print("FACEBOOK!!!")
-               let loginM = LoginManager()
-               loginM.logIn(permissions: ["public_profile", "email"], from: self) { (result, error) in
-                   
-                // tjekker for at man annullerer og at der er et resultat!
-                if let res = result {
-                    print("ER DET ANNULERET: \(res.isCancelled)")
-                    if res.isCancelled {
-                        return
-                    }
-                    
-                    SVProgressHUD.show()
-                     }
-                   
-                    // tjekker for evt fejl
-                   if let error = error {
-                       print("Failed til login: \(error.localizedDescription)")
-                       return
-                   }
-                   
-                //tjekker for evt fejl ved AT
-                   guard let accesToken = AccessToken.current else {
-                       print("Failed to get acces token")
-                       return
-                   }
-                   
-                   let cred = FacebookAuthProvider.credential(withAccessToken: accesToken.tokenString)
-                   
-                   // log nu med de givne credentials
-                   Auth.auth().signIn(with: cred) { (user, error) in
-                       if let error = error {
-                           print("FEJL MED LOGIN PÅ INDE PÅ FIREBASE!!: \(error.localizedDescription)")
-                           return
-                       }
-                    
-                    
-                    /*
-                    
-                     
-                     // og hent bruger først vel?
-                   FirebaseAPI.shared.hentBarer { (result, error) in
-                       if error != nil {
-                           if let barene = result {
-                           for bar in barene {
-                               BarListe.shared.addBar(bar: bar)
+        let loginM = LoginManager()
+        loginM.logIn(permissions: ["public_profile", "email"], from: self) { (result, error) in
             
-                           }
-                            BarListe.shared.findFavo()
-                       }
-                        print("INDE FRA SSVC")
-                        print(BarListe.shared.udskrivTest())
-                        SVProgressHUD.dismiss()
-                        self.present(self.tabbarController, animated: true, completion: nil)
-                   }
-                   }
-                    */
-                    
-                      
-                          
-                       
-                       
-                   }
-               }
+            // tjekker for at man annullerer og at der er et resultat!
+            if let res = result {
+                print("ER DET ANNULERET: \(res.isCancelled)")
+                if res.isCancelled {
+                    return
+                }
+                
+                SVProgressHUD.show()
+            }
+            
+            // tjekker for evt fejl
+            if let error = error {
+                print("Failed til login: \(error.localizedDescription)")
+                return
+            }
+            
+            //tjekker for evt fejl ved AT
+            guard let accesToken = AccessToken.current else {
+                print("Failed to get acces token")
+                return
+            }
+            
+            let cred = FacebookAuthProvider.credential(withAccessToken: accesToken.tokenString)
+            
+                // ny login måde via API og her bliver de både logget ind og oprettet i databasen hvis det er første gang de logger ind!
+                FirebaseAPI.shared.logInWithCred(cred: cred) { (res, err) in
+                    if err != nil {
+                        print("FEJL MED LOGIN PÅ INDE PÅ FIREBASE!!: \(err!.localizedDescription)")
+                        SVProgressHUD.showError(withStatus: "Noget gik galt")
+                        SVProgressHUD.dismiss(withDelay: 1.5)
+                    } else {
+                        print("FØR HENT BRUGER---------------")
+                        FirebaseAPI.shared.hentBruger { (res, err) in
+                            if err != nil {
+                                print("FEJL MED LOGIN PÅ INDE PÅ FIREBASE!!: \(err!.localizedDescription)")
+                                SVProgressHUD.showError(withStatus: "Noget gik galt")
+                                SVProgressHUD.dismiss(withDelay: 1.5)
+                            } else {
+                                // res objektet er brugeren der er hentet fra Firebase og den lægges ind i singleton klassen
+                                if let brugeren = res {
+                                    BarListe.shared.tilføjBruger(bruger: brugeren)
+                                }
+                                
+                                print("FØR HENT BARER--------------")
+                                FirebaseAPI.shared.hentBarer { (result, error) in
+                                    
+                                    if error != nil {
+                                        SVProgressHUD.dismiss()
+                                        SVProgressHUD.showError(withStatus: "Kunne ikke hente barer!")
+                                        SVProgressHUD.dismiss(withDelay: 0.5)
+                                    } else {
+                                        if let barene = result {
+                                            print("FØR BARERNE TILFØJES TIL SINGLETON")
+                                            for bar in barene {
+                                                print("BAR X ----------")
+                                                BarListe.shared.addBar(bar: bar)
+                                            }
+                                         print("FØR FIND FAVO")
+                                         BarListe.shared.findFavo()
+                                            
+                                            SVProgressHUD.dismiss()
+                                            SVProgressHUD.showSuccess(withStatus: "")
+                                          self.present(self.tabbarController, animated: true, completion: nil)
+                                        }
+                                        
+                                        }
+                                }
+                                
+                            }
+                        }
+                    }
+                }
+                
+            }
+            
+        }
         
     }
-    
-   
+            
 
-}

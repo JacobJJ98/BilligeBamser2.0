@@ -8,7 +8,6 @@
 
 import UIKit
 import SVProgressHUD
-import FirebaseAuth
 
 //Gør så keyboard lukker ned når der tabbes uden for
 extension UIViewController {
@@ -176,7 +175,7 @@ class LogindViewController: UIViewController, UITextFieldDelegate {
                                 if let brugeren = bruger {
                                     BarListe.shared.tilføjBruger(bruger: brugeren)
                                 }
-                                BarListe.shared.barer.removeAll()
+                                // BarListe.shared.barer.removeAll()
                                   FirebaseAPI.shared.hentBarer { (result, error) in
                                                            if error != nil {
                                                                SVProgressHUD.dismiss()

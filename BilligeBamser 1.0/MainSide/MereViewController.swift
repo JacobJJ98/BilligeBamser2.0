@@ -16,6 +16,7 @@ class MereViewController: UIViewController {
             try! Auth.auth().signOut()
     
          if Auth.auth().currentUser == nil {
+            BarListe.shared.logOut()
             print("BRGUEREN ER NUL OG SEGUE SKAL BRUGES NU!!!")
             self.dismiss(animated: true, completion: nil)
         }
@@ -36,6 +37,10 @@ class MereViewController: UIViewController {
             print(bar.id)
         }
         print(BarListe.shared.brugerLoggetind.navn)
+        print("FAVO STEDER FRA STRING ARRAY")
+        for sted in BarListe.shared.brugerLoggetind.Favoritsteder {
+            print(sted)
+        }
     }
     
 

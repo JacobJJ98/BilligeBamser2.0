@@ -25,6 +25,12 @@ class BarListe {
     {
         brugerLoggetind = Bruger(navn: "", favoritsteder: [""])
     }
+    func logOut() -> Void {
+        barer.removeAll()
+        brugerLoggetind.navn = ""
+        brugerLoggetind.Favoritsteder.removeAll()
+        egneFavoritter.removeAll()
+    }
     func tilføjBruger(bruger: Bruger) -> Void {
         self.egneFavoritter.removeAll()
         self.brugerLoggetind.Favoritsteder.removeAll()
@@ -62,6 +68,8 @@ class BarListe {
                 }
             }
         }
+        print("FIND FAVO ER KØRT!!!------")
+        print(egneFavoritter.count)
     }
     
     

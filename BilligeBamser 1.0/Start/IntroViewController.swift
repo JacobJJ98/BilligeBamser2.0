@@ -24,6 +24,8 @@ class IntroViewController: UIViewController, UITabBarControllerDelegate {
     override func viewDidAppear(_ animated: Bool) {
         
         if Auth.auth().currentUser != nil {
+            // sørger lige for at slette alt der er, så der startes på en frisk lige meget hvad!
+            BarListe.shared.logOut()
             FirebaseAPI.shared.hentBruger { (bruger, error) in
             if error != nil {
             } else {
@@ -31,7 +33,6 @@ class IntroViewController: UIViewController, UITabBarControllerDelegate {
                 if let brugeren = bruger {
                     BarListe.shared.tilføjBruger(bruger: brugeren)
                 }
-                BarListe.shared.barer.removeAll()
                   FirebaseAPI.shared.hentBarer { (result, error) in
                   if error != nil {
                       print("Fejl ved hent af barer!!")

@@ -38,7 +38,7 @@ class FirebaseAPI {
         
     }
     
-    func opretBrugerFireStore(navn: String, efternavn: String, completionHandler: @escaping (_ result: String?, _ error: Error?) -> Void){
+    func opretBrugerFireStore(navn: String, completionHandler: @escaping (_ result: String?, _ error: Error?) -> Void){
         
         self.db = Firestore.firestore()
         print("INDE I FIREstore tilføj-bruger")
@@ -78,7 +78,14 @@ class FirebaseAPI {
             } else {
                 if let resultt = result {
                     if resultt.additionalUserInfo!.isNewUser {
-                        
+                        self.opretBrugerFireStore(navn: (Auth.auth().currentUser?.displayName)!) { (res, err) in
+                            if let error = err {
+                                print(error.localizedDescription)
+                                completionHandler(nil, error)
+                            } else {
+                                completionHandler(res, nil)
+                            }
+                        }
                     }
                 }
                 if let id = result?.user.uid {
