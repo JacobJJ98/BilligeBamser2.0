@@ -258,6 +258,26 @@ SWIFT_CLASS("_TtC17BilligeBamser_1_018CollectionViewCell")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
 
+
+SWIFT_CLASS("_TtC17BilligeBamser_1_019CollectionViewCell2")
+@interface CollectionViewCell2 : UICollectionViewCell
+@property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified imageView;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified text;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified favoritKnap;
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC17BilligeBamser_1_019CollectionViewCell3")
+@interface CollectionViewCell3 : UICollectionViewCell
+@property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified imageView;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified text;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified favoritKnap;
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
 @class NSBundle;
 
 SWIFT_CLASS("_TtC17BilligeBamser_1_022CustomTabbarController")
@@ -475,11 +495,12 @@ SWIFT_CLASS("_TtC17BilligeBamser_1_021UdforskViewController")
 - (void)viewDidLoad;
 - (void)viewDidAppear:(BOOL)animated;
 - (void)viewDidLayoutSubviews;
-@property (nonatomic, weak) IBOutlet UICollectionView * _Null_unspecified collectionView;
+@property (nonatomic, weak) IBOutlet UICollectionView * _Null_unspecified collectionView1;
+@property (nonatomic, weak) IBOutlet UICollectionView * _Null_unspecified collectionView2;
+@property (nonatomic, weak) IBOutlet UICollectionView * _Null_unspecified collectionView3;
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView * _Nonnull)collectionView SWIFT_WARN_UNUSED_RESULT;
 - (NSInteger)collectionView:(UICollectionView * _Nonnull)collectionView numberOfItemsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
 - (UICollectionViewCell * _Nonnull)collectionView:(UICollectionView * _Nonnull)collectionView cellForItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
-- (IBAction)onClickFavoritNarmestWithSender:(UIButton * _Nonnull)sender;
 - (void)collectionView:(UICollectionView * _Nonnull)collectionView didSelectItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
