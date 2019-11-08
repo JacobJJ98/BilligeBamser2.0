@@ -12,7 +12,7 @@
         <!--Kort-->
         <scene sceneID="0BT-Fr-ll7">
             <objects>
-                <viewController title="Kort" id="Z6h-zG-AZk" customClass="MapViewController" customModule="BilligeBamser_1_0" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Kort" id="Z6h-zG-AZk" customClass="MapViewController" customModule="BilligeBamser1_0" customModuleProvider="target" sceneMemberID="viewController">
                     <mapView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="5Lb-qc-fjp">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -29,7 +29,7 @@
         <!--Udforsk-->
         <scene sceneID="Nky-Ix-Ltj">
             <objects>
-                <viewController title="Udforsk" id="VPP-as-xrx" customClass="UdforskViewController" customModule="BilligeBamser_1_0" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Udforsk" id="VPP-as-xrx" customClass="UdforskViewController" customModule="BilligeBamser1_0" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WZB-Pz-qFb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="900"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -99,7 +99,7 @@
                                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                         </collectionViewFlowLayout>
                                                         <cells>
-                                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionViewCellID" id="qgN-N8-9XJ" customClass="CollectionViewCell" customModule="BilligeBamser_1_0" customModuleProvider="target">
+                                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionViewCellID" id="qgN-N8-9XJ" customClass="CollectionViewCell" customModule="BilligeBamser1_0" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="200" height="120"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -236,7 +236,7 @@
                                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                         </collectionViewFlowLayout>
                                                         <cells>
-                                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionViewCellID2" id="deq-hS-P9C" customClass="CollectionViewCell2" customModule="BilligeBamser_1_0" customModuleProvider="target">
+                                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionViewCellID2" id="deq-hS-P9C" customClass="CollectionViewCell2" customModule="BilligeBamser1_0" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="200" height="120"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -375,7 +375,7 @@
                                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                         </collectionViewFlowLayout>
                                                         <cells>
-                                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionViewCellID3" id="zd3-pT-a13" customClass="CollectionViewCell3" customModule="BilligeBamser_1_0" customModuleProvider="target">
+                                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionViewCellID3" id="zd3-pT-a13" customClass="CollectionViewCell3" customModule="BilligeBamser1_0" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="200" height="120"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -540,7 +540,7 @@
         <!--Opret Bajer View Controller-->
         <scene sceneID="CCw-vN-qeD">
             <objects>
-                <viewController storyboardIdentifier="opretBajer" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9Dw-J6-6kB" customClass="OpretBajerViewController" customModule="BilligeBamser_1_0" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="opretBajer" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9Dw-J6-6kB" customClass="OpretBajerViewController" customModule="BilligeBamser1_0" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="T3W-W6-lmf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -667,7 +667,7 @@
         <!--Mere-->
         <scene sceneID="0Wj-8s-nbp">
             <objects>
-                <viewController id="jwm-PQ-Ta3" customClass="MereViewController" customModule="BilligeBamser_1_0" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="jwm-PQ-Ta3" customClass="MereViewController" customModule="BilligeBamser1_0" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FYj-dk-Ags">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -702,13 +702,13 @@
         <!--Favoritter-->
         <scene sceneID="sPV-xF-R0M">
             <objects>
-                <tableViewController id="ZfP-hV-aBo" customClass="FavoriterTableViewController" customModule="BilligeBamser_1_0" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="ZfP-hV-aBo" customClass="FavoriterTableViewController" customModule="BilligeBamser1_0" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Xxu-x2-IXJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="barCell" rowHeight="72" id="ebn-5j-Osp" customClass="HeadlineTableViewCell" customModule="BilligeBamser_1_0" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="barCell" rowHeight="72" id="ebn-5j-Osp" customClass="HeadlineTableViewCell" customModule="BilligeBamser1_0" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="72"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ebn-5j-Osp" id="VyC-2e-m95">
@@ -874,7 +874,7 @@
         <!--Intro View Controller-->
         <scene sceneID="92t-xz-Oyw">
             <objects>
-                <viewController id="V3M-0s-aSb" customClass="IntroViewController" customModule="BilligeBamser_1_0" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="V3M-0s-aSb" customClass="IntroViewController" customModule="BilligeBamser1_0" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="igO-ou-aex">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -901,7 +901,7 @@
         <!--Startside View Controller-->
         <scene sceneID="ZgS-OH-B96">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="yaP-uK-V5q" customClass="StartsideViewController" customModule="BilligeBamser_1_0" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="yaP-uK-V5q" customClass="StartsideViewController" customModule="BilligeBamser1_0" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PiF-8X-gbb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1042,7 +1042,7 @@
         <!--Logind View Controller-->
         <scene sceneID="t1o-dM-OMf">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="feu-lp-tZK" customClass="LogindViewController" customModule="BilligeBamser_1_0" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="feu-lp-tZK" customClass="LogindViewController" customModule="BilligeBamser1_0" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mhc-PN-R7Q">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1219,7 +1219,7 @@
         <!--Opret Bruger View Controller-->
         <scene sceneID="dL8-hG-T3W">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="g6S-CM-Wsb" customClass="OpretBrugerViewController" customModule="BilligeBamser_1_0" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="g6S-CM-Wsb" customClass="OpretBrugerViewController" customModule="BilligeBamser1_0" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RDf-YW-9J7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1431,7 +1431,7 @@
         <!--Navigation Controller Udforsk-->
         <scene sceneID="ETx-Uw-TNG">
             <objects>
-                <navigationController storyboardIdentifier="udforskVC" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="9sm-LX-bnG" customClass="NavigationControllerUdforsk" customModule="BilligeBamser_1_0" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="udforskVC" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="9sm-LX-bnG" customClass="NavigationControllerUdforsk" customModule="BilligeBamser1_0" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="udforsk75x75" selectedImage="udforsk75x75" id="mvZ-6V-2gt"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" shadowImage="1" id="doB-eF-X9n">

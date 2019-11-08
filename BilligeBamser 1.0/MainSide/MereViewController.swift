@@ -7,21 +7,23 @@
 //
 
 import UIKit
-import FirebaseAuth
 
 class MereViewController: UIViewController {
 
     @IBAction func logUD(_ sender: UIButton) {
-       // if Auth.auth().user != nil {
         
-        //TODO: gør så man logger ud fra API klassen
-            try! Auth.auth().signOut()
-    
-         if Auth.auth().currentUser == nil {
-            BarListe.shared.logOut()
-            print("BRGUEREN ER NUL OG SEGUE SKAL BRUGES NU!!!")
-            self.dismiss(animated: true, completion: nil)
+       
+        FirebaseAPI.shared.logOut { (res, err) in
+            if err != nil {
+                print(err!.localizedDescription)
+            } else {
+                BarListe.shared.logOut()
+                print("BRGUEREN ER NUL OG SEGUE SKAL BRUGES NU!!!")
+                self.dismiss(animated: true, completion: nil)
+                // self.performSegue(withIdentifier: "unwindSegueToVC1", sender: self)
+            }
         }
+    
         
         
     }

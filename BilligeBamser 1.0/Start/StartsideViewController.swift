@@ -14,6 +14,7 @@ import FBSDKLoginKit
 import MapKit
 
 class StartsideViewController: UIViewController {
+    
     private let locationManager = CLLocationManager()
     @IBOutlet weak var loggetindLabel: UILabel!
     @IBOutlet weak var btnFb: UIButton!

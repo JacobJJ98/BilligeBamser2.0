@@ -200,6 +200,17 @@ class FirebaseAPI {
         return Auth.auth().currentUser
     }
     
+    func logOut(completionHandler: @escaping (_ result: String?, _ error: Error?) -> Void)-> Void {
+        
+        do {
+            try Auth.auth().signOut()
+            completionHandler("Succes", nil)
+            } catch let err {
+                print(err)
+                completionHandler(nil, err)
+        }
+    }
+    
     func hentBruger(completionHandler: @escaping (_ result: Bruger?, _ error: Error?) -> Void){
         var brugeren = Bruger(navn: "", favoritsteder: [""])
         
