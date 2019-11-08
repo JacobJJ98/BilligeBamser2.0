@@ -7,14 +7,24 @@
 //
 
 import UIKit
+import CoreLocation
+import MapKit
 
-class FavoriterTableViewController: UITableViewController {
+class FavoriterTableViewController: UITableViewController, CLLocationManagerDelegate {
     
-    var bars = [String]()
+
+    let locationManager = CLLocationManager()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.fillBars()
+        locationManager.delegate = self
+               locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+               locationManager.startUpdatingLocation()
+        
+        // her sorteres favoritterne efter distancen.. men det sker så kun en gang lige pt og det er ved første gang man går derind efter appen har været lukket helt ned!
+        if let lokationen = locationManager.location {
+             BarListe.shared.sorterFavoEfterAfsted(loka: lokationen)
+        }
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -23,13 +33,7 @@ class FavoriterTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     
-    func fillBars() {
-        let sampleChairs = ["Palæen", "Old Irish - Lyngby ", "Den glade gris", "Hegnet"
-        ]
-        
-        bars = sampleChairs.compactMap {$0}
-        
-    }
+    
 
     // MARK: - Table view data source
 
@@ -40,7 +44,7 @@ class FavoriterTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return bars.count
+        return BarListe.shared.egneFavoritter.count
     }
 
     
@@ -48,21 +52,29 @@ class FavoriterTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "barCell", for: indexPath) as! HeadlineTableViewCell
 
         // Configure the cell...
-        
-       // let cell = tableView.dequeueReusableCell(withIdentifier: "chairCell", for: indexPath)
 
         // Configure the cell...
-
-        // tableView.labe.text = bars[indexPath.row]
-        cell.navnet.text = bars[indexPath.row]
+        cell.navnet.text = BarListe.shared.egneFavoritter[indexPath.row].navn
         cell.storBillede.image = UIImage(named: "Beer-Mug")
-        cell.prisTekst.text = "24 Kr"
+        cell.prisTekst.text = "\(BarListe.shared.egneFavoritter[indexPath.row].flaskepris) Kr"
         cell.prisBillede.image = UIImage(named: "Beer-Mug")
-        cell.mapTekst.text = "0.2 Km"
+        if CLLocationManager.locationServicesEnabled() {
+            if let lokationen = locationManager.location {
+             let barLoka = CLLocation(latitude: BarListe.shared.egneFavoritter[indexPath.row].coordinate.latitude, longitude: BarListe.shared.egneFavoritter[indexPath.row].coordinate.longitude)
+                
+                print("MIN LOKATION ER: \(lokationen.coordinate.latitude) og long: \(lokationen.coordinate.longitude)")
+                
+                print("BARENS LOKATION ER: \(BarListe.shared.egneFavoritter[indexPath.row].coordinate.latitude) og long: \(BarListe.shared.egneFavoritter[indexPath.row].coordinate.longitude)")
+             let dist = lokationen.distance(from: barLoka)/1000
+             print(dist)
+             
+            cell.mapTekst.text = "\(dist) Km"
+                    }
+        }
+        
+        
+        
         cell.mapBillede.image = UIImage(named: "mapGrey")
-        // cell.imageView?.image =
-        // cell.imageView?.image = chairs[indexPath.row].image
-     //   return cell
 
         return cell
     }

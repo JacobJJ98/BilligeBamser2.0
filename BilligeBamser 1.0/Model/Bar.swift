@@ -23,4 +23,20 @@ class Bar: NSObject, MKAnnotation {
         self.coordinate = coordinate
     }
     
+    func distance(to location: CLLocation) -> CLLocationDistance {
+        let selfloca = CLLocation(latitude: self.coordinate.latitude, longitude: self.coordinate.longitude)
+        return location.distance(from: selfloca)
+    }
+    
+    
+}
+extension Array where Element == Bar {
+
+    mutating func sort(by location: CLLocation) {
+         return sort(by: { $0.distance(to: location) < $1.distance(to: location) })
+    }
+
+    func sorted(by location: CLLocation) -> [Bar] {
+        return sorted(by: { $0.distance(to: location) < $1.distance(to: location) })
+    }
 }

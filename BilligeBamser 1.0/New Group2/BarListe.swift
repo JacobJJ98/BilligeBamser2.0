@@ -67,7 +67,12 @@ class BarListe {
         print(egneFavoritter.count)
     }
     
-}
+    func sorterFavoEfterAfsted(loka: CLLocation) -> Void {
+        egneFavoritter.sort(by: loka)
+        }
+    }
+    
+
     
 
 
