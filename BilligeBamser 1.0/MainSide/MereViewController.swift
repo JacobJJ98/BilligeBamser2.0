@@ -35,6 +35,7 @@ class MereViewController: UIViewController {
         for bar in BarListe.shared.egneFavoritter {
             print(bar.id)
         }
+        print(BarListe.shared.brugerLoggetind.navn)
     }
     
 

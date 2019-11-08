@@ -38,6 +38,60 @@ class FirebaseAPI {
         
     }
     
+    func opretBrugerFireStore(navn: String, efternavn: String, completionHandler: @escaping (_ result: String?, _ error: Error?) -> Void){
+        
+        self.db = Firestore.firestore()
+        print("INDE I FIREstore tilføj-bruger")
+        var favo: [String] = []
+        var ref: DocumentReference? = nil
+        if let user = Auth.auth().currentUser {
+            
+            self.db.collection("Bruger").document(user.uid).setData([
+                "Navn": navn,
+                            "Favoritsteder": favo
+                        ]) { err in
+                            if let err = err {
+                                print("FEJL NÅR BRUGER SKULLE I DB")
+                                completionHandler(nil, err)
+                            } else {
+                              print("SUCCES MED AT TILFØJE BRUGER I DB")
+                                completionHandler(user.uid, nil)
+                                }
+                                }
+                            
+                                
+                                
+                            }
+            }
+            
+        
+        
+    
+    
+    func logInWithCred(cred: AuthCredential, completionHandler: @escaping (_ result: String?, _ error: Error?) -> Void){
+        Auth.auth().signIn(with: cred) { (result, err) in
+            if err != nil {
+                if let fejl = err {
+                    completionHandler(nil,fejl)
+                }
+                //hvis den kommer herind er der fejl!
+            } else {
+                if let resultt = result {
+                    if resultt.additionalUserInfo!.isNewUser {
+                        
+                    }
+                }
+                if let id = result?.user.uid {
+                    completionHandler(id, nil)
+                }
+                
+                
+                
+            }
+        }
+        
+    }
+    
     func tilføjBar(bar: Bar, completionHandler: @escaping (_ result: DocumentReference?, _ error: Error?) -> Void){
         db = Firestore.firestore()
         
@@ -140,7 +194,7 @@ class FirebaseAPI {
     }
     
     func hentBruger(completionHandler: @escaping (_ result: Bruger?, _ error: Error?) -> Void){
-        var brugeren = Bruger(fornavn: "", efternavn: "", favoritsteder: [""])
+        var brugeren = Bruger(navn: "", favoritsteder: [""])
         
                 print(Auth.auth().currentUser!.uid)
                        // først hentes den bruger der er logget ind
@@ -149,15 +203,10 @@ class FirebaseAPI {
                        docRef.getDocument { (document, error) in
                            if let document = document {
                                print("ER IGANG MED AT HENTE BRUGEREN!!")
-                               if let fornavn =  document.data()!["Fornavn"] as? String {
-                                   print("FORNAVNET ER")
-                                   print(fornavn)
-                                brugeren.Fornavn = fornavn
-                               }
-                               if let efternavn = document.data()!["Efternavn"] as? String {
-                                   print("EFTERNAVNET ER")
-                                   print(efternavn)
-                                   brugeren.Efternavn = efternavn
+                               if let navn =  document.data()!["Navn"] as? String {
+                                   print("NAVNET ER")
+                                   print(navn)
+                                brugeren.navn = navn
                                }
                                if let favoritsteder = document.data()!["Favoritsteder"] as? [String] {
                                                   print("Favoritsteder ER")

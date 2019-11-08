@@ -56,7 +56,7 @@
 		380EDE949A882405A61B8F77 /* Pods-BilligeBamser 1.0.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BilligeBamser 1.0.debug.xcconfig"; path = "Target Support Files/Pods-BilligeBamser 1.0/Pods-BilligeBamser 1.0.debug.xcconfig"; sourceTree = "<group>"; };
 		7F47A92EC5D00DAD65B0498A /* Pods_BilligeBamser_1_0.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BilligeBamser_1_0.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		861AAD122035663F003CE24D /* Pods-BilligeBamser 1.0.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BilligeBamser 1.0.release.xcconfig"; path = "Target Support Files/Pods-BilligeBamser 1.0/Pods-BilligeBamser 1.0.release.xcconfig"; sourceTree = "<group>"; };
-		EE805A2D234DF9B40095651D /* BilligeBamser 1.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BilligeBamser 1.0.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE805A2D234DF9B40095651D /* BilligeBamser1.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BilligeBamser1.0.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE805A30234DF9B40095651D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE805A35234DF9B40095651D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EE805A3A234DF9B60095651D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -176,7 +176,7 @@
 		EE805A2E234DF9B40095651D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				EE805A2D234DF9B40095651D /* BilligeBamser 1.0.app */,
+				EE805A2D234DF9B40095651D /* BilligeBamser1.0.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -203,9 +203,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		EE805A2C234DF9B40095651D /* BilligeBamser 1.0 */ = {
+		EE805A2C234DF9B40095651D /* BilligeBamser1.0 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EE805A3F234DF9B60095651D /* Build configuration list for PBXNativeTarget "BilligeBamser 1.0" */;
+			buildConfigurationList = EE805A3F234DF9B60095651D /* Build configuration list for PBXNativeTarget "BilligeBamser1.0" */;
 			buildPhases = (
 				DCA34F65E16957E50266DE1C /* [CP] Check Pods Manifest.lock */,
 				EE805A29234DF9B40095651D /* Sources */,
@@ -217,9 +217,9 @@
 			);
 			dependencies = (
 			);
-			name = "BilligeBamser 1.0";
+			name = BilligeBamser1.0;
 			productName = "BilligeBamser 1.0";
-			productReference = EE805A2D234DF9B40095651D /* BilligeBamser 1.0.app */;
+			productReference = EE805A2D234DF9B40095651D /* BilligeBamser1.0.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -250,7 +250,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				EE805A2C234DF9B40095651D /* BilligeBamser 1.0 */,
+				EE805A2C234DF9B40095651D /* BilligeBamser1.0 */,
 			);
 		};
 /* End PBXProject section */
@@ -487,7 +487,7 @@
 			baseConfigurationReference = 380EDE949A882405A61B8F77 /* Pods-BilligeBamser 1.0.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8B9KRX6NBR;
+				DEVELOPMENT_TEAM = G6TSQJ6DQ5;
 				INFOPLIST_FILE = "BilligeBamser 1.0/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -506,7 +506,7 @@
 			baseConfigurationReference = 861AAD122035663F003CE24D /* Pods-BilligeBamser 1.0.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8B9KRX6NBR;
+				DEVELOPMENT_TEAM = G6TSQJ6DQ5;
 				INFOPLIST_FILE = "BilligeBamser 1.0/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -532,7 +532,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EE805A3F234DF9B60095651D /* Build configuration list for PBXNativeTarget "BilligeBamser 1.0" */ = {
+		EE805A3F234DF9B60095651D /* Build configuration list for PBXNativeTarget "BilligeBamser1.0" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EE805A40234DF9B60095651D /* Debug */,

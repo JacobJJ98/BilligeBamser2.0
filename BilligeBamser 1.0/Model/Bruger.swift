@@ -7,13 +7,11 @@
 //
 
 class Bruger {
-    var Fornavn: String
-    var Efternavn: String
+    var navn: String
     var Favoritsteder: [String]
     
-    init(fornavn: String, efternavn: String, favoritsteder: [String]) {
-        self.Fornavn = fornavn
-        self.Efternavn = efternavn
+    init(navn: String, favoritsteder: [String]) {
+        self.navn = navn
         self.Favoritsteder = favoritsteder
     }
     

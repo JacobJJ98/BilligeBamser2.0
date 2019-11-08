@@ -61,7 +61,6 @@ class StartsideViewController: UIViewController {
                 // tjekker for at man annullerer og at der er et resultat!
                 if let res = result {
                     print("ER DET ANNULERET: \(res.isCancelled)")
-                    
                     if res.isCancelled {
                         return
                     }
@@ -90,6 +89,11 @@ class StartsideViewController: UIViewController {
                            return
                        }
                     
+                    
+                    /*
+                    
+                     
+                     // og hent bruger først vel?
                    FirebaseAPI.shared.hentBarer { (result, error) in
                        if error != nil {
                            if let barene = result {
@@ -105,6 +109,7 @@ class StartsideViewController: UIViewController {
                         self.present(self.tabbarController, animated: true, completion: nil)
                    }
                    }
+                    */
                     
                       
                           

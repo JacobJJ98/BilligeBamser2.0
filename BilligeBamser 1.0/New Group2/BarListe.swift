@@ -23,7 +23,7 @@ class BarListe {
 
     private init()
     {
-        brugerLoggetind = Bruger(fornavn: "", efternavn: "", favoritsteder: [""])
+        brugerLoggetind = Bruger(navn: "", favoritsteder: [""])
     }
     func tilføjBruger(bruger: Bruger) -> Void {
         self.egneFavoritter.removeAll()
