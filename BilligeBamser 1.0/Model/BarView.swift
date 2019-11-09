@@ -28,6 +28,8 @@ class BarView2: MKAnnotationView {
     willSet {
         print("INDE I BARVIEW2ø-------------------")
       guard let artwork = newValue as? Bar else {return}
+    
+        
       canShowCallout = true
       calloutOffset = CGPoint(x: -5, y: 5)
       // rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
@@ -35,6 +37,7 @@ class BarView2: MKAnnotationView {
            size: CGSize(width: 30, height: 30)))
         mapsButton.setBackgroundImage(UIImage(named: "mapOrange"), for: UIControl.State())
         rightCalloutAccessoryView = mapsButton
+        
         // det er muligt at have en knap på venstre side også, evt favorti
         // leftCalloutAccessoryView = UIButton(type: .detailDisclosure)
          
