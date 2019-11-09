@@ -664,62 +664,6 @@
             </objects>
             <point key="canvasLocation" x="5531.884057971015" y="922.76785714285711"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="Csq-18-huX">
-            <objects>
-                <navigationController id="MWm-P6-JZv" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ZCF-ys-zKe">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="zkD-Op-t9O" kind="relationship" relationship="rootViewController" id="fNc-PT-Zsj"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5sY-Es-0Dw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1618" y="1734"/>
-        </scene>
-        <!--TEST-->
-        <scene sceneID="xJe-tS-i7h">
-            <objects>
-                <viewController id="zkD-Op-t9O" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ODj-Ft-FZy">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K69-rD-nVG">
-                                <rect key="frame" x="-4.5" y="421" width="423" height="54"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Oplysninger" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rFO-73-jQ0">
-                                        <rect key="frame" x="17" y="14" width="116" height="27"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" name="bajerGrøn"/>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="rFO-73-jQ0" secondAttribute="trailing" constant="290" id="QyH-cs-m5H"/>
-                                    <constraint firstItem="rFO-73-jQ0" firstAttribute="leading" secondItem="K69-rD-nVG" secondAttribute="leading" constant="17" id="V51-id-D53"/>
-                                    <constraint firstItem="rFO-73-jQ0" firstAttribute="top" secondItem="K69-rD-nVG" secondAttribute="top" constant="14" id="d3H-Sl-TwX"/>
-                                    <constraint firstAttribute="bottom" secondItem="rFO-73-jQ0" secondAttribute="bottom" constant="13" id="z1h-l2-Wwf"/>
-                                </constraints>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="K69-rD-nVG" firstAttribute="centerY" secondItem="ODj-Ft-FZy" secondAttribute="centerY" id="3Ka-dw-pkK"/>
-                            <constraint firstItem="K69-rD-nVG" firstAttribute="centerX" secondItem="ODj-Ft-FZy" secondAttribute="centerX" id="ksd-kh-flg"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="WC5-xv-Y4U"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="TEST" id="jVQ-lf-dB6"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="OC5-pU-5mL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2540.579710144928" y="1733.7053571428571"/>
-        </scene>
         <!--Mere-->
         <scene sceneID="0Wj-8s-nbp">
             <objects>
