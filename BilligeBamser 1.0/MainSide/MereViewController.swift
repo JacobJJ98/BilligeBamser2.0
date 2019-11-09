@@ -9,10 +9,23 @@
 import UIKit
 
 class MereViewController: UIViewController {
-
-    @IBAction func logUD(_ sender: UIButton) {
+    /*
+            FirebaseAPI.shared.logOut { (res, err) in
+                if err != nil {
+                    print(err!.localizedDescription)
+                } else {
+                    BarListe.shared.logOut()
+                    print("BRGUEREN ER NUL OG SEGUE SKAL BRUGES NU!!!")
+                    self.dismiss(animated: true, completion: nil)
+                    // self.performSegue(withIdentifier: "unwindSegueToVC1", sender: self)
+                }
+            }
+    
+    
+    */
+    @IBOutlet weak var logUdKnap: UIButton!
+    @IBAction func logUd(_ sender: UIButton) {
         
-       
         FirebaseAPI.shared.logOut { (res, err) in
             if err != nil {
                 print(err!.localizedDescription)
@@ -23,15 +36,14 @@ class MereViewController: UIViewController {
                 // self.performSegue(withIdentifier: "unwindSegueToVC1", sender: self)
             }
         }
-    
-        
         
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         print("MERE VIEW!!")
 
-        // Do any additional setup after loading the view.
+         logUdKnap.layer.cornerRadius  = 20
     }
     override func viewDidAppear(_ animated: Bool) {
         print("APPEAR MERE!!")
