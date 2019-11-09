@@ -10,6 +10,7 @@ import Foundation
 import MapKit
 
 class Bar: NSObject, MKAnnotation {
+    let title: String?
     var id: String = ""
     var flaskepris: Int
     var navn: String
@@ -19,6 +20,7 @@ class Bar: NSObject, MKAnnotation {
     init(flaskepris: Int, navn: String, rygning: Bool, coordinate: CLLocationCoordinate2D) {
         self.flaskepris = flaskepris
         self.navn = navn
+        self.title = navn
         self.rygning = rygning
         self.coordinate = coordinate
     }
