@@ -94,6 +94,8 @@ extension MapViewController: MKMapViewDelegate {
   }
     */
     
+    
+    
     // Hvad sker der når man trykker på info knappen!!
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView,
         calloutAccessoryControlTapped control: UIControl) {

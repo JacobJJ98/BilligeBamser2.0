@@ -38,7 +38,7 @@ class BarView2: MKAnnotationView {
         // det er muligt at have en knap på venstre side også, evt favorti
         // leftCalloutAccessoryView = UIButton(type: .detailDisclosure)
          
-        
+        //laver teksten der viser barens øl pris
         let label = UILabel(frame: CGRect(x: 0, y: 0, width: 50, height: 30))
         label.center = CGPoint(x:15, y: 40)
         label.textAlignment = .center
