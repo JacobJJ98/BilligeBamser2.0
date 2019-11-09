@@ -14,11 +14,14 @@ class BarListe {
     var barer: [Bar] = []
     var brugerLoggetind: Bruger
     var egneFavoritter: [Bar] = []
+    var mail: String
     
 
     private init()
     {
         brugerLoggetind = Bruger(navn: "", favoritsteder: [""])
+        
+        mail = ""
     }
     func logOut() -> Void {
         barer.removeAll()

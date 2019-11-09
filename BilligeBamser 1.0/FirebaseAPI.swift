@@ -27,6 +27,8 @@ class FirebaseAPI {
                 }
                 //hvis den kommer herind er der fejl!
             } else {
+                
+                
                 if let id = result?.user.uid {
                     completionHandler(id, nil)
                 }
@@ -212,7 +214,12 @@ class FirebaseAPI {
     
     func hentBruger(completionHandler: @escaping (_ result: Bruger?, _ error: Error?) -> Void){
         var brugeren = Bruger(navn: "", favoritsteder: [""])
-        
+        print("FØR MAIL-------------")
+        if let mail = Auth.auth().currentUser?.email {
+            BarListe.shared.mail = mail
+            print(mail)
+        }
+        print("EFTER MAIL-------------")
                 print(Auth.auth().currentUser!.uid)
                        // først hentes den bruger der er logget ind
                        db = Firestore.firestore()

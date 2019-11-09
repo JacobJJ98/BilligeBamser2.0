@@ -23,6 +23,10 @@ class MereViewController: UIViewController {
     
     
     */
+    @IBOutlet weak var navnLabel: UILabel!
+    @IBOutlet weak var mailLabel: UILabel!
+    
+    
     @IBOutlet weak var logUdKnap: UIButton!
     @IBAction func logUd(_ sender: UIButton) {
         
@@ -44,6 +48,9 @@ class MereViewController: UIViewController {
         print("MERE VIEW!!")
 
          logUdKnap.layer.cornerRadius  = 20
+        navnLabel.text = BarListe.shared.brugerLoggetind.navn
+        mailLabel.text = BarListe.shared.mail
+        
     }
     override func viewDidAppear(_ animated: Bool) {
         print("APPEAR MERE!!")
