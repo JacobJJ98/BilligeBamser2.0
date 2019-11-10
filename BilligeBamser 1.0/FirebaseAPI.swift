@@ -64,6 +64,23 @@ class FirebaseAPI {
                                 
                             }
             }
+    
+    func opretBrugerAuth(mail: String, kode: String, completionHandler: @escaping (_ result: AuthDataResult?, _ error: Error?) -> Void){
+        
+    print("INDE I opretBrugerAuth")
+        
+        Auth.auth().createUser(withEmail: mail, password: kode) { (result, error) in
+            if let err = error {
+                print(err.localizedDescription)
+                completionHandler(nil, err)
+            } else {
+                print("bruger blev oprettet i Auth")
+                if let res = result {
+                    completionHandler(res, nil)
+                }
+            }
+        }
+        }
             
         
         
