@@ -5,14 +5,12 @@
 //  Created by Jacob Jørgensen on 27/10/2019.
 //  Copyright © 2019 Jacob Jørgensen. All rights reserved.
 //
-
 import UIKit
 import FirebaseAuth
 import FirebaseFirestore
 import SVProgressHUD
 
 //Gør så keyboard lukker ned når der tabbes uden for
-
 
 class OpretBrugerViewController: UIViewController, UITextFieldDelegate {
     var db: Firestore!
@@ -167,13 +165,16 @@ class OpretBrugerViewController: UIViewController, UITextFieldDelegate {
             }
             else {
                 print("login med firebas")
-                
+                //OPRET BRUGER PÅ FIREBASE OSV
             }
             
             
         }
         
 }
+    @IBAction func TilbageTrykket(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+    }
 }
 /*
  func opretBrugerPaaFirebase() -> Void {
@@ -254,9 +255,3 @@ class OpretBrugerViewController: UIViewController, UITextFieldDelegate {
  }
  
  */
-
-
-
-
-
-

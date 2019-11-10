@@ -1305,6 +1305,7 @@
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" image="chevron.left" catalog="system"/>
                                                 <connections>
+                                                    <action selector="TilbageTrykket:" destination="g6S-CM-Wsb" eventType="touchUpInside" id="fwY-PR-YbN"/>
                                                     <action selector="TilbageTrykket:" destination="feu-lp-tZK" eventType="touchUpInside" id="hb6-Fv-LSG"/>
                                                 </connections>
                                             </button>
