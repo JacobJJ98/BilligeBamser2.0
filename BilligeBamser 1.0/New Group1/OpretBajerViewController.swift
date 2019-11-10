@@ -13,6 +13,10 @@ import SVProgressHUD
 class OpretBajerViewController: UIViewController, CLLocationManagerDelegate {
     let locationManager = CLLocationManager()
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     var pris : Int? = nil
     var cor : CLLocationCoordinate2D?
     var midlerRyg : Bool? = nil
@@ -26,6 +30,9 @@ class OpretBajerViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var flaskePris: UITextField!
     @IBOutlet weak var rygningTilladt: UISwitch!
     @IBOutlet weak var adresse: UITextField!
+    
+
+    
     @IBAction func vedAendretLokation(_ sender: UISwitch) {
         print("lokation ændret!!")
         if sender.isOn == false {

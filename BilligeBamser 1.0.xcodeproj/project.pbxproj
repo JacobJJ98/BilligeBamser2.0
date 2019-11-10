@@ -14,6 +14,7 @@
 		2865BAC52361935D00CE8878 /* ExampleIrregularityContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2865BAC12361935D00CE8878 /* ExampleIrregularityContentView.swift */; };
 		2865BAC72361936400CE8878 /* CustomTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2865BAC62361936400CE8878 /* CustomTabbarController.swift */; };
 		2865BAC9236193F600CE8878 /* TabbarContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2865BAC8236193F600CE8878 /* TabbarContentView.swift */; };
+		286D41BE2378599500708CC1 /* MapNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286D41BD2378599400708CC1 /* MapNavigationController.swift */; };
 		28721CAF236A1912005C50F4 /* CenterViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28721CAE236A1912005C50F4 /* CenterViewFlowLayout.swift */; };
 		28721CB1236A1DE4005C50F4 /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28721CB0236A1DE4005C50F4 /* UIColorExtensions.swift */; };
 		287ECAED234E541800487427 /* Theme.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 287ECAEC234E541800487427 /* Theme.xcassets */; };
@@ -48,6 +49,7 @@
 		2865BAC12361935D00CE8878 /* ExampleIrregularityContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleIrregularityContentView.swift; sourceTree = "<group>"; };
 		2865BAC62361936400CE8878 /* CustomTabbarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabbarController.swift; sourceTree = "<group>"; };
 		2865BAC8236193F600CE8878 /* TabbarContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabbarContentView.swift; sourceTree = "<group>"; };
+		286D41BD2378599400708CC1 /* MapNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapNavigationController.swift; sourceTree = "<group>"; };
 		28721CAE236A1912005C50F4 /* CenterViewFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CenterViewFlowLayout.swift; sourceTree = "<group>"; };
 		28721CB0236A1DE4005C50F4 /* UIColorExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
 		287ECAEC234E541800487427 /* Theme.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Theme.xcassets; sourceTree = "<group>"; };
@@ -69,7 +71,7 @@
 		EEAECAD623577CF500C555E0 /* BarListe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BarListe.swift; path = "../New Group2/BarListe.swift"; sourceTree = "<group>"; };
 		EEAECAD823578ADE00C555E0 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		EEAECADB23579D2B00C555E0 /* UdforskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UdforskViewController.swift; sourceTree = "<group>"; };
-		EEAECAE12357A1EE00C555E0 /* MereViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MereViewController.swift; sourceTree = "<group>"; };
+		EEAECAE12357A1EE00C555E0 /* MereViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MereViewController.swift; path = "../New Group/MereViewController.swift"; sourceTree = "<group>"; };
 		EEAECAE32357AF8900C555E0 /* LogindViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LogindViewController.swift; path = "../New Group/LogindViewController.swift"; sourceTree = "<group>"; };
 		EEDE09D5236371E400E7B095 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "TabBar/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EEDE09D72365C2F600E7B095 /* OpretBrugerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpretBrugerViewController.swift; sourceTree = "<group>"; };
@@ -90,6 +92,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2803DC5D23785B0D009A0112 /* Mere */ = {
+			isa = PBXGroup;
+			children = (
+				EEAECAE12357A1EE00C555E0 /* MereViewController.swift */,
+			);
+			path = Mere;
+			sourceTree = "<group>";
+		};
 		284DEA8F2371AAFD004471F5 /* Udforsk */ = {
 			isa = PBXGroup;
 			children = (
@@ -128,11 +138,11 @@
 		2865BACB23619DD800CE8878 /* MainSide */ = {
 			isa = PBXGroup;
 			children = (
+				2803DC5D23785B0D009A0112 /* Mere */,
+				286D41BF23785A3700708CC1 /* Favoritter */,
+				286D41BC237858C800708CC1 /* Kort */,
 				284DEA8F2371AAFD004471F5 /* Udforsk */,
-				EEAECAE12357A1EE00C555E0 /* MereViewController.swift */,
 				287ECAEE234E5FF200487427 /* OpretBajerViewController.swift */,
-				EEAECAD823578ADE00C555E0 /* MapViewController.swift */,
-				EEDE0A1F236F4DEE00E7B095 /* FavoriterTableViewController.swift */,
 			);
 			path = MainSide;
 			sourceTree = "<group>";
@@ -147,6 +157,23 @@
 				EE1B0C992376FF94004C3342 /* BarView.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		286D41BC237858C800708CC1 /* Kort */ = {
+			isa = PBXGroup;
+			children = (
+				EEAECAD823578ADE00C555E0 /* MapViewController.swift */,
+				286D41BD2378599400708CC1 /* MapNavigationController.swift */,
+			);
+			path = Kort;
+			sourceTree = "<group>";
+		};
+		286D41BF23785A3700708CC1 /* Favoritter */ = {
+			isa = PBXGroup;
+			children = (
+				EEDE0A1F236F4DEE00E7B095 /* FavoriterTableViewController.swift */,
+			);
+			path = Favoritter;
 			sourceTree = "<group>";
 		};
 		C2D218BA4494DD413AD8CB55 /* Pods */ = {
@@ -342,6 +369,7 @@
 				EEDE0A20236F4DEF00E7B095 /* FavoriterTableViewController.swift in Sources */,
 				2865BAC72361936400CE8878 /* CustomTabbarController.swift in Sources */,
 				2865BAC42361935D00CE8878 /* ExampleBasicContentView.swift in Sources */,
+				286D41BE2378599500708CC1 /* MapNavigationController.swift in Sources */,
 				287ECAEF234E5FF200487427 /* OpretBajerViewController.swift in Sources */,
 				EE805A31234DF9B40095651D /* AppDelegate.swift in Sources */,
 				EEAECAD923578ADE00C555E0 /* MapViewController.swift in Sources */,

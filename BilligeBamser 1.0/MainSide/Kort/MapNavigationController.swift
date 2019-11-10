@@ -1,35 +1,23 @@
 //
-//  ViewControllerUdforsk.swift
-//  BilligeBamser 1.0
+//  MapNavigationController.swift
+//  BilligeBamser1.0
 //
-//  Created by Nicolai Dam on 05/11/2019.
+//  Created by Nicolai Dam on 10/11/2019.
 //  Copyright © 2019 Jacob Jørgensen. All rights reserved.
 //
 
 import UIKit
 
-class NavigationControllerUdforsk: UINavigationController {
-    
-    
+class MapNavigationController: UINavigationController {
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 39, height: 39))
-         imageView.contentMode = .scaleAspectFit
-        let image = UIImage(named: "1")
-        imageView.image = image
-        self.navigationItem.titleView = imageView
-        
 
         // Do any additional setup after loading the view.
     }
     
-    override func viewDidLayoutSubviews() {
-        
-       
-       
-        
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
     
 

@@ -22,6 +22,9 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
         
         let locationManager = CLLocationManager()
+        
+        //Hvid status bar
+      
       
         //Resterende sørger for at sætte current location som der hvor Map starter!!
         if CLLocationManager.locationServicesEnabled() {

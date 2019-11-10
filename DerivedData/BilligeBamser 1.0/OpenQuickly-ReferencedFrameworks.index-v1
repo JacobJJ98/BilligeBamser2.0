@@ -27,37 +27,37 @@
 	<string>WatchKit</string>
 	<string>FirebaseInstanceID</string>
 	<string>FirebaseMLVisionFaceModel</string>
-	<string>CoreText</string>
+	<string>FirebaseMLNaturalLanguage</string>
 	<string>FirebaseAuthInterop</string>
 	<string>FirebaseAuth</string>
-	<string>FirebaseMLNaturalLanguage</string>
-	<string>FirebaseMLVisionLabelModel</string>
 	<string>FBSDKLoginKit</string>
+	<string>FirebaseMLVisionLabelModel</string>
+	<string>AppKit</string>
 	<string>FBSDKCoreKit</string>
 	<string>SVProgressHUD</string>
-	<string>AppKit</string>
 	<string>AdSupport</string>
+	<string>CoreText</string>
 	<string>CoreFoundation</string>
+	<string>ESTabBarController</string>
 	<string>FirebasePerformance</string>
 	<string>FirebaseMLNLTranslate</string>
 	<string>Crashlytics</string>
-	<string>ESTabBarController</string>
 	<string>AuthenticationServices</string>
 	<string>FirebaseMLVisionAutoML</string>
 	<string>netinet</string>
 	<string>GoogleDataTransport</string>
 	<string>protobuf</string>
+	<string>CommonCrypto</string>
 	<string>GoogleUtilities</string>
 	<string>FirebaseMLNLSmartReply</string>
 	<string>FirebaseRemoteConfig</string>
-	<string>CommonCrypto</string>
 	<string>FirebaseMLVision</string>
 	<string>GTMSessionFetcher</string>
 	<string>AudioToolbox</string>
 	<string>FirebaseMLNLLanguageID</string>
 	<string>QuartzCore</string>
-	<string>FirebaseAnalytics</string>
 	<string>SystemConfiguration</string>
+	<string>FirebaseAnalytics</string>
 	<string>Security</string>
 	<string>FirebaseMLVisionObjectDetection</string>
 	<string>CoreGraphics</string>

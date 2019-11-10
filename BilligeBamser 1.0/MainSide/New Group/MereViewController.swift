@@ -28,6 +28,11 @@ class MereViewController: UIViewController {
     
     
     @IBOutlet weak var logUdKnap: UIButton!
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     @IBAction func logUd(_ sender: UIButton) {
         
         FirebaseAPI.shared.logOut { (res, err) in
