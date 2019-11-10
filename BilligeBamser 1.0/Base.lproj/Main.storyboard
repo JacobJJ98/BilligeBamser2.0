@@ -1188,7 +1188,7 @@
                                                     <constraint firstAttribute="height" constant="60" id="trX-db-Jb8"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="15"/>
-                                                <state key="normal" title="LOGIN">
+                                                <state key="normal" title="Login">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
@@ -1202,7 +1202,7 @@
                                                     <constraint firstAttribute="height" constant="60" id="UX4-DH-9Ea"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="15"/>
-                                                <state key="normal" title="LOGIN MED FACEBOOK">
+                                                <state key="normal" title="Login Med Facebook">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
@@ -1256,129 +1256,189 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg1" translatesAutoresizingMaskIntoConstraints="NO" id="dpq-CZ-CYn">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fortæl os hvilket mail du ønsker at bruge" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zas-H6-JZr">
-                                <rect key="frame" x="51" y="718" width="311" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6lU-vp-dBs">
-                                <rect key="frame" x="37" y="296" width="340" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uUK-ao-qkp">
-                                <rect key="frame" x="37" y="473" width="340" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ReN-pt-3FF">
-                                <rect key="frame" x="37" y="557" width="340" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Angiv en adgangskode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dTi-vb-xQk">
-                                <rect key="frame" x="37" y="535" width="175" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t5e-EH-cWc">
-                                <rect key="frame" x="151" y="669" width="112" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Opret bruger">
-                                    <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="onOpretBruger:" destination="g6S-CM-Wsb" eventType="touchUpInside" id="AyA-ko-VC9"/>
-                                </connections>
-                            </button>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Koden skal være på minimum 6 tegn!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jST-cV-gZF">
-                                <rect key="frame" x="37" y="590" width="283" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Indtast en gyldig mail!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oB2-4w-WuF">
-                                <rect key="frame" x="37" y="506" width="168" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Indtast dit fornavn!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cAp-5P-ZPI">
-                                <rect key="frame" x="37" y="336" width="144" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fortæl os dit fornavn" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fQA-mq-SjW">
-                                <rect key="frame" x="37" y="275" width="160" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Opret Bruger" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wFp-Za-R4W">
-                                <rect key="frame" x="130.5" y="74" width="153" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password skal være mindst 6 tegn" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AeH-Ye-lwN">
+                                <rect key="frame" x="30" y="443" width="354" height="20"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="89a-M6-STo"/>
+                                    <constraint firstAttribute="height" constant="20" id="D1m-hQ-WHF"/>
+                                    <constraint firstAttribute="width" constant="354" id="YrD-sV-E4u"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="25"/>
-                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="12"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CmI-Fc-oHL">
-                                <rect key="frame" x="30" y="66" width="37" height="38"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="30" id="pNd-Cv-tGA"/>
-                                    <constraint firstAttribute="height" constant="40" id="zE6-jK-vaJ"/>
-                                </constraints>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" image="chevron.left" catalog="system"/>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fortæl os diN EMAIL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ba4-HM-eOc">
-                                <rect key="frame" x="37" y="450" width="157" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Vil du være en del af øl-fællesskabet?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hx1-zZ-U2n">
-                                <rect key="frame" x="37" y="760" width="340" height="26"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="k3f-IT-AiA">
+                                <rect key="frame" x="0.0" y="39" width="414" height="823"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N8Z-Ok-byy" userLabel="Top">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="411.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Opret Bruger" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rOy-ky-bgY">
+                                                <rect key="frame" x="130.5" y="30" width="153" height="29.5"/>
+                                                <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="25"/>
+                                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u0f-cW-2Vd">
+                                                <rect key="frame" x="20" y="20" width="40" height="40"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" image="chevron.left" catalog="system"/>
+                                                <connections>
+                                                    <action selector="TilbageTrykket:" destination="feu-lp-tZK" eventType="touchUpInside" id="hb6-Fv-LSG"/>
+                                                </connections>
+                                            </button>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="NHr-hD-GJd">
+                                                <rect key="frame" x="30" y="137" width="354" height="244.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Navn" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jF7-77-vvg">
+                                                        <rect key="frame" x="0.0" y="0.0" width="354" height="16.5"/>
+                                                        <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="14"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Indtast dit navn" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wrM-DX-u7e">
+                                                        <rect key="frame" x="0.0" y="25.5" width="354" height="50"/>
+                                                        <color key="backgroundColor" white="1" alpha="0.35057255990000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="WeW-ix-KLt"/>
+                                                        </constraints>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next" textContentType="email"/>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="g6S-CM-Wsb" id="LeY-re-gpE"/>
+                                                        </connections>
+                                                    </textField>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GDY-fv-kNH">
+                                                        <rect key="frame" x="0.0" y="84.5" width="354" height="16.5"/>
+                                                        <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="14"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Indtast din email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m2A-uh-BZI">
+                                                        <rect key="frame" x="0.0" y="110" width="354" height="50"/>
+                                                        <color key="backgroundColor" white="1" alpha="0.35057255990000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="Igc-ix-e04"/>
+                                                        </constraints>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next" textContentType="email"/>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="g6S-CM-Wsb" id="Umc-dL-ynC"/>
+                                                        </connections>
+                                                    </textField>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uoA-FK-iac">
+                                                        <rect key="frame" x="0.0" y="169" width="354" height="16.5"/>
+                                                        <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="14"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Indtast dit password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CeQ-Sx-uZg">
+                                                        <rect key="frame" x="0.0" y="194.5" width="354" height="50"/>
+                                                        <color key="backgroundColor" white="1" alpha="0.35057255990000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="m5V-Of-pyz"/>
+                                                        </constraints>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" spellCheckingType="no" returnKeyType="done" secureTextEntry="YES" textContentType="password"/>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="g6S-CM-Wsb" id="mrc-uv-Zuu"/>
+                                                        </connections>
+                                                    </textField>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="CeQ-Sx-uZg" secondAttribute="trailing" id="Zhe-rB-vw1"/>
+                                                    <constraint firstItem="CeQ-Sx-uZg" firstAttribute="leading" secondItem="NHr-hD-GJd" secondAttribute="leading" id="hcM-ZJ-Z9q"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="u0f-cW-2Vd" firstAttribute="top" secondItem="N8Z-Ok-byy" secondAttribute="top" constant="30" id="CYh-RC-qhK"/>
+                                            <constraint firstItem="rOy-ky-bgY" firstAttribute="centerX" secondItem="N8Z-Ok-byy" secondAttribute="centerX" id="DGu-FJ-hV6"/>
+                                            <constraint firstItem="NHr-hD-GJd" firstAttribute="leading" secondItem="N8Z-Ok-byy" secondAttribute="leading" constant="30" id="Oq9-dw-FZ2"/>
+                                            <constraint firstAttribute="bottom" secondItem="NHr-hD-GJd" secondAttribute="bottom" constant="30" id="bgB-MF-FLf"/>
+                                            <constraint firstItem="NHr-hD-GJd" firstAttribute="leading" secondItem="N8Z-Ok-byy" secondAttribute="leading" constant="30" id="fB5-Th-YTE"/>
+                                            <constraint firstItem="u0f-cW-2Vd" firstAttribute="leading" secondItem="N8Z-Ok-byy" secondAttribute="leading" constant="30" id="fXS-jC-tzD"/>
+                                            <constraint firstItem="rOy-ky-bgY" firstAttribute="top" secondItem="N8Z-Ok-byy" secondAttribute="top" constant="30" id="qUZ-J6-juc"/>
+                                            <constraint firstAttribute="trailing" secondItem="NHr-hD-GJd" secondAttribute="trailing" constant="30" id="zGZ-Q8-Cf6"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ohx-ux-or4" userLabel="Bottom">
+                                        <rect key="frame" x="0.0" y="411.5" width="414" height="411.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Eller" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IMV-ld-Jie">
+                                                <rect key="frame" x="192" y="99" width="30.5" height="20"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="20" id="mgX-xc-WAo"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="14"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dXl-Fd-cnr">
+                                                <rect key="frame" x="30" y="30" width="354" height="60"/>
+                                                <color key="backgroundColor" name="bajerGrøn"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="IIo-6t-DKz"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="15"/>
+                                                <state key="normal" title="Opret">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onOpretBruger:" destination="g6S-CM-Wsb" eventType="touchUpInside" id="8Sd-S4-Jg9"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8kO-1Y-qn7">
+                                                <rect key="frame" x="30" y="128" width="354" height="60"/>
+                                                <color key="backgroundColor" name="bajerLyseBlå"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="PUG-oy-dvt"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="15"/>
+                                                <state key="normal" title="Login Med Facebook">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="FB:" destination="feu-lp-tZK" eventType="touchUpInside" id="MIl-Rz-2zj"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="IMV-ld-Jie" firstAttribute="top" secondItem="dXl-Fd-cnr" secondAttribute="bottom" constant="9" id="Cnd-EO-pJn"/>
+                                            <constraint firstAttribute="trailing" secondItem="dXl-Fd-cnr" secondAttribute="trailing" constant="30" id="EYD-at-7pE"/>
+                                            <constraint firstItem="IMV-ld-Jie" firstAttribute="centerX" secondItem="ohx-ux-or4" secondAttribute="centerX" id="Hc0-vV-1mV"/>
+                                            <constraint firstAttribute="trailing" secondItem="8kO-1Y-qn7" secondAttribute="trailing" constant="30" id="Sf5-mp-bQU"/>
+                                            <constraint firstItem="dXl-Fd-cnr" firstAttribute="leading" secondItem="ohx-ux-or4" secondAttribute="leading" constant="30" id="WJ5-Ho-6Px"/>
+                                            <constraint firstItem="8kO-1Y-qn7" firstAttribute="leading" secondItem="ohx-ux-or4" secondAttribute="leading" constant="30" id="ZBt-VF-7AS"/>
+                                            <constraint firstItem="8kO-1Y-qn7" firstAttribute="top" secondItem="IMV-ld-Jie" secondAttribute="bottom" constant="9" id="uSU-VT-cLA"/>
+                                            <constraint firstItem="dXl-Fd-cnr" firstAttribute="top" secondItem="ohx-ux-or4" secondAttribute="top" constant="30" id="zQ8-6q-um4"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="dpq-CZ-CYn" secondAttribute="bottom" id="2Wq-Gh-DDs"/>
-                            <constraint firstItem="CmI-Fc-oHL" firstAttribute="leading" secondItem="RDf-YW-9J7" secondAttribute="leading" constant="30" id="Bhv-ZL-IMq"/>
-                            <constraint firstItem="CmI-Fc-oHL" firstAttribute="top" secondItem="EYH-8E-buY" secondAttribute="top" constant="30" id="N6r-TU-sOS"/>
+                            <constraint firstItem="EYH-8E-buY" firstAttribute="bottom" secondItem="k3f-IT-AiA" secondAttribute="bottom" id="Dwe-70-IZ9"/>
                             <constraint firstItem="dpq-CZ-CYn" firstAttribute="leading" secondItem="EYH-8E-buY" secondAttribute="leading" id="O6w-re-Zm7"/>
-                            <constraint firstItem="wFp-Za-R4W" firstAttribute="centerX" secondItem="RDf-YW-9J7" secondAttribute="centerX" id="b34-y5-Kg4"/>
-                            <constraint firstItem="wFp-Za-R4W" firstAttribute="top" secondItem="EYH-8E-buY" secondAttribute="top" constant="30" id="ifs-W1-hPs"/>
+                            <constraint firstItem="k3f-IT-AiA" firstAttribute="leading" secondItem="EYH-8E-buY" secondAttribute="leading" id="QgR-rV-Iej"/>
+                            <constraint firstItem="AeH-Ye-lwN" firstAttribute="centerY" secondItem="EYH-8E-buY" secondAttribute="centerY" id="UeH-Ii-2yq"/>
+                            <constraint firstItem="k3f-IT-AiA" firstAttribute="trailing" secondItem="EYH-8E-buY" secondAttribute="trailing" id="c51-tI-JA5"/>
                             <constraint firstItem="dpq-CZ-CYn" firstAttribute="top" secondItem="RDf-YW-9J7" secondAttribute="top" id="lNq-sr-TMX"/>
+                            <constraint firstItem="k3f-IT-AiA" firstAttribute="top" secondItem="EYH-8E-buY" secondAttribute="top" constant="-5" id="sCr-np-hmU"/>
                             <constraint firstItem="dpq-CZ-CYn" firstAttribute="trailing" secondItem="EYH-8E-buY" secondAttribute="trailing" id="smw-eH-X3u"/>
+                            <constraint firstItem="AeH-Ye-lwN" firstAttribute="centerX" secondItem="EYH-8E-buY" secondAttribute="centerX" id="v4X-uO-zKH"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="EYH-8E-buY"/>
                     </view>
                     <connections>
-                        <outlet property="fornavn" destination="6lU-vp-dBs" id="tty-Na-nY1"/>
-                        <outlet property="fornavnAfvist" destination="cAp-5P-ZPI" id="cDw-Oa-kJx"/>
-                        <outlet property="kode" destination="ReN-pt-3FF" id="4t6-Ys-hkg"/>
-                        <outlet property="kodeAfvist" destination="jST-cV-gZF" id="mQG-Gi-f89"/>
-                        <outlet property="mail" destination="uUK-ao-qkp" id="lW3-uQ-nRb"/>
-                        <outlet property="mailAfvist" destination="oB2-4w-WuF" id="Hj3-bo-W2e"/>
+                        <outlet property="btnFb" destination="8kO-1Y-qn7" id="i0I-YQ-cvu"/>
+                        <outlet property="btnOpret" destination="dXl-Fd-cnr" id="4Ln-7D-km6"/>
+                        <outlet property="kodeFelt" destination="CeQ-Sx-uZg" id="bnp-PN-Tzu"/>
+                        <outlet property="mailFelt" destination="m2A-uh-BZI" id="5Cn-lC-HuA"/>
+                        <outlet property="navnFelt" destination="wrM-DX-u7e" id="Fkh-Ur-6Nz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ufl-0x-kOH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

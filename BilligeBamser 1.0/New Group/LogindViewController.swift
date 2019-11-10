@@ -85,6 +85,7 @@ class LogindViewController: UIViewController, UITextFieldDelegate {
             print("mailFelt")
             if let _ = mailFelt.text, let kode = kodeFelt.text {
                 let mail = (mailFelt.text! as NSString).replacingCharacters(in: range, with: string)
+                
                 if mail.isEmpty || kode.isEmpty {
                     print("email felt OG pass er emty")
                     deaktiverLoginKnap()
