@@ -6,14 +6,11 @@
 //  Copyright © 2019 Jacob Jørgensen. All rights reserved.
 //
 import UIKit
-import FirebaseAuth
-import FirebaseFirestore
 import SVProgressHUD
 
 //Gør så keyboard lukker ned når der tabbes uden for
 
 class OpretBrugerViewController: UIViewController, UITextFieldDelegate {
-    var db: Firestore!
     let tabbarController = CustomTabbarController()
     
     var navn: String?
@@ -235,82 +232,3 @@ class OpretBrugerViewController: UIViewController, UITextFieldDelegate {
         self.dismiss(animated: true, completion: nil)
     }
 }
-/*
- func opretBrugerPaaFirebase() -> Void {
- //TODO: opret i authentication og derefter i fireStore. tjek her at document ID ikke findes i forvejen, fordi så findes brugeren. og hvad hvis man bruger den sammen mail to gange?
- SVProgressHUD.show()
- Auth.auth().createUser(withEmail: mailString, password: kodeString) { (ress, err) in
- if err != nil {
- print("OPRETTELSE FEJLET!")
- if err.unsafelyUnwrapped.localizedDescription == "The email address is already in use by another account." {
- SVProgressHUD.showError(withStatus: "Mailen findes allerede")
- print(err.unsafelyUnwrapped.localizedDescription)
- SVProgressHUD.dismiss(withDelay: 2)
- } else {
- SVProgressHUD.showError(withStatus: "Der opstod en fejl")
- print("EFTER IF'en!!")
- SVProgressHUD.dismiss(withDelay: 2)
- }
- if let user = Auth.auth().currentUser {
- print (user.providerID)
- }
- } else {
- print("BRUGEREN BLEV OPRETTET!")
- print(ress.debugDescription)
- print("BRUGEREN SOM ER LOGGET IND: ")
- 
- if let user = Auth.auth().currentUser {
- print(user.uid)
- }
- 
- self.db = Firestore.firestore()
- print("INDE I FIREstore tilføj")
- var favo: [String] = []
- var ref: DocumentReference? = nil
- if let user = Auth.auth().currentUser {
- 
- self.db.collection("Bruger").document(user.uid).setData([
- "Fornavn": self.fornavnString,
- "Efternavn": self.efternavnString,
- "Favoritsteder": favo
- ]) { err in
- if let err = err {
- print("FEJL NÅR BRUGER SKULLE I DB")
- SVProgressHUD.showError(withStatus: "Der opstod en fejl")
- SVProgressHUD.dismiss(withDelay: 2)
- } else {
- print("SUCCES MED AT TILFØJE BRUGER I DB")
- SVProgressHUD.showSuccess(withStatus: "Bruger oprettet")
- // SEND BRUGEREN VIDERE TIL LOGGET IND og henter alle barer
- // BarListe.shared.HentBarer()
- FirebaseAPI.shared.hentBarer { (result, error) in
- if error != nil {
- if let barene = result {
- for bar in barene {
- BarListe.shared.addBar(bar: bar)
- }
- }
- }
- }
- 
- SVProgressHUD.dismiss(withDelay: 1) {
- self.present(self.tabbarController, animated: true, completion: nil)
- }
- 
- 
- 
- }
- }
- 
- }
- 
- 
- 
- 
- 
- }
- }
- 
- }
- 
- */
