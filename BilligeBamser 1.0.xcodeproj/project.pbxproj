@@ -32,8 +32,8 @@
 		EEAECAD723577CF500C555E0 /* BarListe.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAECAD623577CF500C555E0 /* BarListe.swift */; };
 		EEAECAD923578ADE00C555E0 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAECAD823578ADE00C555E0 /* MapViewController.swift */; };
 		EEAECADC23579D2B00C555E0 /* UdforskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAECADB23579D2B00C555E0 /* UdforskViewController.swift */; };
-		EEAECAE22357A1EE00C555E0 /* MereViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAECAE12357A1EE00C555E0 /* MereViewController.swift */; };
 		EEAECAE42357AF8900C555E0 /* LogindViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAECAE32357AF8900C555E0 /* LogindViewController.swift */; };
+		EECF6ABA237C9F82003105E7 /* MereViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EECF6AB9237C9F82003105E7 /* MereViewController.swift */; };
 		EEDE09D6236371E400E7B095 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EEDE09D5236371E400E7B095 /* GoogleService-Info.plist */; };
 		EEDE09D82365C2F600E7B095 /* OpretBrugerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDE09D72365C2F600E7B095 /* OpretBrugerViewController.swift */; };
 		EEDE0A1E236B71E000E7B095 /* Bruger.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDE0A1D236B71E000E7B095 /* Bruger.swift */; };
@@ -71,8 +71,8 @@
 		EEAECAD623577CF500C555E0 /* BarListe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BarListe.swift; path = "../New Group2/BarListe.swift"; sourceTree = "<group>"; };
 		EEAECAD823578ADE00C555E0 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		EEAECADB23579D2B00C555E0 /* UdforskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UdforskViewController.swift; sourceTree = "<group>"; };
-		EEAECAE12357A1EE00C555E0 /* MereViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MereViewController.swift; path = "../New Group/MereViewController.swift"; sourceTree = "<group>"; };
 		EEAECAE32357AF8900C555E0 /* LogindViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LogindViewController.swift; path = "../New Group/LogindViewController.swift"; sourceTree = "<group>"; };
+		EECF6AB9237C9F82003105E7 /* MereViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MereViewController.swift; sourceTree = "<group>"; };
 		EEDE09D5236371E400E7B095 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "TabBar/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EEDE09D72365C2F600E7B095 /* OpretBrugerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpretBrugerViewController.swift; sourceTree = "<group>"; };
 		EEDE0A1D236B71E000E7B095 /* Bruger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bruger.swift; sourceTree = "<group>"; };
@@ -95,7 +95,7 @@
 		2803DC5D23785B0D009A0112 /* Mere */ = {
 			isa = PBXGroup;
 			children = (
-				EEAECAE12357A1EE00C555E0 /* MereViewController.swift */,
+				EECF6AB9237C9F82003105E7 /* MereViewController.swift */,
 			);
 			path = Mere;
 			sourceTree = "<group>";
@@ -351,6 +351,7 @@
 				EE954609235A508A00EC534D /* StartsideViewController.swift in Sources */,
 				EE95460B235A5DAF00EC534D /* IntroViewController.swift in Sources */,
 				2865BAC9236193F600CE8878 /* TabbarContentView.swift in Sources */,
+				EECF6ABA237C9F82003105E7 /* MereViewController.swift in Sources */,
 				EE1B0C9A2376FF94004C3342 /* BarView.swift in Sources */,
 				2865BAC52361935D00CE8878 /* ExampleIrregularityContentView.swift in Sources */,
 				EEAECADC23579D2B00C555E0 /* UdforskViewController.swift in Sources */,
@@ -358,7 +359,6 @@
 				EEDE0A22237498A100E7B095 /* FirebaseAPI.swift in Sources */,
 				2865BAC22361935D00CE8878 /* ExampleBouncesContentView.swift in Sources */,
 				EEDE0A1E236B71E000E7B095 /* Bruger.swift in Sources */,
-				EEAECAE22357A1EE00C555E0 /* MereViewController.swift in Sources */,
 				EEAECAE42357AF8900C555E0 /* LogindViewController.swift in Sources */,
 				284DEA912371AB40004471F5 /* NavigationControllerUdforsk.swift in Sources */,
 				EEDE09D82365C2F600E7B095 /* OpretBrugerViewController.swift in Sources */,
