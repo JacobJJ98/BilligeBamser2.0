@@ -16,8 +16,6 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         mapView.delegate = self
-        
-        
         mapView.register(BarView2.self,
         forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
         
@@ -43,14 +41,29 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         }
     override func viewDidDisappear(_ animated: Bool) {
         
+        print("DISAPEAR!")
         mapView.removeAnnotations(BarListe.shared.barer)
     }
         
     override func viewDidAppear(_ animated: Bool) {
         print("APPEAR MAP!!")
         
+            
+        // mapView.removeAnnotations(BarListe.shared.barer)
             for bar in BarListe.shared.barer {
-                mapView.addAnnotation(bar)
+                for kor in mapView.annotations {
+                    if kor.coordinate.latitude ==  bar.coordinate.latitude && kor.coordinate.longitude == bar.coordinate.longitude {
+                        // do nothing
+                    } else {
+                        mapView.addAnnotation(bar)
+                    }
+                }
+                if mapView.annotations.isEmpty {
+                    for bar in BarListe.shared.barer {
+                        mapView.addAnnotation(bar)
+                    }
+                }
+                
             }
         }
     
@@ -103,6 +116,7 @@ extension MapViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView,
         calloutAccessoryControlTapped control: UIControl) {
         print("TRYKKET!!!")
+        print(mapView.annotations.count)
         if let baren = view.annotation {
             let coordinate = CLLocationCoordinate2DMake(baren.coordinate.latitude,baren.coordinate.longitude)
             let mapItem = MKMapItem(placemark: MKPlacemark(coordinate: coordinate, addressDictionary:nil))

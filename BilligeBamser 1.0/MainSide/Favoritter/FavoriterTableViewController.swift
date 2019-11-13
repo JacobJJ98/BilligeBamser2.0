@@ -28,6 +28,7 @@ class FavoriterTableViewController: UITableViewController, CLLocationManagerDele
         if let lokationen = locationManager.location {
              BarListe.shared.sorterFavoEfterAfsted(loka: lokationen)
         }
+        print("Antal barer: \(BarListe.shared.barer.count)" )
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
