@@ -230,7 +230,7 @@ class FirebaseAPI {
     }
     
     func hentBruger(completionHandler: @escaping (_ result: Bruger?, _ error: Error?) -> Void){
-        var brugeren = Bruger(navn: "", favoritsteder: [""])
+        let brugeren = Bruger(navn: "", favoritsteder: [""])
         print("FØR MAIL-------------")
         if let mail = Auth.auth().currentUser?.email {
             BarListe.shared.mail = mail

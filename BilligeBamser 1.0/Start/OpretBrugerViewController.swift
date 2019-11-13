@@ -25,9 +25,7 @@ class OpretBrugerViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("View did load note")
         deaktiverLoginKnap()
-        
         //Metode til at lukke keyboard ned ved tab uden for
         self.setupHideKeyboardOnTap()
         
@@ -142,8 +140,6 @@ class OpretBrugerViewController: UIViewController, UITextFieldDelegate {
     
     
     @IBAction func onOpretBruger(_ sender: UIButton) {
-        print("opret trykket")
-        
         if let mail = mailFelt.text, let kode = kodeFelt.text, let navn = navnFelt.text {
             if(!erMailKorrekt(mail: mail)) {
                 let alert = UIAlertController(title: title, message: "Indtast en gyldig email-adresse.", preferredStyle: .alert)
@@ -161,35 +157,27 @@ class OpretBrugerViewController: UIViewController, UITextFieldDelegate {
                 
             }
             else {
-                print("nu kontaktes Firebase Auth")
-                
-                print(mail)
-                print(kode)
-                print(navn)
                 //OPRET BRUGER PÅ FIREBASE OSV (Auth)
                 FirebaseAPI.shared.opretBrugerAuth(mail: mail, kode: kode) { (dataRes, error) in
                     if let err = error {
-                        
-                        print("OPRETTELSE FEJLET!")
                         if err.localizedDescription == "The email address is already in use by another account." {
                         SVProgressHUD.showError(withStatus: "Mailen findes allerede")
                         print(err.localizedDescription)
                         SVProgressHUD.dismiss(withDelay: 2)
                         } else {
                         SVProgressHUD.showError(withStatus: "Der opstod en fejl")
-                        print("EFTER IF'en!!")
                         SVProgressHUD.dismiss(withDelay: 2)
                         }
                     } else {
                         // oprettelsen lykkedes og vi kommer herind!
-                        print("BRUGEREN BLEV OPRETTET i Auth!")
                         print(dataRes!.debugDescription)
                         FirebaseAPI.shared.opretBrugerFireStore(navn: navn) { (res, error) in
-                            if let err = error {
-                                print("FEJL NÅR BRUGER SKULLE I DB")
+                            if error != nil {
+                                print("FEJL NÅR BRUGER SKULLE I DB: \(error.debugDescription)")
                                 SVProgressHUD.showError(withStatus: "Der opstod en fejl")
                                 SVProgressHUD.dismiss(withDelay: 2)
-                            } else {print("SUCCES MED AT TILFØJE \(res!) I DB")
+                            } else {
+                                print("SUCCES MED AT TILFØJE \(res!) I DB")
                                 BarListe.shared.mail = mail
                                 self.lavBrugerIBarListe(navn: navn)
                                 FirebaseAPI.shared.hentBarer { (barer, err) in
@@ -201,9 +189,7 @@ class OpretBrugerViewController: UIViewController, UITextFieldDelegate {
                                             for bar in barene {
                                                 BarListe.shared.addBar(bar: bar)
                                             }
-                                            SVProgressHUD.showSuccess(withStatus: "")
-
-                                            SVProgressHUD.dismiss(withDelay: 0.5)
+                                            SVProgressHUD.dismiss()
                                           self.present(self.tabbarController, animated: true, completion: nil)
                                         }
                                         
@@ -213,10 +199,6 @@ class OpretBrugerViewController: UIViewController, UITextFieldDelegate {
                         }
                     }
                 }
-                // opret bruger i database (Firestore)
-                // send videre til navbar 
-                
-                //
             }
             
             

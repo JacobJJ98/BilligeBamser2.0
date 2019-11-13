@@ -62,7 +62,7 @@ class MereViewController: UIViewController {
         print(BarListe.shared.barer.count)
         print(BarListe.shared.egneFavoritter.count)
         for bar in BarListe.shared.egneFavoritter {
-            print(bar.id)
+            print(bar.id!)
         }
         print(BarListe.shared.brugerLoggetind.navn)
         print("FAVO STEDER FRA STRING ARRAY")
