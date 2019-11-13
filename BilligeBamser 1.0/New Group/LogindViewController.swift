@@ -9,18 +9,7 @@
 import UIKit
 import SVProgressHUD
 
-//Gør så keyboard lukker ned når der tabbes uden for
-extension UIViewController {
-    func setupHideKeyboardOnTap() {
-        self.view.addGestureRecognizer(self.endEditingRecognizer())
-        self.navigationController?.navigationBar.addGestureRecognizer(self.endEditingRecognizer())
-    }
-    private func endEditingRecognizer() -> UIGestureRecognizer {
-        let tap = UITapGestureRecognizer(target: self.view, action: #selector(self.view.endEditing(_:)))
-        tap.cancelsTouchesInView = false
-        return tap
-    }
-}
+
 
 class LogindViewController: UIViewController, UITextFieldDelegate {
     
@@ -39,21 +28,14 @@ class LogindViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //mailFelt.delegate = self
-        //kodeFelt.delegate = self
-        
         deaktiverLoginKnap()
-        
         //Metode til at lukke keyboard ned ved tab uden for
         self.setupHideKeyboardOnTap()
-        
     }
     //Hvid status bar
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
-    
     func deaktiverLoginKnap() {
         btnLogin.isEnabled = false
         btnLogin.alpha = 0.5
@@ -79,10 +61,7 @@ class LogindViewController: UIViewController, UITextFieldDelegate {
     
     //Metode til at disable login knap når felterne er tomme
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        print("should change køres")
-        
         if(textField == self.mailFelt) {
-            print("mailFelt")
             if let _ = mailFelt.text, let kode = kodeFelt.text {
                 let mail = (mailFelt.text! as NSString).replacingCharacters(in: range, with: string)
                 
@@ -154,7 +133,6 @@ class LogindViewController: UIViewController, UITextFieldDelegate {
             }
             else {
                 SVProgressHUD.show()
-                // fireBaseLogin(email: mail,pass: kode)
                 FirebaseAPI.shared.logIn(navn: mail, kode: kode) { (result, error) in
                     if error != nil {
                         //hvis den kommer herind er der fejl!
@@ -176,35 +154,31 @@ class LogindViewController: UIViewController, UITextFieldDelegate {
                                 if let brugeren = bruger {
                                     BarListe.shared.tilføjBruger(bruger: brugeren)
                                 }
-                                // BarListe.shared.barer.removeAll()
                                   FirebaseAPI.shared.hentBarer { (result, error) in
-                                                           if error != nil {
-                                                               SVProgressHUD.dismiss()
-                                                               SVProgressHUD.showError(withStatus: "Kunne ikke hente barer!")
-                                                               SVProgressHUD.dismiss(withDelay: 0.5)
-                                                               self.kodeFelt.text = ""
-                                                               self.deaktiverLoginKnap()
-                                                           } else {
-                                                               if let barene = result {
-                                                                   for bar in barene {
-                                                                       BarListe.shared.addBar(bar: bar)
-                                                                   }
-                                                                
-                                                                BarListe.shared.findFavo()
-                                                                   
-                                                                   SVProgressHUD.dismiss()
-                                                                   SVProgressHUD.showSuccess(withStatus: "")
-                                                                 self.present(self.tabbarController, animated: true, completion: nil)
-                                                               }
+                                    if error != nil {
+                                        SVProgressHUD.dismiss()
+                                        SVProgressHUD.showError(withStatus: "Kunne ikke hente barer!")
+                                        SVProgressHUD.dismiss(withDelay: 0.5)
+                                        self.kodeFelt.text = ""
+                                        self.deaktiverLoginKnap()
+                                    } else {
+                                                if let barene = result {
+                                                    for bar in barene {
+                                                        BarListe.shared.addBar(bar: bar)
+                                                    }
+                                                    BarListe.shared.findFavo()
+                                                    SVProgressHUD.dismiss()
+                                                    self.present(self.tabbarController, animated: true, completion: nil)
+                                                }
                                                                
-                                                               }
+                                    }
                                                                
-                                                           }
-                                
-                                
-                                
                             }
-                        }
+                                
+                                
+                                
+                    }
+            }
                         
                         
                         
@@ -237,7 +211,17 @@ class LogindViewController: UIViewController, UITextFieldDelegate {
     
     
 }
-
-
+//Gør så keyboard lukker ned når der tabbes uden for
+extension UIViewController {
+    func setupHideKeyboardOnTap() {
+        self.view.addGestureRecognizer(self.endEditingRecognizer())
+        self.navigationController?.navigationBar.addGestureRecognizer(self.endEditingRecognizer())
+    }
+    private func endEditingRecognizer() -> UIGestureRecognizer {
+        let tap = UITapGestureRecognizer(target: self.view, action: #selector(self.view.endEditing(_:)))
+        tap.cancelsTouchesInView = false
+        return tap
+    }
+}
 
 

@@ -20,7 +20,6 @@ class BarListe {
     private init()
     {
         brugerLoggetind = Bruger(navn: "", favoritsteder: [""])
-        
         mail = ""
     }
     func logOut() -> Void {
@@ -46,14 +45,14 @@ class BarListe {
         print("INDE I FAVO PRINT!")
         print(egneFavoritter.count)
         for bar in egneFavoritter {
-            print(bar.id)
+            print(bar.id!)
         }
     }
     func udskrivTestBarer() -> Void {
         print("INDE I BAR PRINT!")
         print(barer.count)
         for bar in barer {
-            print(bar.id)
+            print(bar.id!)
         }
     }
     
@@ -66,8 +65,6 @@ class BarListe {
                 }
             }
         }
-        print("FIND FAVO ER KØRT!!!------")
-        print(egneFavoritter.count)
     }
     
     func sorterFavoEfterAfsted(loka: CLLocation) -> Void {

@@ -11,7 +11,7 @@ import MapKit
 
 class Bar: NSObject, MKAnnotation {
     let title: String?
-    var id: String = ""
+    var id: String?
     var flaskepris: Int
     var navn: String
     var rygning: Bool

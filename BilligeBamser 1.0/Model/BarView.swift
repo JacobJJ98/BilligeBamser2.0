@@ -11,7 +11,6 @@ import MapKit
 class BarView2: MKAnnotationView {
   override var annotation: MKAnnotation? {
     willSet {
-        print("INDE I BARVIEW2-------------------")
       guard let artwork = newValue as? Bar else {return}
       canShowCallout = true
       calloutOffset = CGPoint(x: -5, y: 5)

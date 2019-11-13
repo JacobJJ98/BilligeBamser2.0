@@ -44,7 +44,7 @@ class FirebaseAPI {
         
         self.db = Firestore.firestore()
         print("INDE I FIREstore tilføj-bruger")
-        var favo: [String] = []
+        let favo: [String] = []
         if let user = Auth.auth().currentUser {
             
             self.db.collection("Bruger").document(user.uid).setData([
