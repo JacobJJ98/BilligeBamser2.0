@@ -742,7 +742,7 @@
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t4R-2Z-khG">
-                                <rect key="frame" x="20" y="442" width="359" height="48"/>
+                                <rect key="frame" x="20" y="442" width="359" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="  Privatlivspolitik " image="info">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -791,7 +791,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DhY-f9-lPr">
-                                <rect key="frame" x="20" y="498" width="394" height="48"/>
+                                <rect key="frame" x="20" y="474" width="394" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="  Om os" image="paper">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -938,15 +938,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Velkommen!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Div-hi-Phs">
-                                <rect key="frame" x="160" y="337" width="95" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Velkommen!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Div-hi-Phs">
+                                <rect key="frame" x="159.5" y="437.5" width="95" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Div-hi-Phs" firstAttribute="centerX" secondItem="igO-ou-aex" secondAttribute="centerX" id="d9R-vR-WZY"/>
+                            <constraint firstItem="Div-hi-Phs" firstAttribute="centerY" secondItem="igO-ou-aex" secondAttribute="centerY" id="z6y-KK-gHf"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="e28-at-vKF"/>
                     </view>
                     <connections>
