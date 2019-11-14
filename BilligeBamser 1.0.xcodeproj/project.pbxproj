@@ -57,9 +57,7 @@
 		287ECAEE234E5FF200487427 /* OpretBajerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OpretBajerViewController.swift; path = "../New Group1/OpretBajerViewController.swift"; sourceTree = "<group>"; };
 		28C5E9C1234F9BEA00BE284D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		28CDE5432374668B00AD14D5 /* Bar2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bar2.swift; sourceTree = "<group>"; };
-		380EDE949A882405A61B8F77 /* Pods-BilligeBamser 1.0.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BilligeBamser 1.0.debug.xcconfig"; path = "Target Support Files/Pods-BilligeBamser 1.0/Pods-BilligeBamser 1.0.debug.xcconfig"; sourceTree = "<group>"; };
 		4A2B78F5FE428E60C38F011F /* Pods-BilligeBamser1.0.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BilligeBamser1.0.debug.xcconfig"; path = "Target Support Files/Pods-BilligeBamser1.0/Pods-BilligeBamser1.0.debug.xcconfig"; sourceTree = "<group>"; };
-		861AAD122035663F003CE24D /* Pods-BilligeBamser 1.0.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BilligeBamser 1.0.release.xcconfig"; path = "Target Support Files/Pods-BilligeBamser 1.0/Pods-BilligeBamser 1.0.release.xcconfig"; sourceTree = "<group>"; };
 		EE1B0C992376FF94004C3342 /* BarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarView.swift; sourceTree = "<group>"; };
 		EE805A2D234DF9B40095651D /* BilligeBamser1.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BilligeBamser1.0.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE805A30234DF9B40095651D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -181,8 +179,6 @@
 		C2D218BA4494DD413AD8CB55 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				380EDE949A882405A61B8F77 /* Pods-BilligeBamser 1.0.debug.xcconfig */,
-				861AAD122035663F003CE24D /* Pods-BilligeBamser 1.0.release.xcconfig */,
 				4A2B78F5FE428E60C38F011F /* Pods-BilligeBamser1.0.debug.xcconfig */,
 				FC01C8404C1C0F313E7E0BAB /* Pods-BilligeBamser1.0.release.xcconfig */,
 			);
