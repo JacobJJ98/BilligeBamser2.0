@@ -22,7 +22,7 @@ class CustomTabbarController: ESTabBarController {
                    tabbarController, viewController, index in
                    if index == 2 {
                        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                       let newViewController = storyBoard.instantiateViewController(withIdentifier: "opretBajer") as! UIViewController
+                    let newViewController = storyBoard.instantiateViewController(withIdentifier: "opretBajer") 
                        tabbarController.present(newViewController, animated: true, completion: nil)
         
                        return true
