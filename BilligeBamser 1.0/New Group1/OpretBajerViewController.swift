@@ -78,6 +78,7 @@ class OpretBajerViewController: UIViewController, CLLocationManagerDelegate {
         if let navnmidler = barNavn.text {
             guard navnmidler.count > 0 else {
                 navnAfvist.isHidden = false
+                SVProgressHUD.dismiss()
                 return
             }
             //sætter navnet til klassevariablen!
@@ -86,6 +87,7 @@ class OpretBajerViewController: UIViewController, CLLocationManagerDelegate {
         if let prismidler = flaskePris.text {
             guard prismidler.count > 0 else {
                 prisAfvist.isHidden = false
+                SVProgressHUD.dismiss()
                 return
             }
             
@@ -99,50 +101,52 @@ class OpretBajerViewController: UIViewController, CLLocationManagerDelegate {
     
     
     func tilføjTilFirebase() -> Void {
-        
-                           if let kor = self.cor {
-                               if let navn_ = self.navn {
-                                   if let pris_ = self.pris {
-                                       print("BAREN KAN NU OPRETTES MED DISSE VÆRDIER: ")
-                                       print(kor.latitude)
-                                       print(kor.longitude)
-                                       print(navn_)
-                                       print(pris_)
-                                       print(self.rygningTilladt.isOn)
-                                       let bar = Bar(flaskepris: pris_, navn: navn_, rygning: self.rygningTilladt.isOn, coordinate: kor)
-                                       FirebaseAPI.shared.tilføjBar(bar: bar) { (res, err) in
-                                           if err != nil {
-                                               SVProgressHUD.showError(withStatus: "Mislykkedes")
-                                           } else {
-                                               BarListe.shared.barer.removeAll()
-                                               FirebaseAPI.shared.hentBarer { (result, error) in
-                                                   if error != nil {
-                                                       SVProgressHUD.dismiss()
-                                                       SVProgressHUD.showError(withStatus: "Kunne ikke hente barer!")
-                                                       SVProgressHUD.dismiss(withDelay: 0.5)
-                                                   } else {
-                                                       if let barene = result {
-                                                           for bar in barene {
-                                                               BarListe.shared.addBar(bar: bar)
-                                                           }
-                                                           
-                                                           SVProgressHUD.showSuccess(withStatus: "")
-                                                           SVProgressHUD.dismiss()
-                                                           self.performSegueToReturnBack()
-                                                       }
-                                                       
-                                                   }
-                                                   
-                                               }
-                                           }
-                                       }
-                                       
-                                   }
-                                   
-                               }
-                               
-                               
-                           }
+        if let kor = self.cor {
+            if let navn_ = self.navn {
+                if let pris_ = self.pris {
+                    print("BAREN KAN NU OPRETTES MED DISSE VÆRDIER: ")
+                    print(kor.latitude)
+                    print(kor.longitude)
+                    print(navn_)
+                    print(pris_)
+                    print(self.rygningTilladt.isOn)
+                    let bar = Bar(flaskepris: pris_, navn: navn_, rygning: self.rygningTilladt.isOn, coordinate: kor)
+                    FirebaseAPI.shared.tilføjBar(bar: bar) { (res, err) in
+                        if err != nil {
+                            SVProgressHUD.showError(withStatus: "Mislykkedes")
+                            print(err!.localizedDescription)
+                        } else {
+                            BarListe.shared.barer.removeAll()
+                            FirebaseAPI.shared.hentBarer { (result, error) in
+                                if error != nil {
+                                    SVProgressHUD.dismiss()
+                                    SVProgressHUD.showError(withStatus: "Kunne ikke hente barer!")
+                                    SVProgressHUD.dismiss(withDelay: 0.5)
+                                    print(error!.localizedDescription)
+                                } else {
+                                    if let barene = result {
+                                        for bar in barene {
+                                            BarListe.shared.addBar(bar: bar)
+                                        }
+                                        SVProgressHUD.showSuccess(withStatus: "")
+                                        SVProgressHUD.dismiss()
+                                        self.performSegueToReturnBack()
+                                        
+                                    }
+                                    
+                                }
+                                
+                            }
+                            
+                        }
+                        
+                    }
+                    
+                }
+                
+            }
+            
+        }
     }
     
     func findLokation() -> Void {
@@ -173,6 +177,7 @@ class OpretBajerViewController: UIViewController, CLLocationManagerDelegate {
             if let adrmidler = adresse.text {
                 guard adrmidler.count > 0 else {
                     adrAfvist.isHidden = false
+                    SVProgressHUD.dismiss()
                     return
                 }
             }
@@ -185,7 +190,7 @@ class OpretBajerViewController: UIViewController, CLLocationManagerDelegate {
                     guard let placemarks = placemarks, let location = placemarks.first?.location
                         else {
                             // handle no location found
-                            // tænker der skal komme en alert omkring det skal indtastes anderledes eller brug nuværende loka!!
+                            // TODO: tænker der skal komme en alert omkring det skal indtastes anderledes eller brug nuværende loka!!
                             
                             print("Lokationen findes ikke!")
                             return

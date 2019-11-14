@@ -66,9 +66,6 @@ class FavoriterTableViewController: UITableViewController, CLLocationManagerDele
             if let lokationen = locationManager.location {
              let barLoka = CLLocation(latitude: BarListe.shared.egneFavoritter[indexPath.row].coordinate.latitude, longitude: BarListe.shared.egneFavoritter[indexPath.row].coordinate.longitude)
                 
-                print("MIN LOKATION ER: \(lokationen.coordinate.latitude) og long: \(lokationen.coordinate.longitude)")
-                
-                print("BARENS LOKATION ER: \(BarListe.shared.egneFavoritter[indexPath.row].coordinate.latitude) og long: \(BarListe.shared.egneFavoritter[indexPath.row].coordinate.longitude)")
              let dist = lokationen.distance(from: barLoka)/1000
              print(dist)
              

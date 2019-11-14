@@ -30,7 +30,6 @@ class IntroViewController: UIViewController, UITabBarControllerDelegate {
                     print(error!.localizedDescription)
                   } else {
                       if let barene = result {
-                              print("Barene er hentet!")
                           for bar in barene {
                               BarListe.shared.addBar(bar: bar)
                           }

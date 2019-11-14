@@ -11,10 +11,9 @@ import MapKit
 class BarView2: MKAnnotationView {
   override var annotation: MKAnnotation? {
     willSet {
-      guard let artwork = newValue as? Bar else {return}
+      guard let baren = newValue as? Bar else {return}
       canShowCallout = true
       calloutOffset = CGPoint(x: -5, y: 5)
-      // rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
         let mapsButton = UIButton(frame: CGRect(origin: CGPoint.zero,
            size: CGSize(width: 30, height: 30)))
         mapsButton.setBackgroundImage(UIImage(named: "mapOrange"), for: UIControl.State())
@@ -33,7 +32,7 @@ class BarView2: MKAnnotationView {
         addSubview(label)
         */
         
-        print("INDE I BARVIEW2-------------------\(artwork.navn)")
+        print("INDE I BARVIEW2-------------------\(baren.navn)")
         // sætter billedet som skal markere barerne på kortet!!
         image = UIImage(named: "beerBottle")
       
