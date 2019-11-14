@@ -36,18 +36,20 @@ class IntroViewController: UIViewController, UITabBarControllerDelegate {
                           }
                         BarListe.shared.findFavo()
                         self.present(self.tabbarController, animated: true, completion: nil)
-                              
                       }
                   }
-            }
+                    
+                }
+                
+                }
+                
             }
             
-              
-               }
-        }else {
+        } else {
                 print("IKKE LOGGET IND!!")
                 sleep(2)
                 self.performSegue(withIdentifier: "forNewUser", sender: nil)
-               }
+            
+        }
     }
 }
