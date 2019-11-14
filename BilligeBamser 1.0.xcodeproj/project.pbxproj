@@ -21,7 +21,7 @@
 		287ECAEF234E5FF200487427 /* OpretBajerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287ECAEE234E5FF200487427 /* OpretBajerViewController.swift */; };
 		28C5E9C2234F9BEA00BE284D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28C5E9C1234F9BEA00BE284D /* Assets.xcassets */; };
 		28CDE5442374668C00AD14D5 /* Bar2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28CDE5432374668B00AD14D5 /* Bar2.swift */; };
-		5A122BC17CAC7E5F5394BDA2 /* Pods_BilligeBamser_1_0.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F47A92EC5D00DAD65B0498A /* Pods_BilligeBamser_1_0.framework */; };
+		9521983EC816B9CFE3A47921 /* Pods_BilligeBamser1_0.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E47A86384BFCD1F8DDAB181 /* Pods_BilligeBamser1_0.framework */; };
 		EE1B0C9A2376FF94004C3342 /* BarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1B0C992376FF94004C3342 /* BarView.swift */; };
 		EE805A31234DF9B40095651D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE805A30234DF9B40095651D /* AppDelegate.swift */; };
 		EE805A36234DF9B40095651D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE805A34234DF9B40095651D /* Main.storyboard */; };
@@ -42,6 +42,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1E47A86384BFCD1F8DDAB181 /* Pods_BilligeBamser1_0.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BilligeBamser1_0.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		284DEA902371AB40004471F5 /* NavigationControllerUdforsk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerUdforsk.swift; sourceTree = "<group>"; };
 		2865BABE2361934D00CE8878 /* ExampleBouncesContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleBouncesContentView.swift; sourceTree = "<group>"; };
 		2865BABF2361935200CE8878 /* ExampleNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleNavigationController.swift; sourceTree = "<group>"; };
@@ -57,7 +58,7 @@
 		28C5E9C1234F9BEA00BE284D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		28CDE5432374668B00AD14D5 /* Bar2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bar2.swift; sourceTree = "<group>"; };
 		380EDE949A882405A61B8F77 /* Pods-BilligeBamser 1.0.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BilligeBamser 1.0.debug.xcconfig"; path = "Target Support Files/Pods-BilligeBamser 1.0/Pods-BilligeBamser 1.0.debug.xcconfig"; sourceTree = "<group>"; };
-		7F47A92EC5D00DAD65B0498A /* Pods_BilligeBamser_1_0.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BilligeBamser_1_0.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A2B78F5FE428E60C38F011F /* Pods-BilligeBamser1.0.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BilligeBamser1.0.debug.xcconfig"; path = "Target Support Files/Pods-BilligeBamser1.0/Pods-BilligeBamser1.0.debug.xcconfig"; sourceTree = "<group>"; };
 		861AAD122035663F003CE24D /* Pods-BilligeBamser 1.0.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BilligeBamser 1.0.release.xcconfig"; path = "Target Support Files/Pods-BilligeBamser 1.0/Pods-BilligeBamser 1.0.release.xcconfig"; sourceTree = "<group>"; };
 		EE1B0C992376FF94004C3342 /* BarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarView.swift; sourceTree = "<group>"; };
 		EE805A2D234DF9B40095651D /* BilligeBamser1.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BilligeBamser1.0.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -78,6 +79,7 @@
 		EEDE0A1D236B71E000E7B095 /* Bruger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bruger.swift; sourceTree = "<group>"; };
 		EEDE0A1F236F4DEE00E7B095 /* FavoriterTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriterTableViewController.swift; sourceTree = "<group>"; };
 		EEDE0A21237498A100E7B095 /* FirebaseAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAPI.swift; sourceTree = "<group>"; };
+		FC01C8404C1C0F313E7E0BAB /* Pods-BilligeBamser1.0.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BilligeBamser1.0.release.xcconfig"; path = "Target Support Files/Pods-BilligeBamser1.0/Pods-BilligeBamser1.0.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,7 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5A122BC17CAC7E5F5394BDA2 /* Pods_BilligeBamser_1_0.framework in Frameworks */,
+				9521983EC816B9CFE3A47921 /* Pods_BilligeBamser1_0.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,6 +183,8 @@
 			children = (
 				380EDE949A882405A61B8F77 /* Pods-BilligeBamser 1.0.debug.xcconfig */,
 				861AAD122035663F003CE24D /* Pods-BilligeBamser 1.0.release.xcconfig */,
+				4A2B78F5FE428E60C38F011F /* Pods-BilligeBamser1.0.debug.xcconfig */,
+				FC01C8404C1C0F313E7E0BAB /* Pods-BilligeBamser1.0.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -188,7 +192,7 @@
 		D4A4F1478BFF1A85B3C11AE3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				7F47A92EC5D00DAD65B0498A /* Pods_BilligeBamser_1_0.framework */,
+				1E47A86384BFCD1F8DDAB181 /* Pods_BilligeBamser1_0.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -307,15 +311,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BilligeBamser 1.0/Pods-BilligeBamser 1.0-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-BilligeBamser1.0/Pods-BilligeBamser1.0-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BilligeBamser 1.0/Pods-BilligeBamser 1.0-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-BilligeBamser1.0/Pods-BilligeBamser1.0-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BilligeBamser 1.0/Pods-BilligeBamser 1.0-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BilligeBamser1.0/Pods-BilligeBamser1.0-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		DCA34F65E16957E50266DE1C /* [CP] Check Pods Manifest.lock */ = {
@@ -333,7 +337,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-BilligeBamser 1.0-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-BilligeBamser1.0-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -516,7 +520,7 @@
 		};
 		EE805A40234DF9B60095651D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 380EDE949A882405A61B8F77 /* Pods-BilligeBamser 1.0.debug.xcconfig */;
+			baseConfigurationReference = 4A2B78F5FE428E60C38F011F /* Pods-BilligeBamser1.0.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G6TSQJ6DQ5;
@@ -535,7 +539,7 @@
 		};
 		EE805A41234DF9B60095651D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 861AAD122035663F003CE24D /* Pods-BilligeBamser 1.0.release.xcconfig */;
+			baseConfigurationReference = FC01C8404C1C0F313E7E0BAB /* Pods-BilligeBamser1.0.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G6TSQJ6DQ5;
