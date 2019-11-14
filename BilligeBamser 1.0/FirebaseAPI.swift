@@ -72,11 +72,7 @@ class FirebaseAPI {
             }
         }
     }
-            
         
-        
-    
-    
     func logInWithCred(cred: AuthCredential, completionHandler: @escaping (_ result: String?, _ error: Error?) -> Void){
         Auth.auth().signIn(with: cred) { (result, err) in
             if err != nil {
@@ -151,13 +147,11 @@ class FirebaseAPI {
             } else {
                 var barerne = [Bar]()
                 for document in querySnapshot!.documents {
-                   
-                   
                     if let flaskepris = document.data()["flaskepris"] as? Int {
                         midlerPris = flaskepris
-                                         print("\(flaskepris)")
+                        print("\(flaskepris)")
                         
-                                       }
+                    }
                     if let latitude = document.data()["latitude"] as? String {
                         if let latitudeDouble = Double(latitude) {
                             midlerLati = latitudeDouble
@@ -195,7 +189,6 @@ class FirebaseAPI {
                     
                 }
                 completionHandler(barerne, nil)
-               // self.hentBruger()
             }
         }
     }
@@ -217,41 +210,30 @@ class FirebaseAPI {
     
     func hentBruger(completionHandler: @escaping (_ result: Bruger?, _ error: Error?) -> Void){
         let brugeren = Bruger(navn: "", favoritsteder: [""])
-        print("FØR MAIL-------------")
         if let mail = Auth.auth().currentUser?.email {
             BarListe.shared.mail = mail
-            print(mail)
         }
-        print("EFTER MAIL-------------")
                 print(Auth.auth().currentUser!.uid)
                        // først hentes den bruger der er logget ind
                        db = Firestore.firestore()
                        let docRef = db.collection("Bruger").document(Auth.auth().currentUser!.uid)
                        docRef.getDocument { (document, error) in
                            if let document = document {
-                               print("ER IGANG MED AT HENTE BRUGEREN!!")
                                if let navn =  document.data()!["Navn"] as? String {
-                                   print("NAVNET ER")
-                                   print(navn)
                                 brugeren.navn = navn
-                               }
-                               if let favoritsteder = document.data()!["Favoritsteder"] as? [String] {
-                                                  print("Favoritsteder ER")
-                                                   print(favoritsteder.count)
-                                   brugeren.Favoritsteder = favoritsteder
-                                   
-                                              }
+                                
+                            }
+                            if let favoritsteder = document.data()!["Favoritsteder"] as? [String] {
+                                brugeren.Favoritsteder = favoritsteder
+                                
+                            }
                             completionHandler(brugeren, nil)
+                            
                            } else {
                                 completionHandler(nil, error)
                                print("Document does not exist")
                            }
                        }
-                       
-                       
-                
-                
-                
             }
         
         
