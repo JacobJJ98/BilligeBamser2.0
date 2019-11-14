@@ -169,6 +169,7 @@ class LogindViewController: UIViewController, UITextFieldDelegate {
                                                     BarListe.shared.findFavo()
                                                     SVProgressHUD.dismiss()
                                                     self.kodeFelt.text = ""
+                                                    self.deaktiverLoginKnap()
                                                     self.present(self.tabbarController, animated: true, completion: nil)
                                                 }
                                                                

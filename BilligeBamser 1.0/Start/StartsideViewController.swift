@@ -28,13 +28,10 @@ class StartsideViewController: UIViewController {
         //Laver layout for knapper efter subviews er lavet
         // så de radius er relativt ift knappens størrelse. (så den er helt rund)
         btnFb.layer.cornerRadius = btnFb.bounds.size.height/2
-        
         fortsætBtn.layer.cornerRadius = fortsætBtn.bounds.size.height/2
-        
         btnAllerede.layer.cornerRadius  = btnAllerede.frame.size.height/2
         btnAllerede.layer.borderWidth = 2
         btnAllerede.layer.borderColor = UIColor.white.cgColor
-        
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -111,7 +108,7 @@ class StartsideViewController: UIViewController {
                                         self.present(tabbarController, animated: true, completion: nil)
                                         }
                                         
-                                        }
+                                    }
                                 }
                                 
                             }
