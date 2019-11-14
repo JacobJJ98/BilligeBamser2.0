@@ -168,6 +168,7 @@ class LogindViewController: UIViewController, UITextFieldDelegate {
                                                     }
                                                     BarListe.shared.findFavo()
                                                     SVProgressHUD.dismiss()
+                                                    self.kodeFelt.text = ""
                                                     self.present(self.tabbarController, animated: true, completion: nil)
                                                 }
                                                                
