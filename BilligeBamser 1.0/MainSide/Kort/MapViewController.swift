@@ -34,7 +34,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
                 centerMapOnLocation(location: initialLocation)
             }
             
-            mapView.showsUserLocation = true
+             mapView.showsUserLocation = true
         
     }
 

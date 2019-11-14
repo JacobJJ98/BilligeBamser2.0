@@ -16,7 +16,6 @@ class FirebaseAPI {
     static let shared = FirebaseAPI()
 
     private init() {}
-
     
     // en metode der logger brugeren ind og har en completionHandler som kan bruges fra klassen hvor den bliver kaldt. 
     func logIn(navn: String, kode: String, completionHandler: @escaping (_ result: String?, _ error: Error?) -> Void){
@@ -25,16 +24,10 @@ class FirebaseAPI {
                 if let fejl = err {
                     completionHandler(nil,fejl)
                 }
-                //hvis den kommer herind er der fejl!
             } else {
-                
-                
                 if let id = result?.user.uid {
                     completionHandler(id, nil)
                 }
-                
-                
-                
             }
         }
         
@@ -43,10 +36,11 @@ class FirebaseAPI {
     func opretBrugerFireStore(navn: String, completionHandler: @escaping (_ result: String?, _ error: Error?) -> Void){
         
         self.db = Firestore.firestore()
-        print("INDE I FIREstore tilføj-bruger")
+        
         let favo: [String] = []
         if let user = Auth.auth().currentUser {
             
+          
             self.db.collection("Bruger").document(user.uid).setData([
                 "Navn": navn,
                             "Favoritsteder": favo
@@ -57,18 +51,15 @@ class FirebaseAPI {
                             } else {
                               print("SUCCES MED AT TILFØJE BRUGER I DB")
                                 completionHandler(user.uid, nil)
-                                }
-                                }
-                            
-                                
-                                
                             }
+                            
             }
+            
+        }
+        
+    }
     
     func opretBrugerAuth(mail: String, kode: String, completionHandler: @escaping (_ result: AuthDataResult?, _ error: Error?) -> Void){
-        
-    print("INDE I opretBrugerAuth")
-        
         Auth.auth().createUser(withEmail: mail, password: kode) { (result, error) in
             if let err = error {
                 print(err.localizedDescription)
@@ -80,7 +71,7 @@ class FirebaseAPI {
                 }
             }
         }
-        }
+    }
             
         
         
@@ -92,7 +83,6 @@ class FirebaseAPI {
                 if let fejl = err {
                     completionHandler(nil,fejl)
                 }
-                //hvis den kommer herind er der fejl!
             } else {
                 if let resultt = result {
                     if resultt.additionalUserInfo!.isNewUser {
@@ -109,12 +99,8 @@ class FirebaseAPI {
                 if let id = result?.user.uid {
                     completionHandler(id, nil)
                 }
-                
-                
-                
             }
         }
-        
     }
     
     func tilføjBar(bar: Bar, completionHandler: @escaping (_ result: DocumentReference?, _ error: Error?) -> Void){

@@ -34,7 +34,6 @@ class OpretBajerViewController: UIViewController, CLLocationManagerDelegate {
 
     
     @IBAction func vedAendretLokation(_ sender: UISwitch) {
-        print("lokation ændret!!")
         if sender.isOn == false {
             adresse.backgroundColor = UIColor.white.withAlphaComponent(1)
             adresse.isEnabled = true
