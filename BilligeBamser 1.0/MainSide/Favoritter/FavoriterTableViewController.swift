@@ -38,7 +38,18 @@ class FavoriterTableViewController: UITableViewController, CLLocationManagerDele
     }
     
     
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
 
+            // remove the item from the data model
+
+            // delete the table view row
+            //tableView.deleteRows(at: [indexPath], with: .fade)
+
+        } else if editingStyle == .insert {
+            // Not used in our example, but if you were adding a new row, this is where you would do it.
+        }
+    }
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
