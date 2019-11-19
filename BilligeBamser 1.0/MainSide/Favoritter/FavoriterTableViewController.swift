@@ -35,6 +35,8 @@ class FavoriterTableViewController: UITableViewController, CLLocationManagerDele
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+        tableView.backgroundView = UIImageView(image: #imageLiteral(resourceName: "bg6"))
     }
     
     
@@ -73,6 +75,7 @@ class FavoriterTableViewController: UITableViewController, CLLocationManagerDele
         // Configure the cell...
         cell.navnet.text = BarListe.shared.egneFavoritter[indexPath.row].navn
         cell.storBillede.image = UIImage(named: "Beer-Mug")
+        
         cell.prisTekst.text = "\(BarListe.shared.egneFavoritter[indexPath.row].flaskepris) Kr"
         cell.prisBillede.image = UIImage(named: "Beer-Mug")
         if CLLocationManager.locationServicesEnabled() {
