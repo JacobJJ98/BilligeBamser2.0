@@ -44,12 +44,14 @@ class FavoriterTableViewController: UITableViewController, CLLocationManagerDele
             // remove the item from the data model
             BarListe.shared.egneFavoritter.remove(at: indexPath.row)
             print("ANTAL FAVORITTER EFTER SLET : \(BarListe.shared.egneFavoritter.count)")
+            // TODO: Fjern fra Firebase også. EVT bare i baggrunden så brugeren ikke mærker det!
 
             // delete the table view row
             tableView.deleteRows(at: [indexPath], with: .fade)
 
         }
     }
+    
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
