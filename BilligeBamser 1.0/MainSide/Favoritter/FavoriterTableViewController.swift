@@ -42,12 +42,12 @@ class FavoriterTableViewController: UITableViewController, CLLocationManagerDele
         if editingStyle == .delete {
 
             // remove the item from the data model
+            BarListe.shared.egneFavoritter.remove(at: indexPath.row)
+            print("ANTAL FAVORITTER EFTER SLET : \(BarListe.shared.egneFavoritter.count)")
 
             // delete the table view row
-            //tableView.deleteRows(at: [indexPath], with: .fade)
+            tableView.deleteRows(at: [indexPath], with: .fade)
 
-        } else if editingStyle == .insert {
-            // Not used in our example, but if you were adding a new row, this is where you would do it.
         }
     }
     // MARK: - Table view data source
