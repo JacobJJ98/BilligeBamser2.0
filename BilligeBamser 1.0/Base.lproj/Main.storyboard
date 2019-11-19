@@ -930,11 +930,11 @@
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fb2" translatesAutoresizingMaskIntoConstraints="NO" id="Kr1-2m-YUM">
                                                                 <rect key="frame" x="8" y="5" width="24" height="38"/>
                                                             </imageView>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="umbrella" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="2Zf-LS-V1w">
-                                                                <rect key="frame" x="371" y="7" width="19" height="33.5"/>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hand.point.right.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="2Zf-LS-V1w">
+                                                                <rect key="frame" x="370" y="9" width="20" height="28.5"/>
                                                             </imageView>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="FØLG OS PÅ FB FORHELF!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BE8-Fk-3vh">
-                                                                <rect key="frame" x="80" y="14" width="204" height="21"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Følg med på Facebook" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BE8-Fk-3vh">
+                                                                <rect key="frame" x="80" y="14" width="174" height="21"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -959,11 +959,11 @@
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ig3" translatesAutoresizingMaskIntoConstraints="NO" id="0S9-8E-z0x">
                                                                 <rect key="frame" x="8" y="5" width="24" height="38"/>
                                                             </imageView>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="umbrella" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="flJ-CL-MXj">
-                                                                <rect key="frame" x="371" y="13.5" width="19" height="20.5"/>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hand.point.right.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="flJ-CL-MXj">
+                                                                <rect key="frame" x="370" y="15.5" width="20" height="15.5"/>
                                                             </imageView>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="FØLG OS PÅ IG FORHELF!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yX9-Gj-UOg">
-                                                                <rect key="frame" x="80" y="14" width="200" height="21"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Følg med på Instagram" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yX9-Gj-UOg">
+                                                                <rect key="frame" x="80" y="14" width="176" height="21"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -988,11 +988,11 @@
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="web" translatesAutoresizingMaskIntoConstraints="NO" id="9j9-GQ-WGn">
                                                                 <rect key="frame" x="8" y="5" width="24" height="38"/>
                                                             </imageView>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="umbrella" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="n7b-Je-cVb">
-                                                                <rect key="frame" x="371" y="13.5" width="19" height="20.5"/>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hand.point.right.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="n7b-Je-cVb">
+                                                                <rect key="frame" x="370" y="15.5" width="20" height="15.5"/>
                                                             </imageView>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Besøg vores smukke hjemmeside" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uVl-Yw-3Zg">
-                                                                <rect key="frame" x="80" y="14" width="255" height="21"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Besøg vores website" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uVl-Yw-3Zg">
+                                                                <rect key="frame" x="80" y="14" width="158" height="21"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -1053,8 +1053,8 @@
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="info" translatesAutoresizingMaskIntoConstraints="NO" id="E1A-En-tgW">
                                                                 <rect key="frame" x="8" y="5" width="24" height="38"/>
                                                             </imageView>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="umbrella" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="keH-ps-UQH">
-                                                                <rect key="frame" x="371" y="7" width="19" height="33.5"/>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hand.point.right.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="keH-ps-UQH">
+                                                                <rect key="frame" x="370" y="9" width="20" height="28.5"/>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Privatlivspolitik" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ye6-ml-tpE">
                                                                 <rect key="frame" x="80" y="14" width="115" height="21"/>
@@ -1082,8 +1082,8 @@
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paper" translatesAutoresizingMaskIntoConstraints="NO" id="gZn-1W-PJb">
                                                                 <rect key="frame" x="8" y="5" width="24" height="38"/>
                                                             </imageView>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="umbrella" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="2tB-tX-PCF">
-                                                                <rect key="frame" x="371" y="7" width="19" height="33.5"/>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hand.point.right.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="2tB-tX-PCF">
+                                                                <rect key="frame" x="370" y="9" width="20" height="28.5"/>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Om os" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E5m-8O-ctj">
                                                                 <rect key="frame" x="80" y="14" width="50" height="21"/>
@@ -1921,6 +1921,7 @@
         <image name="favoOrange" width="75" height="75"/>
         <image name="fb2" width="24" height="24"/>
         <image name="flaske" width="1169" height="4000"/>
+        <image name="hand.point.right.fill" catalog="system" width="64" height="48"/>
         <image name="heart" catalog="system" width="64" height="54"/>
         <image name="ig3" width="24" height="24"/>
         <image name="info" width="24" height="24"/>
@@ -1931,7 +1932,6 @@
         <image name="paper" width="24" height="24"/>
         <image name="person.circle" catalog="system" width="64" height="60"/>
         <image name="udforsk75x75" width="25" height="25"/>
-        <image name="umbrella" catalog="system" width="58" height="64"/>
         <image name="web" width="24" height="24"/>
         <namedColor name="bajerBrun">
             <color red="0.5" green="0.3450795363118262" blue="0.1362704080547118" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
