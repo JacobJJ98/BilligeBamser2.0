@@ -238,7 +238,7 @@ class FirebaseAPI {
                        }
             }
    
-    func fjernFavorit(completionHandler: @escaping (_ result: String?, _ error: Error?) -> Void){
+    func opdaterFavorit(completionHandler: @escaping (_ result: String?, _ error: Error?) -> Void){
          self.db = Firestore.firestore()
         self.db.collection("Bruger").document(Auth.auth().currentUser!.uid).setData([
             "Navn": BarListe.shared.brugerLoggetind.navn,

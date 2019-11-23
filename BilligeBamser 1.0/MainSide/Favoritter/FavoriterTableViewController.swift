@@ -48,7 +48,7 @@ class FavoriterTableViewController: UITableViewController, CLLocationManagerDele
             BarListe.shared.brugerLoggetind.Favoritsteder.removeAll { $0 == BarListe.shared.egneFavoritter[indexPath.row].id }
             BarListe.shared.egneFavoritter.remove(at: indexPath.row)
             
-            FirebaseAPI.shared.fjernFavorit { (res, err) in
+            FirebaseAPI.shared.opdaterFavorit { (res, err) in
                 // completion her!
                 print("COMPLETION")
             }
