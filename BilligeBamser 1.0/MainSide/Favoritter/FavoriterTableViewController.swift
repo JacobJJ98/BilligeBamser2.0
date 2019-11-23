@@ -45,6 +45,7 @@ class FavoriterTableViewController: UITableViewController, CLLocationManagerDele
 
             // remove the item from the data model
             print("BAR DER SKAL SLETTES i følge egneFavo: \(BarListe.shared.egneFavoritter[indexPath.row].navn)")
+            // disse to kalder herunder sørger for at slette baren de to rigtige steder. 
             BarListe.shared.brugerLoggetind.Favoritsteder.removeAll { $0 == BarListe.shared.egneFavoritter[indexPath.row].id }
             BarListe.shared.egneFavoritter.remove(at: indexPath.row)
             
@@ -52,7 +53,6 @@ class FavoriterTableViewController: UITableViewController, CLLocationManagerDele
                 // completion her!
                 print("COMPLETION")
             }
-            // TODO: Fjern fra Firebase også. EVT bare i baggrunden så brugeren ikke mærker det!
 
             // delete the table view row
             print("efter Completion")
