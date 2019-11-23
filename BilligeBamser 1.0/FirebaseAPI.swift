@@ -128,6 +128,8 @@ class FirebaseAPI {
         }
         
     }
+    
+    
 
     func hentBarer(completionHandler: @escaping (_ result: [Bar]?, _ error: Error?) -> Void){
        
@@ -235,6 +237,23 @@ class FirebaseAPI {
                            }
                        }
             }
+   
+    func fjernFavorit(completionHandler: @escaping (_ result: String?, _ error: Error?) -> Void){
+         self.db = Firestore.firestore()
+        self.db.collection("Bruger").document(Auth.auth().currentUser!.uid).setData([
+            "Navn": BarListe.shared.brugerLoggetind.navn,
+            "Favoritsteder": BarListe.shared.brugerLoggetind.Favoritsteder
+                ], completion: { (err) in
+                    if err != nil {
+                        print(err?.localizedDescription)
+                        completionHandler(nil, err!)
+                    } else {
+                        print("Favo er opdateret!")
+                        completionHandler("Succes", nil)
+                    }
+        })
+        
+    }
         
         
     

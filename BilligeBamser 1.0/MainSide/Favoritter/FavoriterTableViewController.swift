@@ -44,11 +44,18 @@ class FavoriterTableViewController: UITableViewController, CLLocationManagerDele
         if editingStyle == .delete {
 
             // remove the item from the data model
+            print("BAR DER SKAL SLETTES i følge egneFavo: \(BarListe.shared.egneFavoritter[indexPath.row].navn)")
+            BarListe.shared.brugerLoggetind.Favoritsteder.removeAll { $0 == BarListe.shared.egneFavoritter[indexPath.row].id }
             BarListe.shared.egneFavoritter.remove(at: indexPath.row)
-            print("ANTAL FAVORITTER EFTER SLET : \(BarListe.shared.egneFavoritter.count)")
+            
+            FirebaseAPI.shared.fjernFavorit { (res, err) in
+                // completion her!
+                print("COMPLETION")
+            }
             // TODO: Fjern fra Firebase også. EVT bare i baggrunden så brugeren ikke mærker det!
 
             // delete the table view row
+            print("efter Completion")
             tableView.deleteRows(at: [indexPath], with: .fade)
 
         }
