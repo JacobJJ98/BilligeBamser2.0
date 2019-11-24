@@ -37,7 +37,7 @@ class Bar: NSObject, MKAnnotation {
 extension Array where Element == Bar {
 
     mutating func sort(by location: CLLocation) {
-         return sort(by: { $0.distance(to: location) < $1.distance(to: location) })
+        return sort(by: { $0.distance(to: location) < $1.distance(to: location) })
     }
 
     func sorted(by location: CLLocation) -> [Bar] {
