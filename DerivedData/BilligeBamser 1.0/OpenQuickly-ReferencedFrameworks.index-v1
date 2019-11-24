@@ -27,22 +27,22 @@
 	<string>WatchKit</string>
 	<string>FirebaseInstanceID</string>
 	<string>FirebaseMLVisionFaceModel</string>
-	<string>FirebaseMLNaturalLanguage</string>
+	<string>AdSupport</string>
 	<string>FirebaseAuthInterop</string>
 	<string>FirebaseAuth</string>
-	<string>FBSDKLoginKit</string>
+	<string>CoreText</string>
 	<string>FirebaseMLVisionLabelModel</string>
+	<string>FirebaseMLNaturalLanguage</string>
 	<string>AppKit</string>
+	<string>FBSDKLoginKit</string>
 	<string>FBSDKCoreKit</string>
 	<string>SVProgressHUD</string>
-	<string>AdSupport</string>
-	<string>CoreText</string>
 	<string>CoreFoundation</string>
 	<string>ESTabBarController</string>
 	<string>FirebasePerformance</string>
 	<string>FirebaseMLNLTranslate</string>
-	<string>Crashlytics</string>
 	<string>AuthenticationServices</string>
+	<string>Crashlytics</string>
 	<string>FirebaseMLVisionAutoML</string>
 	<string>netinet</string>
 	<string>GoogleDataTransport</string>
@@ -65,9 +65,9 @@
 	<string>FirebaseDynamicLinks</string>
 	<string>UIKit</string>
 	<string>Fabric</string>
+	<string>CoreTelephony</string>
 	<string>FirebaseMLVisionBarcodeModel</string>
 	<string>Foundation</string>
-	<string>CoreTelephony</string>
 	<string>sys</string>
 	<string>nanopb</string>
 	<string>FirebaseFirestore</string>

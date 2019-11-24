@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		28007CCC2389E2EF00758B94 /* ViewControllerBajer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28007CCB2389E2EF00758B94 /* ViewControllerBajer.swift */; };
 		284DEA912371AB40004471F5 /* NavigationControllerUdforsk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284DEA902371AB40004471F5 /* NavigationControllerUdforsk.swift */; };
 		2865BAC22361935D00CE8878 /* ExampleBouncesContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2865BABE2361934D00CE8878 /* ExampleBouncesContentView.swift */; };
 		2865BAC32361935D00CE8878 /* ExampleNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2865BABF2361935200CE8878 /* ExampleNavigationController.swift */; };
@@ -20,7 +21,6 @@
 		287ECAED234E541800487427 /* Theme.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 287ECAEC234E541800487427 /* Theme.xcassets */; };
 		287ECAEF234E5FF200487427 /* OpretBajerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287ECAEE234E5FF200487427 /* OpretBajerViewController.swift */; };
 		28C5E9C2234F9BEA00BE284D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28C5E9C1234F9BEA00BE284D /* Assets.xcassets */; };
-		28CDE5442374668C00AD14D5 /* Bar2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28CDE5432374668B00AD14D5 /* Bar2.swift */; };
 		9521983EC816B9CFE3A47921 /* Pods_BilligeBamser1_0.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E47A86384BFCD1F8DDAB181 /* Pods_BilligeBamser1_0.framework */; };
 		EE1B0C9A2376FF94004C3342 /* BarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1B0C992376FF94004C3342 /* BarView.swift */; };
 		EE805A31234DF9B40095651D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE805A30234DF9B40095651D /* AppDelegate.swift */; };
@@ -43,6 +43,7 @@
 
 /* Begin PBXFileReference section */
 		1E47A86384BFCD1F8DDAB181 /* Pods_BilligeBamser1_0.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BilligeBamser1_0.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		28007CCB2389E2EF00758B94 /* ViewControllerBajer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerBajer.swift; sourceTree = "<group>"; };
 		284DEA902371AB40004471F5 /* NavigationControllerUdforsk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerUdforsk.swift; sourceTree = "<group>"; };
 		2865BABE2361934D00CE8878 /* ExampleBouncesContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleBouncesContentView.swift; sourceTree = "<group>"; };
 		2865BABF2361935200CE8878 /* ExampleNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleNavigationController.swift; sourceTree = "<group>"; };
@@ -56,7 +57,6 @@
 		287ECAEC234E541800487427 /* Theme.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Theme.xcassets; sourceTree = "<group>"; };
 		287ECAEE234E5FF200487427 /* OpretBajerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OpretBajerViewController.swift; path = "../New Group1/OpretBajerViewController.swift"; sourceTree = "<group>"; };
 		28C5E9C1234F9BEA00BE284D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		28CDE5432374668B00AD14D5 /* Bar2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bar2.swift; sourceTree = "<group>"; };
 		4A2B78F5FE428E60C38F011F /* Pods-BilligeBamser1.0.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BilligeBamser1.0.debug.xcconfig"; path = "Target Support Files/Pods-BilligeBamser1.0/Pods-BilligeBamser1.0.debug.xcconfig"; sourceTree = "<group>"; };
 		EE1B0C992376FF94004C3342 /* BarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarView.swift; sourceTree = "<group>"; };
 		EE805A2D234DF9B40095651D /* BilligeBamser1.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BilligeBamser1.0.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -143,6 +143,7 @@
 				286D41BC237858C800708CC1 /* Kort */,
 				284DEA8F2371AAFD004471F5 /* Udforsk */,
 				287ECAEE234E5FF200487427 /* OpretBajerViewController.swift */,
+				28007CCB2389E2EF00758B94 /* ViewControllerBajer.swift */,
 			);
 			path = MainSide;
 			sourceTree = "<group>";
@@ -153,7 +154,6 @@
 				EEAECAD42357733200C555E0 /* Bar.swift */,
 				EEAECAD623577CF500C555E0 /* BarListe.swift */,
 				EEDE0A1D236B71E000E7B095 /* Bruger.swift */,
-				28CDE5432374668B00AD14D5 /* Bar2.swift */,
 				EE1B0C992376FF94004C3342 /* BarView.swift */,
 			);
 			path = Model;
@@ -356,6 +356,7 @@
 				2865BAC52361935D00CE8878 /* ExampleIrregularityContentView.swift in Sources */,
 				EEAECADC23579D2B00C555E0 /* UdforskViewController.swift in Sources */,
 				28721CB1236A1DE4005C50F4 /* UIColorExtensions.swift in Sources */,
+				28007CCC2389E2EF00758B94 /* ViewControllerBajer.swift in Sources */,
 				EEDE0A22237498A100E7B095 /* FirebaseAPI.swift in Sources */,
 				2865BAC22361935D00CE8878 /* ExampleBouncesContentView.swift in Sources */,
 				EEDE0A1E236B71E000E7B095 /* Bruger.swift in Sources */,
@@ -363,7 +364,6 @@
 				284DEA912371AB40004471F5 /* NavigationControllerUdforsk.swift in Sources */,
 				EEDE09D82365C2F600E7B095 /* OpretBrugerViewController.swift in Sources */,
 				EEAECAD723577CF500C555E0 /* BarListe.swift in Sources */,
-				28CDE5442374668C00AD14D5 /* Bar2.swift in Sources */,
 				28721CAF236A1912005C50F4 /* CenterViewFlowLayout.swift in Sources */,
 				2865BAC32361935D00CE8878 /* ExampleNavigationController.swift in Sources */,
 				EEDE0A20236F4DEF00E7B095 /* FavoriterTableViewController.swift in Sources */,

@@ -15,11 +15,14 @@ class BarListe {
     var brugerLoggetind: Bruger
     var egneFavoritter: [Bar] = []
     var mail: String
+    var barerNærmeste: [Bar] = []
+    var barerBilligste: [Bar] = []
+    
     
 
     private init()
     {
-        brugerLoggetind = Bruger(navn: "", favoritsteder: [""])
+        brugerLoggetind = Bruger(navn: "", favoritsteder: [""], nærmeste: [""])
         mail = ""
     }
     func logOut() -> Void {
@@ -27,9 +30,11 @@ class BarListe {
         brugerLoggetind.navn = ""
         brugerLoggetind.Favoritsteder.removeAll()
         egneFavoritter.removeAll()
+        barerNærmeste.removeAll()
     }
     func tilføjBruger(bruger: Bruger) -> Void {
         self.egneFavoritter.removeAll()
+        self.barerNærmeste.removeAll()
         self.brugerLoggetind.Favoritsteder.removeAll()
         self.brugerLoggetind = bruger
     }
@@ -67,10 +72,33 @@ class BarListe {
         }
     }
     
+    
+    
+    
     func sorterFavoEfterAfsted(loka: CLLocation) -> Void {
         egneFavoritter.sort(by: loka)
+        
         }
+    
+    func sorterNærmesteEfterAfsted(loka: CLLocation) -> Void {
+        barerNærmeste.sort(by: loka)
+    
     }
+    func sorterBilligsteEfterPris() -> Void {
+       // var emptyDict: [String: ] = [:]
+        var arr: [String] = []
+        var current: Int = 999
+        for bars in barer {
+            var pris: Int = bars.flaskepris
+            if pris <= current {
+                current = pris
+            }
+        }
+    
+    }
+
+    
+}
     
 
     

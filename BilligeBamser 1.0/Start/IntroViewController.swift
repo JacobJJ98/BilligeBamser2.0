@@ -34,6 +34,7 @@ class IntroViewController: UIViewController, UITabBarControllerDelegate {
                               BarListe.shared.addBar(bar: bar)
                           }
                         BarListe.shared.findFavo()
+                         
                         self.present(self.tabbarController, animated: true, completion: nil)
                       }
                   }

@@ -16,6 +16,8 @@ class Bar: NSObject, MKAnnotation {
     var navn: String
     var rygning: Bool
     let coordinate: CLLocationCoordinate2D
+    var afstand: String?
+    var erFavo: Bool?
     
     init(flaskepris: Int, navn: String, rygning: Bool, coordinate: CLLocationCoordinate2D) {
         self.flaskepris = flaskepris
@@ -41,4 +43,5 @@ extension Array where Element == Bar {
     func sorted(by location: CLLocation) -> [Bar] {
         return sorted(by: { $0.distance(to: location) < $1.distance(to: location) })
     }
+
 }

@@ -5,7 +5,7 @@ target 'BilligeBamser1.0' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
-  # Pods for BilligeBamser 1.0
+  # Pods for BilligeBamser1.0
 
 # add the Firebase pod for Google Analytics
 
