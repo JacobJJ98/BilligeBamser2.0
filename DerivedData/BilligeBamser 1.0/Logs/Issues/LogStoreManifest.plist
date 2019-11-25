@@ -90,34 +90,6 @@
 			<key>uniqueIdentifier</key>
 			<string>063BB9E8-BC89-457B-9A79-12B3073C0F8A</string>
 		</dict>
-		<key>08CA0017-8778-4ACC-99AB-D786178D1BCC</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogMajorGroupSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.target.product-type.application</string>
-			<key>fileName</key>
-			<string>08CA0017-8778-4ACC-99AB-D786178D1BCC.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>signature</key>
-			<string>BilligeBamser1.0-gjftjvkdyjsxvpfeefjntnjcugwb</string>
-			<key>timeStartedRecording</key>
-			<real>596316938.65699506</real>
-			<key>timeStoppedRecording</key>
-			<real>596317173.71369803</real>
-			<key>title</key>
-			<string>Build target BilligeBamser1.0</string>
-			<key>uniqueIdentifier</key>
-			<string>08CA0017-8778-4ACC-99AB-D786178D1BCC</string>
-		</dict>
 		<key>1CA32514-D66F-4F46-B6BB-5D2866E697A3</key>
 		<dict>
 			<key>className</key>
@@ -425,6 +397,34 @@
 			<string>Build target FirebaseInstanceID</string>
 			<key>uniqueIdentifier</key>
 			<string>BABC0737-832C-4F32-B287-D63C8B9DB833</string>
+		</dict>
+		<key>C426B6E4-FFC8-4FE5-8FFC-D0B342013534</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogMajorGroupSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.target.product-type.application</string>
+			<key>fileName</key>
+			<string>C426B6E4-FFC8-4FE5-8FFC-D0B342013534.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>signature</key>
+			<string>BilligeBamser1.0-gjftjvkdyjsxvpfeefjntnjcugwb</string>
+			<key>timeStartedRecording</key>
+			<real>596400294.53602004</real>
+			<key>timeStoppedRecording</key>
+			<real>596400304.85119402</real>
+			<key>title</key>
+			<string>Build target BilligeBamser1.0</string>
+			<key>uniqueIdentifier</key>
+			<string>C426B6E4-FFC8-4FE5-8FFC-D0B342013534</string>
 		</dict>
 		<key>C51FFB96-5C04-484B-827C-474CB1362C9A</key>
 		<dict>

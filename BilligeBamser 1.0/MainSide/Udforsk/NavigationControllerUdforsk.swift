@@ -15,19 +15,18 @@ class NavigationControllerUdforsk: UINavigationController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 39, height: 39))
-         imageView.contentMode = .scaleAspectFit
-        let image = UIImage(named: "1")
-        imageView.image = image
-        self.navigationItem.titleView = imageView
+      
+     
         
 
         // Do any additional setup after loading the view.
     }
     
+    
+    
     override func viewDidLayoutSubviews() {
         
-       
+    
        
         
     }

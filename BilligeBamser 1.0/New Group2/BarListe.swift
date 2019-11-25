@@ -85,13 +85,21 @@ class BarListe {
     
     }
     func sorterBilligsteEfterPris() -> Void {
-       // var emptyDict: [String: ] = [:]
-        var arr: [String] = []
-        var current: Int = 999
+        
+        var dictionary: [String: Int] = [:]
         for bars in barer {
+            
             var pris: Int = bars.flaskepris
-            if pris <= current {
-                current = pris
+            dictionary.updateValue(bars.flaskepris, forKey: bars.id!)
+
+        }
+        let sortedDictionary = dictionary.sorted { $0.1 < $1.1 }
+        
+        for barDic in sortedDictionary {
+            for bars in barer {
+                if bars.id == barDic.key {
+                    barerBilligste.append(bars)
+                }
             }
         }
     
