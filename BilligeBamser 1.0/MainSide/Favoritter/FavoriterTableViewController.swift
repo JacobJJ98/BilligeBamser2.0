@@ -39,27 +39,46 @@ class FavoriterTableViewController: UITableViewController, CLLocationManagerDele
         tableView.backgroundView = UIImageView(image: #imageLiteral(resourceName: "bg6"))
     }
     
-    
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-
+    override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        let delete = UITableViewRowAction(style: .destructive, title: "Delete") { (action, indexPath) in
+            // delete item at indexPath
             // remove the item from the data model
-            print("BAR DER SKAL SLETTES i følge egneFavo: \(BarListe.shared.egneFavoritter[indexPath.row].navn)")
-            // disse to kalder herunder sørger for at slette baren de to rigtige steder. 
-            BarListe.shared.brugerLoggetind.Favoritsteder.removeAll { $0 == BarListe.shared.egneFavoritter[indexPath.row].id }
-            BarListe.shared.egneFavoritter.remove(at: indexPath.row)
-            
-            FirebaseAPI.shared.opdaterFavorit { (res, err) in
-                // completion her!
-                print("COMPLETION")
-            }
+                       print("BAR DER SKAL SLETTES i følge egneFavo: \(BarListe.shared.egneFavoritter[indexPath.row].navn)")
+                       // disse to kalder herunder sørger for at slette baren de to rigtige steder.
+                       BarListe.shared.brugerLoggetind.Favoritsteder.removeAll { $0 == BarListe.shared.egneFavoritter[indexPath.row].id }
+                       BarListe.shared.egneFavoritter.remove(at: indexPath.row)
+                       
+                       FirebaseAPI.shared.opdaterFavorit { (res, err) in
+                           // completion her!
+                           print("COMPLETION")
+                       }
 
-            // delete the table view row
-            print("efter Completion")
-            tableView.deleteRows(at: [indexPath], with: .fade)
-
+                       // delete the table view row
+                       print("efter Completion")
+                       tableView.deleteRows(at: [indexPath], with: .fade)
         }
+
+        return [delete]
     }
+    override func tableView(_ tableView: UITableView,
+                   leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration?
+    {
+        let closeAction = UIContextualAction(style: .normal, title:  "Vis vej", handler: { (ac:UIContextualAction, view:UIView, success:(Bool) -> Void) in
+                print("DER VISES VEJ!!!")
+            let coordinate = CLLocationCoordinate2DMake(BarListe.shared.egneFavoritter[indexPath.row].coordinate.latitude,BarListe.shared.egneFavoritter[indexPath.row].coordinate.longitude)
+                let mapItem = MKMapItem(placemark: MKPlacemark(coordinate: coordinate, addressDictionary:nil))
+            mapItem.name = BarListe.shared.egneFavoritter[indexPath.row].navn
+                mapItem.openInMaps(launchOptions: [MKLaunchOptionsDirectionsModeKey : MKLaunchOptionsDirectionsModeDriving])
+            
+                success(true)
+            })
+            closeAction.backgroundColor = .blue
+            closeAction.title = "Vis vej"
+    
+            return UISwipeActionsConfiguration(actions: [closeAction])
+    
+    }
+    
     
     // MARK: - Table view data source
 
@@ -68,6 +87,7 @@ class FavoriterTableViewController: UITableViewController, CLLocationManagerDele
         return 1
     }
 
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return BarListe.shared.egneFavoritter.count
