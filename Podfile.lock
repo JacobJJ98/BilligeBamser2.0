@@ -120,6 +120,7 @@ PODS:
     - nanopb (~> 0.3)
   - gRPC-Core/Interface (1.21.0)
   - GTMSessionFetcher/Core (1.2.2)
+  - Hero (1.5.0)
   - leveldb-library (1.22)
   - nanopb (0.3.901):
     - nanopb/decode (= 0.3.901)
@@ -136,6 +137,7 @@ DEPENDENCIES:
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Firestore
+  - Hero
   - SVProgressHUD
 
 SPEC REPOS:
@@ -160,6 +162,7 @@ SPEC REPOS:
     - "gRPC-C++"
     - gRPC-Core
     - GTMSessionFetcher
+    - Hero
     - leveldb-library
     - nanopb
     - Protobuf
@@ -186,11 +189,12 @@ SPEC CHECKSUMS:
   "gRPC-C++": 9dfe7b44821e7b3e44aacad2af29d2c21f7cde83
   gRPC-Core: c9aef9a261a1247e881b18059b84d597293c9947
   GTMSessionFetcher: 61bb0f61a4cb560030f1222021178008a5727a23
+  Hero: b7385b75e7259da62f4f85462f59a5082d66b058
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   Protobuf: a4dc852ad69c027ca2166ed287b856697814375b
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: 300c98bdcc3b0d3284ca699353fbc8977f74c508
+PODFILE CHECKSUM: 68441be1794ee0a7f50e92f998028d46524d0f17
 
 COCOAPODS: 1.8.4

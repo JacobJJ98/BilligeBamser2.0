@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Hero
 
 class MereViewController: UIViewController {
     
@@ -23,7 +24,18 @@ class MereViewController: UIViewController {
                        print(err!.localizedDescription)
                    } else {
                        BarListe.shared.logOut()
-                       self.dismiss(animated: true, completion: nil)
+                    
+                    let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                    let v1Nav = storyBoard.instantiateViewController(withIdentifier: "startsideVC") as! UIViewController
+                    
+                    v1Nav.isHeroEnabled = true
+                    
+                    let direction = HeroDefaultAnimationType.Direction.down
+                    v1Nav.heroModalAnimationType = HeroDefaultAnimationType.cover(direction: direction)
+                    
+                    self.present(v1Nav, animated: true, completion: nil)
+                    
+                       // self.dismiss(animated: true, completion: nil)
                    }
                }
     }
