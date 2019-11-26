@@ -12,6 +12,7 @@ import FirebaseFirestore
 import MapKit
 
 class FirebaseAPI {
+    // TEST COMMIT
     var db: Firestore!
     static let shared = FirebaseAPI()
 
