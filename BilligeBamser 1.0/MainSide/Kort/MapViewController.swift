@@ -14,17 +14,12 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
 
     let regionRadius: CLLocationDistance = 350
     @IBOutlet var mapView: MKMapView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         mapView.delegate = self
-        mapView.register(BarView2.self,
-        forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
-        
+        mapView.register(BarView2.self, forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
         let locationManager = CLLocationManager()
-        
-        //Hvid status bar
-      
-      
         //Resterende sørger for at sætte current location som der hvor Map starter!!
         if CLLocationManager.locationServicesEnabled() {
             locationManager.delegate = self
@@ -34,12 +29,12 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
                 let initialLocation = CLLocation(latitude: lokationen.coordinate.latitude, longitude: lokationen.coordinate.longitude)
                 centerMapOnLocation(location: initialLocation)
             }
-            
              mapView.showsUserLocation = true
+        }
         
     }
-
-        }
+    
+    
     override func viewDidDisappear(_ animated: Bool) {
         
         print("DISAPEAR!")
@@ -47,13 +42,11 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     }
         
     override func viewDidAppear(_ animated: Bool) {
-        print("APPEAR MAP!!")
-        
         for bar in BarListe.shared.barer {
             mapView.addAnnotation(bar)
         }
-            
-        }
+        
+    }
     
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
@@ -77,17 +70,14 @@ extension MapViewController: MKMapViewDelegate {
     // Hvad sker der når man trykker på info knappen!!
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView,
         calloutAccessoryControlTapped control: UIControl) {
-        print("TRYKKET!!!")
-        print(mapView.annotations.count)
         if let baren = view.annotation {
             let coordinate = CLLocationCoordinate2DMake(baren.coordinate.latitude,baren.coordinate.longitude)
             let mapItem = MKMapItem(placemark: MKPlacemark(coordinate: coordinate, addressDictionary:nil))
             mapItem.name = baren.title!
             mapItem.openInMaps(launchOptions: [MKLaunchOptionsDirectionsModeKey : MKLaunchOptionsDirectionsModeDriving])
         }
-        
-        
     }
-    
- 
 }
+
+
+

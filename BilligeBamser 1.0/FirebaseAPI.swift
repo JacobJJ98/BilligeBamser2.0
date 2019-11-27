@@ -12,7 +12,6 @@ import FirebaseFirestore
 import MapKit
 
 class FirebaseAPI {
-    // TEST COMMIT
     var db: Firestore!
     static let shared = FirebaseAPI()
 
@@ -40,8 +39,6 @@ class FirebaseAPI {
         
         let favo: [String] = []
         if let user = Auth.auth().currentUser {
-            
-          
             self.db.collection("Bruger").document(user.uid).setData([
                 "Navn": navn,
                             "Favoritsteder": favo
@@ -57,7 +54,6 @@ class FirebaseAPI {
             }
             
         }
-        
     }
     
     func opretBrugerAuth(mail: String, kode: String, completionHandler: @escaping (_ result: AuthDataResult?, _ error: Error?) -> Void){
@@ -246,7 +242,7 @@ class FirebaseAPI {
             "Favoritsteder": BarListe.shared.brugerLoggetind.Favoritsteder
                 ], completion: { (err) in
                     if err != nil {
-                        print(err?.localizedDescription)
+                        print(err!.localizedDescription)
                         completionHandler(nil, err!)
                     } else {
                         print("Favo er opdateret!")
