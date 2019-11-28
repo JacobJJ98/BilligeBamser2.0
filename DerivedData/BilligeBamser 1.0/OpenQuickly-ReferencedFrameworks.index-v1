@@ -33,11 +33,11 @@
 	<string>FirebaseAuth</string>
 	<string>CoreText</string>
 	<string>FirebaseMLVisionLabelModel</string>
-	<string>FirebaseMLNaturalLanguage</string>
 	<string>AppKit</string>
 	<string>FBSDKLoginKit</string>
 	<string>FBSDKCoreKit</string>
 	<string>SVProgressHUD</string>
+	<string>FirebaseMLNaturalLanguage</string>
 	<string>CoreFoundation</string>
 	<string>ESTabBarController</string>
 	<string>FirebaseMLNLTranslate</string>

@@ -109,6 +109,25 @@ class BarListe {
         }
     
     }
+    
+    func sletFavorit(ID: String) {
+        for (index, fav) in egneFavoritter.enumerated() {
+            if(fav.id==ID) {
+                self.egneFavoritter.remove(at: index)
+                return
+            }
+        }
+    }
+    func tilføjFavorit(ID: String) {
+        for (index,bar) in barer.enumerated() {
+            if(bar.id==ID){
+                  self.egneFavoritter.append(barer[index])
+            }
+        }
+        
+      
+
+    }
 
     
 }

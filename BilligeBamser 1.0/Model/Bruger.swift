@@ -17,4 +17,16 @@ class Bruger {
         self.nærmeste = nærmeste
     }
     
+    func sletFavorit(ID: String) {
+        for (index, fav) in Favoritsteder.enumerated() {
+            if(fav==ID) {
+                self.Favoritsteder.remove(at: index)
+            }
+        }
+    }
+    
+    func tilføjFavorit(ID: String) {
+        self.Favoritsteder.append(ID)
+    }
+    
 }

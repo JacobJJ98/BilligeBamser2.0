@@ -42,16 +42,23 @@ class CollectionViewCell3 : UICollectionViewCell {
 }
 
 class UdforskViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, CLLocationManagerDelegate {
+    
+ 
+    
     @IBOutlet var scrollView: UIScrollViewFile!
     
-    let locationManager = CLLocationManager()
+      let locationManager = CLLocationManager()
+    
+    //var locationManager = CLLocationManager()
     var refreshControl: UIRefreshControl!
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
+
     
     @objc func didPullToRefresh() {
+        let locationManager = CLLocationManager()
         if let lokationen = locationManager.location {
                    print("inde i loaktionenenenenen")
                    
@@ -80,7 +87,7 @@ class UdforskViewController: UIViewController, UICollectionViewDelegate, UIColle
                             }
                         }
                           
-                      }
+                    }
         
          }
 
@@ -90,13 +97,14 @@ class UdforskViewController: UIViewController, UICollectionViewDelegate, UIColle
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+     
     
         refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(didPullToRefresh), for: .valueChanged)
         refreshControl.tintColor = UIColor.white
         self.scrollView.addSubview(refreshControl)
     
-        
         if let lokationen = locationManager.location {
             print("inde i loaktionenenenenen")
             BarListe.shared.barerNærmeste = BarListe.shared.barer
@@ -106,6 +114,7 @@ class UdforskViewController: UIViewController, UICollectionViewDelegate, UIColle
         else {
             print("Ikke inde i lokaktinenen")
         }
+        
         
         collectionView1.layer.shadowColor = UIColor.black.cgColor
         collectionView1.layer.shadowOffset = CGSize(width: 0, height: 2.0)
@@ -158,6 +167,8 @@ class UdforskViewController: UIViewController, UICollectionViewDelegate, UIColle
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        
         
         if(collectionView == collectionView1) {
             let cell = collectionView1.dequeueReusableCell(withReuseIdentifier: "collectionViewCellID", for: indexPath) as! CollectionViewCell
@@ -335,6 +346,9 @@ class UdforskViewController: UIViewController, UICollectionViewDelegate, UIColle
             if let erFavo = BarListe.shared.barerNærmeste[indexPath.row].erFavo {
                 vc.erFavo = erFavo
             }
+            if let id = BarListe.shared.barerNærmeste[indexPath.row].id {
+                vc.id = id
+            }
             
             vc.pris = String(BarListe.shared.barerNærmeste[indexPath.row].flaskepris)
             vc.barnavn = BarListe.shared.barerNærmeste[indexPath.row].navn
@@ -350,6 +364,9 @@ class UdforskViewController: UIViewController, UICollectionViewDelegate, UIColle
             
             if let erFavo = BarListe.shared.barerBilligste[indexPath.row].erFavo {
                 vc.erFavo = erFavo
+            }
+            if let id = BarListe.shared.barerBilligste[indexPath.row].id {
+                vc.id = id
             }
             
             vc.pris = String(BarListe.shared.barerBilligste[indexPath.row].flaskepris)

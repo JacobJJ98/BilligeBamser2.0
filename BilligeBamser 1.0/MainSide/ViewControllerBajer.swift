@@ -18,8 +18,44 @@ class ViewControllerBajer: UIViewController {
     var afstand:String = ""
     var barnavn:String = ""
     var erFavo:Bool = false
+    var id:String = ""
+    
+    var firstTime: Bool = true
     
     @IBOutlet var erFavoImage: UIImageView!
+    
+    override func viewDidAppear(_ animated: Bool) {
+        print("VIEW DID APPEAR KØRES")
+        print(erFavo)
+        
+        if(!firstTime) {
+            print("VIEW DID APPEAR KØRESinden i")
+            
+            var b = false
+            
+            for favo in BarListe.shared.brugerLoggetind.Favoritsteder {
+                
+                if(favo==self.id) {
+                    b = true
+                    return
+                }
+              
+            }
+            if(b==false) {
+                erFavo = false
+                if #available(iOS 13.0, *) {
+                    let im = UIImage(systemName:"heart")?.withTintColor(.white,
+                    renderingMode: .alwaysOriginal)
+                    erFavoImage.image = im
+                } else {
+                    // Fallback on earlier versions
+                }
+            }
+            
+        }
+        
+        firstTime = false
+    }
     
     override func viewDidLayoutSubviews() {
         let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
@@ -59,16 +95,46 @@ class ViewControllerBajer: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    func updateServer() {
+          FirebaseAPI.shared.opdaterFavorit { (result, error) in
+          if error != nil {
+            print(error!.localizedDescription)
+              }
+          }
+          
+      }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func favorit(_ sender: UIButton) {
+        if(erFavo) {
+        
+            if #available(iOS 13.0, *) {
+                erFavo = false
+                
+                BarListe.shared.brugerLoggetind.sletFavorit(ID: self.id)
+                BarListe.shared.sletFavorit(ID: self.id)
+                updateServer()
+                let im = UIImage(systemName:"heart")?.withTintColor(.white,
+                renderingMode: .alwaysOriginal)
+                erFavoImage.image = im
+            } else {
+                // Fallback on earlier versions
+            }
+        }
+        else {
+            if #available(iOS 13.0, *) {
+                erFavo = true
+                BarListe.shared.brugerLoggetind.tilføjFavorit(ID: self.id)
+                BarListe.shared.tilføjFavorit(ID: self.id)
+                updateServer()
+                let im = UIImage(systemName:"heart.fill")?.withTintColor(.white,
+                renderingMode: .alwaysOriginal)
+                erFavoImage.image = im
+            } else {
+                // Fallback on earlier versions
+            }
+        }
     }
-    */
-
 }
+    
+  
+
