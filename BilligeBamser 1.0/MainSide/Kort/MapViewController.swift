@@ -9,6 +9,7 @@
 import UIKit
 import CoreLocation
 import MapKit
+import SVProgressHUD
 
 class MapViewController: UIViewController, CLLocationManagerDelegate {
 
@@ -36,7 +37,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         button.translatesAutoresizingMaskIntoConstraints = false
         //button.center = mapView.center
          // button.backgroundColor = UIColor.red
-          button.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "love.png"))
+          button.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "refresh35.png"))
        //  button.setTitle("iOSDevCenters Click", for: .normal)
         button.addTarget(self, action:#selector(self.buttonClicked), for: .touchUpInside)
         
@@ -60,7 +61,11 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
       
     }
     @objc func buttonClicked() {
+        SVProgressHUD.show()
         print("Button Clicked")
+        self.viewDidDisappear(false)
+        self.viewDidAppear(false)
+        SVProgressHUD.dismiss()
     }
     override func viewDidDisappear(_ animated: Bool) {
         
@@ -69,6 +74,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     }
         
     override func viewDidAppear(_ animated: Bool) {
+        print("Appear!")
         for bar in BarListe.shared.barer {
             mapView.addAnnotation(bar)
         }
