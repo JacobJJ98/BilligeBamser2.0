@@ -2026,7 +2026,6 @@
         <scene sceneID="yqp-0F-xQk">
             <objects>
                 <navigationController storyboardIdentifier="mereVC" title="Mere" automaticallyAdjustsScrollViewInsets="NO" id="Hov-iz-ci7" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="mere75x75" selectedImage="mere75x75" id="Qhy-Hi-DEH"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="tHe-zW-t6I">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -2050,7 +2049,6 @@
         <scene sceneID="2Vd-uL-nuF">
             <objects>
                 <navigationController storyboardIdentifier="mapVC" automaticallyAdjustsScrollViewInsets="NO" id="YhJ-bA-exD" customClass="MapNavigationController" customModule="BilligeBamser1_0" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="map75x75" selectedImage="map75x75" id="hKN-Ay-Ilc"/>
                     <toolbarItems/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="Dvm-X6-HeV">
@@ -2144,10 +2142,8 @@
         <image name="heart" catalog="system" width="64" height="54"/>
         <image name="ig3" width="24" height="24"/>
         <image name="info" width="24" height="24"/>
-        <image name="map75x75" width="25" height="25"/>
         <image name="mapGrey" width="75" height="75"/>
         <image name="mappin" catalog="system" width="52" height="64"/>
-        <image name="mere75x75" width="25" height="25"/>
         <image name="paper" width="24" height="24"/>
         <image name="person.circle" catalog="system" width="64" height="60"/>
         <image name="questionmark.circle" catalog="system" width="64" height="60"/>

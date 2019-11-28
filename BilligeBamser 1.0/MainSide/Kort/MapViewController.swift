@@ -32,9 +32,36 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
              mapView.showsUserLocation = true
         }
         
+        let button = UIButton(frame: CGRect(x: 0, y: 0, width: 500, height: 500))
+        button.translatesAutoresizingMaskIntoConstraints = false
+        //button.center = mapView.center
+         // button.backgroundColor = UIColor.red
+          button.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "love.png"))
+       //  button.setTitle("iOSDevCenters Click", for: .normal)
+        button.addTarget(self, action:#selector(self.buttonClicked), for: .touchUpInside)
+        
+       // button.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10).isActive = true
+       // button.topAnchor.constraint(equalTo: view.topAnchor, constant: 10).isActive = true
+         
+           mapView.addSubview(button)
+        
+        
+        // let newView = RefreshButton()
+        // newView.backgroundColor = UIColor.red
+        // view.addSubview(newView)
+
+      //  newView.translatesAutoresizingMaskIntoConstraints = false
+        let horizontalConstraint2 = button.rightAnchor.constraint(equalTo: mapView.rightAnchor, constant: -10)
+        let verticalConstraint2 = button.topAnchor.constraint(equalTo: mapView.topAnchor, constant: 100)
+       // let horizontalConstraint = newView.rightAnchor.constraint(equalTo: mapView.rightAnchor)
+       // let verticalConstraint = newView.centerYAnchor.constraint(equalTo: mapView.centerYAnchor)
+        NSLayoutConstraint.activate([horizontalConstraint2, verticalConstraint2])
+        
+      
     }
-    
-    
+    @objc func buttonClicked() {
+        print("Button Clicked")
+    }
     override func viewDidDisappear(_ animated: Bool) {
         
         print("DISAPEAR!")
@@ -79,5 +106,12 @@ extension MapViewController: MKMapViewDelegate {
     }
 }
 
+class RefreshButton: UIView {
+
+    override var intrinsicContentSize: CGSize {
+        return CGSize(width: 100, height: 100)
+    }
+
+}
 
 
