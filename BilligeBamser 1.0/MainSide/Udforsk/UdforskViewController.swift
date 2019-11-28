@@ -1,3 +1,4 @@
+
 //
 //  UdforskViewController.swift
 //  BilligeBamser 1.0
@@ -41,24 +42,69 @@ class CollectionViewCell3 : UICollectionViewCell {
 }
 
 class UdforskViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, CLLocationManagerDelegate {
+    @IBOutlet var scrollView: UIScrollViewFile!
     
     let locationManager = CLLocationManager()
-    
-    
+    var refreshControl: UIRefreshControl!
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
     
-    
+    @objc func didPullToRefresh() {
+        if let lokationen = locationManager.location {
+                   print("inde i loaktionenenenenen")
+                   
+              
+        
+                    FirebaseAPI.shared.hentBarer { (result, error) in
+                        if error != nil {
+                          print(error!.localizedDescription)
+                        } else {
+                            
+                            BarListe.shared.refresh()
+                            
+                            if let barene = result {
+                                for bar in barene {
+                                    BarListe.shared.addBar(bar: bar)
+                                }
+                                
+                                BarListe.shared.barerNærmeste = BarListe.shared.barer
+                                BarListe.shared.sorterNærmesteEfterAfsted(loka: lokationen)
+                                BarListe.shared.sorterBilligsteEfterPris()
+                                BarListe.shared.findFavo()
+                                self.collectionView1.reloadData()
+                                self.collectionView2.reloadData()
+                                self.refreshControl?.endRefreshing()
+                             
+                            }
+                        }
+                          
+                      }
+        
+         }
+
+
+    }
+  
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    
+        refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(didPullToRefresh), for: .valueChanged)
+        refreshControl.tintColor = UIColor.white
+        self.scrollView.addSubview(refreshControl)
+    
         
         if let lokationen = locationManager.location {
+            print("inde i loaktionenenenenen")
             BarListe.shared.barerNærmeste = BarListe.shared.barer
             BarListe.shared.sorterNærmesteEfterAfsted(loka: lokationen)
             BarListe.shared.sorterBilligsteEfterPris()
+        }
+        else {
+            print("Ikke inde i lokaktinenen")
         }
         
         collectionView1.layer.shadowColor = UIColor.black.cgColor
@@ -86,9 +132,8 @@ class UdforskViewController: UIViewController, UICollectionViewDelegate, UIColle
     
     
     override func viewDidAppear(_ animated: Bool) {
-        // SVProgressHUD.show()
-        // BarListe.shared.barer.removeAll()
-        // self.HentBarer()
+        collectionView1.reloadData()
+        collectionView2.reloadData()
         
     }
     
@@ -121,6 +166,7 @@ class UdforskViewController: UIViewController, UICollectionViewDelegate, UIColle
             
             let billed = ["beer1", "beer2","beer3", "beer4","beer5", "beer6","beer7", "beer8","beer9", "beer10",]
             
+            
             cell.text.text = BarListe.shared.barerNærmeste[indexPath.row].navn
             
             print("index path er: \(indexPath.row)")
@@ -137,11 +183,22 @@ class UdforskViewController: UIViewController, UICollectionViewDelegate, UIColle
             
             let id = ["1", "2","3", "4","5", "6","7", "8","9", "10",]
             
+            if #available(iOS 13.0, *) {
+                   let im = UIImage(systemName:"heart")?.withTintColor(.white,
+                                     renderingMode: .alwaysOriginal)
+                                     cell.favoBillede.image = im
+            } else {
+                // Fallback on earlier versions
+            }
             
+            BarListe.shared.barerNærmeste[indexPath.row].erFavo = false
             
+            print("Status for favoritsteder er: \(BarListe.shared.brugerLoggetind.Favoritsteder)")
+
             
             for favo in BarListe.shared.brugerLoggetind.Favoritsteder {
                 print("første favorit er: \(BarListe.shared.brugerLoggetind.Favoritsteder)")
+                
                 if favo == BarListe.shared.barerNærmeste[indexPath.row].id {
                     print("ER FAVORIT STED")
                     BarListe.shared.barerNærmeste[indexPath.row].erFavo = true
@@ -156,31 +213,15 @@ class UdforskViewController: UIViewController, UICollectionViewDelegate, UIColle
                     }
                     
                 }
-                else {
-                    BarListe.shared.barerNærmeste[indexPath.row].erFavo = false
-                    print("ER IKKE FAVORIT STED")
-                    
-                    
-                    if #available(iOS 13.0, *) {
-                           let im = UIImage(systemName:"heart")?.withTintColor(.white,
-                                             renderingMode: .alwaysOriginal)
-                                             cell.favoBillede.image = im
-                    } else {
-                        // Fallback on earlier versions
-                    }
-                    
-                }
-                
+    
             }
-            
-            
-            
+      
             let testimage : UIImage = UIImage(named: billed[indexPath.row])!
             
             cell.imageView.image = testimage
             
             
-            cell.pris.text = String(BarListe.shared.barerNærmeste[indexPath.row].flaskepris)
+            cell.pris.text = "\(BarListe.shared.barerNærmeste[indexPath.row].flaskepris)kr"
             return cell
         }
         
@@ -209,7 +250,17 @@ class UdforskViewController: UIViewController, UICollectionViewDelegate, UIColle
             
             BarListe.shared.barerBilligste[indexPath.row].afstand = distRounded
             
+            //BarListe.shared.barerNærmeste[indexPath.row].erFavo = false
+            print("ER IKKE FAVORIT STED")
             
+            
+            if #available(iOS 13.0, *) {
+                   let im = UIImage(systemName:"heart")?.withTintColor(.white,
+                                     renderingMode: .alwaysOriginal)
+                                     cell2.favoBillede.image = im
+            } else {
+                // Fallback on earlier versions
+            }
             
             
             let id = ["1", "2","3", "4","5", "6","7", "8","9", "10",]
@@ -230,22 +281,9 @@ class UdforskViewController: UIViewController, UICollectionViewDelegate, UIColle
                     }
                     
                 }
-                else {
-                    BarListe.shared.barerNærmeste[indexPath.row].erFavo = false
-                    print("ER IKKE FAVORIT STED")
-                    
-                    
-                    if #available(iOS 13.0, *) {
-                           let im = UIImage(systemName:"heart")?.withTintColor(.white,
-                                             renderingMode: .alwaysOriginal)
-                                             cell2.favoBillede.image = im
-                    } else {
-                        // Fallback on earlier versions
-                    }
-                    
-                }
-                
+       
             }
+ 
             
             
             
@@ -254,7 +292,8 @@ class UdforskViewController: UIViewController, UICollectionViewDelegate, UIColle
             cell2.imageView.image = testimage
             
             
-            cell2.pris.text = String(BarListe.shared.barerBilligste[indexPath.row].flaskepris)
+            cell2.pris.text = "\(BarListe.shared.barerBilligste[indexPath.row].flaskepris)kr"
+ 
             return cell2
             
         }
@@ -330,13 +369,6 @@ class UdforskViewController: UIViewController, UICollectionViewDelegate, UIColle
         }
         
     }
-    
-    
-    
-    
-    
-    
-    
-    
+
 }
 

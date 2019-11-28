@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		28007CCC2389E2EF00758B94 /* ViewControllerBajer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28007CCB2389E2EF00758B94 /* ViewControllerBajer.swift */; };
+		282592EA238FD43D00B34D28 /* UIScrollViewFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282592E9238FD43C00B34D28 /* UIScrollViewFile.swift */; };
 		284DEA912371AB40004471F5 /* NavigationControllerUdforsk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284DEA902371AB40004471F5 /* NavigationControllerUdforsk.swift */; };
 		2865BAC22361935D00CE8878 /* ExampleBouncesContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2865BABE2361934D00CE8878 /* ExampleBouncesContentView.swift */; };
 		2865BAC32361935D00CE8878 /* ExampleNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2865BABF2361935200CE8878 /* ExampleNavigationController.swift */; };
@@ -44,6 +45,7 @@
 /* Begin PBXFileReference section */
 		1E47A86384BFCD1F8DDAB181 /* Pods_BilligeBamser1_0.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BilligeBamser1_0.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		28007CCB2389E2EF00758B94 /* ViewControllerBajer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerBajer.swift; sourceTree = "<group>"; };
+		282592E9238FD43C00B34D28 /* UIScrollViewFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScrollViewFile.swift; sourceTree = "<group>"; };
 		284DEA902371AB40004471F5 /* NavigationControllerUdforsk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerUdforsk.swift; sourceTree = "<group>"; };
 		2865BABE2361934D00CE8878 /* ExampleBouncesContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleBouncesContentView.swift; sourceTree = "<group>"; };
 		2865BABF2361935200CE8878 /* ExampleNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleNavigationController.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 				28721CAE236A1912005C50F4 /* CenterViewFlowLayout.swift */,
 				EEAECADB23579D2B00C555E0 /* UdforskViewController.swift */,
 				284DEA902371AB40004471F5 /* NavigationControllerUdforsk.swift */,
+				282592E9238FD43C00B34D28 /* UIScrollViewFile.swift */,
 			);
 			path = Udforsk;
 			sourceTree = "<group>";
@@ -368,6 +371,7 @@
 				2865BAC32361935D00CE8878 /* ExampleNavigationController.swift in Sources */,
 				EEDE0A20236F4DEF00E7B095 /* FavoriterTableViewController.swift in Sources */,
 				2865BAC72361936400CE8878 /* CustomTabbarController.swift in Sources */,
+				282592EA238FD43D00B34D28 /* UIScrollViewFile.swift in Sources */,
 				2865BAC42361935D00CE8878 /* ExampleBasicContentView.swift in Sources */,
 				286D41BE2378599500708CC1 /* MapNavigationController.swift in Sources */,
 				287ECAEF234E5FF200487427 /* OpretBajerViewController.swift in Sources */,

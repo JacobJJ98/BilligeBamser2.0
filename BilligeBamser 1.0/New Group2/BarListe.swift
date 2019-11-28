@@ -32,6 +32,11 @@ class BarListe {
         egneFavoritter.removeAll()
         barerNærmeste.removeAll()
     }
+    func refresh() -> Void {
+        barer.removeAll()
+        egneFavoritter.removeAll()
+        barerNærmeste.removeAll()
+    }
     func tilføjBruger(bruger: Bruger) -> Void {
         self.egneFavoritter.removeAll()
         self.barerNærmeste.removeAll()

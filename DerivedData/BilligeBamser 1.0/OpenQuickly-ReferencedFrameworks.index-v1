@@ -22,6 +22,7 @@
 	<string>mach</string>
 	<string>FirebaseMessaging</string>
 	<string>FirebaseCoreDiagnosticsInterop</string>
+	<string>Hero</string>
 	<string>GoogleMobileAds</string>
 	<string>MobileCoreServices</string>
 	<string>WatchKit</string>
@@ -39,9 +40,9 @@
 	<string>SVProgressHUD</string>
 	<string>CoreFoundation</string>
 	<string>ESTabBarController</string>
-	<string>FirebasePerformance</string>
 	<string>FirebaseMLNLTranslate</string>
 	<string>AuthenticationServices</string>
+	<string>FirebasePerformance</string>
 	<string>Crashlytics</string>
 	<string>FirebaseMLVisionAutoML</string>
 	<string>netinet</string>
@@ -53,15 +54,16 @@
 	<string>FirebaseRemoteConfig</string>
 	<string>FirebaseMLVision</string>
 	<string>GTMSessionFetcher</string>
-	<string>AudioToolbox</string>
 	<string>FirebaseMLNLLanguageID</string>
 	<string>QuartzCore</string>
 	<string>SystemConfiguration</string>
 	<string>FirebaseAnalytics</string>
+	<string>AudioToolbox</string>
 	<string>Security</string>
 	<string>FirebaseMLVisionObjectDetection</string>
 	<string>CoreGraphics</string>
 	<string>objc</string>
+	<string>CoreMedia</string>
 	<string>FirebaseDynamicLinks</string>
 	<string>UIKit</string>
 	<string>Fabric</string>
