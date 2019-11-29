@@ -120,6 +120,8 @@ class FavoriterTableViewController: UITableViewController, CLLocationManagerDele
                 print(dist)
                 
                 cell.mapTekst.text = "\(dist) Km"
+            } else {
+                cell.mapTekst.text = "---"
             }
         }
         
