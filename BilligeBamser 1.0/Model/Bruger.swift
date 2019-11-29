@@ -25,7 +25,7 @@ class Bruger {
         }
     }
     
-    func tilføjFavorit(ID: String) {
+   public func tilføjFavorit(ID: String) {
         self.Favoritsteder.append(ID)
     }
     
