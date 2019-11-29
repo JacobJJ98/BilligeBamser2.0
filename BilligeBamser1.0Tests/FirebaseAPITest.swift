@@ -10,6 +10,8 @@ import XCTest
 @testable import BilligeBamser1_0
 
 class FirebaseAPITest: XCTestCase {
+    
+    // Tester om login lykkedes når den skal på firebase
     func testLoginSucces() {
         
         let excp = XCTestExpectation(description: "Bruger logges ind")
@@ -27,6 +29,7 @@ class FirebaseAPITest: XCTestCase {
         
     }
     
+    // Tester om login failer når den skal på firebase
     func testLoginFailed() {
         
         let excp = XCTestExpectation(description: "Bruger ikke logget ind")

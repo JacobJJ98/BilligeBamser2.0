@@ -47,7 +47,8 @@ class UdforskViewController: UIViewController, UICollectionViewDelegate, UIColle
     
     @IBOutlet var scrollView: UIScrollViewFile!
     
-      let locationManager = CLLocationManager()
+     let locationManager = CLLocationManager()
+     
     
     //var locationManager = CLLocationManager()
     var refreshControl: UIRefreshControl!
@@ -98,13 +99,17 @@ class UdforskViewController: UIViewController, UICollectionViewDelegate, UIColle
     override func viewDidLoad() {
         super.viewDidLoad()
         
-     
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+        locationManager.startUpdatingLocation()
+        
+      
     
         refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(didPullToRefresh), for: .valueChanged)
         refreshControl.tintColor = UIColor.white
         self.scrollView.addSubview(refreshControl)
-    
+       
         if let lokationen = locationManager.location {
             print("inde i loaktionenenenenen")
             BarListe.shared.barerNærmeste = BarListe.shared.barer
@@ -167,7 +172,6 @@ class UdforskViewController: UIViewController, UICollectionViewDelegate, UIColle
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
         
         
         if(collectionView == collectionView1) {
