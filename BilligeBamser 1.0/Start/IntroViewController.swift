@@ -47,7 +47,6 @@ class IntroViewController: UIViewController, UITabBarControllerDelegate {
             
         } else {
                 print("IKKE LOGGET IND!!")
-                sleep(2)
                 self.performSegue(withIdentifier: "forNewUser", sender: nil)
             
         }
