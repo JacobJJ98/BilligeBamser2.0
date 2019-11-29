@@ -53,7 +53,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
 
       //  newView.translatesAutoresizingMaskIntoConstraints = false
         let horizontalConstraint2 = button.rightAnchor.constraint(equalTo: mapView.rightAnchor, constant: -10)
-        let verticalConstraint2 = button.topAnchor.constraint(equalTo: mapView.topAnchor, constant: 100)
+        let verticalConstraint2 = button.topAnchor.constraint(equalTo: mapView.topAnchor, constant: 10)
        // let horizontalConstraint = newView.rightAnchor.constraint(equalTo: mapView.rightAnchor)
        // let verticalConstraint = newView.centerYAnchor.constraint(equalTo: mapView.centerYAnchor)
         NSLayoutConstraint.activate([horizontalConstraint2, verticalConstraint2])

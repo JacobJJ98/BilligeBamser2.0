@@ -17,6 +17,7 @@ class MereViewController: UIViewController {
     
     @IBOutlet weak var mailv2: UILabel!
     
+    @IBOutlet weak var scrollView: UIScrollView!
     
     @IBAction func onLogUdv2(_ sender: UIButton) {
         FirebaseAPI.shared.logOut { (res, err) in
@@ -49,7 +50,7 @@ class MereViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print("MERE VIEW!!")
-
+        
          logUdKnapv2.layer.cornerRadius  = 20
         brugerNavnv2.text = BarListe.shared.brugerLoggetind.navn
         mailv2.text = BarListe.shared.mail
