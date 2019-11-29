@@ -15,8 +15,8 @@ class CustomTabbarController: ESTabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        tabBar.backgroundColor = UIColor.white
+        tabBar.barTintColor = #colorLiteral(red: 0.1949159264, green: 0.1949159264, blue: 0.1960784314, alpha: 1)
+       // tabBar.backgroundColor = UIColor.white
         
         shouldHijackHandler = {
                    tabbarController, viewController, index in

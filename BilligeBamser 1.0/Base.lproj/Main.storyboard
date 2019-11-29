@@ -851,189 +851,6 @@
             <point key="canvasLocation" x="5531.884057971015" y="922.76785714285711"/>
         </scene>
         <!--Mere-->
-        <scene sceneID="0Wj-8s-nbp">
-            <objects>
-                <viewController id="jwm-PQ-Ta3" customClass="MereViewController" customModule="BilligeBamser1_0" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="FYj-dk-Ags">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.circle" catalog="system" id="Cmz-DT-LXA">
-                                <rect key="frame" x="6" y="20.5" width="100" height="90"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="KIM KIM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Pl-LL-QWg">
-                                <rect key="frame" x="107" y="77" width="287" height="27"/>
-                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="22"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="KSKDJD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wa1-P4-nrQ">
-                                <rect key="frame" x="114" y="114" width="258" height="15"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e4K-Ds-4Yz">
-                                <rect key="frame" x="0.0" y="128" width="414" height="54"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Følg os" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BLn-1R-fLv">
-                                        <rect key="frame" x="8" y="12" width="73" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" name="bajerBrun"/>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UKo-fv-EFE">
-                                <rect key="frame" x="0.0" y="421" width="414" height="54"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Oplysninger" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dmM-yr-r2m">
-                                        <rect key="frame" x="8" y="14" width="259" height="27"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" name="bajerBrun"/>
-                                <constraints>
-                                    <constraint firstItem="dmM-yr-r2m" firstAttribute="top" secondItem="UKo-fv-EFE" secondAttribute="top" constant="14" id="Fgc-sb-lCz"/>
-                                    <constraint firstItem="dmM-yr-r2m" firstAttribute="leading" secondItem="UKo-fv-EFE" secondAttribute="leading" constant="8" id="Poo-Nc-VjZ"/>
-                                    <constraint firstAttribute="bottom" secondItem="dmM-yr-r2m" secondAttribute="bottom" constant="13" id="RaG-Nr-AZM"/>
-                                    <constraint firstAttribute="trailing" secondItem="dmM-yr-r2m" secondAttribute="trailing" constant="147" id="zaa-LY-fcA"/>
-                                </constraints>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T8Q-sU-o2U">
-                                <rect key="frame" x="20" y="190" width="394" height="39"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="  Følg os på Facebook" image="fb2">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="leftHandImage" value="favoGrey"/>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="rightHandImage" value="favoOrange"/>
-                                </userDefinedRuntimeAttributes>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t4R-2Z-khG">
-                                <rect key="frame" x="20" y="486" width="359" height="48"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="  Privatlivspolitik " image="info">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="leftHandImage" value="favoGrey"/>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="rightHandImage" value="favoOrange"/>
-                                </userDefinedRuntimeAttributes>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="byN-YT-Aje">
-                                <rect key="frame" x="20" y="237" width="394" height="39"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="  Følg os på Instagram" image="ig3">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="leftHandImage" value="favoGrey"/>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="rightHandImage" value="favoOrange"/>
-                                </userDefinedRuntimeAttributes>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hPx-cj-AHr">
-                                <rect key="frame" x="20" y="284" width="394" height="39"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="  Besøg vores hjemmeside" image="web">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="leftHandImage" value="favoGrey"/>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="rightHandImage" value="favoOrange"/>
-                                </userDefinedRuntimeAttributes>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DG3-su-6qS">
-                                <rect key="frame" x="113" y="785" width="189" height="40"/>
-                                <color key="backgroundColor" name="bajerGrøn"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                <state key="normal" title="Log ud">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="logUd:" destination="jwm-PQ-Ta3" eventType="touchUpInside" id="XdL-tx-jtu"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DhY-f9-lPr">
-                                <rect key="frame" x="20" y="542" width="394" height="48"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="  Om os" image="paper">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="leftHandImage" value="favoGrey"/>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="rightHandImage" value="favoOrange"/>
-                                </userDefinedRuntimeAttributes>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="wa1-P4-nrQ" firstAttribute="top" secondItem="2Pl-LL-QWg" secondAttribute="bottom" constant="10" id="4xe-jz-hDj"/>
-                            <constraint firstItem="DhY-f9-lPr" firstAttribute="trailing" secondItem="fTs-pA-FXd" secondAttribute="trailing" id="BR7-yw-PIM"/>
-                            <constraint firstItem="t4R-2Z-khG" firstAttribute="leading" secondItem="fTs-pA-FXd" secondAttribute="leading" constant="20" id="Glh-pc-uln"/>
-                            <constraint firstItem="t4R-2Z-khG" firstAttribute="top" secondItem="UKo-fv-EFE" secondAttribute="bottom" constant="11" id="Jjk-Kk-pOR"/>
-                            <constraint firstItem="wa1-P4-nrQ" firstAttribute="leading" secondItem="Cmz-DT-LXA" secondAttribute="trailing" constant="8" id="K18-SU-9OK"/>
-                            <constraint firstItem="2Pl-LL-QWg" firstAttribute="leading" secondItem="Cmz-DT-LXA" secondAttribute="trailing" constant="1" id="MG6-iX-DdN"/>
-                            <constraint firstItem="UKo-fv-EFE" firstAttribute="centerX" secondItem="FYj-dk-Ags" secondAttribute="centerX" id="Ryh-z6-OdK"/>
-                            <constraint firstItem="2Pl-LL-QWg" firstAttribute="top" secondItem="fTs-pA-FXd" secondAttribute="top" constant="33" id="UrX-Fg-4L0"/>
-                            <constraint firstItem="UKo-fv-EFE" firstAttribute="leading" secondItem="fTs-pA-FXd" secondAttribute="leading" id="VeJ-c5-aho"/>
-                            <constraint firstItem="fTs-pA-FXd" firstAttribute="trailing" secondItem="2Pl-LL-QWg" secondAttribute="trailing" constant="20" id="VuQ-To-zPb"/>
-                            <constraint firstItem="UKo-fv-EFE" firstAttribute="centerY" secondItem="FYj-dk-Ags" secondAttribute="centerY" id="WOe-GK-BIy"/>
-                            <constraint firstItem="DhY-f9-lPr" firstAttribute="top" secondItem="t4R-2Z-khG" secondAttribute="bottom" constant="8" id="fEc-WZ-gXj"/>
-                            <constraint firstItem="fTs-pA-FXd" firstAttribute="bottom" secondItem="DG3-su-6qS" secondAttribute="bottom" constant="37" id="fxm-a7-aeb"/>
-                            <constraint firstItem="DhY-f9-lPr" firstAttribute="leading" secondItem="fTs-pA-FXd" secondAttribute="leading" constant="20" id="iZp-WF-kTO"/>
-                            <constraint firstItem="UKo-fv-EFE" firstAttribute="trailing" secondItem="fTs-pA-FXd" secondAttribute="trailing" id="iv3-Gf-3q3"/>
-                            <constraint firstItem="fTs-pA-FXd" firstAttribute="trailing" secondItem="t4R-2Z-khG" secondAttribute="trailing" constant="35" id="mgZ-av-Lgl"/>
-                            <constraint firstItem="fTs-pA-FXd" firstAttribute="trailing" secondItem="DG3-su-6qS" secondAttribute="trailing" constant="112" id="pN4-vt-LdA"/>
-                            <constraint firstItem="DG3-su-6qS" firstAttribute="leading" secondItem="fTs-pA-FXd" secondAttribute="leading" constant="113" id="t4k-kN-rWi"/>
-                            <constraint firstItem="fTs-pA-FXd" firstAttribute="trailing" secondItem="wa1-P4-nrQ" secondAttribute="trailing" constant="42" id="trl-Gt-fgm"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="fTs-pA-FXd"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Mere" id="HDK-Zy-rgx"/>
-                    <connections>
-                        <outlet property="logUdKnap" destination="DG3-su-6qS" id="wdO-Zq-BVg"/>
-                        <outlet property="mailLabel" destination="wa1-P4-nrQ" id="SXd-Vg-Qc4"/>
-                        <outlet property="navnLabel" destination="2Pl-LL-QWg" id="Ipe-iO-3mE"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wgS-SY-k8R" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3339" y="2442"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="8pv-n0-vg0">
-            <objects>
-                <navigationController id="syb-bw-SYb" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="HQX-o3-pBg">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" name="bajerBrun"/>
-                        <textAttributes key="titleTextAttributes">
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </textAttributes>
-                    </navigationBar>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="c9Z-qP-7T4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2118" y="1639"/>
-        </scene>
-        <!--MEREV2-->
         <scene sceneID="za0-N2-ElF">
             <objects>
                 <viewController id="Vze-wJ-7Jw" customClass="MereViewController" customModule="BilligeBamser1_0" customModuleProvider="target" sceneMemberID="viewController">
@@ -1100,7 +917,7 @@
                                                         <rect key="frame" x="8" y="8" width="398" height="48"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fb2" translatesAutoresizingMaskIntoConstraints="NO" id="Kr1-2m-YUM">
-                                                                <rect key="frame" x="8" y="5" width="48" height="38"/>
+                                                                <rect key="frame" x="8" y="5" width="24" height="38"/>
                                                             </imageView>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hand.point.right.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="2Zf-LS-V1w">
                                                                 <rect key="frame" x="370" y="9" width="20" height="28.5"/>
@@ -1129,7 +946,7 @@
                                                         <rect key="frame" x="8" y="64" width="398" height="48"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ig3" translatesAutoresizingMaskIntoConstraints="NO" id="0S9-8E-z0x">
-                                                                <rect key="frame" x="8" y="5" width="48" height="38"/>
+                                                                <rect key="frame" x="8" y="5" width="24" height="38"/>
                                                             </imageView>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hand.point.right.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="flJ-CL-MXj">
                                                                 <rect key="frame" x="370" y="15.5" width="20" height="15.5"/>
@@ -1306,7 +1123,6 @@
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <connections>
-                                                            <action selector="logUd:" destination="jwm-PQ-Ta3" eventType="touchUpInside" id="KVg-fR-fYB"/>
                                                             <action selector="onLogUdv2:" destination="Vze-wJ-7Jw" eventType="touchUpInside" id="uRS-GG-7D2"/>
                                                         </connections>
                                                     </button>
@@ -1365,7 +1181,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Drm-Tn-FTQ"/>
                     </view>
-                    <navigationItem key="navigationItem" title="MEREV2" id="1Fi-mc-wuK"/>
+                    <navigationItem key="navigationItem" title="Mere" id="1Fi-mc-wuK"/>
                     <size key="freeformSize" width="414" height="1300"/>
                     <connections>
                         <outlet property="brugerNavnv2" destination="9ml-vV-Grs" id="OwT-bv-tT2"/>
@@ -1444,22 +1260,26 @@
                             <outlet property="delegate" destination="ZfP-hV-aBo" id="hWX-te-8BZ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Favoritter" id="g1a-ws-A6T"/>
+                    <navigationItem key="navigationItem" title="Favoritter" largeTitleDisplayMode="never" id="g1a-ws-A6T"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BAO-RB-9Jh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2456.521739130435" y="3164.7321428571427"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Favoritter-->
         <scene sceneID="cFJ-Kn-fMW">
             <objects>
-                <navigationController storyboardIdentifier="favoVC2" id="GrD-VQ-Ow2" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="favoVC2" title="Favoritter" id="GrD-VQ-Ow2" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="CyH-uy-7VF">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" name="bajerBrun"/>
+                        <color key="barTintColor" name="NavigationColor"/>
                         <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="15"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="15"/>
                         </textAttributes>
                     </navigationBar>
                     <connections>
@@ -2042,9 +1862,9 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="tHe-zW-t6I">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" name="bajerBrun"/>
+                        <color key="barTintColor" name="NavigationColor"/>
                         <textAttributes key="titleTextAttributes">
-                            <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="19"/>
+                            <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="15"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
                     </navigationBar>
@@ -2063,11 +1883,12 @@
                 <navigationController storyboardIdentifier="mapVC" automaticallyAdjustsScrollViewInsets="NO" id="YhJ-bA-exD" customClass="MapNavigationController" customModule="BilligeBamser1_0" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="Dvm-X6-HeV">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" id="Dvm-X6-HeV">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" name="NavigationColor"/>
                         <textAttributes key="titleTextAttributes">
-                            <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="19"/>
+                            <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="15"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
                     </navigationBar>
@@ -2091,7 +1912,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="doB-eF-X9n">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" name="NavigationColor"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="15"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -2117,11 +1938,12 @@
                     <toolbarItems/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
                     <nil key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="nQn-DN-szy">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" id="nQn-DN-szy">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" name="NavigationColor"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="15"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -2146,21 +1968,19 @@
         <image name="chevron.left" catalog="system" width="48" height="64"/>
         <image name="desktopcomputer" catalog="system" width="64" height="50"/>
         <image name="exclamationmark.circle" catalog="system" width="64" height="60"/>
-        <image name="favoGrey" width="75" height="75"/>
-        <image name="favoOrange" width="75" height="75"/>
         <image name="fb2" width="24" height="24"/>
         <image name="flaske" width="1169" height="4000"/>
         <image name="hand.point.right.fill" catalog="system" width="64" height="48"/>
         <image name="heart" catalog="system" width="64" height="54"/>
         <image name="ig3" width="24" height="24"/>
-        <image name="info" width="24" height="24"/>
         <image name="mapGrey" width="75" height="75"/>
         <image name="mappin" catalog="system" width="52" height="64"/>
-        <image name="paper" width="24" height="24"/>
         <image name="person.circle" catalog="system" width="64" height="60"/>
         <image name="questionmark.circle" catalog="system" width="64" height="60"/>
         <image name="udforsk75x75" width="25" height="25"/>
-        <image name="web" width="24" height="24"/>
+        <namedColor name="NavigationColor">
+            <color red="0.19491592639593913" green="0.19607843137254902" blue="0.19607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="bajerBrun">
             <color red="0.5" green="0.3450795363118262" blue="0.1362704080547118" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
