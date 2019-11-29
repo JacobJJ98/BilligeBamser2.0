@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		28007CCC2389E2EF00758B94 /* ViewControllerBajer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28007CCB2389E2EF00758B94 /* ViewControllerBajer.swift */; };
 		282592EA238FD43D00B34D28 /* UIScrollViewFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282592E9238FD43C00B34D28 /* UIScrollViewFile.swift */; };
+		2828E86E23912B7900D25B48 /* BilligeBamser1_0Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2828E86D23912B7900D25B48 /* BilligeBamser1_0Tests.swift */; };
+		2828E87C23912BA300D25B48 /* BilligeBamser1_0UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2828E87B23912BA300D25B48 /* BilligeBamser1_0UITests.swift */; };
 		284DEA912371AB40004471F5 /* NavigationControllerUdforsk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284DEA902371AB40004471F5 /* NavigationControllerUdforsk.swift */; };
 		2865BAC22361935D00CE8878 /* ExampleBouncesContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2865BABE2361934D00CE8878 /* ExampleBouncesContentView.swift */; };
 		2865BAC32361935D00CE8878 /* ExampleNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2865BABF2361935200CE8878 /* ExampleNavigationController.swift */; };
@@ -42,10 +44,33 @@
 		EEDE0A22237498A100E7B095 /* FirebaseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDE0A21237498A100E7B095 /* FirebaseAPI.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		2828E87023912B7900D25B48 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EE805A25234DF9B40095651D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EE805A2C234DF9B40095651D;
+			remoteInfo = BilligeBamser1.0;
+		};
+		2828E87E23912BA300D25B48 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EE805A25234DF9B40095651D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EE805A2C234DF9B40095651D;
+			remoteInfo = BilligeBamser1.0;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		1E47A86384BFCD1F8DDAB181 /* Pods_BilligeBamser1_0.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BilligeBamser1_0.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		28007CCB2389E2EF00758B94 /* ViewControllerBajer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerBajer.swift; sourceTree = "<group>"; };
 		282592E9238FD43C00B34D28 /* UIScrollViewFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScrollViewFile.swift; sourceTree = "<group>"; };
+		2828E86B23912B7900D25B48 /* BilligeBamser1.0Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BilligeBamser1.0Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2828E86D23912B7900D25B48 /* BilligeBamser1_0Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BilligeBamser1_0Tests.swift; sourceTree = "<group>"; };
+		2828E86F23912B7900D25B48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2828E87923912BA300D25B48 /* BilligeBamser1.0UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BilligeBamser1.0UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2828E87B23912BA300D25B48 /* BilligeBamser1_0UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BilligeBamser1_0UITests.swift; sourceTree = "<group>"; };
+		2828E87D23912BA300D25B48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		284DEA902371AB40004471F5 /* NavigationControllerUdforsk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerUdforsk.swift; sourceTree = "<group>"; };
 		2865BABE2361934D00CE8878 /* ExampleBouncesContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleBouncesContentView.swift; sourceTree = "<group>"; };
 		2865BABF2361935200CE8878 /* ExampleNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleNavigationController.swift; sourceTree = "<group>"; };
@@ -83,6 +108,20 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		2828E86823912B7900D25B48 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2828E87623912BA300D25B48 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EE805A2A234DF9B40095651D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -100,6 +139,24 @@
 				EECF6AB9237C9F82003105E7 /* MereViewController.swift */,
 			);
 			path = Mere;
+			sourceTree = "<group>";
+		};
+		2828E86C23912B7900D25B48 /* BilligeBamser1.0Tests */ = {
+			isa = PBXGroup;
+			children = (
+				2828E86D23912B7900D25B48 /* BilligeBamser1_0Tests.swift */,
+				2828E86F23912B7900D25B48 /* Info.plist */,
+			);
+			path = BilligeBamser1.0Tests;
+			sourceTree = "<group>";
+		};
+		2828E87A23912BA300D25B48 /* BilligeBamser1.0UITests */ = {
+			isa = PBXGroup;
+			children = (
+				2828E87B23912BA300D25B48 /* BilligeBamser1_0UITests.swift */,
+				2828E87D23912BA300D25B48 /* Info.plist */,
+			);
+			path = BilligeBamser1.0UITests;
 			sourceTree = "<group>";
 		};
 		284DEA8F2371AAFD004471F5 /* Udforsk */ = {
@@ -200,6 +257,8 @@
 			isa = PBXGroup;
 			children = (
 				EE805A2F234DF9B40095651D /* BilligeBamser 1.0 */,
+				2828E86C23912B7900D25B48 /* BilligeBamser1.0Tests */,
+				2828E87A23912BA300D25B48 /* BilligeBamser1.0UITests */,
 				EE805A2E234DF9B40095651D /* Products */,
 				C2D218BA4494DD413AD8CB55 /* Pods */,
 				D4A4F1478BFF1A85B3C11AE3 /* Frameworks */,
@@ -210,6 +269,8 @@
 			isa = PBXGroup;
 			children = (
 				EE805A2D234DF9B40095651D /* BilligeBamser1.0.app */,
+				2828E86B23912B7900D25B48 /* BilligeBamser1.0Tests.xctest */,
+				2828E87923912BA300D25B48 /* BilligeBamser1.0UITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -236,6 +297,42 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		2828E86A23912B7900D25B48 /* BilligeBamser1.0Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2828E87423912B7900D25B48 /* Build configuration list for PBXNativeTarget "BilligeBamser1.0Tests" */;
+			buildPhases = (
+				2828E86723912B7900D25B48 /* Sources */,
+				2828E86823912B7900D25B48 /* Frameworks */,
+				2828E86923912B7900D25B48 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2828E87123912B7900D25B48 /* PBXTargetDependency */,
+			);
+			name = BilligeBamser1.0Tests;
+			productName = BilligeBamser1.0Tests;
+			productReference = 2828E86B23912B7900D25B48 /* BilligeBamser1.0Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2828E87823912BA300D25B48 /* BilligeBamser1.0UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2828E88023912BA300D25B48 /* Build configuration list for PBXNativeTarget "BilligeBamser1.0UITests" */;
+			buildPhases = (
+				2828E87523912BA300D25B48 /* Sources */,
+				2828E87623912BA300D25B48 /* Frameworks */,
+				2828E87723912BA300D25B48 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2828E87F23912BA300D25B48 /* PBXTargetDependency */,
+			);
+			name = BilligeBamser1.0UITests;
+			productName = BilligeBamser1.0UITests;
+			productReference = 2828E87923912BA300D25B48 /* BilligeBamser1.0UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		EE805A2C234DF9B40095651D /* BilligeBamser1.0 */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = EE805A3F234DF9B60095651D /* Build configuration list for PBXNativeTarget "BilligeBamser1.0" */;
@@ -261,10 +358,18 @@
 		EE805A25234DF9B40095651D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1030;
+				LastSwiftUpdateCheck = 1110;
 				LastUpgradeCheck = 1030;
 				ORGANIZATIONNAME = "Jacob Jørgensen";
 				TargetAttributes = {
+					2828E86A23912B7900D25B48 = {
+						CreatedOnToolsVersion = 11.1;
+						TestTargetID = EE805A2C234DF9B40095651D;
+					};
+					2828E87823912BA300D25B48 = {
+						CreatedOnToolsVersion = 11.1;
+						TestTargetID = EE805A2C234DF9B40095651D;
+					};
 					EE805A2C234DF9B40095651D = {
 						CreatedOnToolsVersion = 10.3;
 					};
@@ -284,11 +389,27 @@
 			projectRoot = "";
 			targets = (
 				EE805A2C234DF9B40095651D /* BilligeBamser1.0 */,
+				2828E86A23912B7900D25B48 /* BilligeBamser1.0Tests */,
+				2828E87823912BA300D25B48 /* BilligeBamser1.0UITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		2828E86923912B7900D25B48 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2828E87723912BA300D25B48 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EE805A2B234DF9B40095651D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -346,6 +467,22 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		2828E86723912B7900D25B48 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2828E86E23912B7900D25B48 /* BilligeBamser1_0Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2828E87523912BA300D25B48 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2828E87C23912BA300D25B48 /* BilligeBamser1_0UITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EE805A29234DF9B40095651D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -382,6 +519,19 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		2828E87123912B7900D25B48 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EE805A2C234DF9B40095651D /* BilligeBamser1.0 */;
+			targetProxy = 2828E87023912B7900D25B48 /* PBXContainerItemProxy */;
+		};
+		2828E87F23912BA300D25B48 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EE805A2C234DF9B40095651D /* BilligeBamser1.0 */;
+			targetProxy = 2828E87E23912BA300D25B48 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		EE805A34234DF9B40095651D /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -402,6 +552,88 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		2828E87223912B7900D25B48 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8B9KRX6NBR;
+				INFOPLIST_FILE = BilligeBamser1.0Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nicolaidam.BilligeBamser1-0Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BilligeBamser1.0.app/BilligeBamser1.0";
+			};
+			name = Debug;
+		};
+		2828E87323912B7900D25B48 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8B9KRX6NBR;
+				INFOPLIST_FILE = BilligeBamser1.0Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nicolaidam.BilligeBamser1-0Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BilligeBamser1.0.app/BilligeBamser1.0";
+			};
+			name = Release;
+		};
+		2828E88123912BA300D25B48 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8B9KRX6NBR;
+				INFOPLIST_FILE = BilligeBamser1.0UITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nicolaidam.BilligeBamser1-0UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BilligeBamser1.0;
+			};
+			name = Debug;
+		};
+		2828E88223912BA300D25B48 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8B9KRX6NBR;
+				INFOPLIST_FILE = BilligeBamser1.0UITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nicolaidam.BilligeBamser1-0UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BilligeBamser1.0;
+			};
+			name = Release;
+		};
 		EE805A3D234DF9B60095651D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -559,6 +791,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		2828E87423912B7900D25B48 /* Build configuration list for PBXNativeTarget "BilligeBamser1.0Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2828E87223912B7900D25B48 /* Debug */,
+				2828E87323912B7900D25B48 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2828E88023912BA300D25B48 /* Build configuration list for PBXNativeTarget "BilligeBamser1.0UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2828E88123912BA300D25B48 /* Debug */,
+				2828E88223912BA300D25B48 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		EE805A28234DF9B40095651D /* Build configuration list for PBXProject "BilligeBamser 1.0" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

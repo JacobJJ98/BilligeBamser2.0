@@ -6,7 +6,7 @@
 	<integer>10</integer>
 	<key>logs</key>
 	<dict>
-		<key>10380424-C4EC-46BD-B72A-3C915D6CAD70</key>
+		<key>217B4F52-8E5C-4679-BBDC-EAD5D4C7A637</key>
 		<dict>
 			<key>className</key>
 			<string>IDEActivityLogSection</string>
@@ -15,7 +15,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
 			<key>fileName</key>
-			<string>10380424-C4EC-46BD-B72A-3C915D6CAD70.xcactivitylog</string>
+			<string>217B4F52-8E5C-4679-BBDC-EAD5D4C7A637.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -32,15 +32,15 @@
 			<key>signature</key>
 			<string>Build BilligeBamser 1.0</string>
 			<key>timeStartedRecording</key>
-			<real>596661832.63463402</real>
+			<real>596713413.13464797</real>
 			<key>timeStoppedRecording</key>
-			<real>596661841.16985595</real>
+			<real>596713433.56609094</real>
 			<key>title</key>
 			<string>Build BilligeBamser 1.0</string>
 			<key>uniqueIdentifier</key>
-			<string>10380424-C4EC-46BD-B72A-3C915D6CAD70</string>
+			<string>217B4F52-8E5C-4679-BBDC-EAD5D4C7A637</string>
 		</dict>
-		<key>1A5BDDC5-3684-425F-B1F6-3893D2A11DEF</key>
+		<key>4C5A4744-18CC-4572-A260-5795A003757F</key>
 		<dict>
 			<key>className</key>
 			<string>IDEActivityLogSection</string>
@@ -49,7 +49,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
 			<key>fileName</key>
-			<string>1A5BDDC5-3684-425F-B1F6-3893D2A11DEF.xcactivitylog</string>
+			<string>4C5A4744-18CC-4572-A260-5795A003757F.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -66,15 +66,15 @@
 			<key>signature</key>
 			<string>Build BilligeBamser 1.0</string>
 			<key>timeStartedRecording</key>
-			<real>596662021.16395605</real>
+			<real>596713730.88040602</real>
 			<key>timeStoppedRecording</key>
-			<real>596662045.41638696</real>
+			<real>596713758.20468605</real>
 			<key>title</key>
 			<string>Build BilligeBamser 1.0</string>
 			<key>uniqueIdentifier</key>
-			<string>1A5BDDC5-3684-425F-B1F6-3893D2A11DEF</string>
+			<string>4C5A4744-18CC-4572-A260-5795A003757F</string>
 		</dict>
-		<key>4C645C6E-C42D-4D6A-A73A-F007C63A5392</key>
+		<key>7EFE184A-4D8C-4E04-B1B7-EE29E8D88F63</key>
 		<dict>
 			<key>className</key>
 			<string>IDEActivityLogSection</string>
@@ -83,7 +83,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
 			<key>fileName</key>
-			<string>4C645C6E-C42D-4D6A-A73A-F007C63A5392.xcactivitylog</string>
+			<string>7EFE184A-4D8C-4E04-B1B7-EE29E8D88F63.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -100,15 +100,15 @@
 			<key>signature</key>
 			<string>Build BilligeBamser 1.0</string>
 			<key>timeStartedRecording</key>
-			<real>596662665.51260197</real>
+			<real>596713377.19850194</real>
 			<key>timeStoppedRecording</key>
-			<real>596662672.28873205</real>
+			<real>596713380.92817295</real>
 			<key>title</key>
 			<string>Build BilligeBamser 1.0</string>
 			<key>uniqueIdentifier</key>
-			<string>4C645C6E-C42D-4D6A-A73A-F007C63A5392</string>
+			<string>7EFE184A-4D8C-4E04-B1B7-EE29E8D88F63</string>
 		</dict>
-		<key>592E75E0-B6F4-4C6E-AF08-97B8DAC759B0</key>
+		<key>A502F120-A91B-4393-98FA-775CFE75F95F</key>
 		<dict>
 			<key>className</key>
 			<string>IDEActivityLogSection</string>
@@ -117,7 +117,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
 			<key>fileName</key>
-			<string>592E75E0-B6F4-4C6E-AF08-97B8DAC759B0.xcactivitylog</string>
+			<string>A502F120-A91B-4393-98FA-775CFE75F95F.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -134,15 +134,15 @@
 			<key>signature</key>
 			<string>Build BilligeBamser 1.0</string>
 			<key>timeStartedRecording</key>
-			<real>596661901.940974</real>
+			<real>596713618.59287596</real>
 			<key>timeStoppedRecording</key>
-			<real>596661909.40619504</real>
+			<real>596713635.33097398</real>
 			<key>title</key>
 			<string>Build BilligeBamser 1.0</string>
 			<key>uniqueIdentifier</key>
-			<string>592E75E0-B6F4-4C6E-AF08-97B8DAC759B0</string>
+			<string>A502F120-A91B-4393-98FA-775CFE75F95F</string>
 		</dict>
-		<key>78934C7B-DC72-46AA-B67B-BF8C82687BB9</key>
+		<key>BE0CCA3C-3FCC-43E7-8B68-D4957B972F6C</key>
 		<dict>
 			<key>className</key>
 			<string>IDEActivityLogSection</string>
@@ -151,7 +151,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
 			<key>fileName</key>
-			<string>78934C7B-DC72-46AA-B67B-BF8C82687BB9.xcactivitylog</string>
+			<string>BE0CCA3C-3FCC-43E7-8B68-D4957B972F6C.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -168,115 +168,13 @@
 			<key>signature</key>
 			<string>Build BilligeBamser 1.0</string>
 			<key>timeStartedRecording</key>
-			<real>596662046.88793194</real>
+			<real>596713470.86508</real>
 			<key>timeStoppedRecording</key>
-			<real>596662055.32721603</real>
+			<real>596713489.04871595</real>
 			<key>title</key>
 			<string>Build BilligeBamser 1.0</string>
 			<key>uniqueIdentifier</key>
-			<string>78934C7B-DC72-46AA-B67B-BF8C82687BB9</string>
-		</dict>
-		<key>9BB9F2E0-26E8-4942-B692-46DA60817947</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>9BB9F2E0-26E8-4942-B692-46DA60817947.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>BilligeBamser 1.0 project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>BilligeBamser 1.0</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build BilligeBamser 1.0</string>
-			<key>timeStartedRecording</key>
-			<real>596662322.85986495</real>
-			<key>timeStoppedRecording</key>
-			<real>596662330.49303496</real>
-			<key>title</key>
-			<string>Build BilligeBamser 1.0</string>
-			<key>uniqueIdentifier</key>
-			<string>9BB9F2E0-26E8-4942-B692-46DA60817947</string>
-		</dict>
-		<key>C12234C9-8482-4F4A-95B0-8E5D8250B57C</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>C12234C9-8482-4F4A-95B0-8E5D8250B57C.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>BilligeBamser 1.0 project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>BilligeBamser 1.0</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build BilligeBamser 1.0</string>
-			<key>timeStartedRecording</key>
-			<real>596660910.382689</real>
-			<key>timeStoppedRecording</key>
-			<real>596660919.405123</real>
-			<key>title</key>
-			<string>Build BilligeBamser 1.0</string>
-			<key>uniqueIdentifier</key>
-			<string>C12234C9-8482-4F4A-95B0-8E5D8250B57C</string>
-		</dict>
-		<key>DBFE43E6-7CF4-4421-B981-2BAF667D2190</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>DBFE43E6-7CF4-4421-B981-2BAF667D2190.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>BilligeBamser 1.0 project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>BilligeBamser 1.0</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build BilligeBamser 1.0</string>
-			<key>timeStartedRecording</key>
-			<real>596662404.15926099</real>
-			<key>timeStoppedRecording</key>
-			<real>596662411.58431399</real>
-			<key>title</key>
-			<string>Build BilligeBamser 1.0</string>
-			<key>uniqueIdentifier</key>
-			<string>DBFE43E6-7CF4-4421-B981-2BAF667D2190</string>
+			<string>BE0CCA3C-3FCC-43E7-8B68-D4957B972F6C</string>
 		</dict>
 		<key>E1E5B43E-102B-4220-8464-5A520490A437</key>
 		<dict>
@@ -312,7 +210,7 @@
 			<key>uniqueIdentifier</key>
 			<string>E1E5B43E-102B-4220-8464-5A520490A437</string>
 		</dict>
-		<key>F9CBB027-3A38-483D-AE65-EA927CB78A44</key>
+		<key>FFF0F44B-CB46-4F80-BC39-DDF3F165D287</key>
 		<dict>
 			<key>className</key>
 			<string>IDEActivityLogSection</string>
@@ -321,7 +219,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
 			<key>fileName</key>
-			<string>F9CBB027-3A38-483D-AE65-EA927CB78A44.xcactivitylog</string>
+			<string>FFF0F44B-CB46-4F80-BC39-DDF3F165D287.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -338,13 +236,13 @@
 			<key>signature</key>
 			<string>Build BilligeBamser 1.0</string>
 			<key>timeStartedRecording</key>
-			<real>596661728.423576</real>
+			<real>596713546.73630095</real>
 			<key>timeStoppedRecording</key>
-			<real>596661736.70730197</real>
+			<real>596713568.04940701</real>
 			<key>title</key>
 			<string>Build BilligeBamser 1.0</string>
 			<key>uniqueIdentifier</key>
-			<string>F9CBB027-3A38-483D-AE65-EA927CB78A44</string>
+			<string>FFF0F44B-CB46-4F80-BC39-DDF3F165D287</string>
 		</dict>
 	</dict>
 </dict>
