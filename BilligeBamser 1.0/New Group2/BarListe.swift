@@ -93,7 +93,6 @@ class BarListe {
         
         var dictionary: [String: Int] = [:]
         for bars in barer {
-            
             var pris: Int = bars.flaskepris
             dictionary.updateValue(bars.flaskepris, forKey: bars.id!)
 

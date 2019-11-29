@@ -26,6 +26,8 @@
 		28C5E9C2234F9BEA00BE284D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28C5E9C1234F9BEA00BE284D /* Assets.xcassets */; };
 		9521983EC816B9CFE3A47921 /* Pods_BilligeBamser1_0.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E47A86384BFCD1F8DDAB181 /* Pods_BilligeBamser1_0.framework */; };
 		EE1B0C9A2376FF94004C3342 /* BarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1B0C992376FF94004C3342 /* BarView.swift */; };
+		EE5AE5702391618900870297 /* BarListeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE5AE56F2391618900870297 /* BarListeTest.swift */; };
+		EE5AE57223917BE400870297 /* BrugerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE5AE57123917BE400870297 /* BrugerTests.swift */; };
 		EE805A31234DF9B40095651D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE805A30234DF9B40095651D /* AppDelegate.swift */; };
 		EE805A36234DF9B40095651D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE805A34234DF9B40095651D /* Main.storyboard */; };
 		EE805A3B234DF9B60095651D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE805A39234DF9B60095651D /* LaunchScreen.storyboard */; };
@@ -86,6 +88,8 @@
 		28C5E9C1234F9BEA00BE284D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4A2B78F5FE428E60C38F011F /* Pods-BilligeBamser1.0.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BilligeBamser1.0.debug.xcconfig"; path = "Target Support Files/Pods-BilligeBamser1.0/Pods-BilligeBamser1.0.debug.xcconfig"; sourceTree = "<group>"; };
 		EE1B0C992376FF94004C3342 /* BarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarView.swift; sourceTree = "<group>"; };
+		EE5AE56F2391618900870297 /* BarListeTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarListeTest.swift; sourceTree = "<group>"; };
+		EE5AE57123917BE400870297 /* BrugerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrugerTests.swift; sourceTree = "<group>"; };
 		EE805A2D234DF9B40095651D /* BilligeBamser1.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BilligeBamser1.0.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE805A30234DF9B40095651D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE805A35234DF9B40095651D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -146,6 +150,8 @@
 			children = (
 				2828E86D23912B7900D25B48 /* BilligeBamser1_0Tests.swift */,
 				2828E86F23912B7900D25B48 /* Info.plist */,
+				EE5AE56F2391618900870297 /* BarListeTest.swift */,
+				EE5AE57123917BE400870297 /* BrugerTests.swift */,
 			);
 			path = BilligeBamser1.0Tests;
 			sourceTree = "<group>";
@@ -472,6 +478,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2828E86E23912B7900D25B48 /* BilligeBamser1_0Tests.swift in Sources */,
+				EE5AE5702391618900870297 /* BarListeTest.swift in Sources */,
+				EE5AE57223917BE400870297 /* BrugerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -558,6 +566,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8B9KRX6NBR;
+				"HEADER_SEARCH_PATHS[arch=*]" = "${SRCROOT}/Pods/Firebase/CoreOnly/Sources";
 				INFOPLIST_FILE = BilligeBamser1.0Tests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
