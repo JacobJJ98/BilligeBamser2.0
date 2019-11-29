@@ -764,7 +764,7 @@
 			baseConfigurationReference = 4A2B78F5FE428E60C38F011F /* Pods-BilligeBamser1.0.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8B9KRX6NBR;
+				DEVELOPMENT_TEAM = G6TSQJ6DQ5;
 				INFOPLIST_FILE = "BilligeBamser 1.0/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -783,7 +783,7 @@
 			baseConfigurationReference = FC01C8404C1C0F313E7E0BAB /* Pods-BilligeBamser1.0.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8B9KRX6NBR;
+				DEVELOPMENT_TEAM = G6TSQJ6DQ5;
 				INFOPLIST_FILE = "BilligeBamser 1.0/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (

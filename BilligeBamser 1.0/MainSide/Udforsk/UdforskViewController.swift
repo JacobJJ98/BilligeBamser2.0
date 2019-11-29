@@ -90,7 +90,31 @@ class UdforskViewController: UIViewController, UICollectionViewDelegate, UIColle
                           
                     }
         
-         }
+        } else {
+            print("inde i IKKE loaktionenenenenen")
+            FirebaseAPI.shared.hentBarer { (result, error) in
+                if error != nil {
+                    print(error!.localizedDescription)
+                    
+                } else {
+                    BarListe.shared.refresh()
+                    if let barene = result {
+                        for bar in barene {
+                            BarListe.shared.addBar(bar: bar)
+                            
+                        }
+                        BarListe.shared.barerNærmeste = BarListe.shared.barer
+                        // BarListe.shared.sorterNærmesteEfterAfsted(loka: lokationen)
+                        BarListe.shared.findFavo()
+                        self.collectionView1.reloadData()
+                        self.collectionView2.reloadData()
+                        self.refreshControl?.endRefreshing()
+                    }
+                    
+                }
+                
+            }
+        }
 
 
     }
@@ -118,6 +142,8 @@ class UdforskViewController: UIViewController, UICollectionViewDelegate, UIColle
         }
         else {
             print("Ikke inde i lokaktinenen")
+            BarListe.shared.barerNærmeste = BarListe.shared.barer
+            BarListe.shared.sorterBilligsteEfterPris()
         }
         
         
@@ -188,13 +214,24 @@ class UdforskViewController: UIViewController, UICollectionViewDelegate, UIColle
             
             let barKoord = CLLocation(latitude: BarListe.shared.barerNærmeste[indexPath.row].coordinate.latitude, longitude: BarListe.shared.barerNærmeste[indexPath.row].coordinate.longitude)
             
-            let distIMeter: Double = (locationManager.location?.distance(from: barKoord))!/1000.rounded()
+            if let lokationen = locationManager.location {
+                let distIMeter: Double = (lokationen.distance(from: barKoord))/1000.rounded()
+                let distRounded = String(format: "%.1f", distIMeter)
+                cell.afstand.text = "\(distRounded)"
+                BarListe.shared.barerNærmeste[indexPath.row].afstand = distRounded
+            } else {
+                cell.afstand.text = "-"
+                BarListe.shared.barerNærmeste[indexPath.row].afstand = "-"
+                
+            }
             
-            let distRounded = String(format: "%.1f", distIMeter)
+        //    let distIMeter: Double = (locationManager.location?.distance(from: barKoord))!/1000.rounded()
             
-            cell.afstand.text = "\(distRounded)km"
+       //     let distRounded = String(format: "%.1f", distIMeter)
             
-            BarListe.shared.barerNærmeste[indexPath.row].afstand = distRounded
+       //     cell.afstand.text = "\(distRounded)km"
+            
+      //      BarListe.shared.barerNærmeste[indexPath.row].afstand = distRounded
             
             let id = ["1", "2","3", "4","5", "6","7", "8","9", "10",]
             
@@ -257,13 +294,25 @@ class UdforskViewController: UIViewController, UICollectionViewDelegate, UIColle
             
             let barKoord = CLLocation(latitude: BarListe.shared.barerBilligste[indexPath.row].coordinate.latitude, longitude: BarListe.shared.barerBilligste[indexPath.row].coordinate.longitude)
             
-            let distIMeter: Double = (locationManager.location?.distance(from: barKoord))!/1000.rounded()
+            if let lokationen = locationManager.location {
+                           let distIMeter: Double = (lokationen.distance(from: barKoord))/1000.rounded()
+                           let distRounded = String(format: "%.1f", distIMeter)
+                           cell2.afstand.text = "\(distRounded)"
+                           BarListe.shared.barerBilligste[indexPath.row].afstand = distRounded
+                       } else {
+                           cell2.afstand.text = "-"
+                           BarListe.shared.barerBilligste[indexPath.row].afstand = "-"
+                           
+                       }
             
-            let distRounded = String(format: "%.1f", distIMeter)
             
-            cell2.afstand.text = "\(distRounded)km"
+           // let distIMeter: Double = (locationManager.location?.distance(from: barKoord))!/1000.rounded()
             
-            BarListe.shared.barerBilligste[indexPath.row].afstand = distRounded
+        //    let distRounded = String(format: "%.1f", distIMeter)
+            
+         //   cell2.afstand.text = "\(distRounded)km"
+            
+         //   BarListe.shared.barerBilligste[indexPath.row].afstand = distRounded
             
             //BarListe.shared.barerNærmeste[indexPath.row].erFavo = false
             print("ER IKKE FAVORIT STED")
