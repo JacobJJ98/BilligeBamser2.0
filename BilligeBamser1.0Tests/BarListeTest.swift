@@ -12,7 +12,7 @@ import MapKit
 
 
 class BarListeTest: XCTestCase {
-    
+     // Tester om findFavo gør det den skal
     func testFindFavo() {
         // opretter 1 bruger med en favorit bar
         let user = Bruger(navn: "Test", favoritsteder: ["1234512345"], nærmeste: [])
@@ -41,7 +41,7 @@ class BarListeTest: XCTestCase {
         XCTAssertTrue(result)
     }
 
-    
+     // Tester om SorterEfterBilligstePris gør det den skal
     func testSorterBilligsteEfterPris() {
             for n in 1...100 {
              // opretter to testbarer, hvor en af dem er users favoritbar. Barerne tilføjes til BarListens liste af barer
@@ -66,7 +66,7 @@ class BarListeTest: XCTestCase {
         XCTAssertTrue(result)
 
     }
-    
+     // Tester om tilføjBruger gør det den skal
     func testTilfojBruger() {
         let user = Bruger(navn: "Test", favoritsteder: ["1234512345"], nærmeste: [])
         
@@ -80,6 +80,7 @@ class BarListeTest: XCTestCase {
         XCTAssertTrue(result)
     }
     
+    // Tester om logOut gør det den skal
     func testLogOut() {
         let user = Bruger(navn: "Test", favoritsteder: ["1234512345"], nærmeste: [])
         BarListe.shared.tilføjBruger(bruger: user)
@@ -114,6 +115,7 @@ class BarListeTest: XCTestCase {
         XCTAssertTrue(result)
     }
     
+    // Tester om Refresh() gør det den skal
     func testRefresh() {
         let user = Bruger(navn: "Test", favoritsteder: ["1234512345"], nærmeste: [])
         BarListe.shared.tilføjBruger(bruger: user)
@@ -144,7 +146,55 @@ class BarListeTest: XCTestCase {
                
                XCTAssertTrue(result)
         
+        
     }
+    // Tester hvor hurtigt SorterEfterPris kører
+    func testPerformanceSorterEfterPris() {
+        // This is an example of a performance test case.
+        for n in 1...1000 {
+            // opretter to testbarer, hvor en af dem er users favoritbar. Barerne tilføjes til BarListens liste af // barer
+            let coordinate = CLLocationCoordinate2D(latitude: 123, longitude: 123)
+            let number = Int.random(in: 10 ..< 30)
+            let bar = Bar(flaskepris: number, navn: "TESTBAR", rygning: false, coordinate: coordinate)
+            bar.id = "1234512345\(n)"
+            BarListe.shared.addBar(bar: bar)
+                          }
+                          print("ANTAL BARER: \(BarListe.shared.barer.count)")
+        measure {
+            // Put the code you want to measure the time of here.
+            BarListe.shared.sorterBilligsteEfterPris()
+            print("SORTERET!")
+        }
+    }
+    
+    // Tester hvor hurtigt findFavo kører
+    func testPerformanceFindFavoritter() {
+           // This is an example of a performance test case.
+           for n in 1...1000 {
+               // opretter to testbarer, hvor en af dem er users favoritbar. Barerne tilføjes til BarListens liste af // barer
+               let coordinate = CLLocationCoordinate2D(latitude: 123, longitude: 123)
+               let number = Int.random(in: 10 ..< 30)
+               let bar = Bar(flaskepris: number, navn: "TESTBAR", rygning: false, coordinate: coordinate)
+               bar.id = "1234512345\(n)"
+               BarListe.shared.addBar(bar: bar)
+            
+        }
+        print("ANTAL BARER: \(BarListe.shared.barer.count)")
+        
+        //tilføjer en bruger med 15 favoritter
+        let user = Bruger(navn: "Test", favoritsteder: ["12345123451", "12345123452", "12345123453", "12345123454", "12345123455", "12345123456", "12345123457", "12345123458", "12345123459", "123451234510", "123451234511", "123451234512", "123451234513", "123451234514", "123451234515"], nærmeste: [])
+        BarListe.shared.brugerLoggetind = user
+        
+           measure {
+               // Put the code you want to measure the time of here.
+               BarListe.shared.findFavo()
+            print("FAVO FUNDET ------------- \(BarListe.shared.egneFavoritter.count)")
+           }
+        
+        BarListe.shared.barer.removeAll()
+       }
+    
+    
     
     
 }
