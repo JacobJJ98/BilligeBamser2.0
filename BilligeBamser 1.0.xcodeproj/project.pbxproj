@@ -28,6 +28,8 @@
 		EE1B0C9A2376FF94004C3342 /* BarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1B0C992376FF94004C3342 /* BarView.swift */; };
 		EE5AE5702391618900870297 /* BarListeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE5AE56F2391618900870297 /* BarListeTest.swift */; };
 		EE5AE57423917D1700870297 /* FirebaseAPITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE5AE57323917D1700870297 /* FirebaseAPITest.swift */; };
+		EE5C9A4E2392A09200C59754 /* FavoritterNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE5C9A4D2392A09100C59754 /* FavoritterNavigationController.swift */; };
+		EE5C9A502392A25000C59754 /* MereNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE5C9A4F2392A25000C59754 /* MereNavigationController.swift */; };
 		EE805A31234DF9B40095651D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE805A30234DF9B40095651D /* AppDelegate.swift */; };
 		EE805A36234DF9B40095651D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE805A34234DF9B40095651D /* Main.storyboard */; };
 		EE805A3B234DF9B60095651D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE805A39234DF9B60095651D /* LaunchScreen.storyboard */; };
@@ -90,6 +92,8 @@
 		EE1B0C992376FF94004C3342 /* BarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarView.swift; sourceTree = "<group>"; };
 		EE5AE56F2391618900870297 /* BarListeTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarListeTest.swift; sourceTree = "<group>"; };
 		EE5AE57323917D1700870297 /* FirebaseAPITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAPITest.swift; sourceTree = "<group>"; };
+		EE5C9A4D2392A09100C59754 /* FavoritterNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritterNavigationController.swift; sourceTree = "<group>"; };
+		EE5C9A4F2392A25000C59754 /* MereNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MereNavigationController.swift; sourceTree = "<group>"; };
 		EE805A2D234DF9B40095651D /* BilligeBamser1.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BilligeBamser1.0.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE805A30234DF9B40095651D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE805A35234DF9B40095651D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -141,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				EECF6AB9237C9F82003105E7 /* MereViewController.swift */,
+				EE5C9A4F2392A25000C59754 /* MereNavigationController.swift */,
 			);
 			path = Mere;
 			sourceTree = "<group>";
@@ -238,6 +243,7 @@
 			isa = PBXGroup;
 			children = (
 				EEDE0A1F236F4DEE00E7B095 /* FavoriterTableViewController.swift */,
+				EE5C9A4D2392A09100C59754 /* FavoritterNavigationController.swift */,
 			);
 			path = Favoritter;
 			sourceTree = "<group>";
@@ -499,6 +505,7 @@
 				EE954609235A508A00EC534D /* StartsideViewController.swift in Sources */,
 				EE95460B235A5DAF00EC534D /* IntroViewController.swift in Sources */,
 				2865BAC9236193F600CE8878 /* TabbarContentView.swift in Sources */,
+				EE5C9A502392A25000C59754 /* MereNavigationController.swift in Sources */,
 				EECF6ABA237C9F82003105E7 /* MereViewController.swift in Sources */,
 				EE1B0C9A2376FF94004C3342 /* BarView.swift in Sources */,
 				2865BAC52361935D00CE8878 /* ExampleIrregularityContentView.swift in Sources */,
@@ -512,6 +519,7 @@
 				284DEA912371AB40004471F5 /* NavigationControllerUdforsk.swift in Sources */,
 				EEDE09D82365C2F600E7B095 /* OpretBrugerViewController.swift in Sources */,
 				EEAECAD723577CF500C555E0 /* BarListe.swift in Sources */,
+				EE5C9A4E2392A09200C59754 /* FavoritterNavigationController.swift in Sources */,
 				28721CAF236A1912005C50F4 /* CenterViewFlowLayout.swift in Sources */,
 				2865BAC32361935D00CE8878 /* ExampleNavigationController.swift in Sources */,
 				EEDE0A20236F4DEF00E7B095 /* FavoriterTableViewController.swift in Sources */,

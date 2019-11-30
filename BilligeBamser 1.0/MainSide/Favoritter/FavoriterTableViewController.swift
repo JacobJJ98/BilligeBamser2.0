@@ -12,10 +12,6 @@ import MapKit
 
 class FavoriterTableViewController: UITableViewController, CLLocationManagerDelegate {
     
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
-    }
-    
     let locationManager = CLLocationManager()
     
     
