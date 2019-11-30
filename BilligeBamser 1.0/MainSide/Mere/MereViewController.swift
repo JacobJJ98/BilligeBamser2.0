@@ -19,6 +19,10 @@ class MereViewController: UIViewController {
     
     @IBOutlet weak var scrollView: UIScrollView!
     
+    @IBOutlet weak var omOsView: UIView!
+    var tapGesture = UITapGestureRecognizer()
+    
+    
     @IBAction func onLogUdv2(_ sender: UIButton) {
         FirebaseAPI.shared.logOut { (res, err) in
                    if err != nil {
@@ -49,12 +53,22 @@ class MereViewController: UIViewController {
         brugerNavnv2.text = BarListe.shared.brugerLoggetind.navn
         mailv2.text = BarListe.shared.mail
         
+        // TAP Gesture
+        tapGesture = UITapGestureRecognizer(target: self, action: #selector(omOsTapped(_:)))
+        tapGesture.numberOfTapsRequired = 1
+        tapGesture.numberOfTouchesRequired = 1
+        omOsView.addGestureRecognizer(tapGesture)
+        omOsView.isUserInteractionEnabled = true
+        
     }
     override func viewDidAppear(_ animated: Bool) {
         
     }
     
-    
+    @objc func omOsTapped(_ sender: UITapGestureRecognizer) {
+        guard let url = URL(string: "https://docs.google.com/document/d/1HWUYO8Rr-lddAzbX4hrHQrd9H3QeiF0_Bt20AFt626s/edit?usp=sharing") else {  return }
+        UIApplication.shared.open(url)
+    }
     
     
 
