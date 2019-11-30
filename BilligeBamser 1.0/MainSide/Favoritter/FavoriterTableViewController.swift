@@ -20,6 +20,9 @@ class FavoriterTableViewController: UITableViewController, CLLocationManagerDele
     
     
     override func viewDidAppear(_ animated: Bool) {
+        if let lokationen = locationManager.location {
+                   BarListe.shared.sorterFavoEfterAfsted(loka: lokationen)
+               }
         tableView.reloadData()
         
     }
@@ -30,17 +33,12 @@ class FavoriterTableViewController: UITableViewController, CLLocationManagerDele
         locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
         locationManager.startUpdatingLocation()
         
-        // her sorteres favoritterne efter distancen.. men det sker så kun en gang lige pt og det er ved første gang man går derind efter appen har været lukket helt ned!
+        // her sorteres favoritterne efter distancen
         if let lokationen = locationManager.location {
             BarListe.shared.sorterFavoEfterAfsted(loka: lokationen)
         }
         print("Antal barer: \(BarListe.shared.barer.count)" )
         
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-        
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
         
         tableView.backgroundView = UIImageView(image: #imageLiteral(resourceName: "bg6"))
     }
@@ -108,18 +106,19 @@ class FavoriterTableViewController: UITableViewController, CLLocationManagerDele
         
         // Configure the cell...
         cell.navnet.text = BarListe.shared.egneFavoritter[indexPath.row].navn
-        cell.storBillede.image = UIImage(named: "Beer-Mug")
+        // cell.storBillede.image = UIImage(named: "Beer-Mug")
+        
         
         cell.prisTekst.text = "\(BarListe.shared.egneFavoritter[indexPath.row].flaskepris) Kr"
-        cell.prisBillede.image = UIImage(named: "Beer-Mug")
         if CLLocationManager.locationServicesEnabled() {
             if let lokationen = locationManager.location {
                 let barLoka = CLLocation(latitude: BarListe.shared.egneFavoritter[indexPath.row].coordinate.latitude, longitude: BarListe.shared.egneFavoritter[indexPath.row].coordinate.longitude)
                 
-                let dist = lokationen.distance(from: barLoka)/1000
+                let dist = lokationen.distance(from: barLoka)/1000.rounded()
+                let distRounded = String(format: "%.1f", dist)
                 print(dist)
                 
-                cell.mapTekst.text = "\(dist) Km"
+                cell.mapTekst.text = "\(distRounded) Km"
             } else {
                 cell.mapTekst.text = "---"
             }
@@ -127,7 +126,7 @@ class FavoriterTableViewController: UITableViewController, CLLocationManagerDele
         
         
         
-        cell.mapBillede.image = UIImage(named: "mapGrey")
+       // cell.mapBillede.image = UIImage(named: "mapGrey")
         
         return cell
     }
