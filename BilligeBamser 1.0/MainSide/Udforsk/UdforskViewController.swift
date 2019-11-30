@@ -304,17 +304,6 @@ class UdforskViewController: UIViewController, UICollectionViewDelegate, UIColle
                            BarListe.shared.barerBilligste[indexPath.row].afstand = "-"
                            
                        }
-            
-            
-           // let distIMeter: Double = (locationManager.location?.distance(from: barKoord))!/1000.rounded()
-            
-        //    let distRounded = String(format: "%.1f", distIMeter)
-            
-         //   cell2.afstand.text = "\(distRounded)km"
-            
-         //   BarListe.shared.barerBilligste[indexPath.row].afstand = distRounded
-            
-            //BarListe.shared.barerNærmeste[indexPath.row].erFavo = false
             print("ER IKKE FAVORIT STED")
             
             
