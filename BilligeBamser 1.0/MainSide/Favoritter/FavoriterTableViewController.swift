@@ -106,7 +106,6 @@ class FavoriterTableViewController: UITableViewController, CLLocationManagerDele
         
         
         cell.prisTekst.text = "\(BarListe.shared.egneFavoritter[indexPath.row].flaskepris) Kr"
-        if CLLocationManager.locationServicesEnabled() {
             if let lokationen = locationManager.location {
                 let barLoka = CLLocation(latitude: BarListe.shared.egneFavoritter[indexPath.row].coordinate.latitude, longitude: BarListe.shared.egneFavoritter[indexPath.row].coordinate.longitude)
                 
@@ -116,9 +115,9 @@ class FavoriterTableViewController: UITableViewController, CLLocationManagerDele
                 
                 cell.mapTekst.text = "\(distRounded) Km"
             } else {
-                cell.mapTekst.text = "---"
+                cell.mapTekst.text = "-"
             }
-        }
+        
         
         
         
