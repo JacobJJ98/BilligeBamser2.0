@@ -13,7 +13,8 @@ import FirebaseCore
 import FirebaseFirestore
 import FirebaseAuth
 import SVProgressHUD
-
+// COME ON GIT!!!
+// KFKFJDJVJ D
 class CollectionViewCell : UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet var pris: UILabel!
@@ -426,6 +427,7 @@ class UdforskViewController: UIViewController, UICollectionViewDelegate, UIColle
             vc.pris = String(BarListe.shared.barerNærmeste[indexPath.row].flaskepris)
             vc.barnavn = BarListe.shared.barerNærmeste[indexPath.row].navn
             vc.måRyge = BarListe.shared.barerNærmeste[indexPath.row].rygning
+            vc.kordinat = BarListe.shared.barerNærmeste[indexPath.row].coordinate
             self.show(vc, sender: nil)
             print("Trykket på Nærheden nr: \(indexPath.row)")
         }
@@ -445,7 +447,8 @@ class UdforskViewController: UIViewController, UICollectionViewDelegate, UIColle
             
             vc.pris = String(BarListe.shared.barerBilligste[indexPath.row].flaskepris)
             vc.barnavn = BarListe.shared.barerBilligste[indexPath.row].navn
-            vc.måRyge = BarListe.shared.barerNærmeste[indexPath.row].rygning
+            vc.måRyge = BarListe.shared.barerBilligste[indexPath.row].rygning
+            vc.kordinat = BarListe.shared.barerBilligste[indexPath.row].coordinate
             self.show(vc, sender: nil)
             print("Trykket på Billigste nr: \(indexPath.row)")
         }
@@ -469,6 +472,7 @@ class UdforskViewController: UIViewController, UICollectionViewDelegate, UIColle
             vc.pris = String(BarListe.shared.barer[indexPath.row].flaskepris)
             vc.barnavn = BarListe.shared.barer[indexPath.row].navn
             vc.måRyge = BarListe.shared.barer[indexPath.row].rygning
+            vc.kordinat = BarListe.shared.barer[indexPath.row].coordinate
             self.show(vc, sender: nil)
             print("Trykket på Vi anbefaler nr: \(indexPath.row)")
         }
