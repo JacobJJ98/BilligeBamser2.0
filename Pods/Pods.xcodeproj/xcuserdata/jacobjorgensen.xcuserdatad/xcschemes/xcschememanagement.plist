@@ -137,11 +137,6 @@
 			<key>orderHint</key>
 			<integer>21</integer>
 		</dict>
-		<key>Pods-BilligeBamser 1.0.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>27</integer>
-		</dict>
 		<key>Pods-BilligeBamser1.0.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -162,11 +157,6 @@
 			<false/>
 			<key>orderHint</key>
 			<integer>26</integer>
-		</dict>
-		<key>Toast-Swift.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>28</integer>
 		</dict>
 		<key>gRPC-C++-gRPCCertificates-Cpp.xcscheme</key>
 		<dict>

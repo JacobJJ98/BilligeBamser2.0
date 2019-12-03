@@ -15,6 +15,8 @@ import FirebaseAuth
 import SVProgressHUD
 // COME ON GIT!!!
 // KFKFJDJVJ D
+// HALO
+// KOM NU
 class CollectionViewCell : UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet var pris: UILabel!
@@ -362,6 +364,19 @@ class UdforskViewController: UIViewController, UICollectionViewDelegate, UIColle
         
             cell3.text.text = BarListe.shared.barer[indexPath.row].navn
             cell3.pris.text = String(BarListe.shared.barer[indexPath.row].flaskepris)
+            
+            let barKoord = CLLocation(latitude: BarListe.shared.barer[indexPath.row].coordinate.latitude, longitude: BarListe.shared.barer[indexPath.row].coordinate.longitude)
+                       
+                       if let lokationen = locationManager.location {
+                                      let distIMeter: Double = (lokationen.distance(from: barKoord))/1000.rounded()
+                                      let distRounded = String(format: "%.1f", distIMeter)
+                                      cell3.afstand.text = "\(distRounded)"
+                                      BarListe.shared.barer[indexPath.row].afstand = distRounded
+                                  } else {
+                                      cell3.afstand.text = "-"
+                                      BarListe.shared.barer[indexPath.row].afstand = "-"
+                                      
+                                  }
             
             if #available(iOS 13.0, *) {
                               let im = UIImage(systemName:"heart")?.withTintColor(.white,
