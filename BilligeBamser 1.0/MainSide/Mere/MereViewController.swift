@@ -71,6 +71,11 @@ class MereViewController: UIViewController {
     }
     
     
-
+    override func viewDidLayoutSubviews() {
+         let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
+         backgroundImage.image = UIImage(named: "bg6")
+         backgroundImage.contentMode = UIView.ContentMode.scaleAspectFill
+         self.view.insertSubview(backgroundImage, at: 0)
+     }
 
 }

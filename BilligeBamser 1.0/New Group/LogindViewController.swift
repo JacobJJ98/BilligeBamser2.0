@@ -15,8 +15,6 @@ class LogindViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var btnLogin: UIButton!
     
-    @IBOutlet weak var btnFb: UIButton!
-    
     @IBOutlet weak var mailFelt: UITextField!
     
     @IBOutlet weak var kodeFelt: UITextField!
@@ -49,7 +47,7 @@ class LogindViewController: UIViewController, UITextFieldDelegate {
         //Laver layout for knapper efter subviews er lavet
         // så de radius er relativt ift knappens størrelse. (så den er helt rund)
         btnLogin.layer.cornerRadius = btnLogin.bounds.size.height/2
-        btnFb.layer.cornerRadius = btnFb.bounds.size.height/2
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -105,7 +103,7 @@ class LogindViewController: UIViewController, UITextFieldDelegate {
         return true
     }
     
-   
+    
     
     func erMailKorrekt(mail: String) -> Bool {
         let regex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
@@ -117,7 +115,7 @@ class LogindViewController: UIViewController, UITextFieldDelegate {
         if let mail = mailFelt.text, let kode = kodeFelt.text {
             if(!erMailKorrekt(mail: mail)) {
                 
-                let alert = UIAlertController(title: title, message: "Indtast en gyldig email-adresse.", preferredStyle: .alert)
+                let alert = UIAlertController(title: title, message: "Indtast en gyldig email", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
                 self.present(alert, animated: true)
                 kodeFelt.text = ""
@@ -126,7 +124,7 @@ class LogindViewController: UIViewController, UITextFieldDelegate {
                 kodeFelt.text = ""
                 deaktiverLoginKnap()
                 
-                let alert2 = UIAlertController(title: title, message: "Din kode er mindst 6 tegn.", preferredStyle: .alert)
+                let alert2 = UIAlertController(title: title, message: "Din kode er minimum 6 tegn", preferredStyle: .alert)
                 alert2.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
                 self.present(alert2, animated: true)
                 
@@ -136,16 +134,14 @@ class LogindViewController: UIViewController, UITextFieldDelegate {
                 FirebaseAPI.shared.logIn(navn: mail, kode: kode) { (result, error) in
                     if error != nil {
                         //hvis den kommer herind er der fejl!
-                        SVProgressHUD.dismiss()
-                        SVProgressHUD.showError(withStatus: "Mislykket!")
+                        SVProgressHUD.showError(withStatus: "Der opstod en fejl")
                         SVProgressHUD.dismiss(withDelay: 0.5)
                         self.kodeFelt.text = ""
                         self.deaktiverLoginKnap()
                     } else {
                         FirebaseAPI.shared.hentBruger { (bruger, error) in
                             if error != nil {
-                                SVProgressHUD.dismiss()
-                                SVProgressHUD.showError(withStatus: "Kunne ikke hente brugeren!")
+                                SVProgressHUD.showError(withStatus: "Kunne ikke hente brugeren")
                                 SVProgressHUD.dismiss(withDelay: 0.5)
                                 self.kodeFelt.text = ""
                                 self.deaktiverLoginKnap()
@@ -154,59 +150,54 @@ class LogindViewController: UIViewController, UITextFieldDelegate {
                                 if let brugeren = bruger {
                                     BarListe.shared.tilføjBruger(bruger: brugeren)
                                 }
-                                  FirebaseAPI.shared.hentBarer { (result, error) in
+                                FirebaseAPI.shared.hentBarer { (result, error) in
                                     if error != nil {
-                                        SVProgressHUD.dismiss()
-                                        SVProgressHUD.showError(withStatus: "Kunne ikke hente barer!")
+                                        SVProgressHUD.showError(withStatus: "Kunne ikke hente barer")
                                         SVProgressHUD.dismiss(withDelay: 0.5)
                                         self.kodeFelt.text = ""
                                         self.deaktiverLoginKnap()
                                     } else {
-                                                if let barene = result {
-                                                    for bar in barene {
-                                                        BarListe.shared.addBar(bar: bar)
-                                                    }
-                                                    BarListe.shared.findFavo()
-                                                
-                                                    SVProgressHUD.dismiss()
-                                                    self.kodeFelt.text = ""
-                                                    self.deaktiverLoginKnap()
-                                                    self.present(self.tabbarController, animated: true, completion: nil)
-                                                }
-                                                               
+                                        if let barene = result {
+                                            for bar in barene {
+                                                BarListe.shared.addBar(bar: bar)
+                                            }
+                                            BarListe.shared.findFavo()
+                                            SVProgressHUD.dismiss()
+                                            self.kodeFelt.text = ""
+                                            self.deaktiverLoginKnap()
+                                            self.present(self.tabbarController, animated: true, completion: nil)
+                                        }
+                                        
                                     }
-                                                               
+                                    
+                                }
+                                
+                                
+                                
                             }
-                                
-                                
-                                
-                    }
-            }
-                        
-                        
-                        
-                        
-                      
-                            
                         }
                         
                         
                         
+                        
+                        
+                        
                     }
+                    
+                    
+                    
                 }
-                
             }
             
-            
-            
+        }
+        
+        
+        
         
         
     }
     
-    @IBAction func FB(_ sender: UIButton) {
-        //TODO lav fb login
-        
-    }
+    
     
     @IBAction func TilbageTrykket(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)

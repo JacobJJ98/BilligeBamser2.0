@@ -13,20 +13,25 @@ class ViewControllerBajer: UIViewController {
 
     @IBOutlet var prisen: UILabel!
     @IBOutlet var navnTitel: UILabel!
+    @IBOutlet var findVej: UIButton!
     
     var pris:String = ""
     var afstand:String = ""
     var barnavn:String = ""
     var erFavo:Bool = false
     var id:String = ""
+    var måRyge:Bool = false
+    
     
     var firstTime: Bool = true
     
     @IBOutlet var erFavoImage: UIImageView!
     
     override func viewDidAppear(_ animated: Bool) {
-        print("VIEW DID APPEAR KØRES")
+        print("må ryge er \(måRyge)")
         print(erFavo)
+        
+        
         
         if(!firstTime) {
             print("VIEW DID APPEAR KØRESinden i")
@@ -62,6 +67,8 @@ class ViewControllerBajer: UIViewController {
         backgroundImage.image = UIImage(named: "bg6")
         backgroundImage.contentMode = UIView.ContentMode.scaleAspectFill
         self.view.insertSubview(backgroundImage, at: 0)
+        findVej.layer.cornerRadius = findVej.bounds.size.height/2
+        findVej.layer.cornerRadius = findVej.bounds.size.height/2
     }
     
     override func viewDidLoad() {
@@ -92,6 +99,7 @@ class ViewControllerBajer: UIViewController {
       
         prisen.text = "\(pris)kr"
         self.title = barnavn
+        self.navigationItem.backBarButtonItem?.tintColor = UIColor.white
 
         // Do any additional setup after loading the view.
     }
@@ -133,6 +141,8 @@ class ViewControllerBajer: UIViewController {
                 // Fallback on earlier versions
             }
         }
+    }
+    @IBAction func findVej(_ sender: UIButton) {
     }
 }
     

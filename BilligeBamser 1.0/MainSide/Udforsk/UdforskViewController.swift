@@ -20,8 +20,6 @@ class CollectionViewCell : UICollectionViewCell {
     @IBOutlet weak var text: UILabel!
     @IBOutlet var favoBillede: UIImageView!
     @IBOutlet var afstand: UILabel!
-    
-    
 }
 
 class CollectionViewCell2 : UICollectionViewCell {
@@ -37,8 +35,8 @@ class CollectionViewCell3 : UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet var pris: UILabel!
     @IBOutlet weak var text: UILabel!
-    @IBOutlet weak var favoritKnap: UIButton!
-    
+    @IBOutlet var favoBillede: UIImageView!
+    @IBOutlet var afstand: UILabel!
 }
 
 class UdforskViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, CLLocationManagerDelegate {
@@ -67,6 +65,7 @@ class UdforskViewController: UIViewController, UICollectionViewDelegate, UIColle
         
                     FirebaseAPI.shared.hentBarer { (result, error) in
                         if error != nil {
+                            
                           print(error!.localizedDescription)
                         } else {
                             
@@ -83,6 +82,7 @@ class UdforskViewController: UIViewController, UICollectionViewDelegate, UIColle
                                 BarListe.shared.findFavo()
                                 self.collectionView1.reloadData()
                                 self.collectionView2.reloadData()
+                                self.collectionView3.reloadData()
                                 self.refreshControl?.endRefreshing()
                              
                             }
@@ -108,6 +108,7 @@ class UdforskViewController: UIViewController, UICollectionViewDelegate, UIColle
                         BarListe.shared.findFavo()
                         self.collectionView1.reloadData()
                         self.collectionView2.reloadData()
+                        self.collectionView3.reloadData()
                         self.refreshControl?.endRefreshing()
                     }
                     
@@ -174,6 +175,7 @@ class UdforskViewController: UIViewController, UICollectionViewDelegate, UIColle
     override func viewDidAppear(_ animated: Bool) {
         collectionView1.reloadData()
         collectionView2.reloadData()
+        collectionView3.reloadData()
         
     }
     
@@ -286,7 +288,7 @@ class UdforskViewController: UIViewController, UICollectionViewDelegate, UIColle
             cell2.layer.cornerRadius = 5;
             
             
-            let billed = ["beer1", "beer2","beer3", "beer4","beer5", "beer6","beer7", "beer8","beer9", "beer10",]
+            let billed = ["beer10", "beer9","beer8", "beer7","beer6", "beer5","beer4", "beer3","beer2", "beer1",]
             
             cell2.text.text = BarListe.shared.barerBilligste[indexPath.row].navn
             
@@ -356,13 +358,42 @@ class UdforskViewController: UIViewController, UICollectionViewDelegate, UIColle
             let cell3 = collectionView3.dequeueReusableCell(withReuseIdentifier: "collectionViewCellID3", for: indexPath) as! CollectionViewCell3
             
             cell3.layer.cornerRadius = 5;
+        
+            cell3.text.text = BarListe.shared.barer[indexPath.row].navn
+            cell3.pris.text = String(BarListe.shared.barer[indexPath.row].flaskepris)
             
-            let testdata = ["333", "Old Irish - Lyngby ", "Den glade gris", "Hegnet","Artillericafeen","DTU fredagsbar","Ruder Konge","IRISH tivoli","DIAMANTEN","billige bamse cafe :)"]
-            cell3.text.text = testdata[indexPath.row]
+            if #available(iOS 13.0, *) {
+                              let im = UIImage(systemName:"heart")?.withTintColor(.white,
+                                                renderingMode: .alwaysOriginal)
+                                                cell3.favoBillede.image = im
+                       } else {
+                           // Fallback on earlier versions
+                       }
+                       
+                       
+                       let id = ["1", "2","3", "4","5", "6","7", "8","9", "10",]
+                       
+                       for favo in BarListe.shared.brugerLoggetind.Favoritsteder {
+                           print("første favorit er: \(BarListe.shared.brugerLoggetind.Favoritsteder)")
+                           if favo == BarListe.shared.barer[indexPath.row].id {
+                               print("ER FAVORIT STED")
+                            BarListe.shared.barer[indexPath.row].erFavo = true
+                               
+                               if #available(iOS 13.0, *) {
+                                   let im = UIImage(systemName:"heart.fill")?.withTintColor(.white,
+                                   renderingMode: .alwaysOriginal)
+                                   cell3.favoBillede.image = im
+                               } else {
+                                   
+                                   // Fallback on earlier versions
+                               }
+                               
+                           }
+                  
+                       }
             
-            let billed = ["beer1", "beer2","beer3", "beer4","beer5", "beer6","beer7", "beer8","beer9", "beer10",]
             
-            let id = ["1", "2","3", "4","5", "6","7", "8","9", "10",]
+            let billed = ["beer5", "beer4","beer6", "beer3","beer7", "beer2","beer8", "beer1","beer10", "beer9",]
             
             let testimage : UIImage = UIImage(named: billed[indexPath.row])!
             
@@ -394,6 +425,7 @@ class UdforskViewController: UIViewController, UICollectionViewDelegate, UIColle
             
             vc.pris = String(BarListe.shared.barerNærmeste[indexPath.row].flaskepris)
             vc.barnavn = BarListe.shared.barerNærmeste[indexPath.row].navn
+            vc.måRyge = BarListe.shared.barerNærmeste[indexPath.row].rygning
             self.show(vc, sender: nil)
             print("Trykket på Nærheden nr: \(indexPath.row)")
         }
@@ -413,16 +445,30 @@ class UdforskViewController: UIViewController, UICollectionViewDelegate, UIColle
             
             vc.pris = String(BarListe.shared.barerBilligste[indexPath.row].flaskepris)
             vc.barnavn = BarListe.shared.barerBilligste[indexPath.row].navn
+            vc.måRyge = BarListe.shared.barerNærmeste[indexPath.row].rygning
             self.show(vc, sender: nil)
             print("Trykket på Billigste nr: \(indexPath.row)")
         }
         if(collectionView == collectionView3) {
             let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let vc = storyBoard.instantiateViewController(withIdentifier: "ViewControllerBajer") as! ViewControllerBajer
-            let testdata = ["333", "Old Irish - Lyngby ", "Den glade gris", "Hegnet","Artillericafeen","DTU fredagsbar","Ruder Konge","IRISH tivoli","DIAMANTEN","billige bamse cafe :)"]
-            vc.afstand = "\(indexPath)"
-            vc.pris = "prisen er hard :) :) "
-            vc.barnavn = "\(testdata[indexPath.row])"
+            if let afs = BarListe.shared.barer[indexPath.row].afstand {
+                vc.afstand = afs
+            }
+            if let afs = BarListe.shared.barer[indexPath.row].afstand {
+                           vc.afstand = afs
+                       }
+            
+            if let erFavo = BarListe.shared.barer[indexPath.row].erFavo {
+                vc.erFavo = erFavo
+            }
+            if let id = BarListe.shared.barer[indexPath.row].id {
+                vc.id = id
+            }
+            
+            vc.pris = String(BarListe.shared.barer[indexPath.row].flaskepris)
+            vc.barnavn = BarListe.shared.barer[indexPath.row].navn
+            vc.måRyge = BarListe.shared.barer[indexPath.row].rygning
             self.show(vc, sender: nil)
             print("Trykket på Vi anbefaler nr: \(indexPath.row)")
         }

@@ -10,7 +10,7 @@ import UIKit
 import CoreLocation
 import SVProgressHUD
 
-class OpretBajerViewController: UIViewController, CLLocationManagerDelegate {
+class OpretBajerViewController: UIViewController, CLLocationManagerDelegate, UITextFieldDelegate {
     let locationManager = CLLocationManager()
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -21,47 +21,164 @@ class OpretBajerViewController: UIViewController, CLLocationManagerDelegate {
     var cor : CLLocationCoordinate2D?
     var midlerRyg : Bool? = nil
     var navn : String? = nil
-    @IBOutlet weak var navnAfvist: UILabel!
-    @IBOutlet weak var prisAfvist: UILabel!
-    @IBOutlet weak var adrAfvist: UILabel!
     
     @IBOutlet weak var nuværendeLokationStatus: UISwitch!
     @IBOutlet weak var barNavn: UITextField!
     @IBOutlet weak var flaskePris: UITextField!
     @IBOutlet weak var rygningTilladt: UISwitch!
     @IBOutlet weak var adresse: UITextField!
+    @IBOutlet var btn: UIButton!
     
-
+    
     
     @IBAction func vedAendretLokation(_ sender: UISwitch) {
         if sender.isOn == false {
-            adresse.backgroundColor = UIColor.white.withAlphaComponent(1)
             adresse.isEnabled = true
+            adresse.alpha = 0.7
+            adresse.text = ""
+            deaktiverOpretBtn()
+            
         } else {
-            adresse.backgroundColor = UIColor.white.withAlphaComponent(0.4)
+            adresse.alpha = 0.1
             adresse.isEnabled = false
+            adresse.text = "Nuværende Lokation"
+            if let barnavn = barNavn.text, let pris = flaskePris.text {
+                if(!barnavn.isEmpty || !pris.isEmpty) {
+                    aktiverOpretBtn()
+                }
+            }
+         
         }
     }
     
     @IBAction func opretBar(_ sender: UIButton) {
         SVProgressHUD.show()
-        fjernAfvistLabels()
         print("opretBar er trykket")
         // kaldes for at oversætte fra Textfield og hen til klassevariable og kalder derefter find lokation som så derefter vil kalde tilføj til Firebase
         self.tilføjNavnogPris()
     }
     
+    //Metode til at disable login knap når felterne er tomme
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        print("should change køres")
+        
+        if(textField == self.barNavn) {
+            print("should change køres inde i barnavn")
+            if let _ = barNavn.text, let prisFeltet = flaskePris.text, let adresseFelt = adresse.text {
+                let barNavnet = (barNavn.text! as NSString).replacingCharacters(in: range, with: string)
+
+                if prisFeltet.isEmpty || barNavnet.isEmpty || adresseFelt.isEmpty {
+                            
+                            deaktiverOpretBtn()
+                            
+                        }
+                
+                            else {
+                            
+                            aktiverOpretBtn()
+                            }
+                
+            }
+            
+        }
+        
+        if(textField == self.flaskePris) {
+            print("should change køres inde i flaskepris")
+            if let _ = flaskePris.text, let barnavnet = barNavn.text, let adresseFelt = adresse.text {
+                let prisfelteter = (flaskePris.text! as NSString).replacingCharacters(in: range, with: string)
+                
+                if prisfelteter.isEmpty || barnavnet.isEmpty || adresseFelt.isEmpty {
+                            
+                            deaktiverOpretBtn()
+                            
+                        }
+                
+                            else {
+                            
+                            aktiverOpretBtn()
+                            }
+                
+            }
+            
+        }
+        
+        if(textField == self.adresse) {
+            print("adresse")
+            
+            
+            if let _ = adresse.text, let barnavnet = barNavn.text, let prisfelt = flaskePris.text {
+                let adrfelteter = (adresse.text! as NSString).replacingCharacters(in: range, with: string)
+                print("should change køres inde i flaskepris")
+                
+                if prisfelt.isEmpty || barnavnet.isEmpty || adrfelteter.isEmpty {
+                    
+                    deaktiverOpretBtn()
+                    
+                }
+        
+                    else {
+                    
+                    aktiverOpretBtn()
+                    }
+                }
+                
+            
+            
+        }
+        
+        
+        return true
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        deaktiverOpretBtn()
+        adresse.delegate = self
+        flaskePris.delegate = self
+        barNavn.delegate = self
+        //Metode til at lukke keyboard ned ved tab uden for
+        self.setupHideKeyboardOnTapThis()
     }
     
-    func  fjernAfvistLabels() -> Void {
-        prisAfvist.isHidden = true
-        navnAfvist.isHidden = true
-        adrAfvist.isHidden = true
+    func aktiverOpretBtn() {
+        btn.isEnabled = true
+        btn.alpha = 1.0
     }
     
+    func deaktiverOpretBtn() {
+        btn.isEnabled = false
+        btn.alpha = 0.5
+    }
+    
+    override func viewDidLayoutSubviews() {
+        btn.layer.cornerRadius = btn.bounds.size.height/2
+        
+        btn.layer.cornerRadius = btn.bounds.size.height/2
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        //Åbner keyboard ved email feltet automatisk
+        barNavn.becomeFirstResponder()
+        
+    }
+    
+    //Metode til styring af return knappen
+    
+     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+     if textField == barNavn {
+     flaskePris.becomeFirstResponder()
+     }
+     if textField == flaskePris {
+     adresse.becomeFirstResponder()
+     }
+     if textField == adresse {
+        adresse.resignFirstResponder()
+     }
+     return true
+     }
+     
     
     
     
@@ -77,7 +194,6 @@ class OpretBajerViewController: UIViewController, CLLocationManagerDelegate {
     func tilføjNavnogPris() -> Void {
         if let navnmidler = barNavn.text {
             guard navnmidler.count > 0 else {
-                navnAfvist.isHidden = false
                 SVProgressHUD.dismiss()
                 return
             }
@@ -86,7 +202,6 @@ class OpretBajerViewController: UIViewController, CLLocationManagerDelegate {
         }
         if let prismidler = flaskePris.text {
             guard prismidler.count > 0 else {
-                prisAfvist.isHidden = false
                 SVProgressHUD.dismiss()
                 return
             }
@@ -113,14 +228,14 @@ class OpretBajerViewController: UIViewController, CLLocationManagerDelegate {
                     let bar = Bar(flaskepris: pris_, navn: navn_, rygning: self.rygningTilladt.isOn, coordinate: kor)
                     FirebaseAPI.shared.tilføjBar(bar: bar) { (res, err) in
                         if err != nil {
-                            SVProgressHUD.showError(withStatus: "Mislykkedes")
+                            SVProgressHUD.showError(withStatus: "Der opstod en fejl")
                             print(err!.localizedDescription)
                         } else {
                             BarListe.shared.barer.removeAll()
                             FirebaseAPI.shared.hentBarer { (result, error) in
                                 if error != nil {
                                     SVProgressHUD.dismiss()
-                                    SVProgressHUD.showError(withStatus: "Kunne ikke hente barer!")
+                                    SVProgressHUD.showError(withStatus: "Kunne ikke hente barer")
                                     SVProgressHUD.dismiss(withDelay: 0.5)
                                     print(error!.localizedDescription)
                                 } else {
@@ -128,8 +243,8 @@ class OpretBajerViewController: UIViewController, CLLocationManagerDelegate {
                                         for bar in barene {
                                             BarListe.shared.addBar(bar: bar)
                                         }
-                                        SVProgressHUD.showSuccess(withStatus: "")
-                                        SVProgressHUD.dismiss()
+                                        SVProgressHUD.showSuccess(withStatus: "Baren er oprettet")
+                                        SVProgressHUD.dismiss(withDelay: 0.5)
                                         self.performSegueToReturnBack()
                                         
                                     }
@@ -172,11 +287,11 @@ class OpretBajerViewController: UIViewController, CLLocationManagerDelegate {
             }
             
             
+            
         } else {
             
             if let adrmidler = adresse.text {
                 guard adrmidler.count > 0 else {
-                    adrAfvist.isHidden = false
                     SVProgressHUD.dismiss()
                     return
                 }
@@ -198,14 +313,23 @@ class OpretBajerViewController: UIViewController, CLLocationManagerDelegate {
                     
                     self.cor = location.coordinate
                     self.tilføjTilFirebase()
-                    
-                   
-                    
                 }
-                
             }
         }
         
     }
     
+}
+
+//Gør så keyboard lukker ned når der tabbes uden for
+extension UIViewController {
+    func setupHideKeyboardOnTapThis() {
+        self.view.addGestureRecognizer(self.endEditingRecognizer())
+        self.navigationController?.navigationBar.addGestureRecognizer(self.endEditingRecognizer())
+    }
+    private func endEditingRecognizer() -> UIGestureRecognizer {
+        let tap = UITapGestureRecognizer(target: self.view, action: #selector(self.view.endEditing(_:)))
+        tap.cancelsTouchesInView = false
+        return tap
+    }
 }

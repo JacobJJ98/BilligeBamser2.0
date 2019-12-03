@@ -21,7 +21,6 @@ class OpretBrugerViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var mailFelt: UITextField!
     @IBOutlet weak var kodeFelt: UITextField!
     @IBOutlet weak var btnOpret: UIButton!
-    @IBOutlet weak var btnFb: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,8 +49,6 @@ class OpretBrugerViewController: UIViewController, UITextFieldDelegate {
         btnOpret.layer.cornerRadius = btnOpret.bounds.size.height/2
         btnOpret.layer.cornerRadius = btnOpret.bounds.size.height/2
         
-        btnFb.layer.cornerRadius = btnOpret.bounds.size.height/2
-        btnFb.layer.cornerRadius = btnOpret.bounds.size.height/2
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -66,7 +63,7 @@ class OpretBrugerViewController: UIViewController, UITextFieldDelegate {
         
         if(textField == self.navnFelt) {
             print("fornavn")
-            if let _ = navnFelt.text, let kodeFelt = mailFelt.text, let email = mailFelt.text {
+            if let _ = navnFelt.text, let kodeFelt = kodeFelt.text, let email = mailFelt.text {
                 let fornavnet = (navnFelt.text! as NSString).replacingCharacters(in: range, with: string)
                 
                 if email.isEmpty || kodeFelt.isEmpty || fornavnet.isEmpty {
@@ -142,7 +139,7 @@ class OpretBrugerViewController: UIViewController, UITextFieldDelegate {
     @IBAction func onOpretBruger(_ sender: UIButton) {
         if let mail = mailFelt.text, let kode = kodeFelt.text, let navn = navnFelt.text {
             if(!erMailKorrekt(mail: mail)) {
-                let alert = UIAlertController(title: title, message: "Indtast en gyldig email-adresse.", preferredStyle: .alert)
+                let alert = UIAlertController(title: title, message: "Indtast en gyldig email", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
                 self.present(alert, animated: true)
                 kodeFelt.text = ""
@@ -151,22 +148,23 @@ class OpretBrugerViewController: UIViewController, UITextFieldDelegate {
                 kodeFelt.text = ""
                 deaktiverLoginKnap()
                 
-                let alert2 = UIAlertController(title: title, message: "Din kode er mindst 6 tegn.", preferredStyle: .alert)
+                let alert2 = UIAlertController(title: title, message: "Din kode er minimum 6 tegn", preferredStyle: .alert)
                 alert2.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
                 self.present(alert2, animated: true)
                 
             }
             else {
                 //OPRET BRUGER PÅ FIREBASE OSV (Auth)
+                SVProgressHUD.show()
                 FirebaseAPI.shared.opretBrugerAuth(mail: mail, kode: kode) { (dataRes, error) in
                     if let err = error {
                         if err.localizedDescription == "The email address is already in use by another account." {
-                        SVProgressHUD.showError(withStatus: "Mailen findes allerede")
-                        print(err.localizedDescription)
-                        SVProgressHUD.dismiss(withDelay: 2)
+                            SVProgressHUD.showError(withStatus: "Email findes allerede")
+                            print(err.localizedDescription)
+                            SVProgressHUD.dismiss(withDelay: 0.5)
                         } else {
-                        SVProgressHUD.showError(withStatus: "Der opstod en fejl")
-                        SVProgressHUD.dismiss(withDelay: 2)
+                            SVProgressHUD.showError(withStatus: "Der opstod en fejl")
+                            SVProgressHUD.dismiss(withDelay: 0.5)
                         }
                     } else {
                         // oprettelsen lykkedes og vi kommer herind!
@@ -175,14 +173,14 @@ class OpretBrugerViewController: UIViewController, UITextFieldDelegate {
                             if error != nil {
                                 print("FEJL NÅR BRUGER SKULLE I DB: \(error.debugDescription)")
                                 SVProgressHUD.showError(withStatus: "Der opstod en fejl")
-                                SVProgressHUD.dismiss(withDelay: 2)
+                                SVProgressHUD.dismiss(withDelay: 0.5)
                             } else {
                                 print("SUCCES MED AT TILFØJE \(res!) I DB")
                                 BarListe.shared.mail = mail
                                 self.lavBrugerIBarListe(navn: navn)
                                 FirebaseAPI.shared.hentBarer { (barer, err) in
                                     if err != nil {
-                                        SVProgressHUD.showError(withStatus: "Kunne ikke hente barer!")
+                                        SVProgressHUD.showError(withStatus: "Kunne ikke hente barer")
                                         SVProgressHUD.dismiss(withDelay: 0.5)
                                     } else {
                                         if let barene = barer {
@@ -190,10 +188,10 @@ class OpretBrugerViewController: UIViewController, UITextFieldDelegate {
                                                 BarListe.shared.addBar(bar: bar)
                                             }
                                             SVProgressHUD.dismiss()
-                                          self.present(self.tabbarController, animated: true, completion: nil)
+                                            self.present(self.tabbarController, animated: true, completion: nil)
                                         }
                                         
-                                        }
+                                    }
                                 }
                             }
                         }
@@ -204,7 +202,7 @@ class OpretBrugerViewController: UIViewController, UITextFieldDelegate {
             
         }
         
-}
+    }
     
     func lavBrugerIBarListe(navn: String) -> Void {
         let nyBruger = Bruger(navn: navn, favoritsteder: [""], nærmeste: [""])
