@@ -38,7 +38,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         button.translatesAutoresizingMaskIntoConstraints = false
         //button.center = mapView.center
          // button.backgroundColor = UIColor.red
-          button.backgroundColor = UIColor(patternImage:  imageLiteral(resourceName: "refresh35.png"))
+          button.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "refresh35.png"))
        //  button.setTitle("iOSDevCenters Click", for: .normal)
         button.addTarget(self, action:#selector(self.buttonClicked), for: .touchUpInside)
         
