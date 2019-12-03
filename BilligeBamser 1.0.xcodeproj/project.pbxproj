@@ -87,14 +87,14 @@
 		28721CB0236A1DE4005C50F4 /* UIColorExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
 		287ECAEC234E541800487427 /* Theme.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Theme.xcassets; sourceTree = "<group>"; };
 		287ECAEE234E5FF200487427 /* OpretBajerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OpretBajerViewController.swift; path = "../New Group1/OpretBajerViewController.swift"; sourceTree = "<group>"; };
-		28C5E9C1234F9BEA00BE284D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		28C5E9C1234F9BEA00BE284D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "BilligeBamser 1.0/Assets.xcassets"; sourceTree = SOURCE_ROOT; };
 		4A2B78F5FE428E60C38F011F /* Pods-BilligeBamser1.0.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BilligeBamser1.0.debug.xcconfig"; path = "Target Support Files/Pods-BilligeBamser1.0/Pods-BilligeBamser1.0.debug.xcconfig"; sourceTree = "<group>"; };
 		EE1B0C992376FF94004C3342 /* BarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarView.swift; sourceTree = "<group>"; };
 		EE5AE56F2391618900870297 /* BarListeTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarListeTest.swift; sourceTree = "<group>"; };
 		EE5AE57323917D1700870297 /* FirebaseAPITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAPITest.swift; sourceTree = "<group>"; };
 		EE5C9A4D2392A09100C59754 /* FavoritterNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritterNavigationController.swift; sourceTree = "<group>"; };
 		EE5C9A4F2392A25000C59754 /* MereNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MereNavigationController.swift; sourceTree = "<group>"; };
-		EE805A2D234DF9B40095651D /* BilligeBamser1.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BilligeBamser1.0.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE805A2D234DF9B40095651D /* Billige Bamser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Billige Bamser.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE805A30234DF9B40095651D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE805A35234DF9B40095651D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EE805A3A234DF9B60095651D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -280,7 +280,7 @@
 		EE805A2E234DF9B40095651D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				EE805A2D234DF9B40095651D /* BilligeBamser1.0.app */,
+				EE805A2D234DF9B40095651D /* Billige Bamser.app */,
 				2828E86B23912B7900D25B48 /* BilligeBamser1.0Tests.xctest */,
 				2828E87923912BA300D25B48 /* BilligeBamser1.0UITests.xctest */,
 			);
@@ -361,7 +361,7 @@
 			);
 			name = BilligeBamser1.0;
 			productName = "BilligeBamser 1.0";
-			productReference = EE805A2D234DF9B40095651D /* BilligeBamser1.0.app */;
+			productReference = EE805A2D234DF9B40095651D /* Billige Bamser.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -771,6 +771,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4A2B78F5FE428E60C38F011F /* Pods-BilligeBamser1.0.debug.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8B9KRX6NBR;
 				INFOPLIST_FILE = "BilligeBamser 1.0/Info.plist";
@@ -780,7 +781,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Nicolai-Dam";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Billige Bamser";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -790,6 +791,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FC01C8404C1C0F313E7E0BAB /* Pods-BilligeBamser1.0.release.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8B9KRX6NBR;
 				INFOPLIST_FILE = "BilligeBamser 1.0/Info.plist";
@@ -799,7 +801,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Nicolai-Dam";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Billige Bamser";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

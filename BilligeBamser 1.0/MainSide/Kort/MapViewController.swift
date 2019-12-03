@@ -5,16 +5,17 @@
 //  Created by Jacob Jørgensen on 16/10/2019.
 //  Copyright © 2019 Jacob Jørgensen. All rights reserved.
 //
-
+ 
 import UIKit
 import CoreLocation
 import MapKit
 import SVProgressHUD
-
+ 
 class MapViewController: UIViewController, CLLocationManagerDelegate {
-
+ 
     let regionRadius: CLLocationDistance = 350
     @IBOutlet var mapView: MKMapView!
+    var UIVE : UIView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,7 +38,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         button.translatesAutoresizingMaskIntoConstraints = false
         //button.center = mapView.center
          // button.backgroundColor = UIColor.red
-          button.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "refresh35.png"))
+          button.backgroundColor = UIColor(patternImage:  imageLiteral(resourceName: "refresh35.png"))
        //  button.setTitle("iOSDevCenters Click", for: .normal)
         button.addTarget(self, action:#selector(self.buttonClicked), for: .touchUpInside)
         
@@ -46,26 +47,52 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
          
            mapView.addSubview(button)
         
-        
+        let text = UITextField(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
+        text.translatesAutoresizingMaskIntoConstraints = false
+        text.isHidden = true
+        if #available(iOS 13.0, *) {
+            text.textColor = .label
+        } else {
+            // Fallback on earlier versions
+            text.textColor = .black
+        }
+        text.backgroundColor = .clear
+        text.text = "Kortet er opdaret"
+        mapView.addSubview(text)
+   
         // let newView = RefreshButton()
         // newView.backgroundColor = UIColor.red
         // view.addSubview(newView)
-
+ 
       //  newView.translatesAutoresizingMaskIntoConstraints = false
-        let horizontalConstraint2 = button.rightAnchor.constraint(equalTo: mapView.rightAnchor, constant: -10)
+        let horizontalConstraint2 = button.leftAnchor.constraint(equalTo: mapView.leftAnchor, constant: 10)
         let verticalConstraint2 = button.topAnchor.constraint(equalTo: mapView.topAnchor, constant: 10)
+        
+        let horizontalConstraint2TEXT = text.centerXAnchor.constraint(equalTo: mapView.centerXAnchor, constant: 0)
+        let verticalConstraint2TEXT = text.topAnchor.constraint(equalTo: mapView.topAnchor, constant: 10)
        // let horizontalConstraint = newView.rightAnchor.constraint(equalTo: mapView.rightAnchor)
        // let verticalConstraint = newView.centerYAnchor.constraint(equalTo: mapView.centerYAnchor)
-        NSLayoutConstraint.activate([horizontalConstraint2, verticalConstraint2])
+        NSLayoutConstraint.activate([horizontalConstraint2, verticalConstraint2,horizontalConstraint2TEXT, verticalConstraint2TEXT])
         
       
     }
     @objc func buttonClicked() {
-        SVProgressHUD.show()
-        print("Button Clicked")
-        self.viewDidDisappear(false)
-        self.viewDidAppear(false)
-        SVProgressHUD.dismiss()
+    print("Button Clicked")
+        
+       for view in self.mapView.subviews {
+            if let textField = view as? UITextField {
+                textField.isHidden = false
+                self.viewDidDisappear(false)
+                self.viewDidAppear(false)
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                    textField.isHidden = true
+                }
+                print(textField.text!)
+            }
+        }
+        
+        
+        
     }
     override func viewDidDisappear(_ animated: Bool) {
         
@@ -95,10 +122,10 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
       mapView.setRegion(coordinateRegion, animated: true)
     }
     
-
+ 
    
 }
-
+ 
 extension MapViewController: MKMapViewDelegate {
     // Hvad sker der når man trykker på info knappen!!
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView,
@@ -111,13 +138,16 @@ extension MapViewController: MKMapViewDelegate {
         }
     }
 }
-
+ 
 class RefreshButton: UIView {
-
+ 
     override var intrinsicContentSize: CGSize {
         return CGSize(width: 100, height: 100)
     }
-
+ 
 }
+ 
+ 
+ 
 
 

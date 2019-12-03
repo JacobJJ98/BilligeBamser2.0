@@ -1,9 +1,9 @@
 //
-//  CustomTabbarController.swift
-//  dataSpringMobile
+//  ViewControllerBajer.swift
+//  BilligeBamser1.0
 //
-//  Created by huaqi.xue on 2018/5/17.
-//  Copyright © 2018年 Marketing Applications.inc. All rights reserved.
+//  Created by Nicolai Dam on 23/11/2019.
+//  Copyright © 2019 Jacob Jørgensen. All rights reserved.
 //
 
 import UIKit

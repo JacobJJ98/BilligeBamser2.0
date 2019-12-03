@@ -14,7 +14,7 @@ class BarView2: MKAnnotationView {
     willSet {
         guard (newValue as? Bar) != nil else {return}
       canShowCallout = true
-      calloutOffset = CGPoint(x: -5, y: 5)
+      calloutOffset = CGPoint(x: 0, y: 10)
         
         let mapsButton = UIButton(frame: CGRect(origin: CGPoint.zero,
            size: CGSize(width: 30, height: 30)))
@@ -24,7 +24,7 @@ class BarView2: MKAnnotationView {
     
         
         // sætter billedet som skal markere barerne på kortet!!
-        image = UIImage(named: "beerBottle")
+        image = UIImage(named: "18kr2")
     }
   }
 }

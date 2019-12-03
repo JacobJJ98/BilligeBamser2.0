@@ -44,33 +44,20 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pes-aF-2We" userLabel="top">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="190"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Billige" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="797-0B-Ylz">
-                                                        <rect key="frame" x="30" y="59.999999999999993" width="354" height="31.666666666666664"/>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="billigebamserLogoUdenFlasker" translatesAutoresizingMaskIntoConstraints="NO" id="DrK-P5-ALv">
+                                                        <rect key="frame" x="21" y="40" width="372" height="159"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="31.5" id="nZk-n9-WWG"/>
+                                                            <constraint firstAttribute="height" constant="159" id="DhZ-VJ-AwB"/>
+                                                            <constraint firstAttribute="width" constant="372" id="WM9-CU-Vym"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="27"/>
-                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bamser" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fhg-tQ-Wzf">
-                                                        <rect key="frame" x="30" y="96.666666666666657" width="354" height="73.333333333333343"/>
-                                                        <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="95"/>
-                                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <nil key="highlightedColor"/>
-                                                        <size key="shadowOffset" width="0.0" height="0.0"/>
-                                                    </label>
+                                                    </imageView>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstItem="797-0B-Ylz" firstAttribute="leading" secondItem="pes-aF-2We" secondAttribute="leading" constant="30" id="ACu-Qs-CrZ"/>
-                                                    <constraint firstItem="797-0B-Ylz" firstAttribute="top" secondItem="pes-aF-2We" secondAttribute="top" constant="60" id="CZ5-he-ICW"/>
-                                                    <constraint firstItem="fhg-tQ-Wzf" firstAttribute="leading" secondItem="pes-aF-2We" secondAttribute="leading" constant="30" id="I7i-fW-kBP"/>
-                                                    <constraint firstAttribute="bottom" secondItem="fhg-tQ-Wzf" secondAttribute="bottom" constant="20" id="ZuZ-7p-wx9"/>
+                                                    <constraint firstItem="DrK-P5-ALv" firstAttribute="top" secondItem="pes-aF-2We" secondAttribute="top" constant="40" id="AOk-Kf-bpn"/>
+                                                    <constraint firstItem="DrK-P5-ALv" firstAttribute="leading" secondItem="pes-aF-2We" secondAttribute="leading" constant="21" id="FE0-JN-Rby"/>
+                                                    <constraint firstAttribute="trailing" secondItem="DrK-P5-ALv" secondAttribute="trailing" constant="21" id="WKA-ck-6s6"/>
                                                     <constraint firstAttribute="height" constant="190" id="opC-Fp-Aix"/>
-                                                    <constraint firstAttribute="trailing" secondItem="797-0B-Ylz" secondAttribute="trailing" constant="30" id="sVO-ZI-vaG"/>
-                                                    <constraint firstAttribute="trailing" secondItem="fhg-tQ-Wzf" secondAttribute="trailing" constant="30" id="wNi-7i-TgQ"/>
-                                                    <constraint firstItem="fhg-tQ-Wzf" firstAttribute="top" secondItem="797-0B-Ylz" secondAttribute="bottom" constant="5" id="xY1-mV-hfS"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qdf-0o-JY0" userLabel="scroll1">
@@ -1404,17 +1391,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Velkommen!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Div-hi-Phs">
-                                <rect key="frame" x="159.66666666666666" y="437.66666666666669" width="95" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="billigebamserlogopng" translatesAutoresizingMaskIntoConstraints="NO" id="xCX-Th-0JD">
+                                <rect key="frame" x="32" y="124" width="350" height="350"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="350" id="JuX-uk-KL8"/>
+                                    <constraint firstAttribute="width" constant="350" id="zDJ-WP-lZQ"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" name="NavigationColor"/>
                         <constraints>
-                            <constraint firstItem="Div-hi-Phs" firstAttribute="centerX" secondItem="igO-ou-aex" secondAttribute="centerX" id="d9R-vR-WZY"/>
-                            <constraint firstItem="Div-hi-Phs" firstAttribute="centerY" secondItem="igO-ou-aex" secondAttribute="centerY" id="z6y-KK-gHf"/>
+                            <constraint firstItem="xCX-Th-0JD" firstAttribute="top" secondItem="e28-at-vKF" secondAttribute="top" constant="80" id="SgP-Xi-kYt"/>
+                            <constraint firstItem="xCX-Th-0JD" firstAttribute="centerX" secondItem="e28-at-vKF" secondAttribute="centerX" id="sda-S3-uAZ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="e28-at-vKF"/>
                     </view>
@@ -1424,7 +1412,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rxv-CL-pxd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2932" y="-269"/>
+            <point key="canvasLocation" x="-2933.3333333333335" y="-269.19642857142856"/>
         </scene>
         <!--Startside View Controller-->
         <scene sceneID="ZgS-OH-B96">
@@ -1437,48 +1425,21 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg1" translatesAutoresizingMaskIntoConstraints="NO" id="aYQ-Y3-AWp">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="billigebamserlogopng" translatesAutoresizingMaskIntoConstraints="NO" id="dxz-Xn-bgi">
+                                <rect key="frame" x="32" y="84" width="350" height="350"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="350" id="NS6-hU-B1E"/>
+                                    <constraint firstAttribute="height" constant="350" id="obR-i7-AhY"/>
+                                </constraints>
+                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="Ex8-Rw-Cgn">
                                 <rect key="frame" x="0.0" y="44" width="414" height="788"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9HV-TK-MgP" userLabel="Top">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="262"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Billige" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QQJ-ts-wMd">
-                                                <rect key="frame" x="169.66666666666666" y="85.333333333333343" width="75" height="31.666666666666671"/>
-                                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="27"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bamser" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Ad-ZW-br6">
-                                                <rect key="frame" x="30" y="95.333333333333343" width="354" height="116.33333333333334"/>
-                                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="100"/>
-                                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstItem="QQJ-ts-wMd" firstAttribute="centerY" secondItem="9HV-TK-MgP" secondAttribute="centerY" constant="-30" id="di0-15-on6"/>
-                                            <constraint firstItem="QQJ-ts-wMd" firstAttribute="centerX" secondItem="9HV-TK-MgP" secondAttribute="centerX" id="h3E-PR-n7Z"/>
-                                            <constraint firstItem="5Ad-ZW-br6" firstAttribute="leading" secondItem="9HV-TK-MgP" secondAttribute="leading" constant="30" id="rIi-8O-kq7"/>
-                                            <constraint firstAttribute="trailing" secondItem="5Ad-ZW-br6" secondAttribute="trailing" constant="30" id="ypB-DQ-oHK"/>
-                                            <constraint firstItem="5Ad-ZW-br6" firstAttribute="top" secondItem="QQJ-ts-wMd" secondAttribute="top" constant="10" id="z25-cx-rUu"/>
-                                        </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lbu-ND-AN8" userLabel="Middle">
                                         <rect key="frame" x="0.0" y="263" width="414" height="262"/>
-                                        <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Beer-Mug" translatesAutoresizingMaskIntoConstraints="NO" id="3lW-JA-WFn">
-                                                <rect key="frame" x="142.66666666666669" y="20" width="128.66666666666669" height="172"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" secondItem="3lW-JA-WFn" secondAttribute="height" multiplier="188:251" id="Uz0-sx-ueT"/>
-                                                </constraints>
-                                            </imageView>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstItem="3lW-JA-WFn" firstAttribute="centerX" secondItem="lbu-ND-AN8" secondAttribute="centerX" id="Xzu-gd-0RB"/>
-                                            <constraint firstItem="3lW-JA-WFn" firstAttribute="top" secondItem="lbu-ND-AN8" secondAttribute="top" constant="20" id="nlv-0o-h7O"/>
-                                            <constraint firstAttribute="bottom" secondItem="3lW-JA-WFn" secondAttribute="bottom" constant="70" id="s24-OP-GmM"/>
-                                        </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lti-aq-sBw" userLabel="Bottom">
                                         <rect key="frame" x="0.0" y="526" width="414" height="262"/>
@@ -1553,6 +1514,8 @@
                             <constraint firstItem="aYQ-Y3-AWp" firstAttribute="leading" secondItem="lZc-NG-w1d" secondAttribute="leading" id="Zql-eM-Pqw"/>
                             <constraint firstAttribute="trailing" secondItem="Ex8-Rw-Cgn" secondAttribute="trailing" id="eeD-Sd-1Sh"/>
                             <constraint firstItem="lZc-NG-w1d" firstAttribute="bottom" secondItem="Ex8-Rw-Cgn" secondAttribute="bottom" constant="30" id="fFj-pv-hHg"/>
+                            <constraint firstItem="dxz-Xn-bgi" firstAttribute="centerX" secondItem="lZc-NG-w1d" secondAttribute="centerX" id="fqx-Iq-cvT"/>
+                            <constraint firstItem="dxz-Xn-bgi" firstAttribute="top" secondItem="lZc-NG-w1d" secondAttribute="top" constant="40" id="ri2-qY-Lb0"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="lZc-NG-w1d"/>
                     </view>
@@ -2002,6 +1965,8 @@
         <image name="Beer-Mug" width="456" height="592"/>
         <image name="beer7" width="200" height="100"/>
         <image name="bg1" width="1242" height="2688"/>
+        <image name="billigebamserLogoUdenFlasker" width="266.33334350585938" height="108"/>
+        <image name="billigebamserlogopng" width="341.33334350585938" height="341.33334350585938"/>
         <image name="chevron.left" catalog="system" width="48" height="64"/>
         <image name="chevron.right" catalog="system" width="48" height="64"/>
         <image name="desktopcomputer" catalog="system" width="64" height="50"/>
