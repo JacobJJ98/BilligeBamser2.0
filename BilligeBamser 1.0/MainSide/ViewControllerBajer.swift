@@ -5,7 +5,7 @@
 //  Created by Nicolai Dam on 23/11/2019.
 //  Copyright © 2019 Jacob Jørgensen. All rights reserved.
 //
-
+import MapKit
 import UIKit
 
 class ViewControllerBajer: UIViewController {
@@ -21,6 +21,7 @@ class ViewControllerBajer: UIViewController {
     var erFavo:Bool = false
     var id:String = ""
     var måRyge:Bool = false
+    var kordinat: CLLocationCoordinate2D?
     
     
     var firstTime: Bool = true
@@ -143,6 +144,11 @@ class ViewControllerBajer: UIViewController {
         }
     }
     @IBAction func findVej(_ sender: UIButton) {
+        let coordinate = CLLocationCoordinate2DMake(kordinat!.latitude,kordinat!.longitude)
+        let mapItem = MKMapItem(placemark: MKPlacemark(coordinate: coordinate, addressDictionary:nil))
+        mapItem.name = barnavn
+        mapItem.openInMaps(launchOptions: [MKLaunchOptionsDirectionsModeKey : MKLaunchOptionsDirectionsModeDriving])
+        
     }
 }
     
