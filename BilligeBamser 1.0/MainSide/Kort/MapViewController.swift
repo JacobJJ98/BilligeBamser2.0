@@ -58,6 +58,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         }
         text.backgroundColor = .clear
         text.text = "Kortet er opdaret"
+        text.font = UIFont(name:"TreBuchet MS",size:18)
         mapView.addSubview(text)
    
         // let newView = RefreshButton()

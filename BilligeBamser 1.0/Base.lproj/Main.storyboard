@@ -613,7 +613,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QPG-fH-fck">
-                                        <rect key="frame" x="0.0" y="272.66666666666663" width="414" height="272.66666666666663"/>
+                                        <rect key="frame" x="0.0" y="272.66666666666652" width="414" height="272.66666666666663"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="cmE-cz-DBt">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="272.66666666666669"/>
@@ -667,10 +667,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I61-eh-dAE">
-                                        <rect key="frame" x="0.0" y="545.33333333333337" width="414" height="272.66666666666663"/>
+                                        <rect key="frame" x="0.0" y="545.33333333333303" width="414" height="272.66666666666663"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="43w-Ml-tuE">
-                                                <rect key="frame" x="30" y="142.66666666666663" width="354" height="60"/>
+                                                <rect key="frame" x="30" y="142.66666666666652" width="354" height="60"/>
                                                 <color key="backgroundColor" name="bajerGrøn"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="60" id="zwJ-22-yaw"/>
