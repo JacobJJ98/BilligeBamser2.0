@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import Hero
 
 class IntroViewController: UIViewController, UITabBarControllerDelegate {
+    //KOM NU GIT
+    
     
     let tabbarController = CustomTabbarController()
 
@@ -34,6 +37,9 @@ class IntroViewController: UIViewController, UITabBarControllerDelegate {
                               BarListe.shared.addBar(bar: bar)
                           }
                         BarListe.shared.findFavo()
+                        
+                        self.tabbarController.isHeroEnabled = true
+                        self.tabbarController.heroModalAnimationType = HeroDefaultAnimationType.fade
                          
                         self.present(self.tabbarController, animated: true, completion: nil)
                       }
@@ -47,7 +53,19 @@ class IntroViewController: UIViewController, UITabBarControllerDelegate {
             
         } else {
                 print("IKKE LOGGET IND!!")
-                self.performSegue(withIdentifier: "forNewUser", sender: nil)
+            
+            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                               let v1Nav = storyBoard.instantiateViewController(withIdentifier: "startsideVC") as! UIViewController
+                               
+                               v1Nav.isHeroEnabled = true
+                      
+                               
+                               // let direction = HeroDefaultAnimationType.Direction.self
+                               v1Nav.heroModalAnimationType = HeroDefaultAnimationType.fade
+                               
+                               self.present(v1Nav, animated: true, completion: nil)
+            
+                // self.performSegue(withIdentifier: "forNewUser", sender: nil)
             
         }
     }

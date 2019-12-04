@@ -38,9 +38,10 @@ class MereViewController: UIViewController {
                     let v1Nav = storyBoard.instantiateViewController(withIdentifier: "startsideVC") as! UIViewController
                     
                     v1Nav.isHeroEnabled = true
+           
                     
-                    let direction = HeroDefaultAnimationType.Direction.down
-                    v1Nav.heroModalAnimationType = HeroDefaultAnimationType.cover(direction: direction)
+                    // let direction = HeroDefaultAnimationType.Direction.self
+                    v1Nav.heroModalAnimationType = HeroDefaultAnimationType.fade
                     
                     self.present(v1Nav, animated: true, completion: nil)
                     
