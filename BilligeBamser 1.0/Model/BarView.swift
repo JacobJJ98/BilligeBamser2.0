@@ -13,6 +13,7 @@ class BarView2: MKAnnotationView {
   override var annotation: MKAnnotation? {
     willSet {
         guard (newValue as? Bar) != nil else {return}
+        let bar = newValue as! Bar
       canShowCallout = true
       calloutOffset = CGPoint(x: 0, y: 10)
         
@@ -24,9 +25,45 @@ class BarView2: MKAnnotationView {
     
         
         // sætter billedet som skal markere barerne på kortet!!
-        image = UIImage(named: "18kr2")
+        image = self.imageForPrice(price: bar.flaskepris)
     }
   }
+    
+    func imageForPrice(price: Int) -> UIImage {
+        if let image = UIImage(named: "øl\(price)kr") {
+            return image
+        } else {
+            return UIImage(named: "øl5kr")!
+        }
+       /*
+        switch price {
+        case 5:
+            return UIImage(named: "øl27kr")!
+        case 5:
+        return UIImage(named: "øl27kr")!
+            case 5:
+            return UIImage(named: "øl27kr")!
+            case 5:
+            return UIImage(named: "øl27kr")!
+            case 5:
+            return UIImage(named: "øl27kr")!
+            case 5:
+            return UIImage(named: "øl27kr")!
+            case 5:
+            return UIImage(named: "øl27kr")!
+            case 5:
+            return UIImage(named: "øl27kr")!
+            case 5:
+            return UIImage(named: "øl27kr")!
+            case 5:
+            return UIImage(named: "øl27kr")!
+            case 5:
+            return UIImage(named: "øl27kr")!
+        default:
+            otherwise, do something else
+        }
+ */
+    }
 }
 
 
