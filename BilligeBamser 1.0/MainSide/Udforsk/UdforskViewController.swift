@@ -223,7 +223,7 @@ class UdforskViewController: UIViewController, UICollectionViewDelegate, UIColle
             if let lokationen = locationManager.location {
                 let distIMeter: Double = (lokationen.distance(from: barKoord))/1000.rounded()
                 let distRounded = String(format: "%.1f", distIMeter)
-                cell.afstand.text = "\(distRounded)"
+                cell.afstand.text = "\(distRounded) km"
                 BarListe.shared.barerNærmeste[indexPath.row].afstand = distRounded
             } else {
                 cell.afstand.text = "-"
@@ -303,7 +303,7 @@ class UdforskViewController: UIViewController, UICollectionViewDelegate, UIColle
             if let lokationen = locationManager.location {
                            let distIMeter: Double = (lokationen.distance(from: barKoord))/1000.rounded()
                            let distRounded = String(format: "%.1f", distIMeter)
-                           cell2.afstand.text = "\(distRounded)"
+                           cell2.afstand.text = "\(distRounded) km"
                            BarListe.shared.barerBilligste[indexPath.row].afstand = distRounded
                        } else {
                            cell2.afstand.text = "-"
@@ -371,7 +371,7 @@ class UdforskViewController: UIViewController, UICollectionViewDelegate, UIColle
                        if let lokationen = locationManager.location {
                                       let distIMeter: Double = (lokationen.distance(from: barKoord))/1000.rounded()
                                       let distRounded = String(format: "%.1f", distIMeter)
-                                      cell3.afstand.text = "\(distRounded)"
+                                      cell3.afstand.text = "\(distRounded) km"
                                       BarListe.shared.barer[indexPath.row].afstand = distRounded
                                   } else {
                                       cell3.afstand.text = "-"

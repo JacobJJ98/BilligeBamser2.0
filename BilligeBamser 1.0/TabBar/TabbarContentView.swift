@@ -9,6 +9,8 @@
 import UIKit
 import ESTabBarController_swift
 
+//Dette er et normalt item i vores tabbar
+
 class TabBarContentView: ESTabBarItemContentView {
     
     public var duration = 0.5

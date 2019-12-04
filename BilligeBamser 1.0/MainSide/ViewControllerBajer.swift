@@ -27,6 +27,7 @@ class ViewControllerBajer: UIViewController {
     var firstTime: Bool = true
     
     @IBOutlet var erFavoImage: UIImageView!
+    @IBOutlet var myRygeIm: UIImageView!
     
     override func viewDidAppear(_ animated: Bool) {
         print("må ryge er \(måRyge)")
@@ -95,6 +96,31 @@ class ViewControllerBajer: UIViewController {
                 // Fallback on earlier versions
             }
         }
+        
+        if måRyge {
+            
+            if #available(iOS 13.0, *) {
+                let im = UIImage(named: "smoke")?.withTintColor(.white, renderingMode: .alwaysOriginal)
+                myRygeIm.image = im
+            } else {
+                // Fallback on earlier versions
+            }
+        
+        }
+        else {
+          
+            if #available(iOS 13.0, *) {
+                let im = UIImage(named: "nosmoke")?.withTintColor(.white, renderingMode: .alwaysOriginal)
+                myRygeIm.image = im
+            } else {
+                // Fallback on earlier versions
+            }
+                
+        
+        }
+        
+        
+     
         super.viewDidLoad()
         
       

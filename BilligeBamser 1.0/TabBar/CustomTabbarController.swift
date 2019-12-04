@@ -46,14 +46,22 @@ class CustomTabbarController: ESTabBarController {
         
         let v5Nav = storyBoard.instantiateViewController(withIdentifier: "mereVC") as! UINavigationController
         
-        v1Nav.tabBarItem = ESTabBarItem.init(TabBarContentView(), image: UIImage(named: "udforskGrey"), selectedImage: UIImage(named: "udforskOrange"))
-        v2Nav.tabBarItem = ESTabBarItem.init(TabBarContentView(), image: UIImage(named: "mapGrey"), selectedImage: UIImage(named: "mapOrange"))
-        
-        v3Nav.tabBarItem = ESTabBarItem.init(ExampleIrregularityContentView(), title: nil, image: UIImage(named: "photo_big-1"), selectedImage: UIImage(named: "photo_big-1"))
-        
-        
-        v4Nav.tabBarItem = ESTabBarItem.init(TabBarContentView(),image: UIImage(named: "favoGrey"), selectedImage: UIImage(named: "favoOrange"))
-        v5Nav.tabBarItem = ESTabBarItem.init(TabBarContentView(), image: UIImage(named: "mereGrey"), selectedImage: UIImage(named: "mereOrange"))
+        if #available(iOS 13.0, *) {
+            
+            v1Nav.tabBarItem = ESTabBarItem.init(TabBarContentView(), image: UIImage(named: "udforskGrey"), selectedImage: UIImage(named: "udforskGrey")?.withTintColor(UIColor.white))
+            
+            v2Nav.tabBarItem = ESTabBarItem.init(TabBarContentView(), image: UIImage(named: "mapGrey"), selectedImage: UIImage(named: "mapGrey")?.withTintColor(UIColor.white))
+            
+            v3Nav.tabBarItem = ESTabBarItem.init(TabBarContentView(), image: UIImage(systemName: "plus.circle.fill")?.withTintColor(UIColor.white), selectedImage: UIImage(systemName: "plus.circle.fill")?.withTintColor(UIColor.white))
+            
+            v4Nav.tabBarItem = ESTabBarItem.init(TabBarContentView(),image: UIImage(named: "favoGrey"), selectedImage: UIImage(named: "favoOrange")?.withTintColor(UIColor.white))
+            
+            v5Nav.tabBarItem = ESTabBarItem.init(TabBarContentView(), image: UIImage(named: "mereGrey"), selectedImage: UIImage(named: "mereOrange")?.withTintColor(UIColor.white))
+            
+        } else {
+            // Fallback on earlier versions
+        }
+
         
         self.viewControllers = [v1Nav, v2Nav, v3Nav, v4Nav, v5Nav]
         modalPresentationStyle = .fullScreen

@@ -24,26 +24,26 @@
 	<string>FirebaseCoreDiagnosticsInterop</string>
 	<string>Hero</string>
 	<string>GoogleMobileAds</string>
-	<string>WatchKit</string>
 	<string>MobileCoreServices</string>
+	<string>WatchKit</string>
 	<string>FirebaseInstanceID</string>
 	<string>FirebaseMLVisionFaceModel</string>
-	<string>CoreText</string>
+	<string>AdSupport</string>
 	<string>FirebaseAuthInterop</string>
 	<string>FirebaseAuth</string>
 	<string>FirebaseMLNaturalLanguage</string>
 	<string>FirebaseMLVisionLabelModel</string>
-	<string>AppKit</string>
 	<string>FBSDKLoginKit</string>
 	<string>FBSDKCoreKit</string>
 	<string>SVProgressHUD</string>
-	<string>AdSupport</string>
+	<string>AppKit</string>
+	<string>CoreText</string>
 	<string>CoreFoundation</string>
 	<string>ESTabBarController</string>
 	<string>FirebasePerformance</string>
 	<string>FirebaseMLNLTranslate</string>
-	<string>AuthenticationServices</string>
 	<string>Crashlytics</string>
+	<string>AuthenticationServices</string>
 	<string>XCTest</string>
 	<string>FirebaseMLVisionAutoML</string>
 	<string>netinet</string>
@@ -55,11 +55,11 @@
 	<string>CommonCrypto</string>
 	<string>FirebaseMLVision</string>
 	<string>FirebaseMLNLLanguageID</string>
-	<string>AudioToolbox</string>
 	<string>QuartzCore</string>
+	<string>GTMSessionFetcher</string>
 	<string>SystemConfiguration</string>
 	<string>FirebaseAnalytics</string>
-	<string>GTMSessionFetcher</string>
+	<string>AudioToolbox</string>
 	<string>Security</string>
 	<string>BilligeBamser1</string>
 	<string>FirebaseMLVisionObjectDetection</string>

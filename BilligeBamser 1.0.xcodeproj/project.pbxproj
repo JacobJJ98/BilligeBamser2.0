@@ -14,7 +14,6 @@
 		284DEA912371AB40004471F5 /* NavigationControllerUdforsk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284DEA902371AB40004471F5 /* NavigationControllerUdforsk.swift */; };
 		2865BAC22361935D00CE8878 /* ExampleBouncesContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2865BABE2361934D00CE8878 /* ExampleBouncesContentView.swift */; };
 		2865BAC32361935D00CE8878 /* ExampleNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2865BABF2361935200CE8878 /* ExampleNavigationController.swift */; };
-		2865BAC42361935D00CE8878 /* ExampleBasicContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2865BAC02361935800CE8878 /* ExampleBasicContentView.swift */; };
 		2865BAC52361935D00CE8878 /* ExampleIrregularityContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2865BAC12361935D00CE8878 /* ExampleIrregularityContentView.swift */; };
 		2865BAC72361936400CE8878 /* CustomTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2865BAC62361936400CE8878 /* CustomTabbarController.swift */; };
 		2865BAC9236193F600CE8878 /* TabbarContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2865BAC8236193F600CE8878 /* TabbarContentView.swift */; };
@@ -78,7 +77,6 @@
 		284DEA902371AB40004471F5 /* NavigationControllerUdforsk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerUdforsk.swift; sourceTree = "<group>"; };
 		2865BABE2361934D00CE8878 /* ExampleBouncesContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleBouncesContentView.swift; sourceTree = "<group>"; };
 		2865BABF2361935200CE8878 /* ExampleNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleNavigationController.swift; sourceTree = "<group>"; };
-		2865BAC02361935800CE8878 /* ExampleBasicContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleBasicContentView.swift; sourceTree = "<group>"; };
 		2865BAC12361935D00CE8878 /* ExampleIrregularityContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleIrregularityContentView.swift; sourceTree = "<group>"; };
 		2865BAC62361936400CE8878 /* CustomTabbarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabbarController.swift; sourceTree = "<group>"; };
 		2865BAC8236193F600CE8878 /* TabbarContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabbarContentView.swift; sourceTree = "<group>"; };
@@ -186,7 +184,6 @@
 			isa = PBXGroup;
 			children = (
 				2865BAC8236193F600CE8878 /* TabbarContentView.swift */,
-				2865BAC02361935800CE8878 /* ExampleBasicContentView.swift */,
 				2865BAC62361936400CE8878 /* CustomTabbarController.swift */,
 				2865BABE2361934D00CE8878 /* ExampleBouncesContentView.swift */,
 				2865BAC12361935D00CE8878 /* ExampleIrregularityContentView.swift */,
@@ -525,7 +522,6 @@
 				EEDE0A20236F4DEF00E7B095 /* FavoriterTableViewController.swift in Sources */,
 				2865BAC72361936400CE8878 /* CustomTabbarController.swift in Sources */,
 				282592EA238FD43D00B34D28 /* UIScrollViewFile.swift in Sources */,
-				2865BAC42361935D00CE8878 /* ExampleBasicContentView.swift in Sources */,
 				286D41BE2378599500708CC1 /* MapNavigationController.swift in Sources */,
 				287ECAEF234E5FF200487427 /* OpretBajerViewController.swift in Sources */,
 				EE805A31234DF9B40095651D /* AppDelegate.swift in Sources */,
@@ -773,7 +769,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = G6TSQJ6DQ5;
+				DEVELOPMENT_TEAM = 8B9KRX6NBR;
 				INFOPLIST_FILE = "BilligeBamser 1.0/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -793,7 +789,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = G6TSQJ6DQ5;
+				DEVELOPMENT_TEAM = 8B9KRX6NBR;
 				INFOPLIST_FILE = "BilligeBamser 1.0/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (

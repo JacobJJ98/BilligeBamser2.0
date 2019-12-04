@@ -5,6 +5,7 @@
 //  Created by Nicolai Dam on 23/11/2019.
 //  Copyright © 2019 Jacob Jørgensen. All rights reserved.
 //
+/*
 
 import UIKit
 
@@ -38,3 +39,4 @@ class ExampleBouncesContentView: ExampleBasicContentView {
         imageView.layer.add(impliesAnimation, forKey: nil)
     }
 }
+*/

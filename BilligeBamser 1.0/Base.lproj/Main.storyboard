@@ -12,7 +12,7 @@
         <!--Kort-->
         <scene sceneID="0BT-Fr-ll7">
             <objects>
-                <viewController title="Kort" id="Z6h-zG-AZk" customClass="MapViewController" customModule="BilligeBamser1_0" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Kort" id="Z6h-zG-AZk" customClass="MapViewController" customModule="Billige_Bamser" customModuleProvider="target" sceneMemberID="viewController">
                     <mapView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="5Lb-qc-fjp">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -30,7 +30,7 @@
         <!--Udforsk-->
         <scene sceneID="Nky-Ix-Ltj">
             <objects>
-                <viewController title="Udforsk" extendedLayoutIncludesOpaqueBars="YES" id="VPP-as-xrx" customClass="UdforskViewController" customModule="BilligeBamser1_0" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Udforsk" extendedLayoutIncludesOpaqueBars="YES" id="VPP-as-xrx" customClass="UdforskViewController" customModule="Billige_Bamser" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WZB-Pz-qFb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="900"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -87,7 +87,7 @@
                                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                         </collectionViewFlowLayout>
                                                         <cells>
-                                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionViewCellID" id="qgN-N8-9XJ" customClass="CollectionViewCell" customModule="BilligeBamser1_0" customModuleProvider="target">
+                                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionViewCellID" id="qgN-N8-9XJ" customClass="CollectionViewCell" customModule="Billige_Bamser" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="200" height="120"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -226,7 +226,7 @@
                                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                         </collectionViewFlowLayout>
                                                         <cells>
-                                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionViewCellID2" id="deq-hS-P9C" customClass="CollectionViewCell2" customModule="BilligeBamser1_0" customModuleProvider="target">
+                                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionViewCellID2" id="deq-hS-P9C" customClass="CollectionViewCell2" customModule="Billige_Bamser" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="200" height="120"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -367,7 +367,7 @@
                                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                         </collectionViewFlowLayout>
                                                         <cells>
-                                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionViewCellID3" id="zd3-pT-a13" customClass="CollectionViewCell3" customModule="BilligeBamser1_0" customModuleProvider="target">
+                                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionViewCellID3" id="zd3-pT-a13" customClass="CollectionViewCell3" customModule="Billige_Bamser" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="200" height="120"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -414,15 +414,15 @@
                                                                                 <constraint firstAttribute="width" constant="23" id="o2u-Za-qCx"/>
                                                                             </constraints>
                                                                         </imageView>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="2.4km" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZDH-qF-JHk">
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="2.4km" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="ZDH-qF-JHk">
                                                                             <rect key="frame" x="159" y="75" width="32.5" height="19.5"/>
                                                                             <constraints>
-                                                                                <constraint firstAttribute="width" constant="32.5" id="OcG-4U-yVx"/>
                                                                                 <constraint firstAttribute="height" constant="19.5" id="mm3-3W-QxL"/>
                                                                             </constraints>
                                                                             <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="11"/>
                                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                             <nil key="highlightedColor"/>
+                                                                            <size key="shadowOffset" width="0.0" height="0.0"/>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="17kr" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nlZ-j0-FG0">
                                                                             <rect key="frame" x="41" y="33" width="80" height="35"/>
@@ -546,16 +546,16 @@
         <!--Billy booze-->
         <scene sceneID="ELC-EW-LlO">
             <objects>
-                <viewController storyboardIdentifier="ViewControllerBajer" extendedLayoutIncludesOpaqueBars="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Dmr-LE-3m4" customClass="ViewControllerBajer" customModule="BilligeBamser1_0" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewControllerBajer" extendedLayoutIncludesOpaqueBars="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Dmr-LE-3m4" customClass="ViewControllerBajer" customModule="Billige_Bamser" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sRe-ZK-5qX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="wvS-rQ-Be5">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="24090"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c0W-9V-yvp">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="272.66666666666669"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="8030"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="beer7" translatesAutoresizingMaskIntoConstraints="NO" id="Q4O-LU-y9n">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
@@ -586,18 +586,6 @@
                                                     <action selector="favorit:" destination="Dmr-LE-3m4" eventType="touchUpInside" id="84j-BI-Yqu"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gUb-NF-d6P">
-                                                <rect key="frame" x="354" y="90" width="30" height="30"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="01m-Pl-Fxj"/>
-                                                    <constraint firstAttribute="height" constant="30" id="Him-ep-G3F"/>
-                                                    <constraint firstAttribute="width" constant="30" id="jti-LQ-Qgh"/>
-                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="30" id="vzl-Sk-aES"/>
-                                                </constraints>
-                                                <connections>
-                                                    <action selector="favorit:" destination="Dmr-LE-3m4" eventType="touchUpInside" id="d6s-4S-17t"/>
-                                                </connections>
-                                            </button>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Beer-Mug" translatesAutoresizingMaskIntoConstraints="NO" id="ajX-H0-le6">
                                                 <rect key="frame" x="354" y="90" width="30" height="30"/>
                                                 <constraints>
@@ -610,7 +598,6 @@
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="gUb-NF-d6P" firstAttribute="top" secondItem="oVO-R1-oBS" secondAttribute="bottom" constant="30" id="73Z-ux-FXW"/>
                                             <constraint firstItem="oVO-R1-oBS" firstAttribute="top" secondItem="c0W-9V-yvp" secondAttribute="top" constant="30" id="7Dr-LF-Hr4"/>
                                             <constraint firstItem="Q4O-LU-y9n" firstAttribute="leading" secondItem="c0W-9V-yvp" secondAttribute="leading" id="9eC-SO-FWX"/>
                                             <constraint firstAttribute="trailing" secondItem="Q4O-LU-y9n" secondAttribute="trailing" id="CX8-NS-d3D"/>
@@ -621,22 +608,21 @@
                                             <constraint firstItem="Q4O-LU-y9n" firstAttribute="bottom" secondItem="4tZ-4Z-8fk" secondAttribute="bottom" constant="30" id="fgc-Oj-lH3"/>
                                             <constraint firstItem="4tZ-4Z-8fk" firstAttribute="leading" secondItem="Q4O-LU-y9n" secondAttribute="leading" constant="30" id="rtW-uc-a58"/>
                                             <constraint firstItem="ajX-H0-le6" firstAttribute="top" secondItem="oVO-R1-oBS" secondAttribute="bottom" constant="30" id="sCS-yy-0nr"/>
-                                            <constraint firstAttribute="trailing" secondItem="gUb-NF-d6P" secondAttribute="trailing" constant="30" id="tAs-Up-Aka"/>
                                             <constraint firstAttribute="height" constant="150" id="uVE-vx-cT6"/>
                                             <constraint firstAttribute="trailing" secondItem="oPX-Sw-FEQ" secondAttribute="trailing" constant="30" id="yUv-b0-TBZ"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QPG-fH-fck">
-                                        <rect key="frame" x="0.0" y="272.66666666666663" width="414" height="272.66666666666663"/>
+                                        <rect key="frame" x="0.0" y="8030" width="414" height="8030"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="cmE-cz-DBt">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="272.66666666666669"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="8030"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ogX-gA-ejm">
-                                                        <rect key="frame" x="0.0" y="0.0" width="207" height="272.66666666666669"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="207" height="8030"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flaske" translatesAutoresizingMaskIntoConstraints="NO" id="gBN-N5-pGz">
-                                                                <rect key="frame" x="107" y="29.999999999999986" width="100" height="242.66666666666663"/>
+                                                                <rect key="frame" x="107" y="30" width="100" height="8000"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="100" id="MPv-GR-Zaq"/>
                                                                 </constraints>
@@ -650,10 +636,10 @@
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uJG-zH-w9Q">
-                                                        <rect key="frame" x="207" y="0.0" width="207" height="272.66666666666669"/>
+                                                        <rect key="frame" x="207" y="0.0" width="207" height="8030"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Frh-HC-5DK">
-                                                                <rect key="frame" x="17" y="112" width="86" height="49"/>
+                                                                <rect key="frame" x="17" y="3990.6666666666661" width="86" height="49"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="49" id="1bQ-0L-oVO"/>
                                                                     <constraint firstAttribute="width" constant="86" id="Oa6-bb-jVB"/>
@@ -681,10 +667,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I61-eh-dAE">
-                                        <rect key="frame" x="0.0" y="545.33333333333337" width="414" height="272.66666666666663"/>
+                                        <rect key="frame" x="0.0" y="16060" width="414" height="8030"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="43w-Ml-tuE">
-                                                <rect key="frame" x="30" y="142.66666666666663" width="354" height="60"/>
+                                                <rect key="frame" x="30" y="7900" width="354" height="60"/>
                                                 <color key="backgroundColor" name="bajerGrøn"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="60" id="zwJ-22-yaw"/>
@@ -735,6 +721,7 @@
                     <connections>
                         <outlet property="erFavoImage" destination="oVO-R1-oBS" id="eR0-kg-EOh"/>
                         <outlet property="findVej" destination="43w-Ml-tuE" id="M6I-xq-ih1"/>
+                        <outlet property="myRygeIm" destination="ajX-H0-le6" id="CUN-LJ-Cwq"/>
                         <outlet property="navnTitel" destination="4tZ-4Z-8fk" id="Rc2-Pa-MIJ"/>
                         <outlet property="prisen" destination="Frh-HC-5DK" id="afS-IV-QQP"/>
                     </connections>
@@ -746,7 +733,7 @@
         <!--Opret Bajer View Controller-->
         <scene sceneID="CCw-vN-qeD">
             <objects>
-                <viewController storyboardIdentifier="opretBajer" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9Dw-J6-6kB" customClass="OpretBajerViewController" customModule="BilligeBamser1_0" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="opretBajer" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9Dw-J6-6kB" customClass="OpretBajerViewController" customModule="Billige_Bamser" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="T3W-W6-lmf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -940,7 +927,7 @@
         <!--Mere-->
         <scene sceneID="za0-N2-ElF">
             <objects>
-                <viewController id="Vze-wJ-7Jw" customClass="MereViewController" customModule="BilligeBamser1_0" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Vze-wJ-7Jw" customClass="MereViewController" customModule="Billige_Bamser" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="994-OF-JW1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="1212"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1032,8 +1019,8 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KHK-Yc-Vuw" userLabel="InstaView">
                                                         <rect key="frame" x="8" y="64" width="398" height="48"/>
                                                         <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ig3" translatesAutoresizingMaskIntoConstraints="NO" id="0S9-8E-z0x">
-                                                                <rect key="frame" x="8" y="5" width="48" height="38"/>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="plus.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="0S9-8E-z0x">
+                                                                <rect key="frame" x="8.0000000000000018" y="6" width="19.666666666666671" height="36.666666666666671"/>
                                                             </imageView>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="flJ-CL-MXj">
                                                                 <rect key="frame" x="377.66666666666669" y="15.999999999999996" width="12.333333333333314" height="16.333333333333339"/>
@@ -1287,13 +1274,13 @@
         <!--Favoritter-->
         <scene sceneID="sPV-xF-R0M">
             <objects>
-                <tableViewController id="ZfP-hV-aBo" customClass="FavoriterTableViewController" customModule="BilligeBamser1_0" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="ZfP-hV-aBo" customClass="FavoriterTableViewController" customModule="Billige_Bamser" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Xxu-x2-IXJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="barCell" rowHeight="72" id="ebn-5j-Osp" customClass="HeadlineTableViewCell" customModule="BilligeBamser1_0" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="barCell" rowHeight="72" id="ebn-5j-Osp" customClass="HeadlineTableViewCell" customModule="Billige_Bamser" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="72"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ebn-5j-Osp" id="VyC-2e-m95">
@@ -1362,7 +1349,7 @@
         <!--Favoritter-->
         <scene sceneID="cFJ-Kn-fMW">
             <objects>
-                <navigationController storyboardIdentifier="favoVC2" title="Favoritter" id="GrD-VQ-Ow2" customClass="FavoritterNavigationController" customModule="BilligeBamser1_0" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="favoVC2" title="Favoritter" id="GrD-VQ-Ow2" customClass="FavoritterNavigationController" customModule="Billige_Bamser" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="CyH-uy-7VF">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -1386,7 +1373,7 @@
         <!--Intro View Controller-->
         <scene sceneID="92t-xz-Oyw">
             <objects>
-                <viewController id="V3M-0s-aSb" customClass="IntroViewController" customModule="BilligeBamser1_0" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="V3M-0s-aSb" customClass="IntroViewController" customModule="Billige_Bamser" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="igO-ou-aex">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1417,7 +1404,7 @@
         <!--Startside View Controller-->
         <scene sceneID="ZgS-OH-B96">
             <objects>
-                <viewController storyboardIdentifier="startsideVC" modalPresentationStyle="fullScreen" id="yaP-uK-V5q" customClass="StartsideViewController" customModule="BilligeBamser1_0" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="startsideVC" modalPresentationStyle="fullScreen" id="yaP-uK-V5q" customClass="StartsideViewController" customModule="Billige_Bamser" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PiF-8X-gbb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1533,7 +1520,7 @@
         <!--Logind View Controller-->
         <scene sceneID="t1o-dM-OMf">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="feu-lp-tZK" customClass="LogindViewController" customModule="BilligeBamser1_0" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="feu-lp-tZK" customClass="LogindViewController" customModule="Billige_Bamser" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mhc-PN-R7Q">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1685,7 +1672,7 @@
         <!--Opret Bruger View Controller-->
         <scene sceneID="dL8-hG-T3W">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="g6S-CM-Wsb" customClass="OpretBrugerViewController" customModule="BilligeBamser1_0" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="g6S-CM-Wsb" customClass="OpretBrugerViewController" customModule="Billige_Bamser" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RDf-YW-9J7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1858,7 +1845,7 @@
         <!--Mere-->
         <scene sceneID="yqp-0F-xQk">
             <objects>
-                <navigationController storyboardIdentifier="mereVC" title="Mere" automaticallyAdjustsScrollViewInsets="NO" id="Hov-iz-ci7" customClass="MereNavigationController" customModule="BilligeBamser1_0" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="mereVC" title="Mere" automaticallyAdjustsScrollViewInsets="NO" id="Hov-iz-ci7" customClass="MereNavigationController" customModule="Billige_Bamser" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="tHe-zW-t6I">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -1881,7 +1868,7 @@
         <!--Map Navigation Controller-->
         <scene sceneID="2Vd-uL-nuF">
             <objects>
-                <navigationController storyboardIdentifier="mapVC" automaticallyAdjustsScrollViewInsets="NO" id="YhJ-bA-exD" customClass="MapNavigationController" customModule="BilligeBamser1_0" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="mapVC" automaticallyAdjustsScrollViewInsets="NO" id="YhJ-bA-exD" customClass="MapNavigationController" customModule="Billige_Bamser" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" id="Dvm-X6-HeV">
@@ -1905,7 +1892,7 @@
         <!--Navigation Controller Udforsk-->
         <scene sceneID="ETx-Uw-TNG">
             <objects>
-                <navigationController storyboardIdentifier="udforskVC" automaticallyAdjustsScrollViewInsets="NO" id="9sm-LX-bnG" customClass="NavigationControllerUdforsk" customModule="BilligeBamser1_0" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="udforskVC" automaticallyAdjustsScrollViewInsets="NO" id="9sm-LX-bnG" customClass="NavigationControllerUdforsk" customModule="Billige_Bamser" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="udforsk75x75" selectedImage="udforsk75x75" id="mvZ-6V-2gt"/>
                     <toolbarItems/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
@@ -1973,9 +1960,9 @@
         <image name="exclamationmark.circle" catalog="system" width="64" height="60"/>
         <image name="fb2" width="24" height="24"/>
         <image name="flaske" width="1169" height="4000"/>
-        <image name="ig3" width="24" height="24"/>
         <image name="mappin" catalog="system" width="52" height="64"/>
         <image name="person.circle" catalog="system" width="64" height="60"/>
+        <image name="plus.circle.fill" catalog="system" width="64" height="60"/>
         <image name="questionmark.circle" catalog="system" width="64" height="60"/>
         <image name="udforsk75x75" width="25" height="25"/>
         <namedColor name="MereSiden">
