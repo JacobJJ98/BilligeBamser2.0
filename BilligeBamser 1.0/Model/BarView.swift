@@ -18,7 +18,7 @@ class BarView2: MKAnnotationView {
         
         let mapsButton = UIButton(frame: CGRect(origin: CGPoint.zero,
            size: CGSize(width: 30, height: 30)))
-        mapsButton.setBackgroundImage(UIImage(named: "mapOrange"), for: UIControl.State())
+        mapsButton.setBackgroundImage(UIImage(named: "route75"), for: UIControl.State())
         rightCalloutAccessoryView = mapsButton
         
     
