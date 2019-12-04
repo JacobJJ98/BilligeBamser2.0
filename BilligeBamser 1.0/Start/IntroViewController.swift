@@ -38,10 +38,11 @@ class IntroViewController: UIViewController, UITabBarControllerDelegate {
                           }
                         BarListe.shared.findFavo()
                         
-                        self.tabbarController.isHeroEnabled = true
-                        self.tabbarController.heroModalAnimationType = HeroDefaultAnimationType.fade
+                       // self.tabbarController.isHeroEnabled = true
+                        //self.tabbarController.heroModalAnimationType = HeroDefaultAnimationType.fade
+                        
                          
-                        self.present(self.tabbarController, animated: true, completion: nil)
+                        self.present(self.tabbarController, animated: false, completion: nil)
                       }
                   }
                     
@@ -53,19 +54,7 @@ class IntroViewController: UIViewController, UITabBarControllerDelegate {
             
         } else {
                 print("IKKE LOGGET IND!!")
-            
-            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                               let v1Nav = storyBoard.instantiateViewController(withIdentifier: "startsideVC") as! UIViewController
-                               
-                               v1Nav.isHeroEnabled = true
-                      
-                               
-                               // let direction = HeroDefaultAnimationType.Direction.self
-                               v1Nav.heroModalAnimationType = HeroDefaultAnimationType.fade
-                               
-                               self.present(v1Nav, animated: true, completion: nil)
-            
-                // self.performSegue(withIdentifier: "forNewUser", sender: nil)
+                self.performSegue(withIdentifier: "forNewUser", sender: nil)
             
         }
     }
