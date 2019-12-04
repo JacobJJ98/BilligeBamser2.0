@@ -34,23 +34,21 @@ class FirebaseAPI {
     }
     
     func opretBrugerFireStore(navn: String, completionHandler: @escaping (_ result: String?, _ error: Error?) -> Void){
-        
         self.db = Firestore.firestore()
         
         let favo: [String] = []
         if let user = Auth.auth().currentUser {
             self.db.collection("Bruger").document(user.uid).setData([
-                "Navn": navn,
-                            "Favoritsteder": favo
-                        ]) { err in
-                            if let err = err {
-                                print("FEJL NÅR BRUGER SKULLE I DB")
-                                completionHandler(nil, err)
-                            } else {
-                              print("SUCCES MED AT TILFØJE BRUGER I DB")
-                                completionHandler(user.uid, nil)
-                            }
-                            
+                "Navn": navn, "Favoritsteder": favo ]) { err in
+                    if let err = err {
+                        print("FEJL NÅR BRUGER SKULLE I DB")
+                        completionHandler(nil, err)
+                        
+                    } else {
+                        completionHandler(user.uid, nil)
+                        
+                    }
+                    
             }
             
         }
@@ -62,7 +60,6 @@ class FirebaseAPI {
                 print(err.localizedDescription)
                 completionHandler(nil, err)
             } else {
-                print("bruger blev oprettet i Auth")
                 if let res = result {
                     completionHandler(res, nil)
                 }
@@ -129,7 +126,6 @@ class FirebaseAPI {
     
 
     func hentBarer(completionHandler: @escaping (_ result: [Bar]?, _ error: Error?) -> Void){
-       
         db = Firestore.firestore()
         var midlerID = ""
         var midlerPris = 1
@@ -137,7 +133,6 @@ class FirebaseAPI {
         var midlerLong = 1.1
         var midlerNavn = ""
         var midlerRyg = true
-        
         
         db.collection("Bar").getDocuments(){ (querySnapshot, err) in
             if let err = err {
@@ -148,34 +143,27 @@ class FirebaseAPI {
                 for document in querySnapshot!.documents {
                     if let flaskepris = document.data()["flaskepris"] as? Int {
                         midlerPris = flaskepris
-                        print("\(flaskepris)")
-                        
                     }
                     if let latitude = document.data()["latitude"] as? String {
                         if let latitudeDouble = Double(latitude) {
                             midlerLati = latitudeDouble
-                            print("\(latitudeDouble)")
                         }
                       
                     }
                     if let longitude = document.data()["longitude"] as? String {
                         if let longitudeDouble = Double(longitude) {
                             midlerLong = longitudeDouble
-                            print("\(longitudeDouble)")
                         }
                         
                     }
                     if let Name = document.data()["navn"] as? String {
                         midlerNavn = Name
-                      print(Name)
                     }
                     if let rygning = document.data()["rygning"] as? Bool {
                         midlerRyg = rygning
-                      print("\(rygning)")
                     }
                     if let id = document.data()["id"] as? String {
                         midlerID = id
-                        print(id)
                     }
                    var kor = CLLocationCoordinate2D()
                    kor.latitude = midlerLati
@@ -196,7 +184,7 @@ class FirebaseAPI {
         return Auth.auth().currentUser
     }
     
-    func logOut(completionHandler: @escaping (_ result: String?, _ error: Error?) -> Void)-> Void {
+    func logOut(completionHandler: @escaping (_ result: String?, _ error: Error?) -> Void){
         
         do {
             try Auth.auth().signOut()
@@ -212,28 +200,29 @@ class FirebaseAPI {
         if let mail = Auth.auth().currentUser?.email {
             BarListe.shared.mail = mail
         }
-                print(Auth.auth().currentUser!.uid)
-                       // først hentes den bruger der er logget ind
-                       db = Firestore.firestore()
-                       let docRef = db.collection("Bruger").document(Auth.auth().currentUser!.uid)
-                       docRef.getDocument { (document, error) in
-                           if let document = document {
-                               if let navn =  document.data()!["Navn"] as? String {
-                                brugeren.navn = navn
-                                
-                            }
-                            if let favoritsteder = document.data()!["Favoritsteder"] as? [String] {
-                                brugeren.Favoritsteder = favoritsteder
-                                
-                            }
-                            completionHandler(brugeren, nil)
-                            
-                           } else {
-                                completionHandler(nil, error)
-                               print("Document does not exist")
-                           }
-                       }
+        // først hentes den bruger der er logget ind
+        db = Firestore.firestore()
+        let docRef = db.collection("Bruger").document(Auth.auth().currentUser!.uid)
+        docRef.getDocument { (document, error) in
+            if let document = document {
+                if let navn =  document.data()!["Navn"] as? String {
+                    brugeren.navn = navn
+                }
+                if let favoritsteder = document.data()!["Favoritsteder"] as? [String] {
+                    brugeren.Favoritsteder = favoritsteder
+                    
+                }
+                completionHandler(brugeren, nil)
+                
+            } else {
+                completionHandler(nil, error)
+                print("Document does not exist")
+                
             }
+            
+        }
+        
+    }
    
     func opdaterFavorit(completionHandler: @escaping (_ result: String?, _ error: Error?) -> Void){
          self.db = Firestore.firestore()
@@ -245,7 +234,6 @@ class FirebaseAPI {
                         print(err!.localizedDescription)
                         completionHandler(nil, err!)
                     } else {
-                        print("Favo er opdateret!")
                         completionHandler("Succes", nil)
                     }
         })
