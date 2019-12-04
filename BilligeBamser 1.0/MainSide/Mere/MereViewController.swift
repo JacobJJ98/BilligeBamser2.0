@@ -22,6 +22,10 @@ class MereViewController: UIViewController {
     @IBOutlet weak var omOsView: UIView!
     var tapGesture = UITapGestureRecognizer()
     
+    @IBOutlet weak var hjemmesideView: UIView!
+    @IBOutlet weak var instaView: UIView!
+    @IBOutlet weak var fbView: UIView!
+    @IBOutlet weak var privatLivsPView: UIView!
     
     @IBAction func onLogUdv2(_ sender: UIButton) {
         FirebaseAPI.shared.logOut { (res, err) in
@@ -49,7 +53,7 @@ class MereViewController: UIViewController {
         super.viewDidLoad()
         print("MERE VIEW!!")
         
-         logUdKnapv2.layer.cornerRadius  = 20
+        // logUdKnapv2.layer.cornerRadius  = 20
         brugerNavnv2.text = BarListe.shared.brugerLoggetind.navn
         mailv2.text = BarListe.shared.mail
         
@@ -59,6 +63,21 @@ class MereViewController: UIViewController {
         tapGesture.numberOfTouchesRequired = 1
         omOsView.addGestureRecognizer(tapGesture)
         omOsView.isUserInteractionEnabled = true
+        
+        omOsView.layer.borderColor = UIColor.white.cgColor
+        omOsView.layer.borderWidth = 1.5
+        
+        hjemmesideView.layer.borderColor = UIColor.white.cgColor
+        hjemmesideView.layer.borderWidth = 1.5
+        
+        instaView.layer.borderColor = UIColor.white.cgColor
+        instaView.layer.borderWidth = 1.5
+        
+        fbView.layer.borderColor = UIColor.white.cgColor
+        fbView.layer.borderWidth = 1.5
+        
+        privatLivsPView.layer.borderColor = UIColor.white.cgColor
+        privatLivsPView.layer.borderWidth = 1.5
         
     }
     override func viewDidAppear(_ animated: Bool) {
@@ -76,6 +95,9 @@ class MereViewController: UIViewController {
          backgroundImage.image = UIImage(named: "bg6")
          backgroundImage.contentMode = UIView.ContentMode.scaleAspectFill
          self.view.insertSubview(backgroundImage, at: 0)
+        
+        logUdKnapv2.layer.cornerRadius = logUdKnapv2.bounds.size.height/2
+        logUdKnapv2.layer.cornerRadius = logUdKnapv2.bounds.size.height/2
      }
 
 }

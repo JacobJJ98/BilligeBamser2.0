@@ -613,7 +613,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QPG-fH-fck">
-                                        <rect key="frame" x="0.0" y="272.66666666666697" width="414" height="272.66666666666663"/>
+                                        <rect key="frame" x="0.0" y="272.66666666666663" width="414" height="272.66666666666663"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="cmE-cz-DBt">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="272.66666666666669"/>
@@ -667,10 +667,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I61-eh-dAE">
-                                        <rect key="frame" x="0.0" y="545.33333333333394" width="414" height="272.66666666666663"/>
+                                        <rect key="frame" x="0.0" y="545.33333333333337" width="414" height="272.66666666666663"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="43w-Ml-tuE">
-                                                <rect key="frame" x="30" y="142.66666666666697" width="354" height="60"/>
+                                                <rect key="frame" x="30" y="142.66666666666663" width="354" height="60"/>
                                                 <color key="backgroundColor" name="bajerGrøn"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="60" id="zwJ-22-yaw"/>
@@ -1115,7 +1115,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OwX-D0-ppI" userLabel="OplysingerElementer">
                                                 <rect key="frame" x="0.0" y="413" width="414" height="230"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F6Q-HL-F1D" userLabel="OmOsView">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F6Q-HL-F1D" userLabel="PrivatLivView">
                                                         <rect key="frame" x="8" y="8" width="398" height="48"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="exclamationmark.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="E1A-En-tgW">
@@ -1193,8 +1193,11 @@
                                                 <rect key="frame" x="0.0" y="673" width="414" height="200"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i6l-zV-2wc">
-                                                        <rect key="frame" x="130" y="40" width="154" height="40"/>
+                                                        <rect key="frame" x="30" y="40" width="354" height="50"/>
                                                         <color key="backgroundColor" name="bajerGrøn"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="btO-e7-WJU"/>
+                                                        </constraints>
                                                         <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="23"/>
                                                         <state key="normal" title="Log ud">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1206,10 +1209,9 @@
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstItem="i6l-zV-2wc" firstAttribute="top" secondItem="ziU-6U-PE9" secondAttribute="top" constant="40" id="cuu-hW-X8Y"/>
-                                                    <constraint firstItem="i6l-zV-2wc" firstAttribute="leading" secondItem="ziU-6U-PE9" secondAttribute="leading" constant="130" id="lUF-AP-wkK"/>
-                                                    <constraint firstAttribute="trailing" secondItem="i6l-zV-2wc" secondAttribute="trailing" constant="130" id="oLT-Sl-Bdz"/>
-                                                    <constraint firstAttribute="bottom" secondItem="i6l-zV-2wc" secondAttribute="bottom" constant="120" id="p5j-oW-f6R"/>
+                                                    <constraint firstItem="i6l-zV-2wc" firstAttribute="leading" secondItem="ziU-6U-PE9" secondAttribute="leading" constant="30" id="lUF-AP-wkK"/>
+                                                    <constraint firstAttribute="trailing" secondItem="i6l-zV-2wc" secondAttribute="trailing" constant="30" id="oLT-Sl-Bdz"/>
+                                                    <constraint firstAttribute="bottom" secondItem="i6l-zV-2wc" secondAttribute="bottom" constant="110" id="p5j-oW-f6R"/>
                                                     <constraint firstAttribute="height" constant="200" id="xH3-oK-qgW"/>
                                                 </constraints>
                                             </view>
@@ -1264,9 +1266,13 @@
                     <size key="freeformSize" width="414" height="1300"/>
                     <connections>
                         <outlet property="brugerNavnv2" destination="9ml-vV-Grs" id="OwT-bv-tT2"/>
+                        <outlet property="fbView" destination="vsx-Nq-kHT" id="148-l5-FZn"/>
+                        <outlet property="hjemmesideView" destination="VyP-wp-Cor" id="dMI-pC-pyh"/>
+                        <outlet property="instaView" destination="KHK-Yc-Vuw" id="va1-o0-sQL"/>
                         <outlet property="logUdKnapv2" destination="i6l-zV-2wc" id="t3m-l6-3Qk"/>
                         <outlet property="mailv2" destination="y9C-yv-vok" id="de6-of-q5Y"/>
                         <outlet property="omOsView" destination="ef9-vs-ux8" id="dmW-Xk-8W8"/>
+                        <outlet property="privatLivsPView" destination="F6Q-HL-F1D" id="Tbq-Cq-y20"/>
                         <outlet property="scrollView" destination="cm8-Wy-a30" id="32T-U7-vjr"/>
                     </connections>
                 </viewController>
