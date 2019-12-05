@@ -35,26 +35,18 @@ class MereViewController: UIViewController {
                        BarListe.shared.logOut()
                     
                     let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                    let v1Nav = storyBoard.instantiateViewController(withIdentifier: "startsideVC") as! UIViewController
+                    let nyVC = storyBoard.instantiateViewController(withIdentifier: "startsideVC") as! UIViewController
                     
-                    v1Nav.isHeroEnabled = true
-           
+                    nyVC.isHeroEnabled = true
+                    nyVC.heroModalAnimationType = HeroDefaultAnimationType.fade
                     
-                    // let direction = HeroDefaultAnimationType.Direction.self
-                    v1Nav.heroModalAnimationType = HeroDefaultAnimationType.fade
-                    
-                    self.present(v1Nav, animated: true, completion: nil)
-                    
-                       // self.dismiss(animated: true, completion: nil)
+                    self.present(nyVC, animated: true, completion: nil)
                    }
                }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("MERE VIEW!!")
-        
-        // logUdKnapv2.layer.cornerRadius  = 20
         brugerNavnv2.text = BarListe.shared.brugerLoggetind.navn
         mailv2.text = BarListe.shared.mail
         
@@ -81,15 +73,11 @@ class MereViewController: UIViewController {
         privatLivsPView.layer.borderWidth = 1
         
     }
-    override func viewDidAppear(_ animated: Bool) {
-        
-    }
     
     @objc func omOsTapped(_ sender: UITapGestureRecognizer) {
         guard let url = URL(string: "https://docs.google.com/document/d/1HWUYO8Rr-lddAzbX4hrHQrd9H3QeiF0_Bt20AFt626s/edit?usp=sharing") else {  return }
         UIApplication.shared.open(url)
     }
-    
     
     override func viewDidLayoutSubviews() {
          let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
