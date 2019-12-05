@@ -175,11 +175,6 @@ class LogindViewController: UIViewController, UITextFieldDelegate {
                             }
                         }
                         
-                        
-                        
-                        
-                        
-                        
                     }
                     
                     
@@ -188,15 +183,7 @@ class LogindViewController: UIViewController, UITextFieldDelegate {
             }
             
         }
-        
-        
-        
-        
-        
     }
-    
-    
-    
     @IBAction func TilbageTrykket(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
     }
