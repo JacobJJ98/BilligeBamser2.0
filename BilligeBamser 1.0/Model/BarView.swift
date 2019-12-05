@@ -14,22 +14,22 @@ class BarView: MKAnnotationView {
     willSet {
         guard (newValue as? Bar) != nil else {return}
         let bar = newValue as! Bar
-      canShowCallout = true
-      calloutOffset = CGPoint(x: 0, y: 10)
+        canShowCallout = true
+        calloutOffset = CGPoint(x: 0, y: 10)
         
-        let mapsButton = UIButton(frame: CGRect(origin: CGPoint.zero,
+        let kortKnappen = UIButton(frame: CGRect(origin: CGPoint.zero,
            size: CGSize(width: 30, height: 30)))
-        mapsButton.setBackgroundImage(UIImage(named: "route75"), for: UIControl.State())
-        rightCalloutAccessoryView = mapsButton
+        kortKnappen.setBackgroundImage(UIImage(named: "route75"), for: UIControl.State())
+        rightCalloutAccessoryView = kortKnappen
         
     
         
         // sætter billedet som skal markere barerne på kortet!!
-        image = self.imageForPrice(price: bar.flaskepris)
+        image = self.billedeForPris(price: bar.flaskepris)
     }
   }
     
-    func imageForPrice(price: Int) -> UIImage {
+    func billedeForPris(price: Int) -> UIImage {
         if let image = UIImage(named: "øl\(price)kr") {
             return image
         } else {
