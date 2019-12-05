@@ -22,7 +22,7 @@ class BarListe {
 
     private init()
     {
-        brugerLoggetind = Bruger(navn: "", favoritsteder: [""], nærmeste: [""])
+        brugerLoggetind = Bruger(navn: "", favoritsteder: [""])
         mail = ""
     }
     func logOut() -> Void {
@@ -45,25 +45,6 @@ class BarListe {
     }
     func addBar(bar: Bar) -> Void {
         barer.insert(bar, at: barer.count)
-    }
-    
-    func udskrivTest() -> String {
-        let tekst = "Antal Barer: \(barer.count)"
-        return tekst
-    }
-    func udskrivTestFavo() -> Void {
-        print("INDE I FAVO PRINT!")
-        print(egneFavoritter.count)
-        for bar in egneFavoritter {
-            print(bar.id!)
-        }
-    }
-    func udskrivTestBarer() -> Void {
-        print("INDE I BAR PRINT!")
-        print(barer.count)
-        for bar in barer {
-            print(bar.id!)
-        }
     }
     
     func findFavo() -> Void {
@@ -95,7 +76,6 @@ class BarListe {
         for bars in barer {
             var pris: Int = bars.flaskepris
             dictionary.updateValue(bars.flaskepris, forKey: bars.id!)
-
         }
         let sortedDictionary = dictionary.sorted { $0.1 < $1.1 }
         

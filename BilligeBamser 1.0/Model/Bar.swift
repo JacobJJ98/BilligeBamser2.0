@@ -29,13 +29,19 @@ class Bar: NSObject, MKAnnotation {
         self.coordinate = coordinate
     }
     
+    /*
+     Følgende func er taget fra: https://stackoverflow.com/questions/35199363/sort-array-by-calculated-distance-in-swift
+     */
     func distance(to location: CLLocation) -> CLLocationDistance {
         let selfloca = CLLocation(latitude: self.coordinate.latitude, longitude: self.coordinate.longitude)
         return location.distance(from: selfloca)
     }
-    
-    
 }
+
+/*
+ Følgende extension af Array er taget fra https://stackoverflow.com/questions/35199363/sort-array-by-calculated-distance-in-swift
+    dog er enkelte rettelser lavet, for at tilpasse vores kode.
+ */
 extension Array where Element == Bar {
 
     mutating func sort(by location: CLLocation) {

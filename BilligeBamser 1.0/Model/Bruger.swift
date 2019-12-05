@@ -9,12 +9,10 @@
 class Bruger {
     var navn: String
     var Favoritsteder: [String]
-    var nærmeste: [String]
     
-    init(navn: String, favoritsteder: [String], nærmeste: [String]) {
+    init(navn: String, favoritsteder: [String]) {
         self.navn = navn
         self.Favoritsteder = favoritsteder
-        self.nærmeste = nærmeste
     }
     
     func sletFavorit(ID: String) {

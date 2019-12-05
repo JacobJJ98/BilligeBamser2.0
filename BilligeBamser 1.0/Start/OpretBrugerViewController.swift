@@ -205,7 +205,7 @@ class OpretBrugerViewController: UIViewController, UITextFieldDelegate {
     }
     
     func lavBrugerIBarListe(navn: String) -> Void {
-        let nyBruger = Bruger(navn: navn, favoritsteder: [""], nærmeste: [""])
+        let nyBruger = Bruger(navn: navn, favoritsteder: [""])
         BarListe.shared.brugerLoggetind = nyBruger
     }
     @IBAction func TilbageTrykket(_ sender: UIButton) {
