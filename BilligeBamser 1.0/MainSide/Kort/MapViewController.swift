@@ -13,43 +13,34 @@ import SVProgressHUD
  
 class MapViewController: UIViewController, CLLocationManagerDelegate {
  
-    let regionRadius: CLLocationDistance = 350
+    let storrelsePaaRegion: CLLocationDistance = 350
     @IBOutlet var mapView: MKMapView!
-    var UIVE : UIView?
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
         mapView.delegate = self
         mapView.register(BarView.self, forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
-        let locationManager = CLLocationManager()
+        let lokationsManager = CLLocationManager()
         
         //Resterende sørger for at sætte current location som der hvor Map starter!!
-        // OBS tror godt det første tjek her kan fjernes!
-        if CLLocationManager.locationServicesEnabled() {
-            locationManager.delegate = self
-            locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
-            locationManager.startUpdatingLocation()
-            if let lokationen = locationManager.location {
-                let initialLocation = CLLocation(latitude: lokationen.coordinate.latitude, longitude: lokationen.coordinate.longitude)
-                centerMapOnLocation(location: initialLocation)
+            lokationsManager.delegate = self
+            lokationsManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+            lokationsManager.startUpdatingLocation()
+            if let lokationen = lokationsManager.location {
+                let startPos = CLLocation(latitude: lokationen.coordinate.latitude, longitude: lokationen.coordinate.longitude)
+                self.kortetsStartPosition(brugerenLoka:startPos)
             }
              mapView.showsUserLocation = true
-        }
         
+        // laver en refresh knap til venstre hjørne
         let button = UIButton(frame: CGRect(x: 0, y: 0, width: 500, height: 500))
         button.translatesAutoresizingMaskIntoConstraints = false
-        //button.center = mapView.center
-         // button.backgroundColor = UIColor.red
-          button.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "refresh35.png"))
-       //  button.setTitle("iOSDevCenters Click", for: .normal)
+        button.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "refresh35.png"))
         button.addTarget(self, action:#selector(self.buttonClicked), for: .touchUpInside)
-        
-       // button.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10).isActive = true
-       // button.topAnchor.constraint(equalTo: view.topAnchor, constant: 10).isActive = true
-         
            mapView.addSubview(button)
         
+        // laver en label der kommer frem ved opdatering
         let text = UITextField(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
         text.translatesAutoresizingMaskIntoConstraints = false
         text.isHidden = true
@@ -61,29 +52,22 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         }
         text.backgroundColor = .clear
         text.text = "Kortet er opdateret"
-        
         text.font = UIFont(name:"TreBuchet MS",size:18)
         mapView.addSubview(text)
-   
-        // let newView = RefreshButton()
-        // newView.backgroundColor = UIColor.red
-        // view.addSubview(newView)
- 
-      //  newView.translatesAutoresizingMaskIntoConstraints = false
+        
+        // laver constrains for knap og label
         let horizontalConstraint2 = button.leftAnchor.constraint(equalTo: mapView.leftAnchor, constant: 10)
         let verticalConstraint2 = button.topAnchor.constraint(equalTo: mapView.topAnchor, constant: 10)
         
         let horizontalConstraint2TEXT = text.centerXAnchor.constraint(equalTo: mapView.centerXAnchor, constant: 0)
         let verticalConstraint2TEXT = text.topAnchor.constraint(equalTo: mapView.topAnchor, constant: 10)
-       // let horizontalConstraint = newView.rightAnchor.constraint(equalTo: mapView.rightAnchor)
-       // let verticalConstraint = newView.centerYAnchor.constraint(equalTo: mapView.centerYAnchor)
+        
         NSLayoutConstraint.activate([horizontalConstraint2, verticalConstraint2,horizontalConstraint2TEXT, verticalConstraint2TEXT])
         
       
     }
+    
     @objc func buttonClicked() {
-    print("Button Clicked")
-        
        for view in self.mapView.subviews {
             if let textField = view as? UITextField {
                 textField.isHidden = false
@@ -92,38 +76,21 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
                 DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                     textField.isHidden = true
                 }
-                print(textField.text!)
             }
         }
-        
-        
-        
     }
     override func viewDidDisappear(_ animated: Bool) {
-        
-        print("DISAPEAR!")
         mapView.removeAnnotations(BarListe.shared.barer)
     }
         
     override func viewDidAppear(_ animated: Bool) {
-        print("Appear!")
         for bar in BarListe.shared.barer {
             mapView.addAnnotation(bar)
         }
         
     }
-    
-    
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else { return }
-        print("locations = \(locValue.latitude) \(locValue.longitude)")
-    }
-    
-    
-    
-    func centerMapOnLocation(location: CLLocation) {
-        let coordinateRegion = MKCoordinateRegion(center: location.coordinate, latitudinalMeters: regionRadius, longitudinalMeters: regionRadius)
-      mapView.setRegion(coordinateRegion, animated: true)
+    func kortetsStartPosition(brugerenLoka: CLLocation) {
+      mapView.setRegion(MKCoordinateRegion(center: brugerenLoka.coordinate, latitudinalMeters: storrelsePaaRegion, longitudinalMeters: storrelsePaaRegion), animated: true)
     }
     
  
@@ -135,20 +102,12 @@ extension MapViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView,
         calloutAccessoryControlTapped control: UIControl) {
         if let baren = view.annotation {
-            let coordinate = CLLocationCoordinate2DMake(baren.coordinate.latitude,baren.coordinate.longitude)
-            let mapItem = MKMapItem(placemark: MKPlacemark(coordinate: coordinate, addressDictionary:nil))
-            mapItem.name = baren.title!
-            mapItem.openInMaps(launchOptions: [MKLaunchOptionsDirectionsModeKey : MKLaunchOptionsDirectionsModeDriving])
+            let kordinatPaaBaren = CLLocationCoordinate2DMake(baren.coordinate.latitude,baren.coordinate.longitude)
+            let kortItem = MKMapItem(placemark: MKPlacemark(coordinate: kordinatPaaBaren, addressDictionary:nil))
+            kortItem.name = baren.title!
+            kortItem.openInMaps(launchOptions: [MKLaunchOptionsDirectionsModeKey : MKLaunchOptionsDirectionsModeDriving])
         }
     }
-}
- 
-class RefreshButton: UIView {
- 
-    override var intrinsicContentSize: CGSize {
-        return CGSize(width: 100, height: 100)
-    }
- 
 }
  
  
