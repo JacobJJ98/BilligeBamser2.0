@@ -44,7 +44,7 @@ class UdforskViewController: UIViewController, UICollectionViewDelegate, UIColle
     @IBOutlet weak var collectionView1: UICollectionView!
     @IBOutlet weak var collectionView2: UICollectionView!
     @IBOutlet weak var collectionView3: UICollectionView!
-    @IBOutlet var scrollView: UIScrollViewFile!
+    @IBOutlet var scrollView: UIScrollView!
     let lokationsManager = CLLocationManager()
     var refreshControl: UIRefreshControl!
     
