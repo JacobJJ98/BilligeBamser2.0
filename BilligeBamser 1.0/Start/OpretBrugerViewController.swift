@@ -8,7 +8,6 @@
 import UIKit
 import SVProgressHUD
 
-//Gør så keyboard lukker ned når der tabbes uden for
 
 class OpretBrugerViewController: UIViewController, UITextFieldDelegate {
     let tabbarController = TabbarController()
@@ -168,7 +167,6 @@ class OpretBrugerViewController: UIViewController, UITextFieldDelegate {
                         }
                     } else {
                         // oprettelsen lykkedes og vi kommer herind!
-                        print(dataRes!.debugDescription)
                         FirebaseAPI.shared.opretBrugerFireStore(navn: navn) { (res, error) in
                             if error != nil {
                                 print("FEJL NÅR BRUGER SKULLE I DB: \(error.debugDescription)")
