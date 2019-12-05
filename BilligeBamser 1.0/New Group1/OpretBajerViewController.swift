@@ -11,7 +11,7 @@ import CoreLocation
 import SVProgressHUD
 
 class OpretBajerViewController: UIViewController, CLLocationManagerDelegate, UITextFieldDelegate {
-    let locationManager = CLLocationManager()
+    let lokationsManager = CLLocationManager()
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -28,8 +28,6 @@ class OpretBajerViewController: UIViewController, CLLocationManagerDelegate, UIT
     @IBOutlet weak var rygningTilladt: UISwitch!
     @IBOutlet weak var adresse: UITextField!
     @IBOutlet var btn: UIButton!
-    
-    
     
     @IBAction func vedAendretLokation(_ sender: UISwitch) {
         if sender.isOn == false {
@@ -53,7 +51,6 @@ class OpretBajerViewController: UIViewController, CLLocationManagerDelegate, UIT
     
     @IBAction func opretBar(_ sender: UIButton) {
         SVProgressHUD.show()
-        print("opretBar er trykket")
         // kaldes for at oversætte fra Textfield og hen til klassevariable og kalder derefter find lokation som så derefter vil kalde tilføj til Firebase
         self.tilføjNavnogPris()
     }
@@ -68,13 +65,10 @@ class OpretBajerViewController: UIViewController, CLLocationManagerDelegate, UIT
                 let barNavnet = (barNavn.text! as NSString).replacingCharacters(in: range, with: string)
 
                 if prisFeltet.isEmpty || barNavnet.isEmpty || adresseFelt.isEmpty {
-                            
                             deaktiverOpretBtn()
                             
                         }
-                
                             else {
-                            
                             aktiverOpretBtn()
                             }
                 
@@ -88,48 +82,31 @@ class OpretBajerViewController: UIViewController, CLLocationManagerDelegate, UIT
                 let prisfelteter = (flaskePris.text! as NSString).replacingCharacters(in: range, with: string)
                 
                 if prisfelteter.isEmpty || barnavnet.isEmpty || adresseFelt.isEmpty {
-                            
                             deaktiverOpretBtn()
-                            
                         }
-                
                             else {
-                            
                             aktiverOpretBtn()
                             }
-                
             }
             
         }
         
         if(textField == self.adresse) {
             print("adresse")
-            
-            
             if let _ = adresse.text, let barnavnet = barNavn.text, let prisfelt = flaskePris.text {
                 let adrfelteter = (adresse.text! as NSString).replacingCharacters(in: range, with: string)
                 print("should change køres inde i flaskepris")
                 
                 if prisfelt.isEmpty || barnavnet.isEmpty || adrfelteter.isEmpty {
-                    
                     deaktiverOpretBtn()
-                    
                 }
-        
                     else {
-                    
                     aktiverOpretBtn()
                     }
                 }
-                
-            
-            
         }
-        
-        
         return true
     }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -183,10 +160,10 @@ class OpretBajerViewController: UIViewController, CLLocationManagerDelegate, UIT
     
     
     @IBAction func tilbage(_ sender: UIButton) {
-        performSegueToReturnBack()
+        performSegueTilbage()
     }
     
-    func performSegueToReturnBack()  {
+    func performSegueTilbage()  {
         
         self.dismiss(animated: true, completion: nil)
         
@@ -245,7 +222,7 @@ class OpretBajerViewController: UIViewController, CLLocationManagerDelegate, UIT
                                         }
                                         SVProgressHUD.showSuccess(withStatus: "Baren er oprettet")
                                         SVProgressHUD.dismiss(withDelay: 0.5)
-                                        self.performSegueToReturnBack()
+                                        self.performSegueTilbage()
                                         
                                     }
                                     
@@ -265,15 +242,13 @@ class OpretBajerViewController: UIViewController, CLLocationManagerDelegate, UIT
     }
     
     func findLokation() -> Void {
-        print("inde i findLokation")
         // find ud af om det skal være nuværende lokation eller adresse
         if nuværendeLokationStatus.isOn {
             
             
             //Resterende sørger for at sætte current location som der hvor Map starter!!
-            if CLLocationManager.locationServicesEnabled() {
-                locationManager.delegate = self
-                if let lokationen = locationManager.location {
+                lokationsManager.delegate = self
+                if let lokationen = lokationsManager.location {
                     print("LOKATIONEN ER: ")
                     print(lokationen.coordinate.latitude)
                     print(lokationen.coordinate.longitude)
@@ -284,19 +259,17 @@ class OpretBajerViewController: UIViewController, CLLocationManagerDelegate, UIT
                     // TODO:  lav en allert eller noget NICE
                     print("DU SKAL ACCEPTERE BRUG AF LOKATION!!!")
                 }
-            }
+            
             
             
             
         } else {
-            
             if let adrmidler = adresse.text {
                 guard adrmidler.count > 0 else {
                     SVProgressHUD.dismiss()
                     return
                 }
             }
-            // let address = "Toftebakken 15, 3790 Hasle"
             
             let geoCoder = CLGeocoder()
             if let adress = adresse.text {
