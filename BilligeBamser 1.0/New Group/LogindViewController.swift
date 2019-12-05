@@ -54,7 +54,10 @@ class LogindViewController: UIViewController, UITextFieldDelegate {
         
     }
     
-    
+    /*
+     Hjælp til denne metode er fundet her:
+    https://stackoverflow.com/questions/25621496/how-shouldchangecharactersinrange-works-in-swift
+     */
     //Metode til at disable login knap når felterne er tomme
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         if(textField == self.mailFelt) {
@@ -101,8 +104,10 @@ class LogindViewController: UIViewController, UITextFieldDelegate {
         return true
     }
     
-    
-    
+    /*
+     Inspiration fundet her:
+     https://stackoverflow.com/questions/25471114/how-to-validate-an-e-mail-address-in-swift
+     */
     func erMailKorrekt(mail: String) -> Bool {
         let regex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
         let predicate = NSPredicate(format:"SELF MATCHES %@", regex)
@@ -190,6 +195,11 @@ class LogindViewController: UIViewController, UITextFieldDelegate {
     
     
 }
+
+/*
+ Inspiration til extension kommet her fra:
+ https://stackoverflow.com/questions/5306240/ios-dismiss-keyboard-when-touching-outside-of-uitextfield/11623523
+ */
 //Gør så keyboard lukker ned når der tabbes uden for
 extension UIViewController {
     func setupHideKeyboardOnTap() {

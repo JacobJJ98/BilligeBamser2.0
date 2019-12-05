@@ -115,7 +115,7 @@ class OpretBajerViewController: UIViewController, CLLocationManagerDelegate, UIT
         flaskePris.delegate = self
         barNavn.delegate = self
         //Metode til at lukke keyboard ned ved tab uden for
-        self.setupHideKeyboardOnTapThis()
+        self.setupHideKeyboardOnTap()
     }
     
     func aktiverOpretBtn() {
@@ -294,15 +294,5 @@ class OpretBajerViewController: UIViewController, CLLocationManagerDelegate, UIT
     
 }
 
-//Gør så keyboard lukker ned når der tabbes uden for
-extension UIViewController {
-    func setupHideKeyboardOnTapThis() {
-        self.view.addGestureRecognizer(self.endEditingRecognizer())
-        self.navigationController?.navigationBar.addGestureRecognizer(self.endEditingRecognizer())
-    }
-    private func endEditingRecognizer() -> UIGestureRecognizer {
-        let tap = UITapGestureRecognizer(target: self.view, action: #selector(self.view.endEditing(_:)))
-        tap.cancelsTouchesInView = false
-        return tap
-    }
-}
+
+
