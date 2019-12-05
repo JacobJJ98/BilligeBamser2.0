@@ -170,10 +170,10 @@ class ViewControllerBajer: UIViewController {
         }
     }
     @IBAction func findVej(_ sender: UIButton) {
-        let coordinate = CLLocationCoordinate2DMake(kordinat!.latitude,kordinat!.longitude)
-        let mapItem = MKMapItem(placemark: MKPlacemark(coordinate: coordinate, addressDictionary:nil))
-        mapItem.name = barnavn
-        mapItem.openInMaps(launchOptions: [MKLaunchOptionsDirectionsModeKey : MKLaunchOptionsDirectionsModeDriving])
+        let kor = CLLocationCoordinate2DMake(kordinat!.latitude,kordinat!.longitude)
+        let kortItem = MKMapItem(placemark: MKPlacemark(coordinate: kor, addressDictionary:nil))
+        kortItem.name = barnavn
+        kortItem.openInMaps(launchOptions: [MKLaunchOptionsDirectionsModeKey : MKLaunchOptionsDirectionsModeDriving])
         
     }
 }

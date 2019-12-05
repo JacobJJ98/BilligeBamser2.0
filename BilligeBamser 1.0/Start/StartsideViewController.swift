@@ -52,10 +52,8 @@ class StartsideViewController: UIViewController {
                 if res.isCancelled {
                     return
                 }
-                
                 SVProgressHUD.show()
             }
-            
             // tjekker for evt fejl
             if let error = error {
                 print("Failed til login: \(error.localizedDescription)")
@@ -67,7 +65,6 @@ class StartsideViewController: UIViewController {
                 print("Failed to get acces token")
                 return
             }
-            
             let cred = FacebookAuthProvider.credential(withAccessToken: accesToken.tokenString)
             
             // ny login måde via API og her bliver de både logget ind og oprettet i databasen hvis det er første gang de logger ind!
