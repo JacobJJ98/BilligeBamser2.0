@@ -33,7 +33,6 @@ class FavoriterTableViewController: UITableViewController, CLLocationManagerDele
         if let lokationen = locationManager.location {
             BarListe.shared.sorterFavoEfterAfsted(loka: lokationen)
         }
-        print("Antal barer: \(BarListe.shared.barer.count)" )
         
         
         tableView.backgroundView = UIImageView(image: #imageLiteral(resourceName: "bg6"))
@@ -41,21 +40,16 @@ class FavoriterTableViewController: UITableViewController, CLLocationManagerDele
     
     override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         let delete = UITableViewRowAction(style: .destructive, title: "Delete") { (action, indexPath) in
-            // delete item at indexPath
-            // remove the item from the data model
-            
-            var id = BarListe.shared.egneFavoritter[indexPath.row].id!
+            let id = BarListe.shared.egneFavoritter[indexPath.row].id!
             
             BarListe.shared.brugerLoggetind.sletFavorit(ID: id)
             BarListe.shared.sletFavorit(ID: id)
             
             FirebaseAPI.shared.opdaterFavorit { (res, err) in
                 // completion her!
-                print("COMPLETION")
             }
             
-            // delete the table view row
-            print("efter Completion")
+            // slet baren visuelt i listen
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
         
@@ -64,25 +58,20 @@ class FavoriterTableViewController: UITableViewController, CLLocationManagerDele
     override func tableView(_ tableView: UITableView,
                             leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration?
     {
-        let closeAction = UIContextualAction(style: .normal, title:  "Vis vej", handler: { (ac:UIContextualAction, view:UIView, success:(Bool) -> Void) in
-            print("DER VISES VEJ!!!")
-            let coordinate = CLLocationCoordinate2DMake(BarListe.shared.egneFavoritter[indexPath.row].coordinate.latitude,BarListe.shared.egneFavoritter[indexPath.row].coordinate.longitude)
-            let mapItem = MKMapItem(placemark: MKPlacemark(coordinate: coordinate, addressDictionary:nil))
-            mapItem.name = BarListe.shared.egneFavoritter[indexPath.row].navn
-            mapItem.openInMaps(launchOptions: [MKLaunchOptionsDirectionsModeKey : MKLaunchOptionsDirectionsModeDriving])
+        let swipeVenstre = UIContextualAction(style: .normal, title:  "Vis vej", handler: { (ac:UIContextualAction, view:UIView, success:(Bool) -> Void) in
+            let koordinat = CLLocationCoordinate2DMake(BarListe.shared.egneFavoritter[indexPath.row].coordinate.latitude,BarListe.shared.egneFavoritter[indexPath.row].coordinate.longitude)
+            let kortItem = MKMapItem(placemark: MKPlacemark(coordinate: koordinat, addressDictionary:nil))
+            kortItem.name = BarListe.shared.egneFavoritter[indexPath.row].navn
+            kortItem.openInMaps(launchOptions: [MKLaunchOptionsDirectionsModeKey : MKLaunchOptionsDirectionsModeDriving])
             
             success(true)
         })
-        closeAction.backgroundColor = .blue
-        closeAction.title = "Vis vej"
-        
-        return UISwipeActionsConfiguration(actions: [closeAction])
-        
-    }
+        swipeVenstre.backgroundColor = .blue
+        return UISwipeActionsConfiguration(actions: [swipeVenstre])
+        }
     
     
     // MARK: - Table view data source
-    
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
@@ -94,16 +83,10 @@ class FavoriterTableViewController: UITableViewController, CLLocationManagerDele
         return BarListe.shared.egneFavoritter.count
     }
     
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "barCell", for: indexPath) as! HeadlineTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "barCell", for: indexPath) as! BarTableViewCell
         
-        // Configure the cell...
-        
-        // Configure the cell...
         cell.navnet.text = BarListe.shared.egneFavoritter[indexPath.row].navn
-        // cell.storBillede.image = UIImage(named: "Beer-Mug")
-        
         
         cell.prisTekst.text = "\(BarListe.shared.egneFavoritter[indexPath.row].flaskepris) Kr"
         if let lokationen = locationManager.location {
@@ -111,17 +94,11 @@ class FavoriterTableViewController: UITableViewController, CLLocationManagerDele
             
             let dist = lokationen.distance(from: barLoka)/1000.rounded()
             let distRounded = String(format: "%.1f", dist)
-            print(dist)
             
             cell.mapTekst.text = "\(distRounded) Km"
         } else {
             cell.mapTekst.text = "-"
         }
-        
-        
-        
-        
-        // cell.mapBillede.image = UIImage(named: "mapGrey")
         
         return cell
     }
@@ -178,16 +155,10 @@ class FavoriterTableViewController: UITableViewController, CLLocationManagerDele
     
 }
 
-class HeadlineTableViewCell: UITableViewCell {
-    
-    @IBOutlet weak var storBillede: UIImageView!
-    
+class BarTableViewCell: UITableViewCell {
     @IBOutlet weak var navnet: UILabel!
-    @IBOutlet weak var prisBillede: UIImageView!
     
     @IBOutlet weak var prisTekst: UILabel!
-    
-    @IBOutlet weak var mapBillede: UIImageView!
     
     @IBOutlet weak var mapTekst: UILabel!
     
