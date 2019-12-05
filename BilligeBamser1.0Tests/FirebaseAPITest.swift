@@ -7,7 +7,8 @@
 //
 
 import XCTest
-@testable import BilligeBamser1_0
+//@testable import BilligeBamser1_0
+@testable import Billige_Bamser
 
 class FirebaseAPITest: XCTestCase {
     

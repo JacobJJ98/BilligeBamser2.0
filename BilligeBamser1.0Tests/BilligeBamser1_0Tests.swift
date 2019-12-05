@@ -8,7 +8,8 @@
 
 import XCTest
 import MapKit
-@testable import BilligeBamser1_0
+// @testable import BilligeBamser1_0
+@testable import Billige_Bamser
 
 class BilligeBamser1_0Tests: XCTestCase {
 

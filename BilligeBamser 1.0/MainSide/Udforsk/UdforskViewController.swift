@@ -347,7 +347,7 @@ class UdforskViewController: UIViewController, UICollectionViewDelegate, UIColle
             } else {
                 // Fallback on earlier versions
             }
-                BarListe.shared.barerBilligste[indexPath.row].erFavo = false
+                BarListe.shared.barer[indexPath.row].erFavo = false
 
             for favo in BarListe.shared.brugerLoggetind.Favoritsteder {
                 print("første favorit er: \(BarListe.shared.brugerLoggetind.Favoritsteder)")
