@@ -9,14 +9,12 @@
 import UIKit
 import ESTabBarController_swift
 
-//Dette er et normalt item i vores tabbar
-
 class TabBarContentView: ESTabBarItemContentView {
     
     public var duration = 0.5
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
-       // highlightTextColor = UIColor.blue
         renderingMode = .alwaysOriginal
     }
     

@@ -36,16 +36,16 @@
 	<string>FBSDKLoginKit</string>
 	<string>FBSDKCoreKit</string>
 	<string>SVProgressHUD</string>
-	<string>AppKit</string>
 	<string>CoreText</string>
+	<string>AppKit</string>
 	<string>CoreFoundation</string>
-	<string>ESTabBarController</string>
 	<string>FirebasePerformance</string>
 	<string>FirebaseMLNLTranslate</string>
-	<string>Crashlytics</string>
 	<string>AuthenticationServices</string>
-	<string>XCTest</string>
+	<string>Crashlytics</string>
+	<string>ESTabBarController</string>
 	<string>FirebaseMLVisionAutoML</string>
+	<string>XCTest</string>
 	<string>netinet</string>
 	<string>GoogleDataTransport</string>
 	<string>protobuf</string>
@@ -56,22 +56,22 @@
 	<string>FirebaseMLVision</string>
 	<string>FirebaseMLNLLanguageID</string>
 	<string>QuartzCore</string>
-	<string>GTMSessionFetcher</string>
+	<string>AudioToolbox</string>
 	<string>SystemConfiguration</string>
 	<string>FirebaseAnalytics</string>
-	<string>AudioToolbox</string>
+	<string>GTMSessionFetcher</string>
 	<string>Security</string>
-	<string>BilligeBamser1</string>
 	<string>FirebaseMLVisionObjectDetection</string>
+	<string>BilligeBamser1</string>
 	<string>CoreGraphics</string>
 	<string>objc</string>
 	<string>CoreMedia</string>
 	<string>FirebaseDynamicLinks</string>
 	<string>UIKit</string>
 	<string>Fabric</string>
-	<string>CoreTelephony</string>
 	<string>FirebaseMLVisionBarcodeModel</string>
 	<string>Foundation</string>
+	<string>CoreTelephony</string>
 	<string>sys</string>
 	<string>nanopb</string>
 	<string>FirebaseFirestore</string>

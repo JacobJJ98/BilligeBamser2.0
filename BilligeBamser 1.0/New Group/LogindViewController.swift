@@ -14,15 +14,13 @@ import SVProgressHUD
 class LogindViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var btnLogin: UIButton!
-    
     @IBOutlet weak var mailFelt: UITextField!
-    
     @IBOutlet weak var kodeFelt: UITextField!
     
     var email: String?
     var kode: String?
     
-    let tabbarController = CustomTabbarController()
+    let tabbarController = TabbarController()
     
     override func viewDidLoad() {
         super.viewDidLoad()

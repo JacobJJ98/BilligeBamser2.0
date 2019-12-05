@@ -65,20 +65,20 @@ class MereViewController: UIViewController {
         omOsView.addGestureRecognizer(tapGesture)
         omOsView.isUserInteractionEnabled = true
         
-        omOsView.layer.borderColor = UIColor.white.cgColor
-        omOsView.layer.borderWidth = 1.5
+        omOsView.layer.borderColor = #colorLiteral(red: 0.4909999967, green: 0.4909999967, blue: 0.4909999967, alpha: 1)
+        omOsView.layer.borderWidth = 1
         
-        hjemmesideView.layer.borderColor = UIColor.white.cgColor
-        hjemmesideView.layer.borderWidth = 1.5
+        hjemmesideView.layer.borderColor = #colorLiteral(red: 0.4909999967, green: 0.4909999967, blue: 0.4909999967, alpha: 1)
+        hjemmesideView.layer.borderWidth = 1
         
-        instaView.layer.borderColor = UIColor.white.cgColor
-        instaView.layer.borderWidth = 1.5
+        instaView.layer.borderColor = #colorLiteral(red: 0.4909999967, green: 0.4909999967, blue: 0.4909999967, alpha: 1)
+        instaView.layer.borderWidth = 1
         
-        fbView.layer.borderColor = UIColor.white.cgColor
-        fbView.layer.borderWidth = 1.5
+        fbView.layer.borderColor = #colorLiteral(red: 0.4909999967, green: 0.4909999967, blue: 0.4909999967, alpha: 1)
+        fbView.layer.borderWidth = 1
         
-        privatLivsPView.layer.borderColor = UIColor.white.cgColor
-        privatLivsPView.layer.borderWidth = 1.5
+        privatLivsPView.layer.borderColor = #colorLiteral(red: 0.4909999967, green: 0.4909999967, blue: 0.4909999967, alpha: 1)
+        privatLivsPView.layer.borderWidth = 1
         
     }
     override func viewDidAppear(_ animated: Bool) {

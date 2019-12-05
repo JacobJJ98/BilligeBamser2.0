@@ -1,8 +1,8 @@
 //
-//  UIScrollView.swift
+//  UIScrollViewFile.swift
 //  BilligeBamser1.0
 //
-//  Created by Nicolai Dam on 28/11/2019.
+//  Created by Nicolai Dam on 05/12/2019.
 //  Copyright © 2019 Jacob Jørgensen. All rights reserved.
 //
 
@@ -17,7 +17,5 @@ class UIScrollViewFile: UIScrollView {
         // Drawing code
     }
     */
-    
-  
 
 }

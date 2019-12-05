@@ -17,8 +17,8 @@ class FavoriterTableViewController: UITableViewController, CLLocationManagerDele
     
     override func viewDidAppear(_ animated: Bool) {
         if let lokationen = locationManager.location {
-                   BarListe.shared.sorterFavoEfterAfsted(loka: lokationen)
-               }
+            BarListe.shared.sorterFavoEfterAfsted(loka: lokationen)
+        }
         tableView.reloadData()
         
     }
@@ -106,22 +106,22 @@ class FavoriterTableViewController: UITableViewController, CLLocationManagerDele
         
         
         cell.prisTekst.text = "\(BarListe.shared.egneFavoritter[indexPath.row].flaskepris) Kr"
-            if let lokationen = locationManager.location {
-                let barLoka = CLLocation(latitude: BarListe.shared.egneFavoritter[indexPath.row].coordinate.latitude, longitude: BarListe.shared.egneFavoritter[indexPath.row].coordinate.longitude)
-                
-                let dist = lokationen.distance(from: barLoka)/1000.rounded()
-                let distRounded = String(format: "%.1f", dist)
-                print(dist)
-                
-                cell.mapTekst.text = "\(distRounded) Km"
-            } else {
-                cell.mapTekst.text = "-"
-            }
+        if let lokationen = locationManager.location {
+            let barLoka = CLLocation(latitude: BarListe.shared.egneFavoritter[indexPath.row].coordinate.latitude, longitude: BarListe.shared.egneFavoritter[indexPath.row].coordinate.longitude)
+            
+            let dist = lokationen.distance(from: barLoka)/1000.rounded()
+            let distRounded = String(format: "%.1f", dist)
+            print(dist)
+            
+            cell.mapTekst.text = "\(distRounded) Km"
+        } else {
+            cell.mapTekst.text = "-"
+        }
         
         
         
         
-       // cell.mapBillede.image = UIImage(named: "mapGrey")
+        // cell.mapBillede.image = UIImage(named: "mapGrey")
         
         return cell
     }

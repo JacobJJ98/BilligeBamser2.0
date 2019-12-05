@@ -10,11 +10,9 @@ import UIKit
 import Hero
 
 class IntroViewController: UIViewController, UITabBarControllerDelegate {
-    //KOM NU GIT
     
+    let tabbarController = TabbarController()
     
-    let tabbarController = CustomTabbarController()
-
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -22,40 +20,40 @@ class IntroViewController: UIViewController, UITabBarControllerDelegate {
     override func viewDidAppear(_ animated: Bool) {
         if FirebaseAPI.shared.nuvaerendeBruger() != nil {
             FirebaseAPI.shared.hentBruger { (bruger, error) in
-            if error != nil {
-                print(error!.localizedDescription)
-            } else {
-                if let brugeren = bruger {
-                    BarListe.shared.tilføjBruger(bruger: brugeren)
-                }
-                  FirebaseAPI.shared.hentBarer { (result, error) in
-                  if error != nil {
+                if error != nil {
                     print(error!.localizedDescription)
-                  } else {
-                      if let barene = result {
-                          for bar in barene {
-                              BarListe.shared.addBar(bar: bar)
-                          }
-                        BarListe.shared.findFavo()
+                } else {
+                    if let brugeren = bruger {
+                        BarListe.shared.tilføjBruger(bruger: brugeren)
+                    }
+                    FirebaseAPI.shared.hentBarer { (result, error) in
+                        if error != nil {
+                            print(error!.localizedDescription)
+                        } else {
+                            if let barene = result {
+                                for bar in barene {
+                                    BarListe.shared.addBar(bar: bar)
+                                }
+                                BarListe.shared.findFavo()
+                                
+                                self.present(self.tabbarController, animated: false, completion: nil)
+                            }
+                        }
                         
-                       // self.tabbarController.isHeroEnabled = true
-                        //self.tabbarController.heroModalAnimationType = HeroDefaultAnimationType.fade
-                        
-                         
-                        self.present(self.tabbarController, animated: false, completion: nil)
-                      }
-                  }
+                    }
                     
-                }
-                
                 }
                 
             }
             
         } else {
-                print("IKKE LOGGET IND!!")
-                self.performSegue(withIdentifier: "forNewUser", sender: nil)
+            print("IKKE LOGGET IND!!")
+            self.performSegue(withIdentifier: "forNewUser", sender: nil)
             
         }
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
 }

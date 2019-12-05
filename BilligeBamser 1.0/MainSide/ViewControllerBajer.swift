@@ -10,10 +10,11 @@ import UIKit
 
 class ViewControllerBajer: UIViewController {
     
-
     @IBOutlet var prisen: UILabel!
     @IBOutlet var navnTitel: UILabel!
     @IBOutlet var findVej: UIButton!
+    @IBOutlet var erFavoImage: UIImageView!
+    @IBOutlet var myRygeIm: UIImageView!
     
     var pris:String = ""
     var afstand:String = ""
@@ -26,8 +27,7 @@ class ViewControllerBajer: UIViewController {
     
     var firstTime: Bool = true
     
-    @IBOutlet var erFavoImage: UIImageView!
-    @IBOutlet var myRygeIm: UIImageView!
+    
     
     override func viewDidAppear(_ animated: Bool) {
         print("må ryge er \(måRyge)")
@@ -46,13 +46,13 @@ class ViewControllerBajer: UIViewController {
                     b = true
                     return
                 }
-              
+                
             }
             if(b==false) {
                 erFavo = false
                 if #available(iOS 13.0, *) {
                     let im = UIImage(systemName:"heart")?.withTintColor(.white,
-                    renderingMode: .alwaysOriginal)
+                                                                        renderingMode: .alwaysOriginal)
                     erFavoImage.image = im
                 } else {
                     // Fallback on earlier versions
@@ -80,7 +80,7 @@ class ViewControllerBajer: UIViewController {
             print("er favo")
             if #available(iOS 13.0, *) {
                 let im = UIImage(systemName:"heart.fill")?.withTintColor(.white,
-                renderingMode: .alwaysOriginal)
+                                                                         renderingMode: .alwaysOriginal)
                 erFavoImage.image = im
             } else {
                 // Fallback on earlier versions
@@ -90,7 +90,7 @@ class ViewControllerBajer: UIViewController {
             print("er ikke favo")
             if #available(iOS 13.0, *) {
                 let im = UIImage(systemName:"heart")?.withTintColor(.white,
-                renderingMode: .alwaysOriginal)
+                                                                    renderingMode: .alwaysOriginal)
                 erFavoImage.image = im
             } else {
                 // Fallback on earlier versions
@@ -105,43 +105,43 @@ class ViewControllerBajer: UIViewController {
             } else {
                 // Fallback on earlier versions
             }
-        
+            
         }
         else {
-          
+            
             if #available(iOS 13.0, *) {
                 let im = UIImage(named: "nosmoke")?.withTintColor(.white, renderingMode: .alwaysOriginal)
                 myRygeIm.image = im
             } else {
                 // Fallback on earlier versions
             }
-                
-        
+            
+            
         }
         
         
-     
+        
         super.viewDidLoad()
         
-      
+        
         prisen.text = "\(pris)kr"
         self.title = barnavn
         self.navigationItem.backBarButtonItem?.tintColor = UIColor.white
-
+        
         // Do any additional setup after loading the view.
     }
     func updateServer() {
-          FirebaseAPI.shared.opdaterFavorit { (result, error) in
-          if error != nil {
-            print(error!.localizedDescription)
-              }
-          }
-          
-      }
+        FirebaseAPI.shared.opdaterFavorit { (result, error) in
+            if error != nil {
+                print(error!.localizedDescription)
+            }
+        }
+        
+    }
     
     @IBAction func favorit(_ sender: UIButton) {
         if(erFavo) {
-        
+            
             if #available(iOS 13.0, *) {
                 erFavo = false
                 
@@ -149,7 +149,7 @@ class ViewControllerBajer: UIViewController {
                 BarListe.shared.sletFavorit(ID: self.id)
                 updateServer()
                 let im = UIImage(systemName:"heart")?.withTintColor(.white,
-                renderingMode: .alwaysOriginal)
+                                                                    renderingMode: .alwaysOriginal)
                 erFavoImage.image = im
             } else {
                 // Fallback on earlier versions
@@ -162,7 +162,7 @@ class ViewControllerBajer: UIViewController {
                 BarListe.shared.tilføjFavorit(ID: self.id)
                 updateServer()
                 let im = UIImage(systemName:"heart.fill")?.withTintColor(.white,
-                renderingMode: .alwaysOriginal)
+                                                                         renderingMode: .alwaysOriginal)
                 erFavoImage.image = im
             } else {
                 // Fallback on earlier versions
@@ -177,6 +177,6 @@ class ViewControllerBajer: UIViewController {
         
     }
 }
-    
-  
+
+
 

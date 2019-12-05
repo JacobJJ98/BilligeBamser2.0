@@ -11,7 +11,7 @@ import SVProgressHUD
 //Gør så keyboard lukker ned når der tabbes uden for
 
 class OpretBrugerViewController: UIViewController, UITextFieldDelegate {
-    let tabbarController = CustomTabbarController()
+    let tabbarController = TabbarController()
     
     var navn: String?
     var email: String?

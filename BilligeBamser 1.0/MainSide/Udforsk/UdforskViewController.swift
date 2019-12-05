@@ -13,10 +13,7 @@ import FirebaseCore
 import FirebaseFirestore
 import FirebaseAuth
 import SVProgressHUD
-// COME ON GIT!!!
-// KFKFJDJVJ D
-// HALO
-// KOM NU
+
 class CollectionViewCell : UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet var pris: UILabel!
@@ -43,58 +40,51 @@ class CollectionViewCell3 : UICollectionViewCell {
 }
 
 class UdforskViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, CLLocationManagerDelegate {
-    
- 
-    
+
+    @IBOutlet weak var collectionView1: UICollectionView!
+    @IBOutlet weak var collectionView2: UICollectionView!
+    @IBOutlet weak var collectionView3: UICollectionView!
     @IBOutlet var scrollView: UIScrollViewFile!
-    
-     let locationManager = CLLocationManager()
-     
-    
-    //var locationManager = CLLocationManager()
+    let locationManager = CLLocationManager()
     var refreshControl: UIRefreshControl!
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
-
+    
     
     @objc func didPullToRefresh() {
         let locationManager = CLLocationManager()
         if let lokationen = locationManager.location {
-                   print("inde i loaktionenenenenen")
-                   
-              
-        
-                    FirebaseAPI.shared.hentBarer { (result, error) in
-                        if error != nil {
-                            
-                          print(error!.localizedDescription)
-                        } else {
-                            
-                            BarListe.shared.refresh()
-                            
-                            if let barene = result {
-                                for bar in barene {
-                                    BarListe.shared.addBar(bar: bar)
-                                }
-                                
-                                BarListe.shared.barerNærmeste = BarListe.shared.barer
-                                BarListe.shared.sorterNærmesteEfterAfsted(loka: lokationen)
-                                BarListe.shared.sorterBilligsteEfterPris()
-                                BarListe.shared.findFavo()
-                                self.collectionView1.reloadData()
-                                self.collectionView2.reloadData()
-                                self.collectionView3.reloadData()
-                                self.refreshControl?.endRefreshing()
-                             
-                            }
+            
+            FirebaseAPI.shared.hentBarer { (result, error) in
+                if error != nil {
+                    
+                    print(error!.localizedDescription)
+                } else {
+                    
+                    BarListe.shared.refresh()
+                    
+                    if let barene = result {
+                        for bar in barene {
+                            BarListe.shared.addBar(bar: bar)
                         }
-                          
+                        
+                        BarListe.shared.barerNærmeste = BarListe.shared.barer
+                        BarListe.shared.sorterNærmesteEfterAfsted(loka: lokationen)
+                        BarListe.shared.sorterBilligsteEfterPris()
+                        BarListe.shared.findFavo()
+                        self.collectionView1.reloadData()
+                        self.collectionView2.reloadData()
+                        self.collectionView3.reloadData()
+                        self.refreshControl?.endRefreshing()
+                        
                     }
-        
+                }
+                
+            }
+            
         } else {
-            print("inde i IKKE loaktionenenenenen")
             FirebaseAPI.shared.hentBarer { (result, error) in
                 if error != nil {
                     print(error!.localizedDescription)
@@ -107,7 +97,6 @@ class UdforskViewController: UIViewController, UICollectionViewDelegate, UIColle
                             
                         }
                         BarListe.shared.barerNærmeste = BarListe.shared.barer
-                        // BarListe.shared.sorterNærmesteEfterAfsted(loka: lokationen)
                         BarListe.shared.findFavo()
                         self.collectionView1.reloadData()
                         self.collectionView2.reloadData()
@@ -119,10 +108,10 @@ class UdforskViewController: UIViewController, UICollectionViewDelegate, UIColle
                 
             }
         }
-
-
+        
+        
     }
-  
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -131,14 +120,12 @@ class UdforskViewController: UIViewController, UICollectionViewDelegate, UIColle
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
         locationManager.startUpdatingLocation()
-        
-      
-    
+
         refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(didPullToRefresh), for: .valueChanged)
         refreshControl.tintColor = UIColor.white
         self.scrollView.addSubview(refreshControl)
-       
+        
         if let lokationen = locationManager.location {
             print("inde i loaktionenenenenen")
             BarListe.shared.barerNærmeste = BarListe.shared.barer
@@ -189,13 +176,7 @@ class UdforskViewController: UIViewController, UICollectionViewDelegate, UIColle
         backgroundImage.contentMode = UIView.ContentMode.scaleAspectFill
         self.view.insertSubview(backgroundImage, at: 0)
     }
-    
-    @IBOutlet weak var collectionView1: UICollectionView!
-    @IBOutlet weak var collectionView2: UICollectionView!
-    @IBOutlet weak var collectionView3: UICollectionView!
-    
-    
-    
+
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
@@ -231,20 +212,10 @@ class UdforskViewController: UIViewController, UICollectionViewDelegate, UIColle
                 
             }
             
-        //    let distIMeter: Double = (locationManager.location?.distance(from: barKoord))!/1000.rounded()
-            
-       //     let distRounded = String(format: "%.1f", distIMeter)
-            
-       //     cell.afstand.text = "\(distRounded)km"
-            
-      //      BarListe.shared.barerNærmeste[indexPath.row].afstand = distRounded
-            
-            let id = ["1", "2","3", "4","5", "6","7", "8","9", "10",]
-            
             if #available(iOS 13.0, *) {
-                   let im = UIImage(systemName:"heart")?.withTintColor(.white,
-                                     renderingMode: .alwaysOriginal)
-                                     cell.favoBillede.image = im
+                let im = UIImage(systemName:"heart")?.withTintColor(.white,
+                                                                    renderingMode: .alwaysOriginal)
+                cell.favoBillede.image = im
             } else {
                 // Fallback on earlier versions
             }
@@ -252,7 +223,7 @@ class UdforskViewController: UIViewController, UICollectionViewDelegate, UIColle
             BarListe.shared.barerNærmeste[indexPath.row].erFavo = false
             
             print("Status for favoritsteder er: \(BarListe.shared.brugerLoggetind.Favoritsteder)")
-
+            
             
             for favo in BarListe.shared.brugerLoggetind.Favoritsteder {
                 print("første favorit er: \(BarListe.shared.brugerLoggetind.Favoritsteder)")
@@ -262,18 +233,18 @@ class UdforskViewController: UIViewController, UICollectionViewDelegate, UIColle
                     BarListe.shared.barerNærmeste[indexPath.row].erFavo = true
                     
                     if #available(iOS 13.0, *) {
-                          let im = UIImage(systemName:"heart.fill")?.withTintColor(.white,
-                                                                   renderingMode: .alwaysOriginal)
-                                                                   cell.favoBillede.image = im
+                        let im = UIImage(systemName:"heart.fill")?.withTintColor(.white,
+                                                                                 renderingMode: .alwaysOriginal)
+                        cell.favoBillede.image = im
                     } else {
                         
                         // Fallback on earlier versions
                     }
                     
                 }
-    
+                
             }
-      
+            
             let testimage : UIImage = UIImage(named: billed[indexPath.row])!
             
             cell.imageView.image = testimage
@@ -301,28 +272,25 @@ class UdforskViewController: UIViewController, UICollectionViewDelegate, UIColle
             let barKoord = CLLocation(latitude: BarListe.shared.barerBilligste[indexPath.row].coordinate.latitude, longitude: BarListe.shared.barerBilligste[indexPath.row].coordinate.longitude)
             
             if let lokationen = locationManager.location {
-                           let distIMeter: Double = (lokationen.distance(from: barKoord))/1000.rounded()
-                           let distRounded = String(format: "%.1f", distIMeter)
-                           cell2.afstand.text = "\(distRounded) km"
-                           BarListe.shared.barerBilligste[indexPath.row].afstand = distRounded
-                       } else {
-                           cell2.afstand.text = "-"
-                           BarListe.shared.barerBilligste[indexPath.row].afstand = "-"
-                           
-                       }
+                let distIMeter: Double = (lokationen.distance(from: barKoord))/1000.rounded()
+                let distRounded = String(format: "%.1f", distIMeter)
+                cell2.afstand.text = "\(distRounded) km"
+                BarListe.shared.barerBilligste[indexPath.row].afstand = distRounded
+            } else {
+                cell2.afstand.text = "-"
+                BarListe.shared.barerBilligste[indexPath.row].afstand = "-"
+                
+            }
             print("ER IKKE FAVORIT STED")
             
             
             if #available(iOS 13.0, *) {
-                   let im = UIImage(systemName:"heart")?.withTintColor(.white,
-                                     renderingMode: .alwaysOriginal)
-                                     cell2.favoBillede.image = im
+                let im = UIImage(systemName:"heart")?.withTintColor(.white,
+                                                                    renderingMode: .alwaysOriginal)
+                cell2.favoBillede.image = im
             } else {
                 // Fallback on earlier versions
             }
-            
-            
-            let id = ["1", "2","3", "4","5", "6","7", "8","9", "10",]
             
             for favo in BarListe.shared.brugerLoggetind.Favoritsteder {
                 print("første favorit er: \(BarListe.shared.brugerLoggetind.Favoritsteder)")
@@ -332,7 +300,7 @@ class UdforskViewController: UIViewController, UICollectionViewDelegate, UIColle
                     
                     if #available(iOS 13.0, *) {
                         let im = UIImage(systemName:"heart.fill")?.withTintColor(.white,
-                        renderingMode: .alwaysOriginal)
+                                                                                 renderingMode: .alwaysOriginal)
                         cell2.favoBillede.image = im
                     } else {
                         
@@ -340,9 +308,9 @@ class UdforskViewController: UIViewController, UICollectionViewDelegate, UIColle
                     }
                     
                 }
-       
+                
             }
- 
+            
             
             
             
@@ -352,7 +320,7 @@ class UdforskViewController: UIViewController, UICollectionViewDelegate, UIColle
             
             
             cell2.pris.text = "\(BarListe.shared.barerBilligste[indexPath.row].flaskepris)kr"
- 
+            
             return cell2
             
         }
@@ -362,52 +330,49 @@ class UdforskViewController: UIViewController, UICollectionViewDelegate, UIColle
             let cell3 = collectionView3.dequeueReusableCell(withReuseIdentifier: "collectionViewCellID3", for: indexPath) as! CollectionViewCell3
             
             cell3.layer.cornerRadius = 5;
-        
+            
             cell3.text.text = BarListe.shared.barer[indexPath.row].navn
             cell3.pris.text = String(BarListe.shared.barer[indexPath.row].flaskepris)
             
             let barKoord = CLLocation(latitude: BarListe.shared.barer[indexPath.row].coordinate.latitude, longitude: BarListe.shared.barer[indexPath.row].coordinate.longitude)
-                       
-                       if let lokationen = locationManager.location {
-                                      let distIMeter: Double = (lokationen.distance(from: barKoord))/1000.rounded()
-                                      let distRounded = String(format: "%.1f", distIMeter)
-                                      cell3.afstand.text = "\(distRounded) km"
-                                      BarListe.shared.barer[indexPath.row].afstand = distRounded
-                                  } else {
-                                      cell3.afstand.text = "-"
-                                      BarListe.shared.barer[indexPath.row].afstand = "-"
-                                      
-                                  }
+            
+            if let lokationen = locationManager.location {
+                let distIMeter: Double = (lokationen.distance(from: barKoord))/1000.rounded()
+                let distRounded = String(format: "%.1f", distIMeter)
+                cell3.afstand.text = "\(distRounded) km"
+                BarListe.shared.barer[indexPath.row].afstand = distRounded
+            } else {
+                cell3.afstand.text = "-"
+                BarListe.shared.barer[indexPath.row].afstand = "-"
+                
+            }
             
             if #available(iOS 13.0, *) {
-                              let im = UIImage(systemName:"heart")?.withTintColor(.white,
-                                                renderingMode: .alwaysOriginal)
-                                                cell3.favoBillede.image = im
-                       } else {
-                           // Fallback on earlier versions
-                       }
-                       
-                       
-                       let id = ["1", "2","3", "4","5", "6","7", "8","9", "10",]
-                       
-                       for favo in BarListe.shared.brugerLoggetind.Favoritsteder {
-                           print("første favorit er: \(BarListe.shared.brugerLoggetind.Favoritsteder)")
-                           if favo == BarListe.shared.barer[indexPath.row].id {
-                               print("ER FAVORIT STED")
-                            BarListe.shared.barer[indexPath.row].erFavo = true
-                               
-                               if #available(iOS 13.0, *) {
-                                   let im = UIImage(systemName:"heart.fill")?.withTintColor(.white,
-                                   renderingMode: .alwaysOriginal)
-                                   cell3.favoBillede.image = im
-                               } else {
-                                   
-                                   // Fallback on earlier versions
-                               }
-                               
-                           }
-                  
-                       }
+                let im = UIImage(systemName:"heart")?.withTintColor(.white,
+                                                                    renderingMode: .alwaysOriginal)
+                cell3.favoBillede.image = im
+            } else {
+                // Fallback on earlier versions
+            }
+
+            for favo in BarListe.shared.brugerLoggetind.Favoritsteder {
+                print("første favorit er: \(BarListe.shared.brugerLoggetind.Favoritsteder)")
+                if favo == BarListe.shared.barer[indexPath.row].id {
+                    print("ER FAVORIT STED")
+                    BarListe.shared.barer[indexPath.row].erFavo = true
+                    
+                    if #available(iOS 13.0, *) {
+                        let im = UIImage(systemName:"heart.fill")?.withTintColor(.white,
+                                                                                 renderingMode: .alwaysOriginal)
+                        cell3.favoBillede.image = im
+                    } else {
+                        
+                        // Fallback on earlier versions
+                    }
+                    
+                }
+                
+            }
             
             
             let billed = ["beer5", "beer4","beer6", "beer3","beer7", "beer2","beer8", "beer1","beer10", "beer9",]
@@ -475,8 +440,8 @@ class UdforskViewController: UIViewController, UICollectionViewDelegate, UIColle
                 vc.afstand = afs
             }
             if let afs = BarListe.shared.barer[indexPath.row].afstand {
-                           vc.afstand = afs
-                       }
+                vc.afstand = afs
+            }
             
             if let erFavo = BarListe.shared.barer[indexPath.row].erFavo {
                 vc.erFavo = erFavo
@@ -494,6 +459,6 @@ class UdforskViewController: UIViewController, UICollectionViewDelegate, UIColle
         }
         
     }
-
+    
 }
 

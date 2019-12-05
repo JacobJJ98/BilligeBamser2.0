@@ -6,6 +6,8 @@
 //  Copyright © 2019 Jacob Jørgensen. All rights reserved.
 //
 
+/*
+
 import UIKit
 import ESTabBarController_swift
 class ExampleNavigationController: UINavigationController, UITabBarControllerDelegate {
@@ -22,3 +24,4 @@ class ExampleNavigationController: UINavigationController, UITabBarControllerDel
     
     
 }
+ */
