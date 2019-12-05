@@ -45,7 +45,7 @@ class UdforskViewController: UIViewController, UICollectionViewDelegate, UIColle
     @IBOutlet weak var collectionView2: UICollectionView!
     @IBOutlet weak var collectionView3: UICollectionView!
     @IBOutlet var scrollView: UIScrollViewFile!
-    let locationManager = CLLocationManager()
+    let lokationsManager = CLLocationManager()
     var refreshControl: UIRefreshControl!
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -54,15 +54,13 @@ class UdforskViewController: UIViewController, UICollectionViewDelegate, UIColle
     
     
     @objc func didPullToRefresh() {
-        let locationManager = CLLocationManager()
-        if let lokationen = locationManager.location {
+        let lokaManager = CLLocationManager()
+        if let lokationen = lokaManager.location {
             
             FirebaseAPI.shared.hentBarer { (result, error) in
                 if error != nil {
-                    
                     print(error!.localizedDescription)
                 } else {
-                    
                     BarListe.shared.refresh()
                     
                     if let barene = result {
@@ -115,18 +113,18 @@ class UdforskViewController: UIViewController, UICollectionViewDelegate, UIColle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        locationManager.requestWhenInUseAuthorization()
+        lokationsManager.requestWhenInUseAuthorization()
         
-        locationManager.delegate = self
-        locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
-        locationManager.startUpdatingLocation()
+        lokationsManager.delegate = self
+        lokationsManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+        lokationsManager.startUpdatingLocation()
 
         refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(didPullToRefresh), for: .valueChanged)
         refreshControl.tintColor = UIColor.white
         self.scrollView.addSubview(refreshControl)
         
-        if let lokationen = locationManager.location {
+        if let lokationen = lokationsManager.location {
             print("inde i loaktionenenenenen")
             BarListe.shared.barerNærmeste = BarListe.shared.barer
             BarListe.shared.sorterNærmesteEfterAfsted(loka: lokationen)
@@ -201,7 +199,7 @@ class UdforskViewController: UIViewController, UICollectionViewDelegate, UIColle
             
             let barKoord = CLLocation(latitude: BarListe.shared.barerNærmeste[indexPath.row].coordinate.latitude, longitude: BarListe.shared.barerNærmeste[indexPath.row].coordinate.longitude)
             
-            if let lokationen = locationManager.location {
+            if let lokationen = lokationsManager.location {
                 let distIMeter: Double = (lokationen.distance(from: barKoord))/1000.rounded()
                 let distRounded = String(format: "%.1f", distIMeter)
                 cell.afstand.text = "\(distRounded) km"
@@ -271,7 +269,7 @@ class UdforskViewController: UIViewController, UICollectionViewDelegate, UIColle
             
             let barKoord = CLLocation(latitude: BarListe.shared.barerBilligste[indexPath.row].coordinate.latitude, longitude: BarListe.shared.barerBilligste[indexPath.row].coordinate.longitude)
             
-            if let lokationen = locationManager.location {
+            if let lokationen = lokationsManager.location {
                 let distIMeter: Double = (lokationen.distance(from: barKoord))/1000.rounded()
                 let distRounded = String(format: "%.1f", distIMeter)
                 cell2.afstand.text = "\(distRounded) km"
@@ -336,7 +334,7 @@ class UdforskViewController: UIViewController, UICollectionViewDelegate, UIColle
             
             let barKoord = CLLocation(latitude: BarListe.shared.barer[indexPath.row].coordinate.latitude, longitude: BarListe.shared.barer[indexPath.row].coordinate.longitude)
             
-            if let lokationen = locationManager.location {
+            if let lokationen = lokationsManager.location {
                 let distIMeter: Double = (lokationen.distance(from: barKoord))/1000.rounded()
                 let distRounded = String(format: "%.1f", distIMeter)
                 cell3.afstand.text = "\(distRounded) km"
@@ -389,7 +387,6 @@ class UdforskViewController: UIViewController, UICollectionViewDelegate, UIColle
     
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
         
         if(collectionView == collectionView1) {
             let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
