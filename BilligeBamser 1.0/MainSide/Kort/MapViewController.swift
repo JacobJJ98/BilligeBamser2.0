@@ -18,11 +18,14 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     var UIVE : UIView?
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         mapView.delegate = self
-        mapView.register(BarView2.self, forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
+        mapView.register(BarView.self, forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
         let locationManager = CLLocationManager()
+        
         //Resterende sørger for at sætte current location som der hvor Map starter!!
+        // OBS tror godt det første tjek her kan fjernes!
         if CLLocationManager.locationServicesEnabled() {
             locationManager.delegate = self
             locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
@@ -119,8 +122,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     
     
     func centerMapOnLocation(location: CLLocation) {
-        let coordinateRegion = MKCoordinateRegion(center: location.coordinate,
-                                                  latitudinalMeters: regionRadius, longitudinalMeters: regionRadius)
+        let coordinateRegion = MKCoordinateRegion(center: location.coordinate, latitudinalMeters: regionRadius, longitudinalMeters: regionRadius)
       mapView.setRegion(coordinateRegion, animated: true)
     }
     
