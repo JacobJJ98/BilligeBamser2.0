@@ -22,15 +22,13 @@ class BarView: MKAnnotationView {
         kortKnappen.setBackgroundImage(UIImage(named: "route75"), for: UIControl.State())
         rightCalloutAccessoryView = kortKnappen
         
-    
-        
         // sætter billedet som skal markere barerne på kortet!!
-        image = self.billedeForPris(price: bar.flaskepris)
+        image = self.billedeForPris(pris: bar.flaskepris)
     }
   }
     
-    func billedeForPris(price: Int) -> UIImage {
-        if let image = UIImage(named: "øl\(price)kr") {
+    func billedeForPris(pris: Int) -> UIImage {
+        if let image = UIImage(named: "øl\(pris)kr") {
             return image
         } else {
             return UIImage(named: "øl5kr")!
